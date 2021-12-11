@@ -4,7 +4,7 @@ import { Story, Meta } from '@storybook/react'
 import Link, { LinkProps } from '.'
 
 export default {
-  title: 'Shared Components/Link',
+  title: 'Components/Link',
   component: Link,
 } as Meta
 

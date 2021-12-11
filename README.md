@@ -28,7 +28,7 @@ DaisyUI components built with React.
 - [ ] Modal
 - [ ] Navbar
 - [ ] Pagination
-- [ ] Progress
+- [X] Progress
 - [ ] Stack
 - [ ] Stat
 - [ ] Steps

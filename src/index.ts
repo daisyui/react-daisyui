@@ -12,6 +12,8 @@ import Carousel from './Carousel'
 import Countdown from './Countdown'
 import Divider from './Divider'
 import Link from './Link'
+import Modal from './Modal'
+import Progress from './Progress'
 import Tabs from './Tabs.tsx'
 
 export {
@@ -27,5 +29,7 @@ export {
   Countdown,
   Divider,
   Link,
+  Modal,
+  Progress,
   Tabs,
 }

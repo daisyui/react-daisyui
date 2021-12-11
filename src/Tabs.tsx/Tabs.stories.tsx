@@ -6,7 +6,7 @@ import Tabs, { TabsProps } from '.'
 const { Tab } = Tabs
 
 export default {
-  title: 'Shared Components/Tabs',
+  title: 'Components/Tabs',
   component: Tabs,
 } as Meta
 

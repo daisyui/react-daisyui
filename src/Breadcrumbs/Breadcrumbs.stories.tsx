@@ -6,7 +6,7 @@ import Breadcrumbs, { BreadcrumbsProps } from '.'
 const { Item } = Breadcrumbs
 
 export default {
-  title: 'Shared Components/Breadcrumbs',
+  title: 'Components/Breadcrumbs',
   component: Breadcrumbs,
 } as Meta
 

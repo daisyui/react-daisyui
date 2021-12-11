@@ -4,7 +4,7 @@ import { Story, Meta } from '@storybook/react'
 import Countdown, { CountdownProps } from '.'
 
 export default {
-  title: 'Shared Components/Countdown',
+  title: 'Components/Countdown',
   component: Countdown,
 } as Meta
 

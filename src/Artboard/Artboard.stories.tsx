@@ -4,7 +4,7 @@ import { Story, Meta } from '@storybook/react'
 import Artboard, { ArtboardProps } from '.'
 
 export default {
-  title: 'Shared Components/Artboard',
+  title: 'Components/Artboard',
   component: Artboard,
 } as Meta
 
