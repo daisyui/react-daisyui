@@ -22,7 +22,7 @@ DaisyUI components built with React.
 - [ ] Hero
 - [ ] Indicator
 - [ ] Kbd
-- [ ] Link
+- [X] Link
 - [ ] Mask
 - [ ] Menu
 - [ ] Modal

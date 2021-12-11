@@ -1,8 +1,8 @@
-import React, { ReactNode } from 'react'
+import React, { ReactElement, ReactNode } from 'react'
 import clsx from 'clsx'
 
 export type BreadcrumbsProps = {
-  children?: ReactNode | ReactNode[]
+  children?: ReactElement<BreadcrumbsItemProps> | ReactElement<BreadcrumbsItemProps>[]
   className?: string
   style?: Record<string, string | number>
 }

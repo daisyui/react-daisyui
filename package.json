@@ -12,7 +12,7 @@
     "test": "jest",
     "size": "size-limit",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -o docs-build",
     "build": "rollup -c"
   },
   "author": "Benji Trosch",

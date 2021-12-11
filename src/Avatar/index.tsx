@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React, { ReactElement } from 'react'
 import clsx from 'clsx'
 
 import {
@@ -16,7 +16,6 @@ export type AvatarProps = {
   borderColor?: ComponentColor
   online?: boolean
   offline?: boolean
-  placeholder?: boolean
   className?: string
   style?: Record<string, string | number>
 }
@@ -30,7 +29,6 @@ const Avatar = ({
   borderColor,
   online,
   offline,
-  placeholder,
   className,
   style,
 }: AvatarProps): JSX.Element => {
@@ -40,7 +38,7 @@ const Avatar = ({
     {
       'online': online,
       'offline': offline,
-      'placeholder': placeholder,
+      'placeholder': !src,
     }
   )
 
@@ -96,7 +94,7 @@ const Avatar = ({
 }
 
 type AvatarGroupProps = {
-  children: ReactNode | ReactNode[]
+  children: ReactElement<AvatarProps> | ReactElement<AvatarProps>[]
   className?: string
   style?: Record<string, string | number>
 }
