@@ -6,7 +6,6 @@ import {
   ComponentShape,
   ComponentSize,
   ComponentStatus,
-  ComponentVariant
 } from '../types'
 
 export type ButtonProps = {
@@ -15,7 +14,7 @@ export type ButtonProps = {
   href?: string
   shape?: ComponentShape
   size?: ComponentSize
-  variant?: ComponentVariant
+  variant?: 'outline' | 'text' | 'link'
   color?: ComponentColor
   status?: ComponentStatus
   fullWidth?: boolean

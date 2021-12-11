@@ -2,15 +2,13 @@
 
 DaisyUI components built with React.
 
-<br>
-
 ## Components To-Do:
 
 - [x] Alert
-- [ ] Artboard
-- [ ] Avatar
-- [ ] Badge
-- [ ] Breadcrumbs
+- [X] Artboard
+- [X] Avatar
+- [X] Badge
+- [X] Breadcrumbs
 - [x] Button
 - [x] Button-Group
 - [ ] Card
