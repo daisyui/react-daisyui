@@ -44,7 +44,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",
-    "@heroicons/react": "^1.0.3",
     "@rollup/plugin-commonjs": "^20.0.0",
     "@rollup/plugin-node-resolve": "^13.0.4",
     "@size-limit/preset-small-lib": "^5.0.2",

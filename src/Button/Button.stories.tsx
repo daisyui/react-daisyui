@@ -9,7 +9,7 @@ export default {
 } as Meta
 
 export const Default: Story<ButtonProps> = (args) => {
-  return <Button href="/asdg" {...args} />
+  return <Button {...args} />
 }
 Default.args = {
   children: <span>Button</span>,

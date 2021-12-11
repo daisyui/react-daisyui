@@ -1,15 +1,23 @@
 import React, { ReactNode } from 'react'
 import clsx from 'clsx'
 
+import {
+  ComponentColor,
+  ComponentShape,
+  ComponentSize,
+  ComponentStatus,
+  ComponentVariant
+} from '../types'
+
 export type ButtonProps = {
   children?: ReactNode | ReactNode[]
   onClick?: () => void
   href?: string
-  shape?: 'circle' | 'square',
-  size?: 'lg' | 'md' | 'sm' | 'xs',
-  variant?: 'outline' | 'text' | 'link'
-  color?: 'primary' | 'secondary' | 'accent'
-  status?: 'info' | 'success' | 'warning' | 'error'
+  shape?: ComponentShape
+  size?: ComponentSize
+  variant?: ComponentVariant
+  color?: ComponentColor
+  status?: ComponentStatus
   fullWidth?: boolean
   className?: string
   style?: Record<string, string | number>
