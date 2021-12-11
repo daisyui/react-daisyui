@@ -14,7 +14,7 @@ DaisyUI components built with React.
 - [ ] Card
 - [ ] Carousel
 - [ ] Collapse
-- [ ] Countdown
+- [X] Countdown
 - [ ] Divider
 - [ ] Drawer
 - [ ] Dropdown
