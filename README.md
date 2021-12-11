@@ -15,7 +15,7 @@ DaisyUI components built with React.
 - [ ] Carousel
 - [ ] Collapse
 - [X] Countdown
-- [ ] Divider
+- [X] Divider
 - [ ] Drawer
 - [ ] Dropdown
 - [ ] Footer
@@ -32,7 +32,7 @@ DaisyUI components built with React.
 - [ ] Stack
 - [ ] Stat
 - [ ] Steps
-- [ ] Tab
+- [X] Tab
 - [ ] Table
 - [ ] Tooltip
 - [ ] Form-Checkbox
