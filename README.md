@@ -25,7 +25,7 @@ DaisyUI components built with React.
 - [X] Link
 - [ ] Mask
 - [ ] Menu
-- [ ] Modal
+- [X] Modal
 - [ ] Navbar
 - [ ] Pagination
 - [X] Progress
@@ -34,7 +34,7 @@ DaisyUI components built with React.
 - [ ] Steps
 - [X] Tab
 - [ ] Table
-- [ ] Tooltip
+- [X] Tooltip
 - [ ] Form-Checkbox
 - [ ] Form-Input
 - [ ] Form-Radio

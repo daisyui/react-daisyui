@@ -15,6 +15,7 @@ import Link from './Link'
 import Modal from './Modal'
 import Progress from './Progress'
 import Tabs from './Tabs.tsx'
+import Tooltip from './Tooltip'
 
 export {
   Alert,
@@ -32,4 +33,5 @@ export {
   Modal,
   Progress,
   Tabs,
+  Tooltip,
 }

@@ -1,4 +1,5 @@
 export type ComponentColor = 'primary' | 'secondary' | 'accent'
+export type ComponentPosition = 'top' | 'bottom' | 'left' | 'right'
 export type ComponentShape = 'circle' | 'square'
 export type ComponentSize = 'lg' | 'md' | 'sm' | 'xs'
 export type ComponentStatus = 'info' | 'success' | 'warning' | 'error'
