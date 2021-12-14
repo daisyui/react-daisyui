@@ -1,15 +1,16 @@
 import React from 'react'
 import clsx from 'clsx'
 
-import { ComponentColor } from '../types'
+import {
+  IComponentBaseProps,
+  ComponentColor
+} from '../types'
 
-export type LinkProps = {
+export interface LinkProps extends IComponentBaseProps {
   children: string
   href?: string
   color?: 'neutral' | ComponentColor
   hover?: boolean
-  className?: string
-  style?: Record<string, string | number>
 }
 
 const Link = ({
@@ -17,6 +18,7 @@ const Link = ({
   href,
   color,
   hover = true,
+  dataTheme,
   className,
   style,
 }: LinkProps): JSX.Element => {
@@ -31,6 +33,7 @@ const Link = ({
 
   return (
     <a
+      data-theme={dataTheme}
       className={classes}
       style={style}
       href={href}

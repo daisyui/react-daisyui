@@ -1,15 +1,15 @@
 import React, { ReactNode } from 'react'
 import clsx from 'clsx'
 
-export type CardProps = {
+import { IComponentBaseProps } from '../types'
+
+export interface CardProps extends IComponentBaseProps {
   src?: string
   title?: string
   description?: string
   actions?: ReactNode | ReactNode[]
   bordered?: boolean
   compact?: boolean
-  className?: string
-  style?: Record<string, string | number>
 }
 
 const Card = ({
@@ -19,6 +19,7 @@ const Card = ({
   actions,
   bordered,
   compact,
+  dataTheme,
   className,
   style,
 }: CardProps): JSX.Element => {
@@ -33,6 +34,7 @@ const Card = ({
 
   return (
     <div 
+      data-theme={dataTheme}
       className={classes}
       style={style}
     >

@@ -1,16 +1,17 @@
 import React from 'react'
 import clsx from 'clsx'
 
-export type DividerProps = {
+import { IComponentBaseProps } from '../types'
+
+export interface DividerProps extends IComponentBaseProps {
   children?: string
-  vertical?: boolean
-  className?: string
-  style?: Record<string, string | number>
+  vertical?: Boolean
 }
 
 const Divider = ({
   children,
   vertical,
+  dataTheme,
   className,
   style,
 }: DividerProps): JSX.Element => {
@@ -24,6 +25,7 @@ const Divider = ({
 
   return (
     <div
+      data-theme={dataTheme}
       className={classes}
       style={style}
     >

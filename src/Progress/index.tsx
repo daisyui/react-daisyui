@@ -1,15 +1,17 @@
 import React from 'react'
 import clsx from 'clsx'
 
-import { ComponentColor, ComponentStatus } from '../types'
+import {
+  IComponentBaseProps,
+  ComponentColor,
+  ComponentStatus
+} from '../types'
 
-export type ProgressProps = {
+export interface ProgressProps extends IComponentBaseProps {
   value: number
   max: number
   color?: ComponentColor
   status?: ComponentStatus
-  className?: string
-  style?: Record<string, string | number>
 }
 
 const Progress = ({
@@ -17,6 +19,7 @@ const Progress = ({
   max,
   color,
   status,
+  dataTheme,
   className,
   style,
 }: ProgressProps): JSX.Element => {
@@ -31,6 +34,7 @@ const Progress = ({
 
   return (
     <progress
+      data-theme={dataTheme}
       className={classes}
       style={style}
       value={value}

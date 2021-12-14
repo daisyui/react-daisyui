@@ -1,16 +1,19 @@
 import React, {ReactNode} from 'react'
 import clsx from 'clsx'
 
-import { ComponentColor, ComponentSize, ComponentStatus } from '../types'
+import {
+  IComponentBaseProps,
+  ComponentColor,
+  ComponentSize,
+  ComponentStatus
+} from '../types'
 
-export type BadgeProps = {
+export interface BadgeProps extends IComponentBaseProps {
   children?: ReactNode | ReactNode[]
   variant?: 'outline'
   size?: ComponentSize
   color?: ComponentColor
   status?: ComponentStatus
-  className?: string
-  style?: Record<string, string | number>
 }
 
 const Badge = ({
@@ -19,6 +22,7 @@ const Badge = ({
   size,
   color,
   status,
+  dataTheme,
   className,
   style,
 }: BadgeProps): JSX.Element => {
@@ -35,6 +39,7 @@ const Badge = ({
 
   return (
     <div
+      data-theme={dataTheme}
       className={classes}
       style={style}
     >

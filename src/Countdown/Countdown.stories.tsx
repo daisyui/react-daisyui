@@ -4,7 +4,7 @@ import { Story, Meta } from '@storybook/react'
 import Countdown, { CountdownProps } from '.'
 
 export default {
-  title: 'Components/Countdown',
+  title: 'Countdown',
   component: Countdown,
 } as Meta
 

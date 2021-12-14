@@ -6,15 +6,16 @@ import React, {
 } from 'react'
 import clsx from 'clsx'
 
-import { ComponentSize } from '../types'
+import {
+  IComponentBaseProps,
+  ComponentSize
+} from '../types'
 
-export type TabsProps<T> = {
+export interface TabsProps<T> extends IComponentBaseProps {
   children: ReactElement<TabProps<T>>[]
   value?: T
   onChange?: (value: T) => void
   boxed?: boolean
-  className?: string
-  style?: Record<string, string | number>
 }
 
 const Tabs = <T extends string | number | undefined>({
@@ -22,6 +23,7 @@ const Tabs = <T extends string | number | undefined>({
   value,
   onChange,
   boxed,
+  dataTheme,
   className,
   style,
 }: TabsProps<T>): JSX.Element => {
@@ -37,6 +39,7 @@ const Tabs = <T extends string | number | undefined>({
 
   return (
     <div
+      data-theme={dataTheme}
       className={classes}
       style={style}
     >

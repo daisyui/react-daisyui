@@ -1,14 +1,15 @@
 import React, { ReactNode } from "react"
 import clsx from 'clsx'
 
-export type ButtonGroupProps = {
+import { IComponentBaseProps } from "../types"
+
+export interface ButtonGroupProps extends IComponentBaseProps {
   children?: ReactNode | ReactNode[]
-  className?: string
-  style?: Record<string, string | number>
 }
 
 const ButtonGroup = ({
   children,
+  dataTheme,
   className,
   style
 }: ButtonGroupProps): JSX.Element => {
@@ -19,6 +20,7 @@ const ButtonGroup = ({
 
   return (
     <div
+      data-theme={dataTheme}
       className={classes}
       style={style}
     >

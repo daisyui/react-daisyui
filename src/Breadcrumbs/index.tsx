@@ -1,14 +1,15 @@
 import React, { ReactElement, ReactNode } from 'react'
 import clsx from 'clsx'
 
-export type BreadcrumbsProps = {
+import { IComponentBaseProps } from '../types'
+
+export interface BreadcrumbsProps extends IComponentBaseProps {
   children?: ReactElement<BreadcrumbsItemProps> | ReactElement<BreadcrumbsItemProps>[]
-  className?: string
-  style?: Record<string, string | number>
 }
 
 const Breadcrumbs = ({
   children,
+  dataTheme,
   className,
   style,
 }: BreadcrumbsProps): JSX.Element => {
@@ -20,6 +21,7 @@ const Breadcrumbs = ({
 
   return (
     <div
+      data-theme={dataTheme}
       className={classes}
       style={style}
     >

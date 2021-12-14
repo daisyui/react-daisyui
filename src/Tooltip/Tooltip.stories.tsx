@@ -5,7 +5,7 @@ import Tooltip, { TooltipProps } from '.'
 import { Button } from '..'
 
 export default {
-  title: 'Components/Tooltip',
+  title: 'Tooltip',
   component: Tooltip,
 } as Meta
 

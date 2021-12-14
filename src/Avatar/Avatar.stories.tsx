@@ -4,7 +4,7 @@ import { Story, Meta } from '@storybook/react'
 import Avatar, { AvatarProps } from '.'
 
 export default {
-  title: 'Components/Avatar',
+  title: 'Avatar',
   component: Avatar,
 } as Meta
 

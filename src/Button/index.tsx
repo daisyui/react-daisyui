@@ -2,13 +2,14 @@ import React, { ReactNode } from 'react'
 import clsx from 'clsx'
 
 import {
+  IComponentBaseProps,
   ComponentColor,
   ComponentShape,
   ComponentSize,
   ComponentStatus,
 } from '../types'
 
-export type ButtonProps = {
+export interface ButtonProps extends IComponentBaseProps {
   children?: ReactNode | ReactNode[]
   onClick?: () => void
   href?: string
@@ -18,8 +19,6 @@ export type ButtonProps = {
   color?: ComponentColor
   status?: ComponentStatus
   fullWidth?: boolean
-  className?: string
-  style?: Record<string, string | number>
   animation?: boolean
   loading?: boolean
   disabled?: boolean
@@ -35,6 +34,7 @@ const Button = ({
   color,
   status,
   fullWidth,
+  dataTheme,
   className,
   style,
   animation = true,
@@ -70,6 +70,7 @@ const Button = ({
   } else {
     return (
       <button
+        data-theme={dataTheme}
         className={classes}
         style={style}
         onClick={onClick}

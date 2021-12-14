@@ -2,20 +2,19 @@ import React, { ReactNode } from 'react'
 import clsx from 'clsx'
 
 import {
+  IComponentBaseProps,
   ComponentColor,
   ComponentPosition,
   ComponentStatus
 } from '../types'
 
-export type TooltipProps = {
+export interface TooltipProps extends IComponentBaseProps {
   message: string
   children: ReactNode | ReactNode[]
   open?: boolean
   color?: ComponentColor
   status?: ComponentStatus
   position?: ComponentPosition
-  className?: string
-  style?: Record<string, string | number>
 }
 
 const Tooltip = ({
@@ -25,6 +24,7 @@ const Tooltip = ({
   color,
   status,
   position,
+  dataTheme,
   className,
   style,
 }: TooltipProps): JSX.Element => {
@@ -41,6 +41,7 @@ const Tooltip = ({
 
   return (
     <div
+      data-theme={dataTheme}
       data-tip={message}
       className={classes}
       style={style}

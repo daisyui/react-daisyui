@@ -1,9 +1,11 @@
 import React, { ReactNode } from 'react'
 import clsx from 'clsx'
 
+import { IComponentBaseProps } from '../types'
+
 import { Button } from '..'
 
-export type ModalProps = {
+export interface ModalProps extends IComponentBaseProps {
   children?: ReactNode | ReactNode[]
   open?: boolean
   title?: string
@@ -12,8 +14,6 @@ export type ModalProps = {
   cancelText?: string
   onAccept?: () => void
   onCancel?: () => void
-  className?: string
-  style?: Record<string, string | number>
 }
 
 const Modal = ({
@@ -25,6 +25,7 @@ const Modal = ({
   cancelText = 'Close',
   onAccept,
   onCancel,
+  dataTheme,
   className,
   style,
 }: ModalProps): JSX.Element => {
@@ -38,6 +39,7 @@ const Modal = ({
 
   return (
     <div
+      data-theme={dataTheme}
       className={classes}
       style={style}
     >

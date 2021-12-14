@@ -1,14 +1,15 @@
 import React from 'react'
 import clsx from 'clsx'
 
-export type CountdownProps = {
+import { IComponentBaseProps } from '../types'
+
+export interface CountdownProps extends IComponentBaseProps {
   value: number
-  className?: string
-  style?: Record<string, string | number>
 }
 
 const Countdown = ({
   value,
+  dataTheme,
   className,
   style,
 }: CountdownProps): JSX.Element => {
@@ -18,13 +19,16 @@ const Countdown = ({
   )
 
   const displayedValue = Math.min(99, Math.max(0, value))
+  const countdownStyle: Record<string, number> =
+    { '--value': displayedValue }
 
   return (
     <span
+      data-theme={dataTheme}
       className={classes}
       style={style}
     >
-      <span style={{ '--value': displayedValue }} />
+      <span style={countdownStyle} />
     </span>
   )
 }

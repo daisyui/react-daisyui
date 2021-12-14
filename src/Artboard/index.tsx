@@ -1,18 +1,19 @@
 import React, {ReactNode} from 'react'
 import clsx from 'clsx'
 
-export type ArtboardProps = {
+import { IComponentBaseProps } from '../types'
+
+export interface ArtboardProps extends IComponentBaseProps {
   children?: ReactNode | ReactNode[]
   size?: 1 | 2 | 3 | 4 | 5 | 6
   horizontal?: boolean
-  className?: string
-  style?: Record<string, string | number>
 }
 
 const Artboard = ({
   children,
   size,
   horizontal,
+  dataTheme,
   className,
   style,
 }: ArtboardProps): JSX.Element => {
@@ -28,6 +29,7 @@ const Artboard = ({
 
   return (
     <div
+      data-theme={dataTheme}
       className={classes}
       style={style}
     >

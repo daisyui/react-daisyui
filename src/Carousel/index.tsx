@@ -1,18 +1,19 @@
 import React, { ReactElement, ReactNode } from 'react'
 import clsx from 'clsx'
 
-export type CarouselProps = {
+import { IComponentBaseProps } from '../types'
+
+export interface CarouselProps extends IComponentBaseProps {
   children?: ReactElement<CarouselItemProps> | ReactElement<CarouselItemProps>[]
   snap?: 'start' | 'center' | 'end'
   vertical?: boolean
-  className?: string
-  style?: Record<string, string | number>
 }
 
 const Carousel = ({
   children,
   snap,
   vertical,
+  dataTheme,
   className,
   style,
 }: CarouselProps): JSX.Element => {
@@ -26,14 +27,13 @@ const Carousel = ({
   )
 
   return (
-    <>
-      <div
-        className={classes}
-        style={style}
-      >
-        {children}
-      </div>
-    </>
+    <div
+      data-theme={dataTheme}
+      className={classes}
+      style={style}
+    >
+      {children}
+    </div>
   )
 }
 

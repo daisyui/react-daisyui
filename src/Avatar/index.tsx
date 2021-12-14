@@ -2,12 +2,13 @@ import React, { ReactElement } from 'react'
 import clsx from 'clsx'
 
 import {
+  IComponentBaseProps,
   ComponentColor,
   ComponentShape,
   ComponentSize
 } from '../types'
 
-export type AvatarProps = {
+export interface AvatarProps extends IComponentBaseProps {
   src?: string
   letters?: string
   size?: ComponentSize
@@ -16,8 +17,6 @@ export type AvatarProps = {
   borderColor?: ComponentColor
   online?: boolean
   offline?: boolean
-  className?: string
-  style?: Record<string, string | number>
 }
 
 const Avatar = ({
@@ -29,6 +28,7 @@ const Avatar = ({
   borderColor,
   online,
   offline,
+  dataTheme,
   className,
   style,
 }: AvatarProps): JSX.Element => {
@@ -72,6 +72,7 @@ const Avatar = ({
 
   return (
     <div
+      data-theme={dataTheme}
       className={containerClasses}
       style={style}
     >

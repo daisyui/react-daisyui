@@ -4,7 +4,7 @@ import { Story, Meta } from '@storybook/react'
 import Badge, { BadgeProps } from '.'
 
 export default {
-  title: 'Components/Badge',
+  title: 'Badge',
   component: Badge,
 } as Meta
 

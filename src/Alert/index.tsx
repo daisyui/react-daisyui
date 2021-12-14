@@ -1,20 +1,22 @@
 import React, { ReactNode } from 'react'
 import clsx from 'clsx'
 
-import {ComponentStatus} from '../types'
+import {
+  IComponentBaseProps,
+  ComponentStatus
+} from '../types'
 
-export type AlertProps = {
+export interface AlertProps extends IComponentBaseProps {
   children?: ReactNode | ReactNode[]
   icon?: ReactNode
   status?: ComponentStatus
-  className?: string
-  style?: Record<string, string | number>
  }
 
 const Alert = ({
   children,
   icon,
   status,
+  dataTheme,
   className,
   style,
 }: AlertProps): JSX.Element => {
@@ -28,6 +30,7 @@ const Alert = ({
 
   return (
     <div
+      data-theme={dataTheme}
       className={classes}
       style={style}
     >
