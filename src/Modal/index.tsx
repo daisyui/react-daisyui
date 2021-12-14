@@ -20,7 +20,7 @@ const Modal = ({
   children,
   open,
   title,
-  footer,
+  footer = true,
   acceptText = 'Accept',
   cancelText = 'Close',
   onAccept,
