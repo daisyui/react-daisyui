@@ -20,7 +20,7 @@ const Layout = ({
   return (
     <div
       data-theme={dataTheme}
-      className="w-full h-full p-8 bg-base-100"
+      className="w-full h-screen p-8 bg-base-100"
     >
       <Navbar
         className="p-0 text-neutral-content border-b border-neutral"

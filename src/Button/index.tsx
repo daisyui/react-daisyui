@@ -15,10 +15,11 @@ export interface ButtonProps extends IComponentBaseProps {
   href?: string
   shape?: ComponentShape
   size?: ComponentSize
-  variant?: 'outline' | 'text' | 'link'
+  variant?: 'outline' | 'link'
   color?: ComponentColor
   status?: ComponentStatus
   fullWidth?: boolean
+  responsive?: boolean
   animation?: boolean
   loading?: boolean
   disabled?: boolean
@@ -34,12 +35,13 @@ const Button = ({
   color,
   status,
   fullWidth,
-  dataTheme,
-  className,
-  style,
+  responsive,
   animation = true,
   loading,
   disabled,
+  dataTheme,
+  className,
+  style,
 }: ButtonProps): JSX.Element => {
   const classes = clsx(
     'btn',
@@ -51,6 +53,7 @@ const Button = ({
       [`btn-${color}`]: color,
       [`btn-${status}`]: status,
       'btn-block': fullWidth,
+      'btn-xs md:btn-sm lg:btn-md xl:btn-lg': responsive,
       'no-animation': !animation,
       'btn-disabled': disabled,
       'loading': loading,
