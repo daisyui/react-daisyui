@@ -1,6 +1,9 @@
 {
   "name": "react-daisyui",
-  "version": "1.0.0",
+  "version": "0.1.1-0",
+  "description": "react-daisyUI - DaisyUI components built with React 🌼",
+  "author": "Benji Trosch",
+  "license": "MIT",
   "main": "./build/index.js",
   "module": "./build/index.es.js",
   "file": "build",
@@ -11,12 +14,12 @@
   "scripts": {
     "test": "jest",
     "size": "size-limit",
+    "prepublishOnly": "npm run build",
+    "version": "npm run build-storybook && git add -A docs",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o docs-build",
+    "build-storybook": "build-storybook -o ./docs",
     "build": "rollup -c"
   },
-  "author": "Benji Trosch",
-  "license": "ISC",
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint"
