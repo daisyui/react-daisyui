@@ -1,0 +1,67 @@
+on:
+  push:
+    branches:
+      - master
+name: release-please-pr
+jobs:
+  release-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: GoogleCloudPlatform/release-please-action@v2
+        id: release-please
+        with:
+          release-type: node
+          package-name: "@benjitrosch/react-daisyui"
+          changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false},{"type":"refactor","section":"Miscellaneous","hidden":false},{"type":"docs","section":"Storybook","hidden":true}]'
+          command: release-pr
+      - uses: actions/github-script@v5
+        if: ${{ steps.release-please.outputs.pr }}
+        id: extract-branch
+        env:
+          PR_NUM: ${{ steps.release-please.outputs.pr }}
+        with:
+          result-encoding: string
+          script: |
+            const [owner, repo] = process.env.GITHUB_REPOSITORY.split('/');
+            const { data: pullRequest } = await github.rest.pulls.get({
+              owner,
+              repo,
+              pull_number: process.env.PR_NUM,
+            });
+            const branchName = pullRequest.head.ref;
+            return branchName;
+      - uses: actions/checkout@v2
+        if: ${{ steps.release-please.outputs.pr }}
+        with:
+          ref: ${{ steps.extract-branch.outputs.result }}
+      - run: npm ci
+        env:
+          NPM_TOKEN: ${{ secrets.LEV_NPM_TOKEN }}
+        if: ${{ steps.release-please.outputs.pr }}
+      - run: npm run docs
+        if: ${{ steps.release-please.outputs.pr }}
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        if: ${{ steps.release-please.outputs.pr }}
+        with:
+          commit_message: "docs: update storybook for ${{ steps.extract-branch.outputs.result }}"
+
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: GoogleCloudPlatform/release-please-action@v2
+        id: release
+        with:
+          release-type: node
+          package-name: "@benjitrosch/react-daisyui"
+          command: github-release
+      - uses: actions/checkout@v2
+        if: ${{ steps.release.outputs.release_created }}
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+          registry-url: 'https://npm.pkg.github.com/'
+        if: ${{ steps.release.outputs.release_created }}
+      - run: npm ci
+        if: ${{ steps.release.outputs.release_created }}
+      - run: npm publish
+        if: ${{ steps.release.outputs.release_created }}
