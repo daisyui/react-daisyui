@@ -1,9 +1,6 @@
-node_modules/
-
-build/
-
-.github/
-.vscode/
-
-# For vscode file history extension
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
 .history
