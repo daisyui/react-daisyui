@@ -1,4 +1,4 @@
-import './styles/globals.css'
+import './styles.css'
 
 import Alert from './Alert'
 import Artboard from './Artboard'

@@ -27,7 +27,7 @@ const Tabs = <T extends string | number | undefined>({
   className,
   style,
 }: TabsProps<T>): JSX.Element => {
-  const [activeValue, setActiveValue] = useState<T>(value)
+  const [activeValue, setActiveValue] = useState<T | undefined>(value)
 
   const classes = clsx(
     'tabs',
@@ -46,9 +46,9 @@ const Tabs = <T extends string | number | undefined>({
       {children.map((child) => {
         return cloneElement(child, {
           activeValue: activeValue,
-          onClick: (value) => {
+          onClick: (value: T) => {
             setActiveValue(value)
-            onChange(value)
+            onChange && onChange(value)
           },
         })
       })}
@@ -58,7 +58,7 @@ const Tabs = <T extends string | number | undefined>({
 
 type TabProps<T> = {
   children?: ReactNode | ReactNode[]
-  value?: T
+  value: T
   activeValue?: T
   onClick?: (value: T) => void
   size?: ComponentSize
@@ -91,7 +91,7 @@ const Tab = <T extends string | number | undefined>({
     <a
       className={classes}
       style={style}
-      onClick={() => onClick(value)}
+      onClick={() => onClick && onClick(value)}
     >
       {children}
     </a>
