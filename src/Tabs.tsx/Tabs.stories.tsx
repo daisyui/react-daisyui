@@ -19,5 +19,5 @@ export const Default: Story<TabsProps<number>> = (args) => {
     </Tabs>
   )
 }
-Default.args = {}
 
+Default.args = {}

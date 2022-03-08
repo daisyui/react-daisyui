@@ -15,6 +15,8 @@ export interface TabsProps<T> extends IComponentBaseProps {
   children: ReactElement<TabProps<T>>[]
   value?: T
   onChange?: (value: T) => void
+  variant?: 'bordered' | 'lifted'
+  size?: ComponentSize
   boxed?: boolean
 }
 
@@ -22,6 +24,8 @@ const Tabs = <T extends string | number | undefined>({
   children,
   value,
   onChange,
+  variant,
+  size,
   boxed,
   dataTheme,
   className,
@@ -45,6 +49,8 @@ const Tabs = <T extends string | number | undefined>({
     >
       {children.map((child) => {
         return cloneElement(child, {
+          variant,
+          size,
           activeValue: activeValue,
           onClick: (value: T) => {
             setActiveValue(value)
