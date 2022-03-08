@@ -2,7 +2,8 @@ import React from 'react'
 import { Story, Meta } from '@storybook/react'
 
 import Theme, { ThemeProps } from '.'
-import { Button } from '..'
+import Button from '../Button'
+
 
 export default {
   title: 'Theme',

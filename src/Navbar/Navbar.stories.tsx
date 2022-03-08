@@ -2,7 +2,7 @@ import React from 'react'
 import { Story, Meta } from '@storybook/react'
 
 import Navbar, { NavbarProps } from '.'
-import { Button } from '..'
+import Button from '../Button'
 
 const {
   Start,

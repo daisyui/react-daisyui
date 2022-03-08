@@ -3,7 +3,7 @@ import clsx from 'clsx'
 
 import { IComponentBaseProps } from '../types'
 
-import { Button } from '..'
+import Button from '../Button'
 
 export interface ModalProps extends IComponentBaseProps {
   children?: ReactNode | ReactNode[]
