@@ -1,11 +1,10 @@
-import React, {ReactNode} from 'react'
+import React, { ReactNode } from 'react'
 import clsx from 'clsx'
 
 import {
   IComponentBaseProps,
   ComponentColor,
   ComponentSize,
-  ComponentStatus
 } from '../types'
 
 export interface BadgeProps extends IComponentBaseProps {
@@ -13,7 +12,6 @@ export interface BadgeProps extends IComponentBaseProps {
   variant?: 'outline'
   size?: ComponentSize
   color?: ComponentColor
-  status?: ComponentStatus
 }
 
 const Badge = ({
@@ -21,7 +19,6 @@ const Badge = ({
   variant,
   size,
   color,
-  status,
   dataTheme,
   className,
   style,
@@ -33,7 +30,6 @@ const Badge = ({
       [`badge-${size}`]: size,
       [`badge-${variant}`]: variant,
       [`badge-${color}`]: color,
-      [`badge-${status}`]: status,
     }
   )
 

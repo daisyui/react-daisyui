@@ -4,21 +4,18 @@ import clsx from 'clsx'
 import {
   IComponentBaseProps,
   ComponentColor,
-  ComponentStatus
 } from '../types'
 
 export interface ProgressProps extends IComponentBaseProps {
   value: number
   max: number
   color?: ComponentColor
-  status?: ComponentStatus
 }
 
 const Progress = ({
   value,
   max,
   color,
-  status,
   dataTheme,
   className,
   style,
@@ -28,7 +25,6 @@ const Progress = ({
     className,
     {
       [`progress-${color}`]: color,
-      [`progress-${status}`]: status,
     }
   )
 

@@ -10,7 +10,6 @@ import {
   IComponentBaseProps,
   ComponentColor,
   ComponentSize,
-  ComponentStatus,
 } from '../types';
 
 export type SelectOption<T> = {
@@ -25,7 +24,6 @@ export interface SelectProps<T> extends IComponentBaseProps {
   onChange?: (value: T) => void
   size?: ComponentSize
   color?: ComponentColor
-  status?: ComponentStatus
   bordered?: boolean
 }
 
@@ -36,7 +34,6 @@ const Select = <T extends string | number | undefined>({
   onChange,
   size,
   color,
-  status,
   bordered = true,
   dataTheme,
   className,
@@ -48,7 +45,6 @@ const Select = <T extends string | number | undefined>({
     {
       [`select-${size}`]: size,
       [`select-${color}`]: color,
-      [`select-${status}`]: status,
       'select-bordered': bordered,
     }
   )

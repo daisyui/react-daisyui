@@ -13,7 +13,6 @@ export interface TooltipProps extends IComponentBaseProps {
   children: ReactNode | ReactNode[]
   open?: boolean
   color?: ComponentColor
-  status?: ComponentStatus
   position?: ComponentPosition
 }
 
@@ -22,7 +21,6 @@ const Tooltip = ({
   children,
   open,
   color,
-  status,
   position,
   dataTheme,
   className,
@@ -34,7 +32,6 @@ const Tooltip = ({
     {
       'tooltip-open': open,
       [`tooltip-${color}`]: color,
-      [`tooltip-${status}`]: status,
       [`tooltip-${position}`]: position,
     }
   )

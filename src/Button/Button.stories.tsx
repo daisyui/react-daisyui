@@ -19,10 +19,10 @@ export const Colors: Story<ButtonProps> = (args) => {
         <Button {...args} color="ghost">Ghost</Button>
       </div>
       <div className="flex gap-x-2">
-        <Button {...args} status="success">Success</Button>
-        <Button {...args} status="info">Info</Button>
-        <Button {...args} status="warning">Warning</Button>
-        <Button {...args} status="error">Error</Button>
+        <Button {...args} color="success">Success</Button>
+        <Button {...args} color="info">Info</Button>
+        <Button {...args} color="warning">Warning</Button>
+        <Button {...args} color="error">Error</Button>
       </div>
     </div>
   )

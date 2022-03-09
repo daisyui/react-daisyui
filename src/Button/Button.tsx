@@ -6,7 +6,6 @@ import {
   ComponentColor,
   ComponentShape,
   ComponentSize,
-  ComponentStatus,
 } from '../types'
 
 export interface ButtonProps extends IComponentBaseProps {
@@ -17,7 +16,6 @@ export interface ButtonProps extends IComponentBaseProps {
   size?: ComponentSize
   variant?: 'outline' | 'link'
   color?: ComponentColor
-  status?: ComponentStatus
   fullWidth?: boolean
   responsive?: boolean
   animation?: boolean
@@ -33,7 +31,6 @@ const Button = ({
   size,
   variant,
   color,
-  status,
   fullWidth,
   responsive,
   animation = true,
@@ -51,7 +48,6 @@ const Button = ({
       [`btn-${shape}`]: shape,
       [`btn-${variant}`]: variant,
       [`btn-${color}`]: color,
-      [`btn-${status}`]: status,
       'btn-block': fullWidth,
       'btn-xs md:btn-sm lg:btn-md xl:btn-lg': responsive,
       'no-animation': !animation,
