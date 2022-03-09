@@ -11,13 +11,19 @@ import Card from './Card'
 import Carousel from './Carousel'
 import Countdown from './Countdown'
 import Divider from './Divider'
+import Dropdown from './Dropdown'
+import Footer from './Footer'
 import Form from './Form'
+import Indicator from './Indicator'
 import Link from './Link'
+import Menu from './Menu'
 import Modal from './Modal'
 import Navbar from './Navbar'
 import Progress from './Progress'
-import Tabs from './Tabs'
+import Select from './Select'
 import Table from './Table'
+import Tabs from './Tabs'
+import Theme from './Theme'
 import Tooltip from './Tooltip'
 
 export {
@@ -32,12 +38,18 @@ export {
   Carousel,
   Countdown,
   Divider,
+  Dropdown,
+  Footer,
   Form,
+  Indicator,
   Link,
+  Menu,
   Modal,
   Navbar,
   Progress,
-  Tabs,
+  Select,
   Table,
+  Tabs,
+  Theme,
   Tooltip,
 }

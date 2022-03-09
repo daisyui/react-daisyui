@@ -17,7 +17,7 @@ npm install react-daisyui
 
 Actions:
 - [x] Button
-- [ ] Dropdown
+- [X] Dropdown
 - [X] Modal
 - [ ] Swap
 
@@ -41,7 +41,7 @@ Data Input:
 - [ ] Input
 - [ ] Radio
 - [ ] Range
-- [ ] Select
+- [X] Select
 - [ ] Textarea
 - [ ] Toggle
 
@@ -50,9 +50,9 @@ Layout:
 - [x] Button-Group
 - [X] Divider
 - [ ] Drawer
-- [ ] Footer
+- [X] Footer
 - [ ] Hero
-- [ ] Indicator
+- [X] Indicator
 - [ ] Input Group
 - [ ] Mask
 - [ ] Stack
@@ -60,7 +60,7 @@ Layout:
 Navigation:
 - [X] Breadcrumbs
 - [X] Link
-- [ ] Menu
+- [X] Menu
 - [X] Navbar
 - [ ] Pagination
 - [ ] Steps
