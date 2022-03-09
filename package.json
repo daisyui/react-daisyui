@@ -1,13 +1,13 @@
 {
   "name": "react-daisy",
-  "version": "0.1.1-0",
+  "version": "0.2.0",
   "description": "react-daisy - DaisyUI components built with React 🌼",
   "author": "Benji Trosch",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/benjitrosch/react-daisyui.git"
-},
+  },
   "type": "module",
   "exports": {
     "import": "./dist/react-daisy.modern.js",
@@ -75,6 +75,5 @@
     "typescript": "^4.3.5",
     "vite": "^2.8.6"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
