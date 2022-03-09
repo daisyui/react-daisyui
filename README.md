@@ -72,7 +72,7 @@ Layout:
 - [ ] Hero
 - [X] Indicator
 - [ ] Input Group
-- [ ] Mask
+- [X] Mask
 - [ ] Stack
 
 Navigation:
