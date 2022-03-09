@@ -1,26 +1,27 @@
 {
-  "name": "react-daisy-ui",
+  "name": "react-daisy",
   "version": "0.1.1-0",
-  "description": "react-daisy-ui - DaisyUI components built with React 🌼",
+  "description": "react-daisy - DaisyUI components built with React 🌼",
   "author": "Benji Trosch",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benjitrosch/react-daisyui.git"
+},
   "type": "module",
   "exports": {
-    "import": "./dist/react-daisy-ui.modern.js",
-    "require": "./dist/react-daisy-ui.cjs",
-    "default": "./dist/react-daisy-ui.modern.js"
+    "import": "./dist/react-daisy.modern.js",
+    "require": "./dist/react-daisy.cjs",
+    "default": "./dist/react-daisy.modern.js"
   },
-  "main": "./dist/react-daisy-ui.cjs",
-  "module": "./dist/react-daisy-ui.esm.js",
-  "unpkg": "./dist/react-daisy-ui.umd.js",
+  "main": "./dist/react-daisy.cjs",
+  "module": "./dist/react-daisy.esm.js",
+  "unpkg": "./dist/react-daisy.umd.js",
   "sideEffects": false,
   "files": [
     "dist"
   ],
   "types": "./dist/index.d.ts",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "scripts": {
     "start": "start-storybook -p 6006",
     "dist": "microbundle --css inline --compress false",
