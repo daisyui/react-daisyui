@@ -35,8 +35,6 @@ jobs:
         with:
           ref: ${{ steps.extract-branch.outputs.result }}
       - run: npm ci
-        env:
-          NPM_TOKEN: ${{ secrets.LEV_NPM_TOKEN }}
         if: ${{ steps.release-please.outputs.pr }}
       - run: npm run docs
         if: ${{ steps.release-please.outputs.pr }}

@@ -26,7 +26,7 @@ const Layout = ({
         className="p-0 text-neutral-content border-b border-neutral"
       >
         <Navbar.Start>
-          <span className="text-lg font-bold">
+          <span className="text-lg text-base-content font-bold">
               react-daisyui
           </span>
         </Navbar.Start>
@@ -53,12 +53,9 @@ const Layout = ({
       <div
         className="w-full h-full my-4"
       >
-        <h1 className="text-4xl font-bold">{title}</h1>
-        <p>{description}</p>
-
-        <div 
-          className="my-4"
-        >
+        <h1 className="text-4xl text-base-content font-bold">{title}</h1>
+        <p className="text-base-content">{description}</p>
+        <div className="my-4">
           {children}
         </div>
       </div>
