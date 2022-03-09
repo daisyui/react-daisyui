@@ -2,46 +2,62 @@
 
 DaisyUI components built with React.
 
+## 🚧🚧 This repo is under heavy development 🚧🚧
+
 ## Components To-Do:
 
+Actions:
+- [x] Button
+- [ ] Dropdown
+- [X] Modal
+- [ ] Swap
+
+Data Display:
 - [x] Alert
-- [X] Artboard
 - [X] Avatar
 - [X] Badge
-- [X] Breadcrumbs
-- [x] Button
-- [x] Button-Group
 - [ ] Card
-- [ ] Carousel
+- [X] Carousel
 - [ ] Collapse
 - [X] Countdown
+- [ ] Kbd
+- [X] Progress
+- [ ] Radial Progress
+- [ ] Stat
+- [X] Table
+- [X] Tooltip
+
+Data Input:
+- [ ] Checkbox
+- [ ] Input
+- [ ] Radio
+- [ ] Range
+- [ ] Select
+- [ ] Textarea
+- [ ] Toggle
+
+Layout:
+- [X] Artboard
+- [x] Button-Group
 - [X] Divider
 - [ ] Drawer
-- [ ] Dropdown
 - [ ] Footer
 - [ ] Hero
 - [ ] Indicator
-- [ ] Kbd
-- [X] Link
+- [ ] Input Group
 - [ ] Mask
-- [ ] Menu
-- [X] Modal
-- [ ] Navbar
-- [ ] Pagination
-- [X] Progress
 - [ ] Stack
-- [ ] Stat
+
+Navigation:
+- [X] Breadcrumbs
+- [X] Link
+- [ ] Menu
+- [X] Navbar
+- [ ] Pagination
 - [ ] Steps
 - [X] Tab
-- [ ] Table
-- [X] Tooltip
-- [ ] Form-Checkbox
-- [ ] Form-Input
-- [ ] Form-Radio
-- [ ] Form-Range
-- [ ] Form-Select
-- [ ] Form-Textarea
-- [ ] Form-Toggle
-- [ ] Form-Code
-- [ ] Form-Phone
-- [ ] Form-Window
+
+Mockup:
+- [ ] Code
+- [ ] Phone
+- [ ] Window
