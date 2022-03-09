@@ -1,18 +1,18 @@
 {
-  "name": "react-daisyui",
+  "name": "react-daisy-ui",
   "version": "0.1.1-0",
-  "description": "react-daisyUI - DaisyUI components built with React 🌼",
+  "description": "react-daisy-ui - DaisyUI components built with React 🌼",
   "author": "Benji Trosch",
   "license": "MIT",
   "type": "module",
   "exports": {
-    "import": "./dist/react-daisyui.modern.js",
-    "require": "./dist/react-daisyui.cjs",
-    "default": "./dist/react-daisyui.modern.js"
+    "import": "./dist/react-daisy-ui.modern.js",
+    "require": "./dist/react-daisy-ui.cjs",
+    "default": "./dist/react-daisy-ui.modern.js"
   },
-  "main": "./dist/react-daisyui.cjs",
-  "module": "./dist/react-daisyui.esm.js",
-  "unpkg": "./dist/react-daisyui.umd.js",
+  "main": "./dist/react-daisy-ui.cjs",
+  "module": "./dist/react-daisy-ui.esm.js",
+  "unpkg": "./dist/react-daisy-ui.umd.js",
   "sideEffects": false,
   "files": [
     "dist"

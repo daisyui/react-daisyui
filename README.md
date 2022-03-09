@@ -1,4 +1,4 @@
-# react-daisyui
+# react-daisy-ui
 DaisyUI components built with React, Typescript and TailwindCSS.
 <a href="https://benjitrosch.github.io/react-daisyui/">Storybook</a>
 

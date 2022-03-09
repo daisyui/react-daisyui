@@ -27,7 +27,7 @@ const Layout = ({
       >
         <Navbar.Start>
           <span className="text-lg text-base-content font-bold">
-              react-daisyui
+              react-daisy-ui
           </span>
         </Navbar.Start>
 
