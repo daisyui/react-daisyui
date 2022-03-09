@@ -4,7 +4,7 @@ import { Story, Meta } from '@storybook/react'
 import Table, { TableProps } from '.'
 
 export default {
-  title: 'Table',
+  title: 'Data Display/Table',
   component: Table,
 } as Meta
 

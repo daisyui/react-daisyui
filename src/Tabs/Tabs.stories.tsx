@@ -6,7 +6,7 @@ import Tabs, { TabsProps } from '.'
 const { Tab } = Tabs
 
 export default {
-  title: 'Tabs',
+  title: 'Navigation/Tabs',
   component: Tabs,
 } as Meta
 

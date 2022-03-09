@@ -11,7 +11,7 @@ const {
 } = Navbar
 
 export default {
-  title: 'Navbar',
+  title: 'Navigation/Navbar',
   component: Navbar,
 } as Meta
 

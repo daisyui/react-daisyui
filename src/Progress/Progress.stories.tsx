@@ -4,7 +4,7 @@ import { Story, Meta } from '@storybook/react'
 import Progress, { ProgressProps } from '.'
 
 export default {
-  title: 'Progress',
+  title: 'Data Display/Progress',
   component: Progress,
 } as Meta
 

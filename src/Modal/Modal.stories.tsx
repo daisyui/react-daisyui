@@ -5,7 +5,7 @@ import Modal, { ModalProps } from '.'
 import Button from '../Button'
 
 export default {
-  title: 'Modal',
+  title: 'Actions/Modal',
   component: Modal,
 } as Meta
 

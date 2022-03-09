@@ -6,7 +6,7 @@ import Select, { SelectProps } from '.'
 const { Option } = Select
 
 export default {
-  title: 'Select',
+  title: 'Data Input/Select',
   component: Select,
 } as Meta
 
