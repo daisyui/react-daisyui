@@ -16,7 +16,8 @@ import Link from './Link'
 import Modal from './Modal'
 import Navbar from './Navbar'
 import Progress from './Progress'
-import Tabs from './Tabs.tsx'
+import Tabs from './Tabs'
+import Table from './Table'
 import Tooltip from './Tooltip'
 
 export {
@@ -37,5 +38,6 @@ export {
   Navbar,
   Progress,
   Tabs,
+  Table,
   Tooltip,
 }
