@@ -2,6 +2,7 @@ import React from 'react'
 import { Story, Meta } from '@storybook/react'
 
 import Card, { CardProps } from '.'
+import { Button } from '../..'
 
 export default {
   title: 'Data Display/Card',
@@ -10,7 +11,85 @@ export default {
 
 export const Default: Story<CardProps> = (args) => {
   return (
-    <Card {...args} />
+    <Card {...args}>
+      <figure>
+        <img
+          src="https://api.lorem.space/image/shoes?w=400&h=225"
+          alt="Shoes"
+        />
+      </figure>
+      <Card.Body>
+        <Card.Title tag="h2">Shoes!</Card.Title>
+        <p>If a dog chews shoes whose shoes does he choose?</p>
+        <Card.Actions className="justify-end">
+          <Button color="primary">Buy Now</Button>
+        </Card.Actions>
+      </Card.Body>
+    </Card>
   )
 }
-Default.args = {}
+
+export const Responsive: Story<CardProps> = (args) => {
+  return (
+    <div>
+      <div className="mb-3">
+        (vertical on small screen, horizontal on large screen)
+      </div>
+      <Card {...args} side="lg">
+        <figure>
+          <img
+            src="https://api.lorem.space/image/shoes?w=400&h=225"
+            alt="Shoes"
+          />
+        </figure>
+        <Card.Body>
+          <Card.Title tag="h2">Shoes!</Card.Title>
+          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <Card.Actions className="justify-end">
+            <Button color="primary">Buy Now</Button>
+          </Card.Actions>
+        </Card.Body>
+      </Card>
+    </div>
+  )
+}
+
+export const Centered: Story<CardProps> = (args) => {
+  return (
+    <Card {...args}>
+      <figure>
+        <img
+          src="https://api.lorem.space/image/shoes?w=400&h=225"
+          alt="Shoes"
+        />
+      </figure>
+      <Card.Body className="items-center text-center">
+        <Card.Title tag="h2">Shoes!</Card.Title>
+        <p>If a dog chews shoes whose shoes does he choose?</p>
+        <Card.Actions className="justify-end">
+          <Button color="primary">Buy Now</Button>
+        </Card.Actions>
+      </Card.Body>
+    </Card>
+  )
+}
+
+export const ImageOverlay: Story<CardProps> = (args) => {
+  return (
+    <Card {...args} imageFull>
+      <figure>
+        <img
+          src="https://api.lorem.space/image/shoes?w=400&h=225"
+          alt="Shoes"
+        />
+      </figure>
+      <Card.Body>
+        <Card.Title tag="h2">Shoes!</Card.Title>
+        <p>If a dog chews shoes whose shoes does he choose?</p>
+        <Card.Actions className="justify-end">
+          <Button color="primary">Buy Now</Button>
+        </Card.Actions>
+      </Card.Body>
+    </Card>
+  )
+}
