@@ -62,19 +62,19 @@
     "autoprefixer": "^10.4.2",
     "babel-jest": "^27.3.1",
     "babel-loader": "^8.2.2",
+    "clsx": "^1.1.1",
+    "daisyui": "^2.6.3",
     "jest": "^27.0.6",
     "microbundle": "^0.14.2",
     "postcss": "^8.4.8",
     "prettier": "^2.3.2",
     "react-test-renderer": "^17.0.2",
     "storybook-builder-vite": "^0.1.18",
+    "styled-jsx": "^5.0.0",
     "tailwindcss": "^3.0.23",
     "typescript": "^4.3.5",
     "vite": "^2.8.6"
   },
   "dependencies": {
-    "clsx": "^1.1.1",
-    "daisyui": "^2.6.3",
-    "styled-jsx": "^5.0.0"
   }
 }
