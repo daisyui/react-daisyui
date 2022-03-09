@@ -6,7 +6,7 @@ import Button from '../Button'
 
 
 export default {
-  title: 'Theme',
+  title: 'Utils/Theme',
   component: Theme,
 } as Meta
 

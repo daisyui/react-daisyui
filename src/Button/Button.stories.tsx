@@ -8,12 +8,6 @@ export default {
   component: Button,
 } as Meta
 
-export const Default: Story<ButtonProps> = (args) => {
-  return (
-    <Button {...args} color="primary">Click Me</Button>
-  )
-}
-
 export const Colors: Story<ButtonProps> = (args) => {
   return (
     <div className="flex flex-col gap-y-2">
