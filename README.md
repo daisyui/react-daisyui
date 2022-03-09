@@ -1,4 +1,4 @@
-[![NPM Version](https://img.shields.io/npm/v/react-daisy.svg?branch=master)](https://www.npmjs.com/package/reactstrap) [![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-daisy)](https://bundlephobia.com/result?p=react-daisy) [![License](https://img.shields.io/npm/l/reactstrap.svg)](https://github.com/reactstrap/reactstrap/blob/master/LICENSE) 
+[![NPM Version](https://img.shields.io/npm/v/react-daisy.svg?branch=master)](https://www.npmjs.com/package/react-daisy) [![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-daisy)](https://bundlephobia.com/result?p=react-daisy) [![License](https://img.shields.io/npm/l/react-daisy.svg)](https://github.com/benjitrosch/react-daisy/blob/master/LICENSE) 
 
 # react-daisy 🌼
 
