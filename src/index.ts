@@ -9,6 +9,7 @@ import Button from './Button'
 import ButtonGroup from './ButtonGroup'
 import Card from './Card'
 import Carousel from './Carousel'
+import Collapse from './Collapse'
 import Countdown from './Countdown'
 import Divider from './Divider'
 import Dropdown from './Dropdown'
@@ -37,6 +38,7 @@ export {
   ButtonGroup,
   Card,
   Carousel,
+  Collapse,
   Countdown,
   Divider,
   Dropdown,

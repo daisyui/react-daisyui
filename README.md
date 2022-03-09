@@ -37,15 +37,15 @@ Actions:
 - [x] Button
 - [X] Dropdown
 - [X] Modal
-- [ ] Swap
+- [X] Swap
 
 Data Display:
 - [x] Alert
 - [X] Avatar
 - [X] Badge
-- [ ] Card
+- [X] Card
 - [X] Carousel
-- [ ] Collapse
+- [X] Collapse
 - [X] Countdown
 - [ ] Kbd
 - [X] Progress
