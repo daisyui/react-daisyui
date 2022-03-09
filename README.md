@@ -47,7 +47,7 @@ Data Display:
 - [X] Carousel
 - [X] Collapse
 - [X] Countdown
-- [ ] Kbd
+- [X] Kbd
 - [X] Progress
 - [ ] Radial Progress
 - [ ] Stat

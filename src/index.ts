@@ -16,6 +16,7 @@ import Dropdown from './Dropdown'
 import Footer from './Footer'
 import Form from './Form'
 import Indicator from './Indicator'
+import Kbd from './Kbd'
 import Link from './Link'
 import Menu from './Menu'
 import Modal from './Modal'
@@ -45,6 +46,7 @@ export {
   Footer,
   Form,
   Indicator,
+  Kbd,
   Link,
   Menu,
   Modal,
