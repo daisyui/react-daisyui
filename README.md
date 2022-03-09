@@ -9,7 +9,7 @@ DaisyUI components built with React, Typescript and TailwindCSS.
 ## Installation
 
 ```bash
-npm install react-daisyui
+npm install react-daisy
 ```
 
 ## Components To-Do:
