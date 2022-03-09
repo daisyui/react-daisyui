@@ -21,6 +21,7 @@ import Modal from './Modal'
 import Navbar from './Navbar'
 import Progress from './Progress'
 import Select from './Select'
+import Swap from './Swap'
 import Table from './Table'
 import Tabs from './Tabs'
 import Theme from './Theme'
@@ -48,6 +49,7 @@ export {
   Navbar,
   Progress,
   Select,
+  Swap,
   Table,
   Tabs,
   Theme,

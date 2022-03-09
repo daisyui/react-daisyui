@@ -13,4 +13,5 @@ export const Default: Story<BadgeProps> = (args) => {
     <Badge {...args}>Example</Badge>
   )
 }
+
 Default.args = {}
