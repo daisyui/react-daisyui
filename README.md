@@ -1,8 +1,17 @@
-# react-daisyui
+<div align="center"><h1><strong>react-daisyui</strong></h1></div>
+<div align="center">DaisyUI components built with React, Typescript and TailwindCSS.</div>
+<div align="center"><a href="https://benjitrosch.github.io/react-daisyui/">Storybook</a></div>
 
-DaisyUI components built with React.
+<br />
 
 ## 🚧🚧 This repo is under heavy development 🚧🚧
+----
+
+## Installation
+
+```bash
+npm install react-daisyui
+```
 
 ## Components To-Do:
 
