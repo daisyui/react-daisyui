@@ -1,18 +1,37 @@
-# react-daisy
-DaisyUI components built with React, Typescript and TailwindCSS.
-<a href="https://benjitrosch.github.io/react-daisyui/">Storybook</a>
+[![NPM Version](https://img.shields.io/npm/v/react-daisy.svg?branch=master)](https://www.npmjs.com/package/reactstrap) [![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-daisy)](https://bundlephobia.com/result?p=react-daisy) [![License](https://img.shields.io/npm/l/reactstrap.svg)](https://github.com/reactstrap/reactstrap/blob/master/LICENSE) 
 
-## 🚧🚧 This repo is under heavy development 🚧🚧
+# react-daisy 🌼
+
+DaisyUI components built with React, Typescript and TailwindCSS.
+
+<a href="https://benjitrosch.github.io/react-daisyui/">Check out our Storybook!</a>
 
 ----
 
-## Installation
+## Quick Start
 
 ```bash
 npm install react-daisy
 ```
 
-## Components To-Do:
+Then import react-daisy components within your component files:
+
+```js
+import React from 'react'
+import { Button } from '@levco/breezy'
+
+export default (props) => {
+  return (
+    <Button color="primary">
+      Click me!
+    </Button>
+  )
+}
+```
+
+---
+
+## Components To-Do
 
 Actions:
 - [x] Button
