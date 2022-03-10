@@ -1,5 +1,6 @@
-import React, { ReactNode } from 'react'
+import React, { forwardRef, ReactNode } from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import {
   IComponentBaseProps,
@@ -8,24 +9,24 @@ import {
   ComponentSize,
 } from '../types'
 
-export interface ButtonProps extends IComponentBaseProps {
-  children?: ReactNode | ReactNode[]
-  onClick?: () => void
-  href?: string
-  shape?: ComponentShape
-  size?: ComponentSize
-  variant?: 'outline' | 'link'
-  color?: ComponentColor
-  fullWidth?: boolean
-  responsive?: boolean
-  animation?: boolean
-  loading?: boolean
-  disabled?: boolean
+export type ButtonProps =
+  & React.ButtonHTMLAttributes<HTMLButtonElement>
+  & IComponentBaseProps
+  & {
+    children?: ReactNode | ReactNode[]
+    href?: string
+    shape?: ComponentShape
+    size?: ComponentSize
+    variant?: 'outline' | 'link'
+    color?: ComponentColor
+    fullWidth?: boolean
+    responsive?: boolean
+    animation?: boolean
+    loading?: boolean
 }
 
-const Button = ({
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
   children,
-  onClick,
   href,
   shape,
   size,
@@ -35,15 +36,15 @@ const Button = ({
   responsive,
   animation = true,
   loading,
-  disabled,
   dataTheme,
   className,
   style,
-}: ButtonProps): JSX.Element => {
-  const classes = clsx(
+  ...props
+}, ref): JSX.Element => {
+  const classes = twMerge(
     'btn',
     className,
-    {
+    clsx({
       [`btn-${size}`]: size,
       [`btn-${shape}`]: shape,
       [`btn-${variant}`]: variant,
@@ -51,9 +52,9 @@ const Button = ({
       'btn-block': fullWidth,
       'btn-xs md:btn-sm lg:btn-md xl:btn-lg': responsive,
       'no-animation': !animation,
-      'btn-disabled': disabled,
+      'btn-disabled': props.disabled,
       'loading': loading,
-    }
+    })
   )
 
   if (href) {
@@ -61,7 +62,6 @@ const Button = ({
       <a
         className={classes}
         style={style}
-        onClick={onClick}
       >
         {children}
       </a>
@@ -69,16 +69,18 @@ const Button = ({
   } else {
     return (
       <button
+        {...props}
+        ref={ref}
         data-theme={dataTheme}
         className={classes}
         style={style}
-        onClick={onClick}
-        disabled={disabled}
       >
         {children}
       </button>
     )
   }
-}
+})
+
+Button.displayName = "Button"
 
 export default Button
