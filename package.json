@@ -1,22 +1,22 @@
 {
-  "name": "react-daisy",
+  "name": "react-daisyui",
   "version": "0.3.2",
-  "description": "react-daisy - DaisyUI components built with React 🌼",
-  "author": "Benji Trosch",
+  "description": "react-daisyui - DaisyUI components built with React 🌼",
+  "author": "daisyui",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/benjitrosch/react-daisy.git"
+    "url": "https://github.com/daisyui/react-daisyui.git"
   },
   "type": "module",
   "exports": {
-    "import": "./dist/react-daisy.modern.js",
-    "require": "./dist/react-daisy.cjs",
-    "default": "./dist/react-daisy.modern.js"
+    "import": "./dist/react-daisyui.modern.js",
+    "require": "./dist/react-daisyui.cjs",
+    "default": "./dist/react-daisyui.modern.js"
   },
-  "main": "./dist/react-daisy.cjs",
-  "module": "./dist/react-daisy.esm.js",
-  "unpkg": "./dist/react-daisy.umd.js",
+  "main": "./dist/react-daisyui.cjs",
+  "module": "./dist/react-daisyui.esm.js",
+  "unpkg": "./dist/react-daisyui.umd.js",
   "sideEffects": false,
   "files": [
     "dist"
