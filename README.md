@@ -1,6 +1,13 @@
-[![NPM Version](https://img.shields.io/npm/v/react-daisy.svg?branch=master)](https://www.npmjs.com/package/react-daisy) [![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-daisy)](https://bundlephobia.com/result?p=react-daisy) [![License](https://img.shields.io/npm/l/react-daisy.svg)](https://github.com/benjitrosch/react-daisy/blob/master/LICENSE) 
+🚧 WORK IN PROGRESS REPO 🚧
 
-# react-daisy 🌼
+https://github.com/christianblandford/react-daisyui
+https://github.com/benjitrosch/react-daisy
+
+This repo will contain a combination of the above two repos to act as an official React wrapper for daisyUI.
+
+---
+
+# react-daisyui 🌼
 
 DaisyUI components built with React, Typescript and TailwindCSS.
 
@@ -15,14 +22,14 @@ Make sure you've installed <a href="https://tailwindcss.com/docs/installation">T
 Install the package with npm or yarn:
 
 ```bash
-npm install react-daisy
+npm install react-daisyui
 ```
 
 To prevent TailwindCSS from purging your styles, add the following line to your tailwind.config.js:
 
 ```js
 module.exports = {
-  content: ['./node_modules/react-daisy/dist/*.js'],
+  content: ['./node_modules/react-daisyui/dist/*.js'],
   ...
   plugins: [require("daisyui")],
 }
@@ -140,4 +147,4 @@ ___
 
 ### License
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/oslabs-beta/giraffeQL/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/daisyui/react-daisyui/blob/main/LICENSE) file for details.
