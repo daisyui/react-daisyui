@@ -18,7 +18,7 @@ Install the package with npm or yarn:
 npm install react-daisy
 ```
 
-To prevent TailwindCSS from puring your styles, add the following line to your tailwind.config.js:
+To prevent TailwindCSS from purging your styles, add the following line to your tailwind.config.js:
 
 ```js
 module.exports = {
@@ -134,10 +134,10 @@ Mockup:
 
 ## Contributions
 
-We could use some help building out stories and writing unit tests for components.
+We're looking for contributors on this component library! We could use some help building out stories and writing unit tests for components.
 
 ___
 
-## License
+### License
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/oslabs-beta/giraffeQL/blob/main/LICENSE) file for details.
