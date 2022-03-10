@@ -10,6 +10,8 @@ DaisyUI components built with React, Typescript and TailwindCSS.
 
 ## Quick Start
 
+Install the package with npm or yarn:
+
 ```bash
 npm install react-daisy
 ```
@@ -17,14 +19,37 @@ npm install react-daisy
 Then import react-daisy components within your component files:
 
 ```js
-import React from 'react'
-import { Button } from '@levco/breezy'
+import { Button } from 'react-daisy'
 
 export default (props) => {
   return (
     <Button color="primary">
       Click me!
     </Button>
+  )
+}
+```
+
+To apply a theme (or multiple themes) to a page or components, import the Theme component and wrap your content:
+
+```js
+import { Theme, Button } from 'react-daisy'
+
+export default (props) => {
+  return (
+    <>
+      <Theme dataTheme="dark">
+        <Button color="primary">
+          Click me, dark!
+        </Button>
+      </Theme>
+      
+      <Theme dataTheme="light">
+        <Button color="primary">
+          Click me, light!
+        </Button>
+      </Theme>
+    </>
   )
 }
 ```
@@ -88,3 +113,13 @@ Mockup:
 - [ ] Code
 - [ ] Phone
 - [ ] Window
+
+## Contributions
+
+We could use some help building out stories and writing unit tests for components.
+
+___
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/oslabs-beta/giraffeQL/blob/main/LICENSE) file for details.
