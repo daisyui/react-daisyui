@@ -2,7 +2,7 @@ import React from 'react'
 import { Story, Meta } from '@storybook/react'
 
 import Card, { CardProps } from '.'
-import { Button } from '../..'
+import Button from '../Button'
 
 export default {
   title: 'Data Display/Card',
