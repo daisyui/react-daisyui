@@ -30,7 +30,7 @@
     "format": "prettier --write ./src",
     "prepublishOnly": "npm run dist",
     "postpublish": "git push --no-verify && git push --tags",
-    "version": "npm run build-storybook && git add -A docs"
+    "version": "npm run docs && git add -A docs"
   },
   "peerDependencies": {
     "react": ">=16",
