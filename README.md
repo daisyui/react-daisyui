@@ -1,19 +1,12 @@
 🚧 WORK IN PROGRESS REPO 🚧
 
 https://github.com/christianblandford/react-daisyui
+
 https://github.com/benjitrosch/react-daisy
 
 This repo will contain a combination of the above two repos to act as an official React wrapper for daisyUI.
 
 ---
-
-# react-daisyui 🌼
-
-DaisyUI components built with React, Typescript and TailwindCSS.
-
-<a href="https://benjitrosch.github.io/react-daisy/">Check out our Storybook!</a>
-
-----
 
 ## 💿 Install
 
