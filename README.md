@@ -55,13 +55,13 @@ Data Display:
 - [X] Tooltip
 
 Data Input:
-- [ ] Checkbox
-- [ ] Input
-- [ ] Radio
-- [ ] Range
+- [X] Checkbox
+- [X] Input
+- [X] Radio
+- [X] Range
 - [X] Select
-- [ ] Textarea
-- [ ] Toggle
+- [X] Textarea
+- [X] Toggle
 
 Layout:
 - [X] Artboard
