@@ -8,7 +8,9 @@ DaisyUI components built with React, Typescript and TailwindCSS.
 
 ----
 
-## Quick Start
+## 💿 Install
+
+Make sure you've installed <a href="https://tailwindcss.com/docs/installation">TailwindCSS</a> and <a href="https://daisyui.com/docs/install/">daisyUI</a>.
 
 Install the package with npm or yarn:
 
@@ -16,7 +18,19 @@ Install the package with npm or yarn:
 npm install react-daisy
 ```
 
-Then import react-daisy components within your component files:
+To prevent TailwindCSS from puring your styles, add the following line to your tailwind.config.js:
+
+```js
+module.exports = {
+  content: ['./node_modules/react-daisy/dist/*.js'],
+  ...
+  plugins: [require("daisyui")],
+}
+```
+
+## ⚡ Quick Start
+
+Import react-daisy components within your component files:
 
 ```js
 import { Button } from 'react-daisy'
@@ -29,6 +43,8 @@ export default (props) => {
   )
 }
 ```
+
+## 🎨 Themes
 
 To apply a theme (or multiple themes) to a page or components, import the Theme component and wrap your content:
 
@@ -54,9 +70,11 @@ export default (props) => {
 }
 ```
 
+Use tools like the official <a href="https://daisyui.com/theme-generator/">daisyUI Theme Generator</a> or <a href="https://themes.ionevolve.com/">daisyUI Theme Builder</a> to easily create your own themes.
+
 ---
 
-## Components To-Do
+## 🚧 Components To-Do
 
 Actions:
 - [x] Button
