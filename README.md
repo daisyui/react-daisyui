@@ -156,9 +156,13 @@ Use tools like the official <a href="https://daisyui.com/theme-generator/">daisy
 - [ ] <a href="https://daisyui.github.io/react-daisyui/?path=/story/mockup-window">Window</a>
 </details>
 
+---
+
 ## 🤝 Contributing
 
-We're looking for contributors on this component library! We could use some help building out stories and writing unit tests for components.
+We're looking for contributors to help write stories and unit tests for components.
+
+For story references, check out the official <a href="https://daisyui.com/components/">daisyUI examples.</a> 👈
 
 ### Creating new components
 
