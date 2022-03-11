@@ -8,49 +8,52 @@ import {
   ComponentPosition,
 } from '../types'
 
-export type TooltipProps =
-  & React.HTMLAttributes<HTMLDivElement>
-  & IComponentBaseProps
-  & {
+export type TooltipProps = React.HTMLAttributes<HTMLDivElement> &
+  IComponentBaseProps & {
     message: string
     open?: boolean
     color?: ComponentColor
     position?: ComponentPosition
-}
+  }
 
-const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(({
-  message,
-  children,
-  open,
-  color,
-  position,
-  dataTheme,
-  className,
-  ...props
-}, ref): JSX.Element => {
-  const classes = twMerge(
-    'tooltip',
-    className,
-    clsx({
-      'tooltip-open': open,
-      [`tooltip-${color}`]: color,
-      [`tooltip-${position}`]: position,
-    })
-  )
+const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
+  (
+    {
+      message,
+      children,
+      open,
+      color,
+      position,
+      dataTheme,
+      className,
+      ...props
+    },
+    ref
+  ): JSX.Element => {
+    const classes = twMerge(
+      'tooltip',
+      className,
+      clsx({
+        'tooltip-open': open,
+        [`tooltip-${color}`]: color,
+        [`tooltip-${position}`]: position,
+      })
+    )
 
-  return (
-    <div
-      {...props}
-      ref={ref}
-      data-theme={dataTheme}
-      data-tip={message}
-      className={classes}
-    >
-      {children}
-    </div>
-  )
-})
+    return (
+      <div
+        {...props}
+        ref={ref}
+        data-theme={dataTheme}
+        data-tip={message}
+        className={classes}
+      >
+        {children}
+      </div>
+    )
+  }
+)
 
-Tooltip.displayName = "Tooltip"
+Tooltip.displayName = 'Tooltip'
 
 export default Tooltip

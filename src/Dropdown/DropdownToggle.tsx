@@ -4,14 +4,12 @@ import { ComponentColor, ComponentSize, IComponentBaseProps } from '../types'
 
 import Button from '../Button'
 
-export type DropdownToggleProps =
-  & React.LabelHTMLAttributes<HTMLLabelElement>
-    & IComponentBaseProps
-    & {
-        color?: ComponentColor
-        size?: ComponentSize
-        button?: boolean
-}
+export type DropdownToggleProps = React.LabelHTMLAttributes<HTMLLabelElement> &
+  IComponentBaseProps & {
+    color?: ComponentColor
+    size?: ComponentSize
+    button?: boolean
+  }
 
 const DropdownToggle = ({
   className,

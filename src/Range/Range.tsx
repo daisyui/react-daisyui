@@ -2,50 +2,41 @@ import React, { forwardRef } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-import {
-    IComponentBaseProps,
-    ComponentSize,
-} from '../types'
+import { IComponentBaseProps, ComponentSize } from '../types'
 
-export type RangeProps =
-    & React.InputHTMLAttributes<HTMLInputElement>
-    & IComponentBaseProps
-    & {
-        value: number
-        min?: number
-        max?: number
-        color?: "primary" | "secondary" | "accent"
-        size?: ComponentSize
-        disabled?: boolean
-}
+export type RangeProps = React.InputHTMLAttributes<HTMLInputElement> &
+  IComponentBaseProps & {
+    value: number
+    min?: number
+    max?: number
+    color?: 'primary' | 'secondary' | 'accent'
+    size?: ComponentSize
+    disabled?: boolean
+  }
 
-const Range = forwardRef<HTMLInputElement, RangeProps>(({
-    color,
-    size,
-    dataTheme,
-    className,
-    ...props
-}, ref): JSX.Element => {
+const Range = forwardRef<HTMLInputElement, RangeProps>(
+  ({ color, size, dataTheme, className, ...props }, ref): JSX.Element => {
     const classes = twMerge(
-        'range',
-        className,
-        clsx({
-            [`range-${size}`]: size,
-            [`range-${color}`]: color,
-        })
+      'range',
+      className,
+      clsx({
+        [`range-${size}`]: size,
+        [`range-${color}`]: color,
+      })
     )
 
     return (
-        <input
-            {...props}
-            ref={ref}
-            type="range"
-            data-theme={dataTheme}
-            className={classes}
-        />
+      <input
+        {...props}
+        ref={ref}
+        type="range"
+        data-theme={dataTheme}
+        className={classes}
+      />
     )
-})
+  }
+)
 
-Range.displayName = "Range"
+Range.displayName = 'Range'
 
 export default Range

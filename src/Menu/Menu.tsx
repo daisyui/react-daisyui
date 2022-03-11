@@ -8,15 +8,13 @@ import MenuItem, { MenuItemProps as ItemProps } from './MenuItem'
 
 export type MenuItemProps = ItemProps
 
-export type MenuProps =
-  & React.HTMLAttributes<HTMLUListElement>
-  & IComponentBaseProps
-  & {
+export type MenuProps = React.HTMLAttributes<HTMLUListElement> &
+  IComponentBaseProps & {
     normal?: ComponentSize | boolean // Applies default paddings
     compact?: ComponentSize | boolean // Applies smaller padding
     vertical?: ComponentSize | boolean // Vertical menu (default)
     horizontal?: ComponentSize | boolean // Horizontal menu
-}
+  }
 
 interface ModifierMap {
   [key: string]: {
@@ -68,12 +66,12 @@ const Menu = ({
     className,
     clsx({
       [(compact && DYNAMIC_MODIFIERS.compact[compact.toString()]) || '']:
-          compact,
-        [(normal && DYNAMIC_MODIFIERS.normal[normal.toString()]) || '']: normal,
-        [(horizontal && DYNAMIC_MODIFIERS.horizontal[horizontal.toString()]) ||
-        '']: horizontal,
-        [(vertical && DYNAMIC_MODIFIERS.vertical[vertical.toString()]) || '']:
-          vertical,
+        compact,
+      [(normal && DYNAMIC_MODIFIERS.normal[normal.toString()]) || '']: normal,
+      [(horizontal && DYNAMIC_MODIFIERS.horizontal[horizontal.toString()]) ||
+      '']: horizontal,
+      [(vertical && DYNAMIC_MODIFIERS.vertical[vertical.toString()]) || '']:
+        vertical,
     })
   )
 

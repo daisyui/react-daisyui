@@ -2,20 +2,16 @@ import React, { LegacyRef } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-import {
-  IComponentBaseProps,
-} from '../types'
+import { IComponentBaseProps } from '../types'
 
 import Stat from './Stat'
 
-export type StatsProps = 
-  & React.HTMLAttributes<HTMLDivElement>
-  & IComponentBaseProps
-  & {
+export type StatsProps = React.HTMLAttributes<HTMLDivElement> &
+  IComponentBaseProps & {
     ref: LegacyRef<HTMLDivElement>
     horizontal?: boolean
     vertical?: boolean
-}
+  }
 
 const Stats = ({
   horizontal,
@@ -27,21 +23,16 @@ const Stats = ({
   ...props
 }: StatsProps): JSX.Element => {
   const classes = twMerge(
-    "stats",
+    'stats',
     className,
     clsx({
       'stats-horizontal': horizontal,
-      'stats-vertical': vertical
+      'stats-vertical': vertical,
     })
   )
 
   return (
-    <div
-      {...props}
-      ref={ref}
-      data-theme={dataTheme}
-      className={classes}
-    >
+    <div {...props} ref={ref} data-theme={dataTheme} className={classes}>
       {children}
     </div>
   )

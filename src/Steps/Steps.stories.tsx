@@ -15,7 +15,9 @@ export const Default: Story<StepsProps> = (args) => {
       <Steps.Step color="info">Shrink the moon</Steps.Step>
       <Steps.Step color="info">Grab the moon</Steps.Step>
 
-      <Steps.Step value="?" color="error">Sit on toilet</Steps.Step>
+      <Steps.Step value="?" color="error">
+        Sit on toilet
+      </Steps.Step>
     </Steps>
   )
 }

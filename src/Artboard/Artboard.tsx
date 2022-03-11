@@ -4,45 +4,36 @@ import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
-export type ArtboardProps =
-  & React.HTMLAttributes<HTMLDivElement>
-  & IComponentBaseProps
-  & {
+export type ArtboardProps = React.HTMLAttributes<HTMLDivElement> &
+  IComponentBaseProps & {
     children?: ReactNode | ReactNode[]
     size?: 1 | 2 | 3 | 4 | 5 | 6
     horizontal?: boolean
-}
+  }
 
-const Artboard = forwardRef<HTMLDivElement, ArtboardProps>(({
-  children,
-  size,
-  horizontal,
-  dataTheme,
-  className,
-  ...props
-}, ref): JSX.Element => {
-  const classes = twMerge(
-    'artboard',
-    'artboard-demo',
-    className,
-    clsx({
-      [`phone-${size}`]: size,
-      'horizontal': horizontal,
-    })
-  )
+const Artboard = forwardRef<HTMLDivElement, ArtboardProps>(
+  (
+    { children, size, horizontal, dataTheme, className, ...props },
+    ref
+  ): JSX.Element => {
+    const classes = twMerge(
+      'artboard',
+      'artboard-demo',
+      className,
+      clsx({
+        [`phone-${size}`]: size,
+        horizontal: horizontal,
+      })
+    )
 
-  return (
-    <div
-      {...props}
-      ref={ref}
-      data-theme={dataTheme}
-      className={classes}
-    >
-      {children}
-    </div>
-  )
-})
+    return (
+      <div {...props} ref={ref} data-theme={dataTheme} className={classes}>
+        {children}
+      </div>
+    )
+  }
+)
 
-Artboard.displayName = "Artboard"
+Artboard.displayName = 'Artboard'
 
 export default Artboard

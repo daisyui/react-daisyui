@@ -9,10 +9,8 @@ import {
   ComponentSize,
 } from '../types'
 
-export type ButtonProps =
-  & React.ButtonHTMLAttributes<HTMLButtonElement>
-  & IComponentBaseProps
-  & {
+export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
+  IComponentBaseProps & {
     href?: string
     shape?: ComponentShape
     size?: ComponentSize
@@ -23,67 +21,69 @@ export type ButtonProps =
     animation?: boolean
     loading?: boolean
     active?: boolean
-}
-
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
-  children,
-  href,
-  shape,
-  size,
-  variant,
-  color,
-  fullWidth,
-  responsive,
-  animation = true,
-  loading,
-  active,
-  disabled,
-  dataTheme,
-  className,
-  style,
-  ...props
-}, ref): JSX.Element => {
-  const classes = twMerge(
-    'btn',
-    className,
-    clsx({
-      [`btn-${size}`]: size,
-      [`btn-${shape}`]: shape,
-      [`btn-${variant}`]: variant,
-      [`btn-${color}`]: color,
-      'btn-block': fullWidth,
-      'btn-xs md:btn-sm lg:btn-md xl:btn-lg': responsive,
-      'no-animation': !animation,
-      'btn-active': active,
-      'btn-disabled': disabled,
-      'loading': loading,
-    })
-  )
-
-  if (href) {
-    return (
-      <a
-        className={classes}
-        style={style}
-      >
-        {children}
-      </a>
-    )
-  } else {
-    return (
-      <button
-        {...props}
-        ref={ref}
-        data-theme={dataTheme}
-        className={classes}
-        style={style}
-      >
-        {children}
-      </button>
-    )
   }
-})
 
-Button.displayName = "Button"
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  (
+    {
+      children,
+      href,
+      shape,
+      size,
+      variant,
+      color,
+      fullWidth,
+      responsive,
+      animation = true,
+      loading,
+      active,
+      disabled,
+      dataTheme,
+      className,
+      style,
+      ...props
+    },
+    ref
+  ): JSX.Element => {
+    const classes = twMerge(
+      'btn',
+      className,
+      clsx({
+        [`btn-${size}`]: size,
+        [`btn-${shape}`]: shape,
+        [`btn-${variant}`]: variant,
+        [`btn-${color}`]: color,
+        'btn-block': fullWidth,
+        'btn-xs md:btn-sm lg:btn-md xl:btn-lg': responsive,
+        'no-animation': !animation,
+        'btn-active': active,
+        'btn-disabled': disabled,
+        loading: loading,
+      })
+    )
+
+    if (href) {
+      return (
+        <a className={classes} style={style}>
+          {children}
+        </a>
+      )
+    } else {
+      return (
+        <button
+          {...props}
+          ref={ref}
+          data-theme={dataTheme}
+          className={classes}
+          style={style}
+        >
+          {children}
+        </button>
+      )
+    }
+  }
+)
+
+Button.displayName = 'Button'
 
 export default Button

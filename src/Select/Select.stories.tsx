@@ -20,5 +20,5 @@ export const Default: Story<SelectProps<string>> = (args) => {
   )
 }
 Default.args = {
-  onChange: (e) => console.log(e)
+  onChange: (e) => console.log(e),
 }

@@ -2,10 +2,8 @@ import React, { ElementType } from 'react'
 import { twMerge } from 'tailwind-merge'
 import { IComponentBaseProps } from '../types'
 
-export type CardTitleProps =
-  & React.HTMLAttributes<HTMLDivElement>
-  & IComponentBaseProps
-  & {
+export type CardTitleProps = React.HTMLAttributes<HTMLDivElement> &
+  IComponentBaseProps & {
     tag?: ElementType
   }
 

@@ -5,10 +5,8 @@ import { IComponentBaseProps } from '../types'
 
 import Step from './Step'
 
-export type StepsProps = 
-  & React.HTMLAttributes<HTMLUListElement>
-  & IComponentBaseProps 
-  & {
+export type StepsProps = React.HTMLAttributes<HTMLUListElement> &
+  IComponentBaseProps & {
     ref?: LegacyRef<HTMLUListElement>
     vertical?: boolean
     horizontal?: boolean
@@ -21,18 +19,10 @@ const Steps = ({
   className,
   ...props
 }: StepsProps): JSX.Element => {
-  const classes = twMerge(
-    'steps',
-    className
-  )
+  const classes = twMerge('steps', className)
 
   return (
-    <ul
-      {...props}
-      ref={ref}
-      data-theme={dataTheme}
-      className={classes}
-    >
+    <ul {...props} ref={ref} data-theme={dataTheme} className={classes}>
       {children}
     </ul>
   )

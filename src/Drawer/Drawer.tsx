@@ -4,10 +4,8 @@ import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
-export type DrawerProps =
-  & React.HTMLAttributes<HTMLDivElement>
-  & IComponentBaseProps
-  & {
+export type DrawerProps = React.HTMLAttributes<HTMLDivElement> &
+  IComponentBaseProps & {
     side: ReactNode
     id: string
     open?: boolean
@@ -20,7 +18,7 @@ const Drawer = ({
   side,
   open,
   mobile,
-  end,  
+  end,
   id,
   dataTheme,
   className,
@@ -37,15 +35,8 @@ const Drawer = ({
 
   return (
     <div {...props} className={classes}>
-      <input
-        id={id}
-        type="checkbox"
-        className="drawer-toggle"
-        checked={open}
-      />
-      <div className="drawer-content">
-        {children}
-      </div>
+      <input id={id} type="checkbox" className="drawer-toggle" checked={open} />
+      <div className="drawer-content">{children}</div>
       <div className="drawer-side">
         <label htmlFor={id} className="drawer-overlay"></label>
         {side}
