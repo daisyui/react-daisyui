@@ -102,8 +102,8 @@ Use tools like the official <a href="https://daisyui.com/theme-generator/">daisy
 - [X] Countdown
 - [X] Kbd
 - [X] Progress
-- [ ] Radial Progress
-- [ ] Stat
+- [X] Radial Progress
+- [X] Stats
 - [X] Table
 - [X] Tooltip
 </details>

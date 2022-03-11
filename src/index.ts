@@ -25,10 +25,12 @@ import Menu from './Menu'
 import Modal from './Modal'
 import Navbar from './Navbar'
 import Progress from './Progress'
+import RadialProgress from './RadialProgress'
 import Radio from './Radio'
 import Range from './Range'
 import Rating from './Rating'
 import Select from './Select'
+import Stats from './Stats'
 import Swap from './Swap'
 import Table from './Table'
 import Tabs from './Tabs'
@@ -63,10 +65,12 @@ export {
   Modal,
   Navbar,
   Progress,
+  RadialProgress,
   Radio,
   Range,
   Rating,
   Select,
+  Stats,
   Swap,
   Table,
   Tabs,
