@@ -35,10 +35,10 @@ module.exports = {
 
 ## ⚡ Quick Start
 
-Import react-daisy components within your component files:
+Import react-daisyui components within your component files:
 
 ```js
-import { Button } from 'react-daisy'
+import { Button } from 'react-daisyui'
 
 export default (props) => {
   return (
@@ -54,7 +54,7 @@ export default (props) => {
 To apply a theme (or multiple themes) to a page or components, import the Theme component and wrap your content:
 
 ```js
-import { Theme, Button } from 'react-daisy'
+import { Theme, Button } from 'react-daisyui'
 
 export default (props) => {
   return (
