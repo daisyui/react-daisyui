@@ -81,13 +81,18 @@ Use tools like the official <a href="https://daisyui.com/theme-generator/">daisy
 
 ## 🚧 Components To-Do
 
-Actions:
+<details>
+<summary>Actions:</summary>
+  
 - [x] Button
 - [X] Dropdown
 - [X] Modal
 - [X] Swap
+</details>
 
-Data Display:
+<details>
+<summary>Data Display:</summary>
+  
 - [x] Alert
 - [X] Avatar
 - [X] Badge
@@ -101,8 +106,11 @@ Data Display:
 - [ ] Stat
 - [X] Table
 - [X] Tooltip
+</details>
 
-Data Input:
+<details>
+<summary>Data Input:</summary>
+
 - [X] Checkbox
 - [X] Input
 - [X] Radio
@@ -111,8 +119,11 @@ Data Input:
 - [X] Select
 - [X] Textarea
 - [X] Toggle
+</details>
 
-Layout:
+<details>
+<summary>Layout:</summary>
+
 - [X] Artboard
 - [x] Button-Group
 - [X] Divider
@@ -123,8 +134,11 @@ Layout:
 - [ ] Input Group
 - [X] Mask
 - [ ] Stack
+</details>
 
-Navigation:
+<details>
+<summary>Navigation:</summary>
+
 - [X] Breadcrumbs
 - [X] Link
 - [X] Menu
@@ -132,11 +146,15 @@ Navigation:
 - [ ] Pagination
 - [ ] Steps
 - [X] Tab
+</details>
 
-Mockup:
+<details>
+<summary>Mockup:</summary>
+
 - [ ] Code
 - [ ] Phone
 - [ ] Window
+</details>
 
 ## Contributions
 
