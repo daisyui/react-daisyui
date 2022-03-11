@@ -11,7 +11,7 @@ export default {
 export const Default: Story<DrawerProps> = (args) => {
   const drawerContent = (
     <div className="flex flex-col items-center justify-center align-middle drawer-content">
-      <h1>Some drawer content! 🍉 (Not required)</h1>
+      <h1>Some drawer content! 🍉</h1>
     </div>
   )
 
