@@ -127,7 +127,7 @@ Use tools like the official <a href="https://daisyui.com/theme-generator/">daisy
 - [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/layout-artboard">Artboard</a>
 - [x] <a href="https://daisyui.github.io/react-daisyui/?path=/story/layout-buttongroup">Button-Group</a>
 - [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/layout-divider">Divider</a>
-- [ ] <a href="https://daisyui.github.io/react-daisyui/?path=/story/layout-drawer">Drawer</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/layout-drawer">Drawer</a>
 - [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/layout-footer">Footer</a>
 - [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/layout-hero">Hero</a>
 - [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/layout-indicator">Indicator</a>
