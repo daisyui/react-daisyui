@@ -32,6 +32,7 @@ import Radio from './Radio'
 import Range from './Range'
 import Rating from './Rating'
 import Select from './Select'
+import Stack from './Stack'
 import Stats from './Stats'
 import Swap from './Swap'
 import Table from './Table'
@@ -74,6 +75,7 @@ export {
   Range,
   Rating,
   Select,
+  Stack,
   Stats,
   Swap,
   Table,

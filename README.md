@@ -133,7 +133,7 @@ Use tools like the official <a href="https://daisyui.com/theme-generator/">daisy
 - [X] Indicator
 - [X] Input Group
 - [X] Mask
-- [ ] Stack
+- [X] Stack
 </details>
 
 <details>
