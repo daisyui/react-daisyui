@@ -1,27 +1,32 @@
-import React, { forwardRef, ReactNode } from 'react'
+import React, { LegacyRef, ReactNode } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
+import CollapseTitle from './CollapseTitle'
+import CollapseContent from './CollapseContent'
+
 export type CollapseProps =
     & React.HTMLAttributes<HTMLDivElement>
     & IComponentBaseProps 
     & {
+        ref: LegacyRef<HTMLDivElement>
         content?: ReactNode | ReactNode[]
         icon?: 'arrow' | 'plus'
         open?: boolean
 }
 
-const Collapse = forwardRef<HTMLDivElement, CollapseProps>(({
+const Collapse = ({
   children,
+  ref,
   content,
   icon,
   open,
   dataTheme,
   className,
   ...props
-}, ref): JSX.Element => {
+}: CollapseProps): JSX.Element => {
     const classes = twMerge(
         'collapse',
         className,
@@ -40,12 +45,12 @@ const Collapse = forwardRef<HTMLDivElement, CollapseProps>(({
             data-theme={dataTheme}
             className={classes}
         >
-            <div className="collapse-title">{children}</div>
-            <div className="collapse-content">{content}</div>
+            {children}
         </div>
     )
-})
+}
 
-Collapse.displayName = "Collapse"
+Collapse.Title = CollapseTitle
+Collapse.Content = CollapseContent
 
 export default Collapse
