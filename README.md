@@ -107,6 +107,7 @@ Data Input:
 - [X] Input
 - [X] Radio
 - [X] Range
+- [X] Rating
 - [X] Select
 - [X] Textarea
 - [X] Toggle

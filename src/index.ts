@@ -27,6 +27,7 @@ import Navbar from './Navbar'
 import Progress from './Progress'
 import Radio from './Radio'
 import Range from './Range'
+import Rating from './Rating'
 import Select from './Select'
 import Swap from './Swap'
 import Table from './Table'
@@ -64,6 +65,7 @@ export {
   Progress,
   Radio,
   Range,
+  Rating,
   Select,
   Swap,
   Table,
