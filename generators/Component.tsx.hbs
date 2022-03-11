@@ -1,0 +1,63 @@
+import React, { forwardRef, ReactNode } from 'react'
+import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
+
+import {
+  IComponentBaseProps,
+  {{#each typeImports}}
+  {{{this}}},
+  {{/each}}
+} from '../types'
+
+export type {{properCase name}}Props = IComponentBaseProps & {
+  {{#each propTypes}}
+  {{{this}}}
+  {{/each}}
+  className?: string
+  children?: ReactNode | ReactNode[]
+}
+
+const {{properCase name}} = forwardRef<{{refType}}, {{properCase name}}Props>(
+  (
+    {
+      {{#each spreadProps}}
+      {{{this}}},
+      {{/each}}
+      dataTheme,
+      className,
+      children,
+      ...props
+      },
+      ref
+  ): JSX.Element => {
+    const classes = twMerge(
+      {{#if twPrefix}}
+      '{{{twPrefix}}}',
+      {{/if}}
+      clsx({
+        {{#each classNames}}
+        {{{this}}},
+        {{/each}}
+        }),
+        className,
+    )
+
+    return (
+      <{{htmlTag}}
+        {...props}
+        data-theme={dataTheme}
+        className={classes}
+        {{#each props}}
+        {{{this}}}
+        {{/each}}
+        ref={ref}
+      >
+        {children}
+      </{{htmlTag}}>
+    )
+  }
+)
+
+{{properCase name}}.displayName = "{{properCase name}}"
+
+export default {{properCase name}}
