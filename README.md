@@ -100,7 +100,7 @@ Use tools like the official <a href="https://daisyui.com/theme-generator/">daisy
 - [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/data-display-carousel">Carousel</a>
 - [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/data-display-collapse">Collapse</a>
 - [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/data-display-countdown">Countdown</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/data-display-kdb">Kbd</a>
+- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/data-display-kbd">Kbd</a>
 - [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/data-display-progress">Progress</a>
 - [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/data-display-radial-progress">Radial Progress</a>
 - [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/data-display-stats">Stats</a>
