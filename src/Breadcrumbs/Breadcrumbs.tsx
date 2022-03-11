@@ -2,7 +2,7 @@ import React, {
   LegacyRef,
   ReactElement,
 } from 'react'
-import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
@@ -23,7 +23,7 @@ const Breadcrumbs = ({
   className,
   ...props
 }: BreadcrumbsProps): JSX.Element => {
-  const classes = clsx(
+  const classes = twMerge(
     'breadcrumbs',
     'text-sm',
     className,

@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import {
   IComponentBaseProps,
@@ -18,13 +19,13 @@ const Kbd = ({
   className,
   style,
 }: KbdProps): JSX.Element => {
-  const classes = clsx(
+  const classes = twMerge(
     'kbd',
     className,
-    {
+    clsx({
       [`kbd-${size}`]: size,
     }
-  )
+)  )
 
   return (
     <kbd

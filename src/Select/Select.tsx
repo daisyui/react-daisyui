@@ -5,6 +5,7 @@ import React, {
   useState
 } from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import {
   IComponentBaseProps,
@@ -46,14 +47,14 @@ const Select = <T extends string | number | undefined>({
   className,
   ...props
 }: SelectProps<T>): JSX.Element => {
-  const classes = clsx(
+  const classes = twMerge(
     'select',
     className,
-    {
+    clsx({
       [`select-${size}`]: size,
       [`select-${color}`]: color,
       'select-bordered': bordered,
-    }
+    })
   )
 
   const [selectedValue, setSelectedValue] =

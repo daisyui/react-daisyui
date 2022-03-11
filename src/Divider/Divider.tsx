@@ -1,5 +1,6 @@
 import React from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
@@ -18,12 +19,12 @@ const Divider = ({
   className,
   ...props
 }: DividerProps): JSX.Element => {
-  const classes = clsx(
+  const classes = twMerge(
     'divider',
     className,
-    {
+    clsx({
       'divider-vertical': vertical,
-    }
+    })
   )
 
   return (

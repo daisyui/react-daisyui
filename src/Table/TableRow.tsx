@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
@@ -16,12 +17,12 @@ const TableRow = ({
     className,
     style,
 }: TableRowProps): JSX.Element => {
-    const classes = clsx(
+    const classes = twMerge(
         className,
-        {
+        clsx({
           'active': active,
           'hover': hover,
-        }
+        })
     )
 
     return (

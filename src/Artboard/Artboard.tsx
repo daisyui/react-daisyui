@@ -1,5 +1,6 @@
 import React, { forwardRef, ReactNode } from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
@@ -20,14 +21,14 @@ const Artboard = forwardRef<HTMLDivElement, ArtboardProps>(({
   className,
   ...props
 }, ref): JSX.Element => {
-  const classes = clsx(
+  const classes = twMerge(
     'artboard',
     'artboard-demo',
     className,
-    {
+    clsx({
       [`phone-${size}`]: size,
       'horizontal': horizontal,
-    }
+    })
   )
 
   return (

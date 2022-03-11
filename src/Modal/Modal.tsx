@@ -1,5 +1,6 @@
 import React, { forwardRef, ReactNode, useImperativeHandle } from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
@@ -37,12 +38,12 @@ const Modal = forwardRef<ModalRef, ModalProps>(({
   className,
   ...props
 }, ref): JSX.Element => {
-  const classes = clsx(
+  const classes = twMerge(
     'modal',
     className,
-    {
+    clsx({
       'modal-open': open,
-    }
+    })
   )
 
   useImperativeHandle(ref, (): ModalRef => {

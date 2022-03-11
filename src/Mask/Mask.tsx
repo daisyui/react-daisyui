@@ -1,5 +1,6 @@
 import React from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
@@ -36,12 +37,12 @@ const Mask = ({
     className,
     style,
 }: MaskProps): JSX.Element => {
-    const classes = clsx(
+    const classes = twMerge(
         'mask',
         className,
-        {
+        clsx({
             [`mask-${variant}`]: variant,
-        }
+        })
     )
 
     return (

@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react'
-import clsx from 'clsx'
 
 export type CarouselItemProps = {
     children?: ReactNode | ReactNode[]
@@ -12,14 +11,10 @@ const CarouselItem = ({
     src,
     index,
 }: CarouselItemProps): JSX.Element => {
-    const classes = clsx(
-        "carousel-item",
-    )
-  
     return (
         <div
             id={`item${index}`} 
-            className={classes}
+            className="carousel-item"
         >
             {src ? 
             (

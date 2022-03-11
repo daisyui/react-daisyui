@@ -1,5 +1,6 @@
 import React, { LegacyRef, ReactElement } from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
@@ -24,13 +25,13 @@ const Carousel = ({
   className,
   ...props
 }: CarouselProps): JSX.Element => {
-  const classes = clsx(
+  const classes = twMerge(
     'carousel',
     className,
-    {
+    clsx({
       [`carousel-${snap}`]: snap,
       'carousel-vertical': vertical,
-    }
+    })
   )
 
   return (

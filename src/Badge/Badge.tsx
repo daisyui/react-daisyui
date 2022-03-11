@@ -1,5 +1,6 @@
 import React, { forwardRef, ReactNode } from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import {
   IComponentBaseProps,
@@ -26,14 +27,14 @@ const Badge = forwardRef<HTMLDivElement, BadgeProps>(({
   className,
   ...props
 }, ref): JSX.Element => {
-  const classes = clsx(
+  const classes = twMerge(
     'badge',
     className,
-    {
+    clsx({
       [`badge-${size}`]: size,
       [`badge-${variant}`]: variant,
       [`badge-${color}`]: color,
-    }
+    })
   )
 
   return (

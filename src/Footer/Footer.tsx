@@ -1,5 +1,6 @@
 import React from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
@@ -13,8 +14,12 @@ export type FooterProps =
 }
 
 const Footer = ({ center, className, ...props }: FooterProps) => {
-  const classes = clsx(
-    'footer', className, { 'footer-center': center }
+  const classes = twMerge(
+    'footer',
+    className,
+    clsx({
+      'footer-center': center
+    })
   )
 
   return (

@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import {
   IComponentBaseProps,
@@ -25,13 +26,13 @@ const Link = forwardRef<HTMLAnchorElement, LinkProps>(({
   className,
   ...props
 }, ref): JSX.Element => {
-  const classes = clsx(
+  const classes = twMerge(
     'link',
     className,
-    {
+    clsx({
       [`link-${color}`]: color,
       'link-hover': hover,
-    }
+    })
   )
 
   return (

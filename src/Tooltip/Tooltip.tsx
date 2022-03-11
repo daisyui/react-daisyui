@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import {
   IComponentBaseProps,
@@ -27,14 +28,14 @@ const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(({
   className,
   ...props
 }, ref): JSX.Element => {
-  const classes = clsx(
+  const classes = twMerge(
     'tooltip',
     className,
-    {
+    clsx({
       'tooltip-open': open,
       [`tooltip-${color}`]: color,
       [`tooltip-${position}`]: position,
-    }
+    })
   )
 
   return (

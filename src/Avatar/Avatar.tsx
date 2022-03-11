@@ -1,5 +1,6 @@
 import React, { LegacyRef } from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import AvatarGroup from './AvatarGroup'
 
@@ -39,14 +40,14 @@ const Avatar = ({
   className,
   ...props
 }: AvatarProps): JSX.Element => {
-  const containerClasses = clsx(
+  const containerClasses = twMerge(
     'avatar',
     className,
-    {
+    clsx({
       'online': online,
       'offline': offline,
       'placeholder': !src,
-    }
+    })
   )
 
   const imgClasses = clsx(

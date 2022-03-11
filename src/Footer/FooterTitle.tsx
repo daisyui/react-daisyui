@@ -1,7 +1,5 @@
-
-   
 import React, { ReactNode } from 'react'
-import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
@@ -10,7 +8,7 @@ export interface FooterTitleProps extends IComponentBaseProps {
 }
 
 const FooterTitle = ({ className, ...props }: FooterTitleProps) => {
-  return <span className={clsx('footer-title', className)} {...props} />
+  return <span className={twMerge('footer-title', className)} {...props} />
 }
 
 export default FooterTitle

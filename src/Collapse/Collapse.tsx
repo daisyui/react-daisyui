@@ -1,5 +1,6 @@
 import React, { forwardRef, ReactNode } from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
@@ -22,14 +23,14 @@ const Collapse = forwardRef<HTMLDivElement, CollapseProps>(({
   className,
   ...props
 }, ref): JSX.Element => {
-    const classes = clsx(
+    const classes = twMerge(
         'collapse',
         className,
-        {
+        clsx({
             [`collapse-${icon}`]: icon,
             'collapse-open': open,
             'collapse-close': !open,
-        }
+        })
     )
 
     return (

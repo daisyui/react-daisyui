@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import {
     IComponentBaseProps,
@@ -25,13 +26,13 @@ const Range = forwardRef<HTMLInputElement, RangeProps>(({
     className,
     ...props
 }, ref): JSX.Element => {
-    const classes = clsx(
+    const classes = twMerge(
         'range',
         className,
-        {
+        clsx({
             [`range-${size}`]: size,
             [`range-${color}`]: color,
-        }
+        })
     )
 
     return (

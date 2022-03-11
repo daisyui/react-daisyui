@@ -1,5 +1,6 @@
 import React, { LegacyRef, ReactNode } from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
@@ -31,14 +32,14 @@ const Dropdown = ({
     dataTheme,
     ...props
 }: DropdownProps): JSX.Element => {
-    const classes = clsx(
+    const classes = twMerge(
         'dropdown',
-        {
+        clsx({
             [`dropdown-${horizontal}`]: horizontal,
             [`dropdown-${vertical}`]: vertical,
             'dropdown-hover': hover,
             'dropdown-open': open,
-        }
+        })
     )
 
     return (

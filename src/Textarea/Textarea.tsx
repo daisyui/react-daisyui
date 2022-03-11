@@ -1,13 +1,14 @@
-import React, { HTMLAttributes } from 'react'
+import React from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { ComponentColor } from '../types'
 
 export type TextareaProps =
     & React.TextareaHTMLAttributes<HTMLTextAreaElement>
     & {
-    color?: ComponentColor
-    bordered?: boolean
+        color?: ComponentColor
+        bordered?: boolean
 }
 
 const Textarea = ({
@@ -16,13 +17,13 @@ const Textarea = ({
     className,
     ...props
 }: TextareaProps): JSX.Element => {
-    const classes = clsx(
+    const classes = twMerge(
         'textarea',
         className,
-        {
+        clsx({
             [`textarea-${color}`]: color,
             'textarea-bordered': bordered
-        }
+        })
     )
 
     return <textarea className={classes} {...props} />

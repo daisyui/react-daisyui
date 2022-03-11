@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 import { IComponentBaseProps } from '../types'
 
 export interface CardBodyProps extends IComponentBaseProps {
@@ -7,7 +7,7 @@ export interface CardBodyProps extends IComponentBaseProps {
 }
 
 const CardBody = ({ className, ...props }: CardBodyProps) => (
-  <div className={clsx('card-body', className)} {...props} />
+  <div className={twMerge('card-body', className)} {...props} />
 )
 
 export default CardBody

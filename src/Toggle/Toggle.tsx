@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import {
     IComponentBaseProps,
@@ -10,8 +11,8 @@ export type ToggleProps =
     & React.InputHTMLAttributes<HTMLInputElement>
     & IComponentBaseProps
     & {
-    color?: "primary" | "secondary" | "accent"
-    size?: ComponentSize
+        color?: "primary" | "secondary" | "accent"
+        size?: ComponentSize
 }
 
 const Toggle = forwardRef<HTMLInputElement, ToggleProps>(({
@@ -21,13 +22,13 @@ const Toggle = forwardRef<HTMLInputElement, ToggleProps>(({
     className,
     ...props
 }, ref): JSX.Element => {
-    const classes = clsx(
+    const classes = twMerge(
         'toggle',
         className,
-        {
-        [`toggle-${size}`]: size,
-        [`toggle-${color}`]: color,
-        }
+        clsx({
+            [`toggle-${size}`]: size,
+            [`toggle-${color}`]: color,
+        })
     )
 
     return (

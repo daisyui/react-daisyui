@@ -1,5 +1,7 @@
 import React, { ReactNode } from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
+
 import { IComponentBaseProps } from '../types'
 
 export interface MenuItemProps extends IComponentBaseProps {
@@ -9,15 +11,15 @@ export interface MenuItemProps extends IComponentBaseProps {
 }
 
 const MenuItem = ({ className, title, disabled, ...props }: MenuItemProps) => {
-  return (
-    <li
-      className={clsx(className, {
-        'menu-title': title,
-        disabled: disabled,
-      })}
-      {...props}
-    />
+  const classes = twMerge(
+    className,
+    clsx({
+      'menu-title': title,
+      disabled: disabled,
+    })
   )
+
+  return <li className={classes} {...props} />
 }
 
 export default MenuItem

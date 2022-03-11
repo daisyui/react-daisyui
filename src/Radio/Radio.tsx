@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import {
     IComponentBaseProps,
@@ -21,13 +22,13 @@ const Radio = forwardRef<HTMLInputElement, RadioProps>(({
     className,
     ...props
 }, ref): JSX.Element => {
-    const classes = clsx(
+    const classes = twMerge(
         'radio',
         className,
-        {
+        clsx({
             [`radio-${size}`]: size,
             [`radio-${color}`]: color,
-        }
+        })
     )
 
     return (

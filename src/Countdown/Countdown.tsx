@@ -1,5 +1,5 @@
 import React from 'react'
-import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
@@ -13,7 +13,7 @@ const Countdown = ({
   className,
   style,
 }: CountdownProps): JSX.Element => {
-  const classes = clsx(
+  const classes = twMerge(
     'countdown',
     className,
   )

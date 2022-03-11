@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import {
     IComponentBaseProps,
@@ -26,13 +27,13 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(({
     className,
     ...props
 }, ref): JSX.Element => {
-    const classes = clsx(
+    const classes = twMerge(
         'checkbox',
         className,
-        {
-        [`checkbox-${size}`]: size,
-        [`checkbox-${color}`]: color,
-        }
+        clsx({
+            [`checkbox-${size}`]: size,
+            [`checkbox-${color}`]: color,
+        })
     )
 
     return (

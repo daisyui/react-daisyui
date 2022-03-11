@@ -1,5 +1,5 @@
 import React from 'react'
-import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
@@ -15,7 +15,7 @@ const Navbar = ({
   className,
   ...props
 }: NavbarProps): JSX.Element => {
-  const classes = clsx(
+  const classes = twMerge(
     'navbar',
     className,
   )

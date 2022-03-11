@@ -1,5 +1,6 @@
 import React from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
@@ -23,13 +24,13 @@ const Table = ({
     className,
     ...props
 }: TableProps): JSX.Element => {
-    const classes = clsx(
+    const classes = twMerge(
         'table',
         className,
-        {
+        clsx({
             'table-zebra': zebra,
             'table-compact': compact,
-        }
+        })
     )
 
     return (

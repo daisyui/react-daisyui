@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
@@ -21,14 +22,14 @@ const Swap = ({
   className,
   style,
 }: SwapProps): JSX.Element => {
-  const classes = clsx(
+  const classes = twMerge(
     'swap',
     className,
-    {
+    clsx({
       'swap-active': active,
       'swap-rotate': rotate,
       'swap-flip': flip,
-    }
+    })
   )
 
   return (

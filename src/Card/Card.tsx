@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps, ComponentSize } from '../types'
 
@@ -60,19 +61,22 @@ const Card = ({
   compact,
   side,
   ...props
-}: CardProps) => (
-  <div
-    className={clsx('card', className, {
+}: CardProps): JSX.Element => {
+    const classes = twMerge(
+    'card',
+    className,
+    clsx({
       'card-bordered': bordered,
       'image-full': imageFull,
       [(compact && DYNAMIC_MODIFIERS.compact[compact.toString()]) || '']:
         compact,
       [(normal && DYNAMIC_MODIFIERS.normal[normal.toString()]) || '']: normal,
       [(side && DYNAMIC_MODIFIERS.side[side.toString()]) || '']: side,
-    })}
-    {...props}
-  />
-)
+    })
+  )
+
+  return <div className={classes} {...props} />
+}
 
 Card.Actions = CardActions
 Card.Body = CardBody

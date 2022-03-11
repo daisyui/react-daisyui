@@ -1,5 +1,5 @@
 import React, { ElementType, ReactNode } from 'react'
-import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 import { IComponentBaseProps } from '../types'
 
 export interface CardTitleProps extends IComponentBaseProps {
@@ -10,7 +10,7 @@ export interface CardTitleProps extends IComponentBaseProps {
 const CardTitle = ({ className, tag = 'div', ...props }: CardTitleProps) => {
   const Tag = tag
 
-  return <Tag className={clsx('card-title', className)} {...props} />
+  return <Tag className={twMerge('card-title', className)} {...props} />
 }
 
 export default CardTitle

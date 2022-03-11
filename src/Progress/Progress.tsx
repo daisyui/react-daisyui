@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import {
   IComponentBaseProps,
@@ -19,12 +20,12 @@ const Progress = forwardRef<HTMLProgressElement, ProgressProps>(({
   className,
   ...props
 }, ref): JSX.Element => {
-  const classes = clsx(
+  const classes = twMerge(
     'progress',
     className,
-    {
+    clsx({
       [`progress-${color}`]: color,
-    }
+    })
   )
 
   return (

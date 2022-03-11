@@ -1,15 +1,17 @@
 import React, {
   cloneElement,
   ReactElement,
-  ReactNode,
   useState,
 } from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import {
   IComponentBaseProps,
   ComponentSize
 } from '../types'
+
+import Tab, { TabProps } from './Tab'
 
 export interface TabsProps<T> extends IComponentBaseProps {
   children: ReactElement<TabProps<T>>[]
@@ -33,12 +35,12 @@ const Tabs = <T extends string | number | undefined>({
 }: TabsProps<T>): JSX.Element => {
   const [activeValue, setActiveValue] = useState<T | undefined>(value)
 
-  const classes = clsx(
+  const classes = twMerge(
     'tabs',
     className,
-    {
+    clsx({
       'tabs-boxed': boxed,
-    }
+    })
   )
 
   return (
@@ -59,48 +61,6 @@ const Tabs = <T extends string | number | undefined>({
         })
       })}
     </div>
-  )
-}
-
-type TabProps<T> = {
-  children?: ReactNode | ReactNode[]
-  value: T
-  activeValue?: T
-  onClick?: (value: T) => void
-  size?: ComponentSize
-  variant?: 'bordered' | 'lifted'
-  className?: string
-  style?: Record<string, string | number>
-}
-
-const Tab = <T extends string | number | undefined>({
-  children,
-  value,
-  activeValue,
-  onClick,
-  size,
-  variant,
-  className,
-  style,
-}: TabProps<T>): JSX.Element => {
-  const classes = clsx(
-    'tab',
-    className,
-    {
-      'tab-active': value != null && value === activeValue,
-      [`tab-${size}`]: size,
-      [`tab-${variant}`]: variant,
-    }
-  )
-
-  return (
-    <a
-      className={classes}
-      style={style}
-      onClick={() => onClick && onClick(value)}
-    >
-      {children}
-    </a>
   )
 }
 

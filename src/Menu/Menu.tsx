@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps, ComponentSize } from '../types'
 
@@ -61,20 +62,23 @@ const Menu = ({
   horizontal,
   vertical,
   ...props
-}: MenuProps) => (
-  <ul
-    className={clsx('menu', className, {
+}: MenuProps) => {
+  const classes = twMerge(
+    'menu',
+    className,
+    clsx({
       [(compact && DYNAMIC_MODIFIERS.compact[compact.toString()]) || '']:
-        compact,
-      [(normal && DYNAMIC_MODIFIERS.normal[normal.toString()]) || '']: normal,
-      [(horizontal && DYNAMIC_MODIFIERS.horizontal[horizontal.toString()]) ||
-      '']: horizontal,
-      [(vertical && DYNAMIC_MODIFIERS.vertical[vertical.toString()]) || '']:
-        vertical,
-    })}
-    {...props}
-  />
-)
+          compact,
+        [(normal && DYNAMIC_MODIFIERS.normal[normal.toString()]) || '']: normal,
+        [(horizontal && DYNAMIC_MODIFIERS.horizontal[horizontal.toString()]) ||
+        '']: horizontal,
+        [(vertical && DYNAMIC_MODIFIERS.vertical[vertical.toString()]) || '']:
+          vertical,
+    })
+  )
+
+  return <ul className={classes} {...props} />
+}
 
 Menu.Item = MenuItem
 

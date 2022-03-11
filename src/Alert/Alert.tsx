@@ -1,5 +1,6 @@
 import React, { forwardRef, ReactNode } from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import {
   IComponentBaseProps,
@@ -23,12 +24,12 @@ const Alert = forwardRef<HTMLDivElement, AlertProps>(({
   className,
   ...props
 }, ref): JSX.Element => {
-  const classes = clsx(
+  const classes = twMerge(
     'alert',
     className,
-    {
+    clsx({
       [`alert-${status}`]: status,
-    }
+    })
   )
 
   return (

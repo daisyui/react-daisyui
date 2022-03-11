@@ -1,5 +1,6 @@
 import React from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { NavbarProps } from './Navbar'
 
@@ -14,12 +15,12 @@ const NavbarSection = ({
     className,
     style,
 }: NavbarSectionProps): JSX.Element => {
-    const classes = clsx(
+    const classes = twMerge(
         'flex-1',
         className,
-        {
+        clsx({
             [`navbar-${section}`]: section,
-        }
+        })
     )
   
     return (

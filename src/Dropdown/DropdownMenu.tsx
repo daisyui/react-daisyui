@@ -1,10 +1,10 @@
 import React from 'react'
-import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 export type DropdownMenuProps = React.HTMLAttributes<HTMLUListElement>
 
 const DropdownMenu = ({ className, ...props }: DropdownMenuProps) => {
-    const classes = clsx(
+    const classes = twMerge(
         'dropdown-content menu p-2 shadow bg-base-100 rounded-box',
         className
     )

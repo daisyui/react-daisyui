@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types';
 
@@ -12,7 +12,7 @@ const Form = ({
   dataTheme,
   className,
 }: FormProps): JSX.Element => {
-  const classes = clsx(
+  const classes = twMerge(
     'form-control',
     className,
   )

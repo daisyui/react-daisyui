@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react'
 import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
@@ -19,13 +20,13 @@ const Indicator = ({
   className,
   style,
 }: IndicatorProps): JSX.Element => {
-  const classes = clsx(
+  const classes = twMerge(
     'indicator-item',
     className,
-    {
+    clsx({
       [`indicator-${horizontal}`]: horizontal,
       [`indicator-${vertical}`]: vertical,
-    }
+    })
   )
 
   return (
