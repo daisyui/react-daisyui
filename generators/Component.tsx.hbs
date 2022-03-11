@@ -9,12 +9,13 @@ import {
   {{/each}}
 } from '../types'
 
-export type {{properCase name}}Props = IComponentBaseProps & {
-  {{#each propTypes}}
-  {{{this}}}
-  {{/each}}
-  className?: string
-  children?: ReactNode | ReactNode[]
+export type {{properCase name}}Props = 
+  & {{htmlAttributesType}}<{{refType}}>
+  & IComponentBaseProps 
+  & {
+    {{#each propTypes}}
+    {{{this}}}
+    {{/each}}
 }
 
 const {{properCase name}} = forwardRef<{{refType}}, {{properCase name}}Props>(
