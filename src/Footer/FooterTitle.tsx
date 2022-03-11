@@ -3,8 +3,11 @@ import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
-export interface FooterTitleProps extends IComponentBaseProps {
-  children?: ReactNode
+export type FooterTitleProps =
+  & React.HTMLAttributes<HTMLSpanElement>
+  & IComponentBaseProps 
+  & {
+    children?: ReactNode
 }
 
 const FooterTitle = ({ className, ...props }: FooterTitleProps) => {

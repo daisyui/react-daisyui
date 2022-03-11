@@ -12,7 +12,6 @@ export type DropdownProps =
     & React.HTMLAttributes<HTMLDivElement>
     & IComponentBaseProps 
     & {
-        children?: ReactNode | ReactNode[]
         ref?: LegacyRef<HTMLDivElement>
         item?: ReactNode
         horizontal?: 'left' | 'center' | 'right'

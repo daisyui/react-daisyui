@@ -7,8 +7,10 @@ import {
   ComponentSize,
 } from '../types'
 
-export interface KbdProps extends IComponentBaseProps {
-  children?: ReactNode | ReactNode[]
+export type KbdProps =
+  & React.HTMLAttributes<HTMLElement>
+  & IComponentBaseProps
+  & {
   size?: ComponentSize
 }
 
@@ -17,7 +19,7 @@ const Kbd = ({
   size,
   dataTheme,
   className,
-  style,
+  ...props
 }: KbdProps): JSX.Element => {
   const classes = twMerge(
     'kbd',
@@ -29,9 +31,9 @@ const Kbd = ({
 
   return (
     <kbd
+      {...props}
       data-theme={dataTheme}
       className={classes}
-      style={style}
     >
       {children}
     </kbd>

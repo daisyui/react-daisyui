@@ -1,23 +1,18 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
   
-export type BreadcrumbsItemProps = {
-    children?: ReactNode | ReactNode[]
-    href?: string
-    className?: string
-    style?: Record<string, string | number>
+export type BreadcrumbsItemProps =
+    & React.LiHTMLAttributes<HTMLLIElement>
+    & {
+        href?: string
 }
   
 const BreadcrumbsItem = ({
     children,
     href,
-    className,
-    style,
+    ...props
 }: BreadcrumbsItemProps): JSX.Element => {
     return (
-        <li
-            className={className}
-            style={style}
-        >
+        <li {...props}>
             {href ?
             (
                 <a href={href}>

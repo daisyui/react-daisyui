@@ -12,7 +12,6 @@ export type BadgeProps =
   & React.HTMLAttributes<HTMLDivElement>
   & IComponentBaseProps
   & {
-    children?: ReactNode | ReactNode[]
     variant?: 'outline'
     size?: ComponentSize
     color?: ComponentColor

@@ -1,7 +1,5 @@
 export interface IComponentBaseProps {
   dataTheme?: string
-  className?: string
-  style?: Record<string, string | number>
 }
 
 export type ComponentColor =

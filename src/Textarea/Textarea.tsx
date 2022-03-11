@@ -26,7 +26,7 @@ const Textarea = ({
         })
     )
 
-    return <textarea className={classes} {...props} />
+    return <textarea {...props} className={classes} />
 }
 
 export default Textarea

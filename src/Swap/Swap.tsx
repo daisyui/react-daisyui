@@ -4,7 +4,10 @@ import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
-export interface SwapProps extends IComponentBaseProps {
+export type SwapProps =
+  & React.LabelHTMLAttributes<HTMLLabelElement>
+  & IComponentBaseProps
+  & {
     onElement: ReactNode | ReactNode[]
     offElement: ReactNode | ReactNode[]
     active?: boolean
@@ -20,7 +23,7 @@ const Swap = ({
   flip,
   dataTheme,
   className,
-  style,
+  ...props
 }: SwapProps): JSX.Element => {
   const classes = twMerge(
     'swap',
@@ -34,9 +37,9 @@ const Swap = ({
 
   return (
     <label
+      {...props}
       data-theme={dataTheme}
       className={classes}
-      style={style}
     >
         <input type="checkbox"/>
         <div className="swap-on">{onElement}</div>

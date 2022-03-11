@@ -3,14 +3,15 @@ import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types';
 
-export interface FormProps extends IComponentBaseProps {
-  children: ReactNode | ReactNode[]
-}
+export type FormProps =
+  & React.HTMLAttributes<HTMLDivElement>
+  & IComponentBaseProps
 
 const Form = ({
   children,
   dataTheme,
   className,
+  ...props
 }: FormProps): JSX.Element => {
   const classes = twMerge(
     'form-control',
@@ -19,6 +20,7 @@ const Form = ({
 
   return (
     <div
+      {...props}
       data-theme={dataTheme}
       className={classes}
     >

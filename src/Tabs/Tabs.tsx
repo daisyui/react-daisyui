@@ -13,13 +13,16 @@ import {
 
 import Tab, { TabProps } from './Tab'
 
-export interface TabsProps<T> extends IComponentBaseProps {
-  children: ReactElement<TabProps<T>>[]
-  value?: T
-  onChange?: (value: T) => void
-  variant?: 'bordered' | 'lifted'
-  size?: ComponentSize
-  boxed?: boolean
+export type TabsProps<T> =
+  & React.HTMLAttributes<HTMLDivElement>
+  & IComponentBaseProps
+  & {
+    children: ReactElement<TabProps<T>>[]
+    value?: T
+    onChange?: (value: T) => void
+    variant?: 'bordered' | 'lifted'
+    size?: ComponentSize
+    boxed?: boolean
 }
 
 const Tabs = <T extends string | number | undefined>({
@@ -31,7 +34,7 @@ const Tabs = <T extends string | number | undefined>({
   boxed,
   dataTheme,
   className,
-  style,
+  ...props
 }: TabsProps<T>): JSX.Element => {
   const [activeValue, setActiveValue] = useState<T | undefined>(value)
 
@@ -45,9 +48,9 @@ const Tabs = <T extends string | number | undefined>({
 
   return (
     <div
+      {...props}
       data-theme={dataTheme}
       className={classes}
-      style={style}
     >
       {children.map((child) => {
         return cloneElement(child, {

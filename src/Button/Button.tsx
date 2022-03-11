@@ -13,7 +13,6 @@ export type ButtonProps =
   & React.ButtonHTMLAttributes<HTMLButtonElement>
   & IComponentBaseProps
   & {
-    children?: ReactNode | ReactNode[]
     href?: string
     shape?: ComponentShape
     size?: ComponentSize
@@ -36,6 +35,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
   responsive,
   animation = true,
   loading,
+  disabled,
   dataTheme,
   className,
   style,
@@ -52,7 +52,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
       'btn-block': fullWidth,
       'btn-xs md:btn-sm lg:btn-md xl:btn-lg': responsive,
       'no-animation': !animation,
-      'btn-disabled': props.disabled,
+      'btn-disabled': disabled,
       'loading': loading,
     })
   )

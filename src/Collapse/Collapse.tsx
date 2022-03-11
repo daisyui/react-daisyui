@@ -8,7 +8,6 @@ export type CollapseProps =
     & React.HTMLAttributes<HTMLDivElement>
     & IComponentBaseProps 
     & {
-        children?: ReactNode | ReactNode[]
         content?: ReactNode | ReactNode[]
         icon?: 'arrow' | 'plus'
         open?: boolean

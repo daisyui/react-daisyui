@@ -4,10 +4,13 @@ import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
-export interface TableRowProps extends IComponentBaseProps {
-    children: ReactElement[]
-    active?: boolean
-    hover?: boolean
+export type TableRowProps =
+    & React.TableHTMLAttributes<HTMLTableRowElement>
+    & IComponentBaseProps
+    & {
+        children?: ReactElement[]
+        active?: boolean
+        hover?: boolean
 }
 
 const TableRow = ({
@@ -15,7 +18,7 @@ const TableRow = ({
     active,
     hover,
     className,
-    style,
+    ...props
 }: TableRowProps): JSX.Element => {
     const classes = twMerge(
         className,
@@ -27,10 +30,10 @@ const TableRow = ({
 
     return (
         <tr
+            {...props}
             className={classes}
-            style={style}
         >
-            {children.map((child) => {
+            {children?.map((child) => {
                 return (
                     <td>{child}</td>
                 )

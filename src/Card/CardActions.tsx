@@ -1,10 +1,10 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 import { twMerge } from 'tailwind-merge'
 import { IComponentBaseProps } from '../types'
 
-export interface CardActionsProps extends IComponentBaseProps {
-  children?: ReactNode
-}
+export type CardActionsProps =
+  & React.HTMLAttributes<HTMLDivElement>
+  & IComponentBaseProps
 
 const CardActions = ({ className, ...props }: CardActionsProps) => (
   <div className={twMerge('card-actions', className)} {...props} />

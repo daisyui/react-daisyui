@@ -1,17 +1,17 @@
-import React, { ReactNode } from "react"
+import React from "react"
 import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from "../types"
 
-export interface ButtonGroupProps extends IComponentBaseProps {
-  children?: ReactNode | ReactNode[]
-}
+export type ButtonGroupProps = 
+  & React.HTMLAttributes<HTMLDivElement>
+  & IComponentBaseProps
 
 const ButtonGroup = ({
   children,
   dataTheme,
   className,
-  style
+  ...props
 }: ButtonGroupProps): JSX.Element => {
   const classes = twMerge(
     'btn-group',
@@ -20,9 +20,9 @@ const ButtonGroup = ({
 
   return (
     <div
+      {...props}
       data-theme={dataTheme}
       className={classes}
-      style={style}
     >
       {children}
     </div>

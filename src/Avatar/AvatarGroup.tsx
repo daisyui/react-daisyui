@@ -3,10 +3,10 @@ import clsx from 'clsx'
 
 import { AvatarProps } from './Avatar'
 
-type AvatarGroupProps = {
+type AvatarGroupProps =
+  & React.HTMLAttributes<HTMLDivElement>
+  & {
     children: ReactElement<AvatarProps> | ReactElement<AvatarProps>[]
-    className?: string
-    style?: Record<string, string | number>
 }
 
 const AvatarGroup = ({

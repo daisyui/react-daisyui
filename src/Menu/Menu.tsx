@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
@@ -8,14 +8,14 @@ import MenuItem, { MenuItemProps as ItemProps } from './MenuItem'
 
 export type MenuItemProps = ItemProps
 
-export interface MenuProps extends IComponentBaseProps {
-  children?: ReactNode
-
-  // responsive props
-  normal?: ComponentSize | boolean // Applies default paddings
-  compact?: ComponentSize | boolean // Applies smaller padding
-  vertical?: ComponentSize | boolean // Vertical menu (default)
-  horizontal?: ComponentSize | boolean // Horizontal menu
+export type MenuProps =
+  & React.HTMLAttributes<HTMLUListElement>
+  & IComponentBaseProps
+  & {
+    normal?: ComponentSize | boolean // Applies default paddings
+    compact?: ComponentSize | boolean // Applies smaller padding
+    vertical?: ComponentSize | boolean // Vertical menu (default)
+    horizontal?: ComponentSize | boolean // Horizontal menu
 }
 
 interface ModifierMap {

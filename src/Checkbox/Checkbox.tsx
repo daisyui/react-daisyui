@@ -11,11 +11,8 @@ export type CheckboxProps =
     & React.InputHTMLAttributes<HTMLInputElement>
     & IComponentBaseProps
     & {
-        checked?: boolean
-        defaultChecked?: boolean
         color?: "primary" | "secondary" | "accent"
         size?: ComponentSize
-        disabled?: boolean
 }
 
 const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(({

@@ -3,15 +3,18 @@ import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
-export interface CountdownProps extends IComponentBaseProps {
-  value: number
+export type CountdownProps =
+  & React.HTMLAttributes<HTMLSpanElement>
+  & IComponentBaseProps
+  & {
+    value: number
 }
 
 const Countdown = ({
   value,
   dataTheme,
   className,
-  style,
+  ...props
 }: CountdownProps): JSX.Element => {
   const classes = twMerge(
     'countdown',
@@ -24,9 +27,9 @@ const Countdown = ({
 
   return (
     <span
+      {...props}
       data-theme={dataTheme}
       className={classes}
-      style={style}
     >
       <span style={countdownStyle} />
     </span>

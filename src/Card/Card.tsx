@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
@@ -12,15 +12,17 @@ export type CardActionsProps = ActionProps
 export type CardBodyProps = BodyProps
 export type CardTitleProps = TitleProps
 
-export interface CardProps extends IComponentBaseProps {
-  children?: ReactNode
-  bordered?: boolean
-  imageFull?: boolean
+export type CardProps = 
+  & React.HTMLAttributes<HTMLDivElement>
+  & IComponentBaseProps
+  & {
+    bordered?: boolean
+    imageFull?: boolean
 
-  // responsive props
-  normal?: ComponentSize | boolean // Applies default paddings
-  compact?: ComponentSize | boolean // Applies smaller padding
-  side?: ComponentSize | boolean // The image in <figure> will be on to the side
+    // responsive props
+    normal?: ComponentSize | boolean // Applies default paddings
+    compact?: ComponentSize | boolean // Applies smaller padding
+    side?: ComponentSize | boolean // The image in <figure> will be on to the side
 }
 
 interface ModifierMap {
@@ -54,12 +56,12 @@ const DYNAMIC_MODIFIERS: ModifierMap = {
 }
 
 const Card = ({
-  className,
   bordered = true,
   imageFull,
   normal,
   compact,
   side,
+  className,
   ...props
 }: CardProps): JSX.Element => {
     const classes = twMerge(
