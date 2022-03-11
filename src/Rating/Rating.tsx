@@ -2,22 +2,17 @@ import React, { LegacyRef } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-import {
-  IComponentBaseProps,
-  ComponentSize,
-} from '../types'
+import { IComponentBaseProps, ComponentSize } from '../types'
 
 import RatingItem from './RatingItem'
 
-export type RatingProps =
-  & React.HTMLAttributes<HTMLDivElement>
-  & IComponentBaseProps
-  & {
+export type RatingProps = React.HTMLAttributes<HTMLDivElement> &
+  IComponentBaseProps & {
     ref?: LegacyRef<HTMLDivElement>
     size?: ComponentSize
     half?: boolean
     hidden?: boolean
-}
+  }
 
 const Rating = ({
   children,
@@ -40,12 +35,7 @@ const Rating = ({
   )
 
   return (
-    <div
-      {...props}
-      ref={ref}
-      data-theme={dataTheme}
-      className={classes}
-    >
+    <div {...props} ref={ref} data-theme={dataTheme} className={classes}>
       {children}
     </div>
   )

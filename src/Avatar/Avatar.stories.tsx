@@ -9,12 +9,10 @@ export default {
 } as Meta
 
 export const Default: Story<AvatarProps> = (args) => {
-  return (
-    <Avatar {...args} />
-  )
+  return <Avatar {...args} />
 }
 Default.args = {
-  src: 'http://daisyui.com/tailwind-css-component-profile-1@94w.png'
+  src: 'http://daisyui.com/tailwind-css-component-profile-1@94w.png',
 }
 
 export const Group: Story<AvatarProps> = (args) => {
@@ -27,5 +25,5 @@ export const Group: Story<AvatarProps> = (args) => {
   )
 }
 Group.args = {
-  src: 'http://daisyui.com/tailwind-css-component-profile-1@94w.png'
+  src: 'http://daisyui.com/tailwind-css-component-profile-1@94w.png',
 }

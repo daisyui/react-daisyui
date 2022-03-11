@@ -12,8 +12,8 @@ export default {
 export const Default: Story<RadioProps> = (args) => {
   return (
     <Form>
-        <Radio name="radio1" />
-        <Radio name="radio2" defaultChecked />
+      <Radio name="radio1" />
+      <Radio name="radio2" defaultChecked />
     </Form>
   )
 }

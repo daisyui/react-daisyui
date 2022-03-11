@@ -21,9 +21,7 @@ export const Default: Story<CountdownProps> = (args) => {
     }
   }, [value])
 
-  return (
-    <Countdown value={value}/>
-  )
+  return <Countdown value={value} />
 }
 Default.args = {
   value: 50,

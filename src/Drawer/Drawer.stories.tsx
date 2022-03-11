@@ -21,13 +21,8 @@ export const Default: Story<DrawerProps> = (args) => {
   )
 
   return (
-    <Drawer
-      {...args}
-      id="sidebar-id"
-      className="h-screen w-full"
-      side={side}
-    >
-      <div className='w-full flex items-center justify-center'>
+    <Drawer {...args} id="sidebar-id" className="h-screen w-full" side={side}>
+      <div className="w-full flex items-center justify-center">
         <label htmlFor="sidebar-id" className="btn btn-primary drawer-button">
           Open drawer
         </label>

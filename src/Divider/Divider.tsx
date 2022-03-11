@@ -4,13 +4,11 @@ import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
-export type DividerProps =
-  & React.HTMLAttributes<HTMLDivElement>
-  & IComponentBaseProps
-  & {
+export type DividerProps = React.HTMLAttributes<HTMLDivElement> &
+  IComponentBaseProps & {
     children?: string
     vertical?: boolean
-}
+  }
 
 const Divider = ({
   children,
@@ -28,11 +26,7 @@ const Divider = ({
   )
 
   return (
-    <div
-      {...props}
-      data-theme={dataTheme}
-      className={classes}
-    >
+    <div {...props} data-theme={dataTheme} className={classes}>
       {children}
     </div>
   )

@@ -4,14 +4,12 @@ import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
-export type IndicatorProps =
-  & React.HTMLAttributes<HTMLDivElement>
-  & IComponentBaseProps
-  & {
-  item?: ReactNode
-  horizontal?: 'start' | 'center' | 'end'
-  vertical?: 'top' | 'middle' | 'bottom'
-}
+export type IndicatorProps = React.HTMLAttributes<HTMLDivElement> &
+  IComponentBaseProps & {
+    item?: ReactNode
+    horizontal?: 'start' | 'center' | 'end'
+    vertical?: 'top' | 'middle' | 'bottom'
+  }
 
 const Indicator = ({
   children,
@@ -32,16 +30,12 @@ const Indicator = ({
   )
 
   return (
-    <div className='indicator'>
-        <div
-            {...props}
-            data-theme={dataTheme}
-            className={classes}
-        >
-            {item}
-        </div>
+    <div className="indicator">
+      <div {...props} data-theme={dataTheme} className={classes}>
+        {item}
+      </div>
 
-        {children}
+      {children}
     </div>
   )
 }

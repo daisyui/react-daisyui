@@ -16,10 +16,10 @@ export const Default: Story<InputGroupProps> = (args) => {
       <label className="label">
         <span className="label-text">Enter amount</span>
       </label>
-      
+
       <InputGroup {...args}>
         <span>Price</span>
-          <Input type="text" placeholder="10" bordered />
+        <Input type="text" placeholder="10" bordered />
         <span>USD</span>
       </InputGroup>
     </Form>

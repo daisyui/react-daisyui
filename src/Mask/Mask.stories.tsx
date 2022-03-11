@@ -9,12 +9,10 @@ export default {
 } as Meta
 
 export const Default: Story<MaskProps> = (args) => {
-  return (
-    <Mask {...args} />
-  )
+  return <Mask {...args} />
 }
 
 Default.args = {
-    src: "https://api.lorem.space/image/shoes?w=160&h=160",
-    variant: 'squircle',
+  src: 'https://api.lorem.space/image/shoes?w=160&h=160',
+  variant: 'squircle',
 }

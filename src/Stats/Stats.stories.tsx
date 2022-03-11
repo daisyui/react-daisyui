@@ -11,11 +11,11 @@ export default {
 
 export const Default: Story<StatsProps> = (args) => {
   return (
-    <Stats {...args} className='bg-base-200 shadow'>
+    <Stats {...args} className="bg-base-200 shadow">
       <Stats.Stat>
-        <Stat.Item variant='title'>Total Page Views</Stat.Item>
-        <Stat.Item variant='value'>89,400</Stat.Item>
-        <Stat.Item variant='desc'>21% more than last month</Stat.Item>
+        <Stat.Item variant="title">Total Page Views</Stat.Item>
+        <Stat.Item variant="value">89,400</Stat.Item>
+        <Stat.Item variant="desc">21% more than last month</Stat.Item>
       </Stats.Stat>
     </Stats>
   )

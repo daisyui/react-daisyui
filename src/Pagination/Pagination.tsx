@@ -1,4 +1,4 @@
-import ButtonGroup, { ButtonGroupProps } from "../ButtonGroup"
+import ButtonGroup, { ButtonGroupProps } from '../ButtonGroup'
 
 export type PaginationProps = ButtonGroupProps
 const Pagination = ButtonGroup

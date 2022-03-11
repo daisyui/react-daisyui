@@ -12,10 +12,10 @@ export default {
 export const Default: Story<PaginationProps> = (args) => {
   return (
     <Pagination {...args}>
-        <Button>1</Button>
-        <Button active>2</Button>
-        <Button>3</Button>
-        <Button>4</Button>
+      <Button>1</Button>
+      <Button active>2</Button>
+      <Button>3</Button>
+      <Button>4</Button>
     </Pagination>
   )
 }

@@ -2,51 +2,38 @@ import React, { forwardRef } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-import {
-  IComponentBaseProps,
-  ComponentColor
-} from '../types'
+import { IComponentBaseProps, ComponentColor } from '../types'
 
-export type LinkProps =
-  & React.AnchorHTMLAttributes<HTMLAnchorElement>
-  & IComponentBaseProps
-  & {
+export type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> &
+  IComponentBaseProps & {
     children: string
     href?: string
     color?: 'neutral' | ComponentColor
     hover?: boolean
-}
+  }
 
-const Link = forwardRef<HTMLAnchorElement, LinkProps>(({
-  children,
-  href,
-  color,
-  hover = true,
-  dataTheme,
-  className,
-  ...props
-}, ref): JSX.Element => {
-  const classes = twMerge(
-    'link',
-    className,
-    clsx({
-      [`link-${color}`]: color,
-      'link-hover': hover,
-    })
-  )
+const Link = forwardRef<HTMLAnchorElement, LinkProps>(
+  (
+    { children, href, color, hover = true, dataTheme, className, ...props },
+    ref
+  ): JSX.Element => {
+    const classes = twMerge(
+      'link',
+      className,
+      clsx({
+        [`link-${color}`]: color,
+        'link-hover': hover,
+      })
+    )
 
-  return (
-    <a
-      {...props}
-      ref={ref}
-      data-theme={dataTheme}
-      className={classes}
-    >
-      {children}
-    </a>
-  )
-})
+    return (
+      <a {...props} ref={ref} data-theme={dataTheme} className={classes}>
+        {children}
+      </a>
+    )
+  }
+)
 
-Link.displayName = "Link"
+Link.displayName = 'Link'
 
 export default Link

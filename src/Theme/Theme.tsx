@@ -2,9 +2,8 @@ import React from 'react'
 
 import { IComponentBaseProps } from '../types'
 
-export type ThemeProps =
-  & React.HTMLAttributes<HTMLDivElement>
-  & IComponentBaseProps
+export type ThemeProps = React.HTMLAttributes<HTMLDivElement> &
+  IComponentBaseProps
 
 const Theme = ({
   children,
@@ -13,11 +12,7 @@ const Theme = ({
   ...props
 }: ThemeProps): JSX.Element => {
   return (
-    <div
-      {...props}
-      data-theme={dataTheme}
-      className={className}
-    >
+    <div {...props} data-theme={dataTheme} className={className}>
       {children}
     </div>
   )

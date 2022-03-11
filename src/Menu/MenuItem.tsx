@@ -4,20 +4,13 @@ import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
-export type MenuItemProps =
-  & React.LiHTMLAttributes<HTMLLIElement>
-  & IComponentBaseProps
-  & {
+export type MenuItemProps = React.LiHTMLAttributes<HTMLLIElement> &
+  IComponentBaseProps & {
     title?: boolean
     disabled?: boolean
-}
+  }
 
-const MenuItem = ({
-  className,
-  title,
-  disabled,
-  ...props
-}: MenuItemProps) => {
+const MenuItem = ({ className, title, disabled, ...props }: MenuItemProps) => {
   const classes = twMerge(
     className,
     clsx({
