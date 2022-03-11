@@ -79,84 +79,84 @@ Use tools like the official <a href="https://daisyui.com/theme-generator/">daisy
 
 ---
 
-## 🚧 Components To-Do
+## ⚙️ Components
 
 <details>
 <summary>Actions:</summary>
   
-- [x] Button
-- [X] Dropdown
-- [X] Modal
-- [X] Swap
+- [x] <a href="https://daisyui.github.io/react-daisyui/?path=/story/actions-button">Button</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/actions-dropdown">Dropdown</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/actions-modal">Modal</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/actions-swap">Swap</a>
 </details>
 
 <details>
 <summary>Data Display:</summary>
   
-- [x] Alert
-- [X] Avatar
-- [X] Badge
-- [X] Card
-- [X] Carousel
-- [X] Collapse
-- [X] Countdown
-- [X] Kbd
-- [X] Progress
-- [X] Radial Progress
-- [X] Stats
-- [X] Table
-- [X] Tooltip
+- [x] <a href="https://daisyui.github.io/react-daisyui/?path=/story/data-display-alert">Alert</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/data-display-avatar">Avatar</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/data-display-badge">Badge</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/data-display-card">Card</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/data-display-carousel">Carousel</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/data-display-collapse">Collapse</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/data-display-countdown">Countdown</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/data-display-kdb">Kbd</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/data-display-progress">Progress</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/data-display-radial-progress">Radial Progress</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/data-display-stats">Stats</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/data-display-table">Table</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/data-display-tooltip">Tooltip</a>
 </details>
 
 <details>
 <summary>Data Input:</summary>
 
-- [X] Checkbox
-- [X] Input
-- [X] Radio
-- [X] Range
-- [X] Rating
-- [X] Select
-- [X] Textarea
-- [X] Toggle
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/data-input-checkbox">Checkbox</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/data-input-input">Input</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/data-input-radio">Radio</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/data-input-range">Range</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/data-input-rating">Rating</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/data-input-select">Select</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/data-input-textarea">Textarea</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/data-input-toggle">Toggle</a>
 </details>
 
 <details>
 <summary>Layout:</summary>
 
-- [X] Artboard
-- [x] Button-Group
-- [X] Divider
-- [ ] Drawer
-- [X] Footer
-- [X] Hero
-- [X] Indicator
-- [X] Input Group
-- [X] Mask
-- [X] Stack
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/layout-artboard">Artboard</a>
+- [x] <a href="https://daisyui.github.io/react-daisyui/?path=/story/layout-buttongroup">Button-Group</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/layout-divider">Divider</a>
+- [ ] <a href="https://daisyui.github.io/react-daisyui/?path=/story/layout-drawer">Drawer</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/layout-footer">Footer</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/layout-hero">Hero</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/layout-indicator">Indicator</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/layout-inputgroup">Input Group</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/layout-mask">Mask</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/layout-stack">Stack</a>
 </details>
 
 <details>
 <summary>Navigation:</summary>
 
-- [X] Breadcrumbs
-- [X] Link
-- [X] Menu
-- [X] Navbar
-- [ ] Pagination
-- [X] Steps
-- [X] Tab
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/navigation-breadcrumbs">Breadcrumbs</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/navigation-link">Link</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/navigation-menu">Menu</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/navigation-navbar">Navbar</a>
+- [ ] <a href="https://daisyui.github.io/react-daisyui/?path=/story/navigation-pagination">Pagination</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/navigation-steps">Steps</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/navigation-tabs">Tabs</a>
 </details>
 
 <details>
 <summary>Mockup:</summary>
 
-- [ ] Code
-- [ ] Phone
-- [ ] Window
+- [ ] <a href="https://daisyui.github.io/react-daisyui/?path=/story/mockup-code">Code</a>
+- [ ] <a href="https://daisyui.github.io/react-daisyui/?path=/story/mockup-phone">Phone</a>
+- [ ] <a href="https://daisyui.github.io/react-daisyui/?path=/story/mockup-window">Window</a>
 </details>
 
-## Contributions
+## 🤝 Contributing
 
 We're looking for contributors on this component library! We could use some help building out stories and writing unit tests for components.
 
