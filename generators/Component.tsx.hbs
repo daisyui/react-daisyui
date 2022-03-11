@@ -16,8 +16,6 @@ export type {{properCase name}}Props =
     {{#each propTypes}}
     {{{this}}}
     {{/each}}
-    className?: string
-    children?: ReactNode | ReactNode[]
 }
 
 const {{properCase name}} = forwardRef<{{refType}}, {{properCase name}}Props>(
