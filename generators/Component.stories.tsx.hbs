@@ -1,0 +1,42 @@
+import React from 'react'
+import { Story, Meta } from '@storybook/react'
+
+import {{properCase name}}, { {{properCase name}}Props } from '.'
+
+const meta: Meta = {
+  title: `{{folder}}/{{ properCase name }}`,
+  component: {{ properCase name }},
+  parameters: {
+    controls: { expanded: true },
+  },
+};
+
+export default meta
+
+const Template: Story = ({ children, ...rest}) => <{{ properCase name }} {...rest}>{children}</{{ properCase name }}>;
+
+export const Default = Template.bind({})
+Default.args = {}
+
+{{#each stories}}
+export const {{this.storyName}}: Story<{{ properCase ../name }}Props> = (args) => {
+  return (
+    {{#if this.wrapWithDiv}}
+    <div className="{{#if this.divWrapperClassName}}{{this.divWrapperClassName}}{{/if}}">
+    {{/if}}
+
+    {{#if this.showDefault}}
+      <{{ properCase ../name }} {...args}>Default</{{ properCase ../name }}>
+    {{/if}}
+      
+      {{#each this.props}}
+      {{#each this.values}}
+      <{{ properCase ../../../name }} {...args} {{../propName}}={{{this.value}}}>{{this.children}}</{{ properCase ../../../name }}>
+      {{/each}}
+      {{/each}}
+    {{#if this.wrapWithDiv}}
+    </div>
+    {{/if}}
+  )
+}
+{{/each}}

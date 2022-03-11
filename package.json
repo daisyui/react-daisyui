@@ -30,7 +30,8 @@
     "format": "prettier --write ./src",
     "prepublishOnly": "npm run dist",
     "postpublish": "git push --no-verify && git push --tags",
-    "version": "npm run docs && git add -A docs"
+    "version": "npm run docs && git add -A docs",
+    "generate": "plop"
   },
   "peerDependencies": {
     "daisyui": "^2.6.3",
@@ -67,6 +68,7 @@
     "clsx": "^1.1.1",
     "jest": "^27.0.6",
     "microbundle": "^0.14.2",
+    "plop": "^3.0.5",
     "postcss": "^8.4.8",
     "prettier": "^2.3.2",
     "react-test-renderer": "^17.0.2",
