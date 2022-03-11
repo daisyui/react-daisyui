@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import clsx from 'clsx'
 
 import {
@@ -6,24 +6,21 @@ import {
     ComponentSize,
 } from '../types'
 
-export interface ToggleProps extends IComponentBaseProps {
-    checked?: boolean
-    defaultChecked?: boolean
+export type ToggleProps =
+    & React.InputHTMLAttributes<HTMLInputElement>
+    & IComponentBaseProps
+    & {
     color?: "primary" | "secondary" | "accent"
     size?: ComponentSize
-    disabled?: boolean
 }
 
-const Toggle = ({
-    checked,
-    defaultChecked = false,
+const Toggle = forwardRef<HTMLInputElement, ToggleProps>(({
     color,
     size,
-    disabled,
     dataTheme,
     className,
-    style,
-}: ToggleProps): JSX.Element => {
+    ...props
+}, ref): JSX.Element => {
     const classes = clsx(
         'toggle',
         className,
@@ -35,15 +32,15 @@ const Toggle = ({
 
     return (
         <input
+            {...props}
+            ref={ref}
             type="checkbox"
-            checked={checked}
-            defaultChecked={defaultChecked}
             data-theme={dataTheme}
             className={classes}
-            style={style}
-            disabled={disabled}
         />
     )
-}
+})
+
+Toggle.displayName = "Toggle"
 
 export default Toggle

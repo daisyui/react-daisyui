@@ -1,17 +1,27 @@
-import React, { ReactElement, ReactNode } from 'react'
+import React, {
+  LegacyRef,
+  ReactElement,
+} from 'react'
 import clsx from 'clsx'
 
 import { IComponentBaseProps } from '../types'
 
-export interface BreadcrumbsProps extends IComponentBaseProps {
-  children?: ReactElement<BreadcrumbsItemProps> | ReactElement<BreadcrumbsItemProps>[]
+import BreadcrumbsItem, { BreadcrumbsItemProps } from './BreadcrumbsItem'
+
+export type BreadcrumbsProps =
+  & React.HTMLAttributes<HTMLDivElement>
+  & IComponentBaseProps
+  & {
+    children?: ReactElement<BreadcrumbsItemProps> | ReactElement<BreadcrumbsItemProps>[]
+    ref?: LegacyRef<HTMLDivElement>
 }
 
 const Breadcrumbs = ({
   children,
+  ref,
   dataTheme,
   className,
-  style,
+  ...props
 }: BreadcrumbsProps): JSX.Element => {
   const classes = clsx(
     'breadcrumbs',
@@ -21,47 +31,15 @@ const Breadcrumbs = ({
 
   return (
     <div
+      {...props}
+      ref={ref}
       data-theme={dataTheme}
       className={classes}
-      style={style}
     >
       <ul>
         {children}
       </ul>
     </div>
-  )
-}
-
-type BreadcrumbsItemProps = {
-  children?: ReactNode | ReactNode[]
-  href?: string
-  className?: string
-  style?: Record<string, string | number>
-}
-
-const BreadcrumbsItem = ({
-  children,
-  href,
-  className,
-  style,
-}: BreadcrumbsItemProps): JSX.Element => {
-  return (
-    <li
-      className={className}
-      style={style}
-    >
-      {href ?
-        (
-          <a href={href}>
-            {children}
-          </a>
-        ) :
-        (
-          <>
-            {children}
-          </>
-        )}
-    </li>
   )
 }
 

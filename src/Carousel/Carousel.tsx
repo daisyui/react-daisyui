@@ -1,21 +1,28 @@
-import React, { ReactElement, ReactNode } from 'react'
+import React, { LegacyRef, ReactElement } from 'react'
 import clsx from 'clsx'
 
 import { IComponentBaseProps } from '../types'
 
-export interface CarouselProps extends IComponentBaseProps {
-  children?: ReactElement<CarouselItemProps> | ReactElement<CarouselItemProps>[]
-  snap?: 'start' | 'center' | 'end'
-  vertical?: boolean
+import CarouselItem, { CarouselItemProps } from './CarouselItem'
+
+export type CarouselProps =
+  & React.HTMLAttributes<HTMLDivElement>
+  & IComponentBaseProps
+  & {
+    children?: ReactElement<CarouselItemProps> | ReactElement<CarouselItemProps>[]
+    ref?: LegacyRef<HTMLDivElement>
+    snap?: 'start' | 'center' | 'end'
+    vertical?: boolean
 }
 
 const Carousel = ({
   children,
+  ref,
   snap,
   vertical,
   dataTheme,
   className,
-  style,
+  ...props
 }: CarouselProps): JSX.Element => {
   const classes = clsx(
     'carousel',
@@ -28,43 +35,12 @@ const Carousel = ({
 
   return (
     <div
+      {...props}
+      ref={ref}
       data-theme={dataTheme}
       className={classes}
-      style={style}
     >
       {children}
-    </div>
-  )
-}
-
-type CarouselItemProps = {
-  children?: ReactNode | ReactNode[]
-  src?: string
-  index?: number
-}
-
-const CarouselItem = ({
-  children,
-  src,
-  index,
-}: CarouselItemProps): JSX.Element => {
-  const classes = clsx(
-    "carousel-item",
-  )
-
-  return (
-    <div
-      id={`item${index}`} 
-      className={classes}
-    >
-      {src ? 
-        (
-          <img src={src}/>
-        ) :
-        (
-          children
-        )
-      }
     </div>
   )
 }

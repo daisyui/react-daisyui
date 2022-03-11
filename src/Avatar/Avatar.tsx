@@ -1,5 +1,7 @@
-import React, { ReactElement } from 'react'
+import React, { LegacyRef } from 'react'
 import clsx from 'clsx'
+
+import AvatarGroup from './AvatarGroup'
 
 import {
   IComponentBaseProps,
@@ -8,18 +10,23 @@ import {
   ComponentSize
 } from '../types'
 
-export interface AvatarProps extends IComponentBaseProps {
-  src?: string
-  letters?: string
-  size?: ComponentSize
-  shape?: ComponentShape
-  border?: boolean
-  borderColor?: ComponentColor
-  online?: boolean
-  offline?: boolean
+export type AvatarProps =
+  & React.HTMLAttributes<HTMLDivElement>
+  & IComponentBaseProps
+  & {
+    ref?: LegacyRef<HTMLDivElement>
+    src?: string
+    letters?: string
+    size?: ComponentSize
+    shape?: ComponentShape
+    border?: boolean
+    borderColor?: ComponentColor
+    online?: boolean
+    offline?: boolean
 }
 
 const Avatar = ({
+  ref,
   src,
   letters,
   size, 
@@ -30,7 +37,7 @@ const Avatar = ({
   offline,
   dataTheme,
   className,
-  style,
+  ...props
 }: AvatarProps): JSX.Element => {
   const containerClasses = clsx(
     'avatar',
@@ -72,9 +79,10 @@ const Avatar = ({
 
   return (
     <div
+      {...props}
+      ref={ref}
       data-theme={dataTheme}
       className={containerClasses}
-      style={style}
     >
       {src ?
         (
@@ -90,33 +98,6 @@ const Avatar = ({
           </div>
         )
       }
-    </div>
-  )
-}
-
-type AvatarGroupProps = {
-  children: ReactElement<AvatarProps> | ReactElement<AvatarProps>[]
-  className?: string
-  style?: Record<string, string | number>
-}
-
-const AvatarGroup = ({
-  children,
-  className,
-  style
-}: AvatarGroupProps): JSX.Element => {
-  const classes = clsx(
-    'avatar-group',
-    '-space-x-6',
-    className,
-  )
-
-  return (
-    <div
-      className={classes}
-      style={style}
-    >
-      {children}
     </div>
   )
 }

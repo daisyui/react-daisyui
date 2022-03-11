@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import clsx from 'clsx'
 
 import {
@@ -6,44 +6,41 @@ import {
     ComponentSize,
 } from '../types'
 
-export interface RadioProps extends IComponentBaseProps {
-    name?: string
-    defaultChecked?: boolean
-    color?: "primary" | "secondary" | "accent"
-    size?: ComponentSize
-    disabled?: boolean
+export type RadioProps =
+    & React.InputHTMLAttributes<HTMLInputElement>
+    & IComponentBaseProps
+    & {
+        color?: "primary" | "secondary" | "accent"
+        size?: ComponentSize
 }
 
-const Radio = ({
-    name,
-    defaultChecked = false,
+const Radio = forwardRef<HTMLInputElement, RadioProps>(({
     color,
     size,
-    disabled,
     dataTheme,
     className,
-    style,
-}: RadioProps): JSX.Element => {
+    ...props
+}, ref): JSX.Element => {
     const classes = clsx(
         'radio',
         className,
         {
-        [`radio-${size}`]: size,
-        [`radio-${color}`]: color,
+            [`radio-${size}`]: size,
+            [`radio-${color}`]: color,
         }
     )
 
     return (
         <input
+            {...props}
+            ref={ref}
             type="radio"
-            name={name}
-            defaultChecked={defaultChecked}
             data-theme={dataTheme}
             className={classes}
-            style={style}
-            disabled={disabled}
         />
     )
-}
+})
+
+Radio.displayName = "Radio"
 
 export default Radio

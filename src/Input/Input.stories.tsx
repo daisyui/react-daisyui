@@ -14,4 +14,6 @@ export const Default: Story<InputProps> = (args) => {
   )
 }
 
-Default.args = {}
+Default.args = {
+  bordered: true,
+}

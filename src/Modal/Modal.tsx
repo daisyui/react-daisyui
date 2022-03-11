@@ -1,22 +1,30 @@
-import React, { ReactNode } from 'react'
+import React, { forwardRef, ReactNode, useImperativeHandle } from 'react'
 import clsx from 'clsx'
 
 import { IComponentBaseProps } from '../types'
 
 import Button from '../Button'
 
-export interface ModalProps extends IComponentBaseProps {
-  children?: ReactNode | ReactNode[]
-  open?: boolean
-  title?: string
-  footer?: boolean
-  acceptText?: string
-  cancelText?: string
-  onAccept?: () => void
-  onCancel?: () => void
+export type ModalRef = {
+  accept: () => void,
+  cancel: () => void,
 }
 
-const Modal = ({
+export type ModalProps =
+  & React.HTMLAttributes<HTMLDivElement>
+  & IComponentBaseProps
+  & {
+    children?: ReactNode | ReactNode[]
+    open?: boolean
+    title?: string
+    footer?: boolean
+    acceptText?: string
+    cancelText?: string
+    onAccept?: () => void
+    onCancel?: () => void
+}
+
+const Modal = forwardRef<ModalRef, ModalProps>(({
   children,
   open,
   title,
@@ -27,8 +35,8 @@ const Modal = ({
   onCancel,
   dataTheme,
   className,
-  style,
-}: ModalProps): JSX.Element => {
+  ...props
+}, ref): JSX.Element => {
   const classes = clsx(
     'modal',
     className,
@@ -37,11 +45,22 @@ const Modal = ({
     }
   )
 
+  useImperativeHandle(ref, (): ModalRef => {
+    return {
+      accept: () => {
+        onAccept && onAccept()
+      },
+      cancel: () => {
+        onCancel && onCancel()
+      },
+    }
+  })
+
   return (
     <div
+      {...props}
       data-theme={dataTheme}
       className={classes}
-      style={style}
     >
       <div className="modal-box">
         {title ?
@@ -77,6 +96,8 @@ const Modal = ({
       </div>
     </div>
   )
-}
+})
+
+Modal.displayName = "Modal"
 
 export default Modal

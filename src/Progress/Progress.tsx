@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import clsx from 'clsx'
 
 import {
@@ -6,20 +6,19 @@ import {
   ComponentColor,
 } from '../types'
 
-export interface ProgressProps extends IComponentBaseProps {
-  value: number
-  max: number
-  color?: ComponentColor
+export type ProgressProps =
+  & React.ProgressHTMLAttributes<HTMLProgressElement>
+  & IComponentBaseProps
+  & {
+    color?: ComponentColor
 }
 
-const Progress = ({
-  value,
-  max,
+const Progress = forwardRef<HTMLProgressElement, ProgressProps>(({
   color,
   dataTheme,
   className,
-  style,
-}: ProgressProps): JSX.Element => {
+  ...props
+}, ref): JSX.Element => {
   const classes = clsx(
     'progress',
     className,
@@ -30,13 +29,14 @@ const Progress = ({
 
   return (
     <progress
+      {...props}
+      ref={ref}
       data-theme={dataTheme}
       className={classes}
-      style={style}
-      value={value}
-      max={max}
     />
   )
-}
+})
+
+Progress.displayName = "Progress"
 
 export default Progress

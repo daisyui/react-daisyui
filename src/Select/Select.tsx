@@ -1,7 +1,7 @@
 import React, {
   cloneElement,
+  LegacyRef,
   ReactElement,
-  ReactNode,
   useState
 } from 'react'
 import clsx from 'clsx'
@@ -10,25 +10,32 @@ import {
   IComponentBaseProps,
   ComponentColor,
   ComponentSize,
-} from '../types';
+} from '../types'
+
+import SelectOption, { SelectOptionProps } from './SelectOption'
 
 export type SelectOption<T> = {
   value: T
   label: string
 }
 
-export interface SelectProps<T> extends IComponentBaseProps {
-  children: ReactElement<SelectOptionProps<T>>[]
-  initialValue?: T
-  value?: T
-  onChange?: (value: T) => void
-  size?: ComponentSize
-  color?: ComponentColor
-  bordered?: boolean
+export type SelectProps<T> =
+  & React.SelectHTMLAttributes<HTMLSelectElement>
+  & IComponentBaseProps
+  & {
+    children: ReactElement<SelectOptionProps<T>>[]
+    ref?: LegacyRef<HTMLSelectElement>
+    initialValue?: T
+    value?: T
+    onChange?: (value: T) => void
+    size?: ComponentSize
+    color?: ComponentColor
+    bordered?: boolean
 }
 
 const Select = <T extends string | number | undefined>({
   children,
+  ref,
   initialValue,
   value,
   onChange,
@@ -37,7 +44,7 @@ const Select = <T extends string | number | undefined>({
   bordered = true,
   dataTheme,
   className,
-  style,
+  ...props
 }: SelectProps<T>): JSX.Element => {
   const classes = clsx(
     'select',
@@ -54,9 +61,10 @@ const Select = <T extends string | number | undefined>({
 
   return (
     <select
+      {...props}
+      ref={ref}
       data-theme={dataTheme}
       className={classes}
-      style={style}
       onChange={(e) => {
         setSelectedValue(e.currentTarget.value as T)
         onChange && onChange(e.currentTarget.value as T)
@@ -68,26 +76,6 @@ const Select = <T extends string | number | undefined>({
         })
       })}
     </select>
-  )
-}
-
-type SelectOptionProps<T> = {
-  selectedValue?: T
-  value: T
-  children: ReactNode | ReactNode[]
-}
-
-const SelectOption = <T extends string | number | undefined>({
-  selectedValue,
-  value,
-  children,
-}: SelectOptionProps<T>): JSX.Element => {
-  return (
-    <option
-      selected={value === selectedValue}
-    >
-      {children}
-    </option>
   )
 }
 

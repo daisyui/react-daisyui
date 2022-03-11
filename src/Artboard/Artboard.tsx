@@ -1,22 +1,25 @@
-import React, {ReactNode} from 'react'
+import React, { forwardRef, ReactNode } from 'react'
 import clsx from 'clsx'
 
 import { IComponentBaseProps } from '../types'
 
-export interface ArtboardProps extends IComponentBaseProps {
-  children?: ReactNode | ReactNode[]
-  size?: 1 | 2 | 3 | 4 | 5 | 6
-  horizontal?: boolean
+export type ArtboardProps =
+  & React.HTMLAttributes<HTMLDivElement>
+  & IComponentBaseProps
+  & {
+    children?: ReactNode | ReactNode[]
+    size?: 1 | 2 | 3 | 4 | 5 | 6
+    horizontal?: boolean
 }
 
-const Artboard = ({
+const Artboard = forwardRef<HTMLDivElement, ArtboardProps>(({
   children,
   size,
   horizontal,
   dataTheme,
   className,
-  style,
-}: ArtboardProps): JSX.Element => {
+  ...props
+}, ref): JSX.Element => {
   const classes = clsx(
     'artboard',
     'artboard-demo',
@@ -29,13 +32,16 @@ const Artboard = ({
 
   return (
     <div
+      {...props}
+      ref={ref}
       data-theme={dataTheme}
       className={classes}
-      style={style}
     >
       {children}
     </div>
   )
-}
+})
+
+Artboard.displayName = "Artboard"
 
 export default Artboard

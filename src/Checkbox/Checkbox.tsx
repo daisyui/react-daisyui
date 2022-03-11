@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import clsx from 'clsx'
 
 import {
@@ -6,24 +6,26 @@ import {
     ComponentSize,
 } from '../types'
 
-export interface CheckboxProps extends IComponentBaseProps {
-    checked?: boolean
-    defaultChecked?: boolean
-    color?: "primary" | "secondary" | "accent"
-    size?: ComponentSize
-    disabled?: boolean
+export type CheckboxProps =
+    & React.InputHTMLAttributes<HTMLInputElement>
+    & IComponentBaseProps
+    & {
+        checked?: boolean
+        defaultChecked?: boolean
+        color?: "primary" | "secondary" | "accent"
+        size?: ComponentSize
+        disabled?: boolean
 }
 
-const Checkbox = ({
+const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(({
     checked,
     defaultChecked = false,
     color,
     size,
-    disabled,
     dataTheme,
     className,
-    style,
-}: CheckboxProps): JSX.Element => {
+    ...props
+}, ref): JSX.Element => {
     const classes = clsx(
         'checkbox',
         className,
@@ -35,15 +37,17 @@ const Checkbox = ({
 
     return (
         <input
+            {...props}
+            ref={ref}
             type="checkbox"
             checked={checked}
             defaultChecked={defaultChecked}
             data-theme={dataTheme}
             className={classes}
-            style={style}
-            disabled={disabled}
         />
     )
-}
+})
+
+Checkbox.displayName = "Checkbox"
 
 export default Checkbox

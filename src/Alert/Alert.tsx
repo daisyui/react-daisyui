@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React, { forwardRef, ReactNode } from 'react'
 import clsx from 'clsx'
 
 import {
@@ -6,20 +6,23 @@ import {
   ComponentStatus
 } from '../types'
 
-export interface AlertProps extends IComponentBaseProps {
-  children?: ReactNode | ReactNode[]
-  icon?: ReactNode
-  status?: ComponentStatus
- }
+export type AlertProps = 
+  & React.HTMLAttributes<HTMLDivElement>
+  & IComponentBaseProps
+  & {
+    children?: ReactNode | ReactNode[]
+    icon?: ReactNode
+    status?: ComponentStatus
+}
 
-const Alert = ({
+const Alert = forwardRef<HTMLDivElement, AlertProps>(({
   children,
   icon,
   status,
   dataTheme,
   className,
-  style,
-}: AlertProps): JSX.Element => {
+  ...props
+}, ref): JSX.Element => {
   const classes = clsx(
     'alert',
     className,
@@ -30,9 +33,10 @@ const Alert = ({
 
   return (
     <div
+      {...props}
+      ref={ref}
       data-theme={dataTheme}
       className={classes}
-      style={style}
     >
       <div className="flex-1">
         {icon}
@@ -40,6 +44,8 @@ const Alert = ({
       </div>
     </div>
   )
-}
+})
+
+Alert.displayName = "Alert"
 
 export default Alert

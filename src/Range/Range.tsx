@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import clsx from 'clsx'
 
 import {
@@ -6,47 +6,45 @@ import {
     ComponentSize,
 } from '../types'
 
-export interface RangeProps extends IComponentBaseProps {
-    value: number
-    min?: number
-    max?: number
-    color?: "primary" | "secondary" | "accent"
-    size?: ComponentSize
-    disabled?: boolean
+export type RangeProps =
+    & React.InputHTMLAttributes<HTMLInputElement>
+    & IComponentBaseProps
+    & {
+        value: number
+        min?: number
+        max?: number
+        color?: "primary" | "secondary" | "accent"
+        size?: ComponentSize
+        disabled?: boolean
 }
 
-const Range = ({
-    value,
-    min = 0,
-    max = 100,
+const Range = forwardRef<HTMLInputElement, RangeProps>(({
     color,
     size,
-    disabled,
     dataTheme,
     className,
-    style,
-}: RangeProps): JSX.Element => {
+    ...props
+}, ref): JSX.Element => {
     const classes = clsx(
         'range',
         className,
         {
-        [`range-${size}`]: size,
-        [`range-${color}`]: color,
+            [`range-${size}`]: size,
+            [`range-${color}`]: color,
         }
     )
 
     return (
         <input
+            {...props}
+            ref={ref}
             type="range"
-            min={min}
-            max={max}
-            value={value}
             data-theme={dataTheme}
             className={classes}
-            style={style}
-            disabled={disabled}
         />
     )
-}
+})
+
+Range.displayName = "Range"
 
 export default Range

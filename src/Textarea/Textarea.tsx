@@ -3,7 +3,9 @@ import clsx from 'clsx'
 
 import { ComponentColor } from '../types'
 
-export interface TextareaProps extends HTMLAttributes<HTMLTextAreaElement> {
+export type TextareaProps =
+    & React.TextareaHTMLAttributes<HTMLTextAreaElement>
+    & {
     color?: ComponentColor
     bordered?: boolean
 }

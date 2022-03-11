@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import clsx from 'clsx'
 
 import {
@@ -6,22 +6,25 @@ import {
   ComponentColor
 } from '../types'
 
-export interface LinkProps extends IComponentBaseProps {
-  children: string
-  href?: string
-  color?: 'neutral' | ComponentColor
-  hover?: boolean
+export type LinkProps =
+  & React.AnchorHTMLAttributes<HTMLAnchorElement>
+  & IComponentBaseProps
+  & {
+    children: string
+    href?: string
+    color?: 'neutral' | ComponentColor
+    hover?: boolean
 }
 
-const Link = ({
+const Link = forwardRef<HTMLAnchorElement, LinkProps>(({
   children,
   href,
   color,
   hover = true,
   dataTheme,
   className,
-  style,
-}: LinkProps): JSX.Element => {
+  ...props
+}, ref): JSX.Element => {
   const classes = clsx(
     'link',
     className,
@@ -33,14 +36,16 @@ const Link = ({
 
   return (
     <a
+      {...props}
+      ref={ref}
       data-theme={dataTheme}
       className={classes}
-      style={style}
-      href={href}
     >
       {children}
     </a>
   )
-}
+})
+
+Link.displayName = "Link"
 
 export default Link

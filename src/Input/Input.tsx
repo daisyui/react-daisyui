@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import clsx from 'clsx'
 
 import {
@@ -7,26 +7,27 @@ import {
     ComponentSize,
 } from '../types'
 
-export interface InputProps extends IComponentBaseProps {
-    value?: string
-    placeholder?: string
-    onChange?: (value: string) => void
-    bordered?: boolean
-    size?: ComponentSize
-    color?: ComponentColor
+export type InputProps =
+    & React.InputHTMLAttributes<HTMLInputElement>
+    & IComponentBaseProps
+    & {
+        value?: string
+        placeholder?: string
+        bordered?: boolean
+        size?: ComponentSize
+        color?: ComponentColor
 }
 
-const Input = ({
+const Input = forwardRef<HTMLInputElement, InputProps>(({
     value,
     placeholder,
-    onChange,
     bordered,
     size,
     color,
     dataTheme,
     className,
-    style,
-}: InputProps): JSX.Element => {
+    ...props
+}, ref): JSX.Element => {
     const classes = clsx(
         'input',
         className,
@@ -39,15 +40,17 @@ const Input = ({
 
     return (
         <input
+            {...props}
+            ref={ref}
             type="text"
             value={value}
-            onChange={(e) => onChange && onChange(e.currentTarget.value)}
             placeholder={placeholder}
             data-theme={dataTheme}
             className={classes}
-            style={style}
         />
     )
-}
+})
+
+Input.displayName = "Input"
 
 export default Input

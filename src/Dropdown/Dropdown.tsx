@@ -1,25 +1,35 @@
-import React, { ReactNode } from 'react'
+import React, { LegacyRef, ReactNode } from 'react'
 import clsx from 'clsx'
 
 import { IComponentBaseProps } from '../types'
 
-export interface DropdownProps extends IComponentBaseProps {
-    children?: ReactNode | ReactNode[]
-    item?: ReactNode
-    horizontal?: 'left' | 'center' | 'right'
-    vertical?: 'top' | 'middle' | 'end'
-    hover?: boolean
-    open?: boolean
+import DropdownMenu from './DropdownMenu'
+import DropdownItem from './DropdownItem'
+import DropdownToggle from './DropdownToggle'
+
+export type DropdownProps =
+    & React.HTMLAttributes<HTMLDivElement>
+    & IComponentBaseProps 
+    & {
+        children?: ReactNode | ReactNode[]
+        ref?: LegacyRef<HTMLDivElement>
+        item?: ReactNode
+        horizontal?: 'left' | 'center' | 'right'
+        vertical?: 'top' | 'middle' | 'end'
+        hover?: boolean
+        open?: boolean
 }
   
 const Dropdown = ({
     children,
+    ref,
     item,
     horizontal,
     vertical,
     hover,
     open,
     dataTheme,
+    ...props
 }: DropdownProps): JSX.Element => {
     const classes = clsx(
         'dropdown',
@@ -32,7 +42,12 @@ const Dropdown = ({
     )
 
     return (
-        <div data-theme={dataTheme} className={classes}>
+        <div
+            {...props}
+            ref={ref}
+            data-theme={dataTheme}
+            className={classes}
+        >
             <label tabIndex={0}>{children}</label>
             <ul className='dropdown-content'>
                 {item}
@@ -40,5 +55,9 @@ const Dropdown = ({
         </div>
     )
 }
+
+Dropdown.Toggle = DropdownToggle
+Dropdown.Menu = DropdownMenu
+Dropdown.Item = DropdownItem
 
 export default Dropdown

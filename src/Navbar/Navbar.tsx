@@ -1,17 +1,19 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 import clsx from 'clsx'
 
-import { IComponentBaseProps } from '../types';
+import { IComponentBaseProps } from '../types'
 
-export interface NavbarProps extends IComponentBaseProps {
-  children?: ReactNode | ReactNode[]
-}
+import NavbarSection, { NavbarSectionProps } from './NavbarSection'
+
+export type NavbarProps =
+  & React.HTMLAttributes<HTMLDivElement>
+  & IComponentBaseProps
 
 const Navbar = ({
   children,
   dataTheme,
   className,
-  style,
+  ...props
 }: NavbarProps): JSX.Element => {
   const classes = clsx(
     'navbar',
@@ -20,39 +22,9 @@ const Navbar = ({
 
   return (
     <div
+      {...props}
       data-theme={dataTheme}
       className={classes}
-      style={style}
-    >
-      {children}
-    </div>
-  )
-}
-
-interface NavbarSectionProps extends NavbarProps {
-  section: 'start' | 'center' | 'end'
-}
-
-const NavbarSection = ({
-  children,
-  section,
-  dataTheme,
-  className,
-  style,
-}: NavbarSectionProps): JSX.Element => {
-  const classes = clsx(
-    'flex-1',
-    className,
-    {
-      [`navbar-${section}`]: section,
-    }
-  )
-
-  return (
-    <div
-      data-theme={dataTheme}
-      className={classes}
-      style={style}
     >
       {children}
     </div>

@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React, { forwardRef, ReactNode } from 'react'
 import clsx from 'clsx'
 
 import {
@@ -7,22 +7,25 @@ import {
   ComponentSize,
 } from '../types'
 
-export interface BadgeProps extends IComponentBaseProps {
-  children?: ReactNode | ReactNode[]
-  variant?: 'outline'
-  size?: ComponentSize
-  color?: ComponentColor
+export type BadgeProps =
+  & React.HTMLAttributes<HTMLDivElement>
+  & IComponentBaseProps
+  & {
+    children?: ReactNode | ReactNode[]
+    variant?: 'outline'
+    size?: ComponentSize
+    color?: ComponentColor
 }
 
-const Badge = ({
+const Badge = forwardRef<HTMLDivElement, BadgeProps>(({
   children,
   variant,
   size,
   color,
   dataTheme,
   className,
-  style,
-}: BadgeProps): JSX.Element => {
+  ...props
+}, ref): JSX.Element => {
   const classes = clsx(
     'badge',
     className,
@@ -35,13 +38,16 @@ const Badge = ({
 
   return (
     <div
+      {...props}
+      ref={ref}
       data-theme={dataTheme}
       className={classes}
-      style={style}
     >
       {children}
     </div>
   )
-}
+})
+
+Badge.displayName = "Badge"
 
 export default Badge

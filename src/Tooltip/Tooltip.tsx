@@ -1,22 +1,23 @@
-import React, { ReactNode } from 'react'
+import React, { forwardRef } from 'react'
 import clsx from 'clsx'
 
 import {
   IComponentBaseProps,
   ComponentColor,
   ComponentPosition,
-  ComponentStatus
 } from '../types'
 
-export interface TooltipProps extends IComponentBaseProps {
-  message: string
-  children: ReactNode | ReactNode[]
-  open?: boolean
-  color?: ComponentColor
-  position?: ComponentPosition
+export type TooltipProps =
+  & React.HTMLAttributes<HTMLDivElement>
+  & IComponentBaseProps
+  & {
+    message: string
+    open?: boolean
+    color?: ComponentColor
+    position?: ComponentPosition
 }
 
-const Tooltip = ({
+const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(({
   message,
   children,
   open,
@@ -24,8 +25,8 @@ const Tooltip = ({
   position,
   dataTheme,
   className,
-  style,
-}: TooltipProps): JSX.Element => {
+  ...props
+}, ref): JSX.Element => {
   const classes = clsx(
     'tooltip',
     className,
@@ -38,14 +39,17 @@ const Tooltip = ({
 
   return (
     <div
+      {...props}
+      ref={ref}
       data-theme={dataTheme}
       data-tip={message}
       className={classes}
-      style={style}
     >
       {children}
     </div>
   )
-}
+})
+
+Tooltip.displayName = "Tooltip"
 
 export default Tooltip

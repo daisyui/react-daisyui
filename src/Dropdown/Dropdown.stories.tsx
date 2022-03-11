@@ -2,8 +2,6 @@ import React from 'react'
 import { Story, Meta } from '@storybook/react'
 
 import Dropdown, { DropdownProps } from '.'
-import Button from '../Button'
-import Menu from '../Menu'
 
 export default {
   title: 'Actions/Dropdown',
@@ -13,22 +11,12 @@ export default {
 export const Default: Story<DropdownProps> = (args) => {
   return (
     <Dropdown {...args}>
-        <Button>Click me</Button>
+      <Dropdown.Toggle>Click</Dropdown.Toggle>
+      <Dropdown.Menu className="w-52">
+        <Dropdown.Item>Item 1</Dropdown.Item>
+        <Dropdown.Item>Item 2</Dropdown.Item>
+        <Dropdown.Item>Item 3</Dropdown.Item>
+      </Dropdown.Menu>
     </Dropdown>
   )
-}
-Default.args = {
-    item: (
-        <Menu className="bg-base-100 w-56">
-            <Menu.Item>
-                <a>Item 1</a>
-            </Menu.Item>
-            <Menu.Item>
-                <a>Item 2</a>
-            </Menu.Item>
-            <Menu.Item>
-                <a className="active">Item 3</a>
-            </Menu.Item>
-        </Menu>
-    )
 }

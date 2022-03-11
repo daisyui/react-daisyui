@@ -1,24 +1,27 @@
-import React, { ReactNode } from 'react'
+import React, { forwardRef, ReactNode } from 'react'
 import clsx from 'clsx'
 
 import { IComponentBaseProps } from '../types'
 
-export interface CollapseProps extends IComponentBaseProps {
-    children?: ReactNode | ReactNode[]
-    content?: ReactNode | ReactNode[]
-    icon?: 'arrow' | 'plus'
-    open?: boolean
+export type CollapseProps =
+    & React.HTMLAttributes<HTMLDivElement>
+    & IComponentBaseProps 
+    & {
+        children?: ReactNode | ReactNode[]
+        content?: ReactNode | ReactNode[]
+        icon?: 'arrow' | 'plus'
+        open?: boolean
 }
 
-const Collapse = ({
+const Collapse = forwardRef<HTMLDivElement, CollapseProps>(({
   children,
   content,
   icon,
   open,
   dataTheme,
   className,
-  style,
-}: CollapseProps): JSX.Element => {
+  ...props
+}, ref): JSX.Element => {
     const classes = clsx(
         'collapse',
         className,
@@ -31,15 +34,18 @@ const Collapse = ({
 
     return (
         <div
+            {...props}
+            ref={ref}
             tabIndex={0}
             data-theme={dataTheme}
             className={classes}
-            style={style}
         >
             <div className="collapse-title">{children}</div>
             <div className="collapse-content">{content}</div>
         </div>
     )
-}
+})
+
+Collapse.displayName = "Collapse"
 
 export default Collapse
