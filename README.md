@@ -129,7 +129,7 @@ Use tools like the official <a href="https://daisyui.com/theme-generator/">daisy
 - [X] Divider
 - [ ] Drawer
 - [X] Footer
-- [ ] Hero
+- [X] Hero
 - [X] Indicator
 - [ ] Input Group
 - [X] Mask

@@ -16,6 +16,7 @@ import Divider from './Divider'
 import Dropdown from './Dropdown'
 import Footer from './Footer'
 import Form from './Form'
+import Hero from './Hero'
 import Indicator from './Indicator'
 import Input from './Input'
 import Kbd from './Kbd'
@@ -56,6 +57,7 @@ export {
   Dropdown,
   Footer,
   Form,
+  Hero,
   Indicator,
   Input,
   Kbd,
