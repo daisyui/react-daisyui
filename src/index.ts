@@ -34,6 +34,7 @@ import Rating from './Rating'
 import Select from './Select'
 import Stack from './Stack'
 import Stats from './Stats'
+import Steps from './Steps'
 import Swap from './Swap'
 import Table from './Table'
 import Tabs from './Tabs'
@@ -77,6 +78,7 @@ export {
   Select,
   Stack,
   Stats,
+  Steps,
   Swap,
   Table,
   Tabs,

@@ -9,7 +9,7 @@ export type DividerProps =
   & IComponentBaseProps
   & {
     children?: string
-    vertical?: Boolean
+    vertical?: boolean
 }
 
 const Divider = ({
