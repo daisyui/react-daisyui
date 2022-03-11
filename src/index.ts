@@ -19,6 +19,7 @@ import Form from './Form'
 import Hero from './Hero'
 import Indicator from './Indicator'
 import Input from './Input'
+import InputGroup from './InputGroup'
 import Kbd from './Kbd'
 import Link from './Link'
 import Mask from './Mask'
@@ -60,6 +61,7 @@ export {
   Hero,
   Indicator,
   Input,
+  InputGroup,
   Kbd,
   Link,
   Mask,

@@ -131,7 +131,7 @@ Use tools like the official <a href="https://daisyui.com/theme-generator/">daisy
 - [X] Footer
 - [X] Hero
 - [X] Indicator
-- [ ] Input Group
+- [X] Input Group
 - [X] Mask
 - [ ] Stack
 </details>
