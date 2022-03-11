@@ -12,7 +12,6 @@ export type CollapseProps =
     & IComponentBaseProps 
     & {
         ref: LegacyRef<HTMLDivElement>
-        content?: ReactNode | ReactNode[]
         icon?: 'arrow' | 'plus'
         open?: boolean
 }
@@ -20,7 +19,6 @@ export type CollapseProps =
 const Collapse = ({
   children,
   ref,
-  content,
   icon,
   open,
   dataTheme,
@@ -32,8 +30,8 @@ const Collapse = ({
         className,
         clsx({
             [`collapse-${icon}`]: icon,
-            'collapse-open': open,
-            'collapse-close': !open,
+            'collapse-open': open === true,
+            'collapse-close': open === false,
         })
     )
 

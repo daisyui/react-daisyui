@@ -11,15 +11,17 @@ export default {
 export const Default: Story<CollapseProps> = (args) => {
   return (
     <Collapse {...args}>
-        <div className="collapse-title text-xl font-medium">
+        <Collapse.Title className="text-xl font-medium">
             Focus me to see content
-        </div>
+        </Collapse.Title>
+        <Collapse.Content>
+          tabindex="0" attribute is necessary to make the div focusable
+        </Collapse.Content>
     </Collapse>
   )
 }
 
 Default.args = {
     className: "border border-base-300 bg-base-100 rounded-box",
-    content: <p>tabindex="0" attribute is necessary to make the div focusable</p>,
     icon: "arrow",
 }
