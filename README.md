@@ -144,9 +144,9 @@ We're looking for contributors on this component library! We could use some help
 
 ### Creating new components
 
-Run `npm generate component ${your_new_component_name}`. The generator will ask a few questions and setup the component for you.
+Run `npm run generate component ${your_new_component_name}`. The generator will ask a few questions and setup the component for you.
 
-Don't forget to export the component from `index.tsx`.
+When you'e done, export the component from `index.tsx` and open a PR.
 ___
 
 ### License
