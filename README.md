@@ -1,10 +1,10 @@
-🚧 WORK IN PROGRESS REPO 🚧
+[![NPM Version](https://img.shields.io/npm/v/react-daisyui.svg?branch=master)](https://www.npmjs.com/package/react-daisyui) [![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-daisyui)](https://bundlephobia.com/result?p=react-daisyui) [![License](https://img.shields.io/npm/l/react-daisyui.svg)](https://github.com/daisyui/react-daisyui/blob/master/LICENSE) 
 
-https://github.com/christianblandford/react-daisyui
+# react-daisyui 🌼
 
-https://github.com/benjitrosch/react-daisy
+DaisyUI components built with React, Typescript and TailwindCSS.
 
-This repo will contain a combination of the above two repos to act as an official React wrapper for daisyUI.
+<a href="https://daisyui.github.io/react-daisyui/">Check out our Storybook!</a>
 
 ---
 
