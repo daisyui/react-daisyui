@@ -9,39 +9,31 @@ export default {
 } as Meta
 
 export const Default: Story<DrawerProps> = (args) => {
-  const drawerContent = (
-    <div className="flex flex-col items-center justify-center align-middle drawer-content">
-      <h1>Some drawer content! 🍉</h1>
-    </div>
+  const side = (
+    <ul className="menu p-4 overflow-y-auto w-80 bg-base-200">
+      <li>
+        <a>Sidebar Item 1</a>
+      </li>
+      <li>
+        <a>Sidebar Item 2</a>
+      </li>
+    </ul>
   )
 
   return (
-    <>
-      <div className="flex flex-col items-center justify-center p-2">
-        <label htmlFor="sidebar-id">
-          👀 Open/Close drawer by alternating the Storybook controls below 👇
+    <Drawer
+      {...args}
+      id="sidebar-id"
+      className="h-screen w-full"
+      side={side}
+    >
+      <div className='w-full flex items-center justify-center'>
+        <label htmlFor="sidebar-id" className="btn btn-primary drawer-button">
+          Open drawer
         </label>
       </div>
-
-      <Drawer
-        {...args}
-        id="sidebar-id"
-        className="h-screen w-full bg-base-100 rounded border"
-        drawerContent={drawerContent}
-      >
-        <ul className="menu p-4 overflow-y-auto w-80 bg-base-200">
-          <li>
-            <a>Sidebar Item 1</a>
-          </li>
-          <li>
-            <a>Sidebar Item 2</a>
-          </li>
-        </ul>
-      </Drawer>
-    </>
+    </Drawer>
   )
 }
 
-Default.args = {
-  open: true,
-}
+Default.args = {}
