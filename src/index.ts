@@ -27,6 +27,7 @@ import Mask from './Mask'
 import Menu from './Menu'
 import Modal from './Modal'
 import Navbar from './Navbar'
+import Pagination from './Pagination'
 import Progress from './Progress'
 import RadialProgress from './RadialProgress'
 import Radio from './Radio'
@@ -58,6 +59,7 @@ export {
   Collapse,
   Countdown,
   Divider,
+  Drawer,
   Dropdown,
   Footer,
   Form,
@@ -71,6 +73,7 @@ export {
   Menu,
   Modal,
   Navbar,
+  Pagination,
   Progress,
   RadialProgress,
   Radio,

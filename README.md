@@ -143,7 +143,7 @@ Use tools like the official <a href="https://daisyui.com/theme-generator/">daisy
 - [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/navigation-link">Link</a>
 - [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/navigation-menu">Menu</a>
 - [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/navigation-navbar">Navbar</a>
-- [ ] <a href="https://daisyui.github.io/react-daisyui/?path=/story/navigation-pagination">Pagination</a>
+- [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/navigation-pagination">Pagination</a>
 - [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/navigation-steps">Steps</a>
 - [X] <a href="https://daisyui.github.io/react-daisyui/?path=/story/navigation-tabs">Tabs</a>
 </details>

@@ -22,6 +22,7 @@ export type ButtonProps =
     responsive?: boolean
     animation?: boolean
     loading?: boolean
+    active?: boolean
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
@@ -35,6 +36,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
   responsive,
   animation = true,
   loading,
+  active,
   disabled,
   dataTheme,
   className,
@@ -52,6 +54,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
       'btn-block': fullWidth,
       'btn-xs md:btn-sm lg:btn-md xl:btn-lg': responsive,
       'no-animation': !animation,
+      'btn-active': active,
       'btn-disabled': disabled,
       'loading': loading,
     })
