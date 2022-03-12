@@ -40,11 +40,11 @@ FormControlAccent.args = { color: 'accent' }
 
 export const Sizes: Story<CheckboxProps> = (args) => {
   return (
-    <div className='flex flex-col gap-2'>
-      <Checkbox {...args} />
-      <Checkbox {...args} />
-      <Checkbox {...args} />
-      <Checkbox {...args} />
+    <div className='flex flex-col items-center float-left gap-2'>
+      <Checkbox {...args} checked size="xs" />
+      <Checkbox {...args} checked size="sm" />
+      <Checkbox {...args} checked size="md" />
+      <Checkbox {...args} checked size="lg" />
     </div>
   )
 }
