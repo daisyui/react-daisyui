@@ -154,13 +154,15 @@ Use tools like the official <a href="https://daisyui.com/theme-generator/">daisy
 
 We're looking for contributors to help write stories and unit tests for components.
 
-For story references, check out the official <a href="https://daisyui.com/components/">daisyUI examples.</a> 👈
-
 ### Creating new components
 
 Run `npm run generate component ${your_new_component_name}`. The generator will ask a few questions and setup the component for you.
 
 When you'e done, export the component from `index.tsx` and open a PR.
+
+### Creating new stories
+
+Check out the official <a href="https://daisyui.com/components/">daisyUI examples.</a> 👈
 
 ---
 
