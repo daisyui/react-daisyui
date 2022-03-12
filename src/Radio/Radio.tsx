@@ -2,16 +2,20 @@ import React, { forwardRef } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-import { IComponentBaseProps, ComponentSize } from '../types'
+import {
+  IComponentBaseProps,
+  ComponentBrandColors,
+  ComponentSize
+} from '../types'
 
 export type RadioProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> &
   IComponentBaseProps & {
-    color?: 'primary' | 'secondary' | 'accent'
+    color?: ComponentBrandColors
     size?: ComponentSize
   }
 
 const Radio = forwardRef<HTMLInputElement, RadioProps>(
-  ({ color, size, dataTheme, className, ...props }, ref): JSX.Element => {
+  ({ color, size, name, dataTheme, className, ...props }, ref): JSX.Element => {
     const classes = twMerge(
       'radio',
       className,
@@ -26,6 +30,7 @@ const Radio = forwardRef<HTMLInputElement, RadioProps>(
         {...props}
         ref={ref}
         type="radio"
+        name={name}
         data-theme={dataTheme}
         className={classes}
       />

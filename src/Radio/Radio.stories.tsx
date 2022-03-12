@@ -9,13 +9,45 @@ export default {
   component: Radio,
 } as Meta
 
-export const Default: Story<RadioProps> = (args) => {
+const Template: Story<RadioProps> = (args) => {
   return (
     <Form>
-      <Radio name="radio1" />
-      <Radio name="radio2" defaultChecked />
+      <Radio {...args} name="radio1" />
+      <Radio {...args} name="radio1" defaultChecked />
     </Form>
   )
 }
 
+export const Default = Template.bind({})
 Default.args = {}
+
+export const PrimaryColor = Template.bind({})
+PrimaryColor.args = { color: 'primary' }
+
+export const SecondaryColor = Template.bind({})
+SecondaryColor.args = { color: 'secondary' }
+
+export const AccentColor = Template.bind({})
+AccentColor.args = { color: 'accent' }
+
+export const Disabled = Template.bind({})
+Disabled.args = { disabled: true }
+
+export const WithLabelsAndForm: Story<RadioProps> = (args) => {
+  return (
+    <div className='bg-base-200 w-1/4 p-4 rounded-lg shadow'>
+      <Form>
+        <label className="label cursor-pointer">
+          <span className="label-text">Red pill</span> 
+          <Radio {...args} name="radio1" className='checked:bg-red-500' defaultChecked />
+        </label>
+      </Form>
+      <Form>
+        <label className="label cursor-pointer">
+          <span className="label-text">Blue pill</span> 
+          <Radio {...args} name="radio1" className='checked:bg-blue-500' defaultChecked />
+        </label>
+      </Form>
+    </div>
+  )
+}
