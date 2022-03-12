@@ -1,21 +1,21 @@
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useMemo } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-import { IComponentBaseProps, ComponentSize } from '../types'
+import {
+  IComponentBaseProps,
+  ComponentBrandColors,
+  ComponentSize
+} from '../types'
 
 export type RangeProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> &
   IComponentBaseProps & {
-    value: number
-    min?: number
-    max?: number
-    color?: 'primary' | 'secondary' | 'accent'
+    color?: ComponentBrandColors
     size?: ComponentSize
-    disabled?: boolean
   }
 
 const Range = forwardRef<HTMLInputElement, RangeProps>(
-  ({ color, size, dataTheme, className, ...props }, ref): JSX.Element => {
+  ({ color, size, step, dataTheme, className, ...props }, ref): JSX.Element => {
     const classes = twMerge(
       'range',
       className,
@@ -25,14 +25,29 @@ const Range = forwardRef<HTMLInputElement, RangeProps>(
       })
     )
 
+    const numSteps = useMemo(() => {
+      const safeStep = Math.max(1, Number(step))
+      return Math.ceil(100 / safeStep) ?? 1
+    }, [props.max, step])
+
     return (
-      <input
-        {...props}
-        ref={ref}
-        type="range"
-        data-theme={dataTheme}
-        className={classes}
-      />
+      <>
+        <input
+          {...props}
+          ref={ref}
+          type="range"
+          step={step}
+          data-theme={dataTheme}
+          className={classes}
+        />
+        {step != null && (
+          <div className="w-full flex justify-between text-xs px-2">
+            {[...Array(numSteps + 1)].map(() => {
+              return <span>|</span>
+            })}
+          </div>
+        )}
+      </>
     )
   }
 )
