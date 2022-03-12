@@ -1,17 +1,17 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 
-export type SelectOptionProps<T> = {
+export type SelectOptionProps<T> = Omit<React.OptionHTMLAttributes<HTMLOptionElement>, 'value'> & {
   selectedValue?: T
   value: T
-  children: ReactNode | ReactNode[]
 }
 
 const SelectOption = <T extends string | number | undefined>({
   selectedValue,
   value,
   children,
+  ...props
 }: SelectOptionProps<T>): JSX.Element => {
-  return <option selected={value === selectedValue}>{children}</option>
+  return <option {...props} selected={value === selectedValue}>{children}</option>
 }
 
 export default SelectOption

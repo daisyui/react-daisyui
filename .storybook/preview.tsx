@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Layout from '../src/Layout'
+import StoryLayout from './story-layout'
 
 import '../src/styles.css'
 
@@ -34,11 +34,11 @@ export const parameters = {
 
 export const decorators = [
   (Story, options) => (
-    <Layout
+    <StoryLayout
       title={options.title}
       description={options.story}
     >
       <Story />
-    </Layout>
+    </StoryLayout>
   ),
 ]

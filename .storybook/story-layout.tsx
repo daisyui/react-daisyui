@@ -1,8 +1,9 @@
 import React, { ReactNode, useState } from 'react'
 
-import { Navbar } from '.'
-import { DEFAULT_THEMES } from './defaultThemes'
-import Select from './Select'
+import { DEFAULT_THEMES } from '../src/defaultThemes'
+
+import Navbar from '../src/Navbar'
+import Select from '../src/Select'
 
 type Props = {
   children: ReactNode | ReactNode[]
@@ -10,14 +11,14 @@ type Props = {
   description?: string
 }
 
-const Layout = ({ children, title, description }: Props): JSX.Element => {
+const StoryLayout = ({ children, title, description }: Props): JSX.Element => {
   const [dataTheme, setDataTheme] = useState<string>('dark')
 
   return (
     <div data-theme={dataTheme} className="w-full h-screen p-8 bg-base-100">
-      <Navbar className="p-0 text-neutral-content border-b border-neutral">
+      <Navbar className="p-0 border-b border-neutral text-base-content">
         <Navbar.Start>
-          <span className="text-lg text-base-content font-bold">
+          <span className="text-lg font-bold">
             react-daisyui
           </span>
         </Navbar.Start>
@@ -41,4 +42,4 @@ const Layout = ({ children, title, description }: Props): JSX.Element => {
   )
 }
 
-export default Layout
+export default StoryLayout
