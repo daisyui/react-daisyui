@@ -8,11 +8,19 @@ export default {
   component: Avatar,
 } as Meta
 
-export const Default: Story<AvatarProps> = (args) => {
+const Template: Story<AvatarProps> = (args) => {
   return <Avatar {...args} />
 }
+
+export const Default = Template.bind({})
 Default.args = {
   src: 'http://daisyui.com/tailwind-css-component-profile-1@94w.png',
+}
+
+export const Rounded = Template.bind({})
+Rounded.args = {
+  src: 'http://daisyui.com/tailwind-css-component-profile-1@94w.png',
+  shape: 'circle',
 }
 
 export const Group: Story<AvatarProps> = (args) => {
@@ -26,4 +34,18 @@ export const Group: Story<AvatarProps> = (args) => {
 }
 Group.args = {
   src: 'http://daisyui.com/tailwind-css-component-profile-1@94w.png',
+}
+
+export const Ring = Template.bind({})
+Ring.args = {
+  src: 'http://daisyui.com/tailwind-css-component-profile-1@94w.png',
+  border: true,
+  borderColor: 'primary',
+  shape: 'circle',
+}
+
+export const Placeholder = Template.bind({})
+Placeholder.args = {
+  shape: 'circle',
+  letters: 'Y',
 }
