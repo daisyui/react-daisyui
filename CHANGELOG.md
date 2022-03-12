@@ -1,5 +1,13 @@
 # Changelog
 
+### [1.0.2](https://www.github.com/daisyui/react-daisyui/compare/v1.0.1...v1.0.2) (2022-03-12)
+
+
+### Bug Fixes
+
+* removed extra space in readme ([018238a](https://www.github.com/daisyui/react-daisyui/commit/018238afc78822b31dc24463aa30af8b14fe420b))
+* reset package version to v1.0.0 ([28ac477](https://www.github.com/daisyui/react-daisyui/commit/28ac4777c446472f7d159ce869daa2942b51bb87))
+
 ### [1.0.1](https://www.github.com/daisyui/react-daisyui/compare/v1.0.0...v1.0.1) (2022-03-12)
 
 
