@@ -1,5 +1,17 @@
 # Changelog
 
+### [1.0.1](https://www.github.com/daisyui/react-daisyui/compare/v1.0.0...v1.0.1) (2022-03-12)
+
+
+### Bug Fixes
+
+* added border by default to textarea story for visbility ([2a47d83](https://www.github.com/daisyui/react-daisyui/commit/2a47d833bd70290651ff4de0c313686e3e026561))
+
+
+### Miscellaneous
+
+* removed unneeded styles import in index ([6e6156c](https://www.github.com/daisyui/react-daisyui/commit/6e6156cd628cf2d927ee5c418fe983ad94c5e114))
+
 ## 1.0.0 (2022-03-12)
 
 
