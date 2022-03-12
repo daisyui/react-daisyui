@@ -10,6 +10,7 @@ import ButtonGroup from './ButtonGroup'
 import Card from './Card'
 import Carousel from './Carousel'
 import Checkbox from './Checkbox'
+import CodeMockup from './CodeMockup'
 import Collapse from './Collapse'
 import Countdown from './Countdown'
 import Divider from './Divider'
@@ -27,6 +28,7 @@ import Mask from './Mask'
 import Menu from './Menu'
 import Modal from './Modal'
 import Navbar from './Navbar'
+import PhoneMockup from './PhoneMockup'
 import Pagination from './Pagination'
 import Progress from './Progress'
 import RadialProgress from './RadialProgress'
@@ -44,6 +46,7 @@ import Textarea from './Textarea'
 import Theme from './Theme'
 import Toggle from './Toggle'
 import Tooltip from './Tooltip'
+import WindowMockup from './WindowMockup'
 
 export {
   Alert,
@@ -56,6 +59,7 @@ export {
   Card,
   Carousel,
   Checkbox,
+  CodeMockup,
   Collapse,
   Countdown,
   Divider,
@@ -73,6 +77,7 @@ export {
   Menu,
   Modal,
   Navbar,
+  PhoneMockup,
   Pagination,
   Progress,
   RadialProgress,
@@ -90,4 +95,5 @@ export {
   Theme,
   Toggle,
   Tooltip,
+  WindowMockup,
 }

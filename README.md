@@ -1,4 +1,4 @@
-[![NPM Version](https://img.shields.io/npm/v/react-daisyui.svg?branch=master)](https://www.npmjs.com/package/react-daisyui) [![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-daisyui)](https://bundlephobia.com/result?p=react-daisyui) [![License](https://img.shields.io/npm/l/react-daisyui.svg)](https://github.com/daisyui/react-daisyui/blob/master/LICENSE) 
+[![NPM Version](https://img.shields.io/npm/v/react-daisyui.svg?branch=master)](https://www.npmjs.com/package/react-daisyui) [![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-daisyui)](https://bundlephobia.com/result?p=react-daisyui) [![License](https://img.shields.io/npm/l/react-daisyui.svg)](https://github.com/daisyui/react-daisyui/blob/master/LICENSE)
 
 # react-daisyui 🌼
 
@@ -41,11 +41,7 @@ Import react-daisyui components within your component files:
 import { Button } from 'react-daisyui'
 
 export default (props) => {
-  return (
-    <Button color="primary">
-      Click me!
-    </Button>
-  )
+  return <Button color="primary">Click me!</Button>
 }
 ```
 
@@ -60,15 +56,11 @@ export default (props) => {
   return (
     <>
       <Theme dataTheme="dark">
-        <Button color="primary">
-          Click me, dark!
-        </Button>
+        <Button color="primary">Click me, dark!</Button>
       </Theme>
-      
+
       <Theme dataTheme="light">
-        <Button color="primary">
-          Click me, light!
-        </Button>
+        <Button color="primary">Click me, light!</Button>
       </Theme>
     </>
   )
@@ -151,9 +143,9 @@ Use tools like the official <a href="https://daisyui.com/theme-generator/">daisy
 <details>
 <summary>Mockup:</summary>
 
-- [ ] <a href="https://react.daisyui.com/?path=/story/mockup-code">Code</a>
-- [ ] <a href="https://react.daisyui.com/?path=/story/mockup-phone">Phone</a>
-- [ ] <a href="https://react.daisyui.com/?path=/story/mockup-window">Window</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/mockup-code">Code</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/mockup-phone">Phone</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/mockup-window">Window</a>
 </details>
 
 ---
@@ -169,7 +161,8 @@ For story references, check out the official <a href="https://daisyui.com/compon
 Run `npm run generate component ${your_new_component_name}`. The generator will ask a few questions and setup the component for you.
 
 When you'e done, export the component from `index.tsx` and open a PR.
-___
+
+---
 
 ### License
 

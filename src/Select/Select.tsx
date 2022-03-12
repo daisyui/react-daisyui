@@ -11,7 +11,10 @@ export type SelectOption<T> = {
   label: string
 }
 
-export type SelectProps<T> = Omit<React.SelectHTMLAttributes<HTMLSelectElement>, 'onChange'> &
+export type SelectProps<T> = Omit<
+  React.SelectHTMLAttributes<HTMLSelectElement>,
+  'onChange' | 'value'
+> &
   IComponentBaseProps & {
     children: ReactElement<SelectOptionProps<T>>[]
     ref?: LegacyRef<HTMLSelectElement>
