@@ -9,5 +9,5 @@ export default {
 } as Meta
 
 export const Default: Story<TextareaProps> = (args) => {
-  return <Textarea {...args} />
+  return <Textarea {...args} bordered />
 }
