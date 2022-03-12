@@ -1,15 +1,23 @@
+import {
+  componentStatuses,
+  componentColors,
+  componentPositions,
+  compnentSizes,
+  componentShapes,
+  bgColors,
+  brandColors,
+} from './constants'
+import { DEFAULT_THEMES } from './defaultThemes'
+
 export interface IComponentBaseProps {
-  dataTheme?: string
+  dataTheme?: typeof DEFAULT_THEMES[number] | string
 }
 
-export type ComponentColor =
-  | 'primary'
-  | 'secondary'
-  | 'accent'
-  | 'ghost'
-  | ComponentStatus
+export type ComponentColor = typeof componentColors[number]
 
-export type ComponentPosition = 'top' | 'bottom' | 'left' | 'right'
-export type ComponentShape = 'circle' | 'square'
-export type ComponentSize = 'lg' | 'md' | 'sm' | 'xs'
-export type ComponentStatus = 'info' | 'success' | 'warning' | 'error'
+export type ComponentPosition = typeof componentPositions[number]
+export type ComponentShape = typeof componentShapes[number]
+export type ComponentSize = typeof compnentSizes[number]
+export type ComponentStatus = typeof componentStatuses[number]
+export type ComponentBrandColors = typeof brandColors[number]
+export type ComponentBgColors = typeof bgColors[number]
