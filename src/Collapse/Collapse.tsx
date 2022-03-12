@@ -10,6 +10,7 @@ import CollapseContent from './CollapseContent'
 export type CollapseProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {
     ref: LegacyRef<HTMLDivElement>
+    checkbox?: boolean
     icon?: 'arrow' | 'plus'
     open?: boolean
   }
@@ -17,6 +18,7 @@ export type CollapseProps = React.HTMLAttributes<HTMLDivElement> &
 const Collapse = ({
   children,
   ref,
+  checkbox,
   icon,
   open,
   dataTheme,
@@ -41,6 +43,7 @@ const Collapse = ({
       data-theme={dataTheme}
       className={classes}
     >
+      {checkbox && <input type="checkbox" className="peer" />}
       {children}
     </div>
   )
