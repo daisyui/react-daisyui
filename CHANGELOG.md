@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.1](https://www.github.com/daisyui/react-daisyui/compare/v1.0.0...v1.0.1) (2022-03-12)
+
+
+### Bug Fixes
+
+* remove inlined css from microbundle and minify with compress for smaller bundle size ([fa98273](https://www.github.com/daisyui/react-daisyui/commit/fa98273cb8b27b4487e023fd596eb05261918355))
+
 ## 1.0.0 (2022-03-12)
 
 
