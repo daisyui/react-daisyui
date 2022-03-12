@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.1.0](https://www.github.com/daisyui/react-daisyui/compare/v1.0.2...v1.1.0) (2022-03-12)
+
+
+### Features
+
+* added collapse stories ([4c154c4](https://www.github.com/daisyui/react-daisyui/commit/4c154c4132b35655b49b79c30d3facb8384d4adc))
+* added Label ([778fe1d](https://www.github.com/daisyui/react-daisyui/commit/778fe1d9c5e00c97a3b8058ad83e1e38838f28d3))
+* added Label ([5f82164](https://www.github.com/daisyui/react-daisyui/commit/5f82164e9919ba7574f948afec6d370116dd9ccb))
+* added radio stories ([b0e3ac7](https://www.github.com/daisyui/react-daisyui/commit/b0e3ac77405a164297672ced8dd3e3e32b233ae2))
+* added range stories ([616b8c6](https://www.github.com/daisyui/react-daisyui/commit/616b8c60a3b373354099281388f1970652dc9647))
+* added stack stories ([2776591](https://www.github.com/daisyui/react-daisyui/commit/2776591aabd78b37e8317fc4e2a9e13427d5c03e))
+* added swap stories ([6150c20](https://www.github.com/daisyui/react-daisyui/commit/6150c208cea48ae783ab1febfd95f28a82a08fe4))
+* added toggle stories ([c1c1459](https://www.github.com/daisyui/react-daisyui/commit/c1c14592de0dcaba1efb72ba833740e213bef1a8))
+
+
+### Miscellaneous
+
+* added checkbox stories ([#23](https://www.github.com/daisyui/react-daisyui/issues/23)) ([a050e97](https://www.github.com/daisyui/react-daisyui/commit/a050e97f0098ae9e359f7e444bfbbf1a2df15799))
+
 ### [1.0.2](https://www.github.com/daisyui/react-daisyui/compare/v1.0.1...v1.0.2) (2022-03-12)
 
 
