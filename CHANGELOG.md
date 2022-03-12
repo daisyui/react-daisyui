@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.1](https://www.github.com/daisyui/react-daisyui/compare/v1.0.0...v1.0.1) (2022-03-12)
+
+
+### Bug Fixes
+
+* added npmrc and changed release configs ([#12](https://www.github.com/daisyui/react-daisyui/issues/12)) ([ad2535c](https://www.github.com/daisyui/react-daisyui/commit/ad2535c19fc60e08e3620ef778edc433bdf045a4))
+
 ## 1.0.0 (2022-03-12)
 
 
