@@ -1,5 +1,3 @@
-import './styles.css'
-
 import Alert from './Alert'
 import Artboard from './Artboard'
 import Avatar from './Avatar'
