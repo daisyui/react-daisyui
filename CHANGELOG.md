@@ -1,5 +1,14 @@
 # Changelog
 
+### [1.0.2](https://www.github.com/daisyui/react-daisyui/compare/v1.0.1...v1.0.2) (2022-03-12)
+
+
+### Bug Fixes
+
+* omit size from checkbox input html attributes ([b3147bd](https://www.github.com/daisyui/react-daisyui/commit/b3147bdd423d15cb20e60f7fff1d15b5761c8655))
+* omit size from htmlattributes of all inputs ([41daea4](https://www.github.com/daisyui/react-daisyui/commit/41daea4272cf28971d4297dab4f3428cd2d95f36))
+* typo in componentsizes ([8244d83](https://www.github.com/daisyui/react-daisyui/commit/8244d83404ee6c402b006dcf69778946fd98f67e))
+
 ### [1.0.1](https://www.github.com/daisyui/react-daisyui/compare/v1.0.0...v1.0.1) (2022-03-12)
 
 
