@@ -4,14 +4,13 @@ import { twMerge } from 'tailwind-merge'
 
 import {
   IComponentBaseProps,
-  ComponentColor,
+  ComponentBrandColors,
   ComponentSize,
-  ComponentStatus,
 } from '../types'
 
 export type ToggleProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> &
   IComponentBaseProps & {
-    color?: Omit<ComponentColor, ComponentStatus | 'ghost'>
+    color?: ComponentBrandColors
     size?: ComponentSize
   }
 
