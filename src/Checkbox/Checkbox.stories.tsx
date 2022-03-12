@@ -19,10 +19,9 @@ Default.args = {}
 const FormTemplate: Story<CheckboxProps> = (args) => {
   return (
     <Form className='shadow bg-base-200 w-64 rounded-lg p-4'>
-      <label className="label cursor-pointer">
-        <span className="label-text">Remember me</span> 
+      <Form.Label title="Remember me">
         <Checkbox {...args} />
-      </label>
+      </Form.Label>
     </Form>
   )
 }

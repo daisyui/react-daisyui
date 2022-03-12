@@ -13,9 +13,7 @@ export default {
 export const Default: Story<InputGroupProps> = (args) => {
   return (
     <Form>
-      <label className="label">
-        <span className="label-text">Enter amount</span>
-      </label>
+      <Form.Label title="Enter amount"></Form.Label>
 
       <InputGroup {...args}>
         <span>Price</span>
