@@ -1,5 +1,15 @@
 # Changelog
 
+### [1.1.1](https://www.github.com/daisyui/react-daisyui/compare/v1.1.0...v1.1.1) (2022-03-12)
+
+
+### Bug Fixes
+
+* added cname to docs manualy ([86d5a35](https://www.github.com/daisyui/react-daisyui/commit/86d5a359fa7eb18aa944f3cd16ffaea7f4792f6d))
+* changed text color of theme select to improve readability ([e7f31e7](https://www.github.com/daisyui/react-daisyui/commit/e7f31e74f2fa63c57e012e2482780eb6aedf4450))
+* manually ran docs because storybook never updated after release ([1379483](https://www.github.com/daisyui/react-daisyui/commit/1379483fe0527b1475df943f04b78cfa0ef12d93))
+* removed duplicate label component ([437cfe6](https://www.github.com/daisyui/react-daisyui/commit/437cfe6a384937fd8cccf5e1977893a86a9bb11c))
+
 ## [1.1.0](https://www.github.com/daisyui/react-daisyui/compare/v1.0.2...v1.1.0) (2022-03-12)
 
 
