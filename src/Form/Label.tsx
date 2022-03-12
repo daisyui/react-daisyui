@@ -22,7 +22,7 @@ const Label = ({
 
     return (
         <label {...props} className={classes}>
-            <span className="label-text">{title}</span>
+            <span className="label-text cursor-pointer">{title}</span>
             {children}
         </label>
     )

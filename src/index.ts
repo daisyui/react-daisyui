@@ -21,7 +21,6 @@ import Indicator from './Indicator'
 import Input from './Input'
 import InputGroup from './InputGroup'
 import Kbd from './Kbd'
-import Label from './Label'
 import Link from './Link'
 import Mask from './Mask'
 import Menu from './Menu'
@@ -71,7 +70,6 @@ export {
   Input,
   InputGroup,
   Kbd,
-  Label,
   Link,
   Mask,
   Menu,
