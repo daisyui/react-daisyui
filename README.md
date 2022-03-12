@@ -131,7 +131,6 @@ Use tools like the official <a href="https://daisyui.com/theme-generator/">daisy
 <details>
 <summary>Navigation:</summary>
 
-
 - [X] <a href="https://react.daisyui.com/?path=/story/navigation-breadcrumbs">Breadcrumbs</a>
 - [X] <a href="https://react.daisyui.com/?path=/story/navigation-link">Link</a>
 - [X] <a href="https://react.daisyui.com/?path=/story/navigation-menu">Menu</a>
