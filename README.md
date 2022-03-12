@@ -4,7 +4,7 @@
 
 DaisyUI components built with React, Typescript and TailwindCSS.
 
-👉 <a href="https://react.daisyui.com/">Check out our Storybook!</a> 👈
+👉 Check out our <a href="https://react.daisyui.com/">Storybook</a> | 🎲 Try it with <a href="https://codesandbox.io/s/react-daisyui-example-840os3?file=/src/App.tsx">CodeSandbox</a>
 
 ---
 
