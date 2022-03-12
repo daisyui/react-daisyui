@@ -4,7 +4,7 @@
 
 DaisyUI components built with React, Typescript and TailwindCSS.
 
-<a href="https://dev.daisyui.com/react-daisyui/">Check out our Storybook!</a>
+<a href="https://react.daisyui.com/">Check out our Storybook!</a>
 
 ---
 
@@ -84,76 +84,76 @@ Use tools like the official <a href="https://daisyui.com/theme-generator/">daisy
 <details>
 <summary>Actions:</summary>
   
-- [x] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/actions-button">Button</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/actions-dropdown">Dropdown</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/actions-modal">Modal</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/actions-swap">Swap</a>
+- [x] <a href="https://react.daisyui.com/?path=/story/actions-button">Button</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/actions-dropdown">Dropdown</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/actions-modal">Modal</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/actions-swap">Swap</a>
 </details>
 
 <details>
 <summary>Data Display:</summary>
   
-- [x] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/data-display-alert">Alert</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/data-display-avatar">Avatar</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/data-display-badge">Badge</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/data-display-card">Card</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/data-display-carousel">Carousel</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/data-display-collapse">Collapse</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/data-display-countdown">Countdown</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/data-display-kbd">Kbd</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/data-display-progress">Progress</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/data-display-radial-progress">Radial Progress</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/data-display-stats">Stats</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/data-display-table">Table</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/data-display-tooltip">Tooltip</a>
+- [x] <a href="https://react.daisyui.com/?path=/story/data-display-alert">Alert</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-avatar">Avatar</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-badge">Badge</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-card">Card</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-carousel">Carousel</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-collapse">Collapse</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-countdown">Countdown</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-kbd">Kbd</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-progress">Progress</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-radial-progress">Radial Progress</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-stats">Stats</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-table">Table</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-tooltip">Tooltip</a>
 </details>
 
 <details>
 <summary>Data Input:</summary>
 
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/data-input-checkbox">Checkbox</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/data-input-input">Input</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/data-input-radio">Radio</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/data-input-range">Range</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/data-input-rating">Rating</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/data-input-select">Select</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/data-input-textarea">Textarea</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/data-input-toggle">Toggle</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-input-checkbox">Checkbox</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-input-input">Input</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-input-radio">Radio</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-input-range">Range</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-input-rating">Rating</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-input-select">Select</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-input-textarea">Textarea</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-input-toggle">Toggle</a>
 </details>
 
 <details>
 <summary>Layout:</summary>
 
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/layout-artboard">Artboard</a>
-- [x] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/layout-buttongroup">Button-Group</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/layout-divider">Divider</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/layout-drawer">Drawer</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/layout-footer">Footer</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/layout-hero">Hero</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/layout-indicator">Indicator</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/layout-inputgroup">Input Group</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/layout-mask">Mask</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/layout-stack">Stack</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/layout-artboard">Artboard</a>
+- [x] <a href="https://react.daisyui.com/?path=/story/layout-buttongroup">Button-Group</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/layout-divider">Divider</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/layout-drawer">Drawer</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/layout-footer">Footer</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/layout-hero">Hero</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/layout-indicator">Indicator</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/layout-inputgroup">Input Group</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/layout-mask">Mask</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/layout-stack">Stack</a>
 </details>
 
 <details>
 <summary>Navigation:</summary>
 
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/navigation-breadcrumbs">Breadcrumbs</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/navigation-link">Link</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/navigation-menu">Menu</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/navigation-navbar">Navbar</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/navigation-pagination">Pagination</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/navigation-steps">Steps</a>
-- [X] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/navigation-tabs">Tabs</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/navigation-breadcrumbs">Breadcrumbs</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/navigation-link">Link</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/navigation-menu">Menu</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/navigation-navbar">Navbar</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/navigation-pagination">Pagination</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/navigation-steps">Steps</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/navigation-tabs">Tabs</a>
 </details>
 
 <details>
 <summary>Mockup:</summary>
 
-- [ ] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/mockup-code">Code</a>
-- [ ] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/mockup-phone">Phone</a>
-- [ ] <a href="https://dev.daisyui.com/react-daisyui/?path=/story/mockup-window">Window</a>
+- [ ] <a href="https://react.daisyui.com/?path=/story/mockup-code">Code</a>
+- [ ] <a href="https://react.daisyui.com/?path=/story/mockup-phone">Phone</a>
+- [ ] <a href="https://react.daisyui.com/?path=/story/mockup-window">Window</a>
 </details>
 
 ---
