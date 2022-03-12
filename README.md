@@ -1,4 +1,4 @@
-[![NPM Version](https://img.shields.io/npm/v/react-daisyui.svg?branch=master)](https://www.npmjs.com/package/react-daisyui) [![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-daisyui)](https://bundlephobia.com/result?p=react-daisyui) [![License](https://img.shields.io/npm/l/react-daisyui.svg)](https://github.com/daisyui/react-daisyui/blob/master/LICENSE) 
+[![NPM Version](https://img.shields.io/npm/v/react-daisyui.svg?branch=master)](https://www.npmjs.com/package/react-daisyui) [![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-daisyui)](https://bundlephobia.com/result?p=react-daisyui) [![License](https://img.shields.io/npm/l/react-daisyui.svg)](https://github.com/daisyui/react-daisyui/blob/master/LICENSE)
 
 # react-daisyui 🌼
 
@@ -41,11 +41,7 @@ Import react-daisyui components within your component files:
 import { Button } from 'react-daisyui'
 
 export default (props) => {
-  return (
-    <Button color="primary">
-      Click me!
-    </Button>
-  )
+  return <Button color="primary">Click me!</Button>
 }
 ```
 
@@ -60,15 +56,11 @@ export default (props) => {
   return (
     <>
       <Theme dataTheme="dark">
-        <Button color="primary">
-          Click me, dark!
-        </Button>
+        <Button color="primary">Click me, dark!</Button>
       </Theme>
-      
+
       <Theme dataTheme="light">
-        <Button color="primary">
-          Click me, light!
-        </Button>
+        <Button color="primary">Click me, light!</Button>
       </Theme>
     </>
   )
@@ -111,49 +103,49 @@ Use tools like the official <a href="https://daisyui.com/theme-generator/">daisy
 <details>
 <summary>Data Input:</summary>
 
-- [X] Checkbox
-- [X] Input
-- [X] Radio
-- [X] Range
-- [X] Rating
-- [X] Select
-- [X] Textarea
-- [X] Toggle
+- [x] Checkbox
+- [x] Input
+- [x] Radio
+- [x] Range
+- [x] Rating
+- [x] Select
+- [x] Textarea
+- [x] Toggle
 </details>
 
 <details>
 <summary>Layout:</summary>
 
-- [X] Artboard
+- [x] Artboard
 - [x] Button-Group
-- [X] Divider
-- [ ] Drawer
-- [X] Footer
-- [X] Hero
-- [X] Indicator
-- [X] Input Group
-- [X] Mask
-- [X] Stack
+- [x] Divider
+- [x] Drawer
+- [x] Footer
+- [x] Hero
+- [x] Indicator
+- [x] Input Group
+- [x] Mask
+- [x] Stack
 </details>
 
 <details>
 <summary>Navigation:</summary>
 
-- [X] Breadcrumbs
-- [X] Link
-- [X] Menu
-- [X] Navbar
-- [ ] Pagination
-- [ ] Steps
-- [X] Tab
+- [x] Breadcrumbs
+- [x] Link
+- [x] Menu
+- [x] Navbar
+- [x] Pagination
+- [x] Steps
+- [x] Tab
 </details>
 
 <details>
 <summary>Mockup:</summary>
 
-- [ ] Code
-- [ ] Phone
-- [ ] Window
+- [x] Code
+- [x] Phone
+- [x] Window
 </details>
 
 ## Contributions
@@ -165,7 +157,8 @@ We're looking for contributors on this component library! We could use some help
 Run `npm run generate component ${your_new_component_name}`. The generator will ask a few questions and setup the component for you.
 
 When you'e done, export the component from `index.tsx` and open a PR.
-___
+
+---
 
 ### License
 
