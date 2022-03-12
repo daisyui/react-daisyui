@@ -37,16 +37,14 @@ export const WithLabelsAndForm: Story<RadioProps> = (args) => {
   return (
     <div className='bg-base-200 w-1/4 p-4 rounded-lg shadow'>
       <Form>
-        <label className="label cursor-pointer">
-          <span className="label-text">Red pill</span> 
+        <Form.Label title="Red Pill">
           <Radio {...args} name="radio1" className='checked:bg-red-500' defaultChecked />
-        </label>
+        </Form.Label>
       </Form>
       <Form>
-        <label className="label cursor-pointer">
-          <span className="label-text">Blue pill</span> 
+        <Form.Label title="Blue Pill">
           <Radio {...args} name="radio1" className='checked:bg-blue-500' defaultChecked />
-        </label>
+        </Form.Label>
       </Form>
     </div>
   )

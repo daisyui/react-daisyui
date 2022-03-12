@@ -3,6 +3,8 @@ import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
+import Label from './Label'
+
 export type FormProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps
 
@@ -20,5 +22,7 @@ const Form = ({
     </div>
   )
 }
+
+Form.Label = Label
 
 export default Form
