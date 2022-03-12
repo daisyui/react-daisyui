@@ -15,12 +15,10 @@ export const Default: Story<ModalProps> = (args) => {
   return (
     <>
       <Button onClick={() => toggleVisible(!visible)}>Open Modal</Button>
-      <Modal
-        {...args}
-        open={visible}
-        onCancel={() => toggleVisible(false)}
-      >
-        Enim dolorem dolorum omnis atque necessitatibus. Consequatur aut adipisci qui iusto illo eaque. Consequatur repudiandae et. Nulla ea quasi eligendi. Saepe velit autem minima.
+      <Modal {...args} open={visible} onCancel={() => toggleVisible(false)}>
+        Enim dolorem dolorum omnis atque necessitatibus. Consequatur aut
+        adipisci qui iusto illo eaque. Consequatur repudiandae et. Nulla ea
+        quasi eligendi. Saepe velit autem minima.
       </Modal>
     </>
   )

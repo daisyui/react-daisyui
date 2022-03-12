@@ -2,17 +2,12 @@ import React, { ReactNode } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-import {
-  IComponentBaseProps,
-  ComponentSize,
-} from '../types'
+import { IComponentBaseProps, ComponentSize } from '../types'
 
-export type KbdProps =
-  & React.HTMLAttributes<HTMLElement>
-  & IComponentBaseProps
-  & {
-  size?: ComponentSize
-}
+export type KbdProps = React.HTMLAttributes<HTMLElement> &
+  IComponentBaseProps & {
+    size?: ComponentSize
+  }
 
 const Kbd = ({
   children,
@@ -26,15 +21,11 @@ const Kbd = ({
     className,
     clsx({
       [`kbd-${size}`]: size,
-    }
-)  )
+    })
+  )
 
   return (
-    <kbd
-      {...props}
-      data-theme={dataTheme}
-      className={classes}
-    >
+    <kbd {...props} data-theme={dataTheme} className={classes}>
       {children}
     </kbd>
   )

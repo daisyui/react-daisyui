@@ -1,29 +1,20 @@
-import React, {
-  cloneElement,
-  ReactElement,
-  useState,
-} from 'react'
+import React, { cloneElement, ReactElement, useState } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-import {
-  IComponentBaseProps,
-  ComponentSize
-} from '../types'
+import { IComponentBaseProps, ComponentSize } from '../types'
 
 import Tab, { TabProps } from './Tab'
 
-export type TabsProps<T> =
-  & React.HTMLAttributes<HTMLDivElement>
-  & IComponentBaseProps
-  & {
+export type TabsProps<T> = React.HTMLAttributes<HTMLDivElement> &
+  IComponentBaseProps & {
     children: ReactElement<TabProps<T>>[]
     value?: T
     onChange?: (value: T) => void
     variant?: 'bordered' | 'lifted'
     size?: ComponentSize
     boxed?: boolean
-}
+  }
 
 const Tabs = <T extends string | number | undefined>({
   children,
@@ -47,11 +38,7 @@ const Tabs = <T extends string | number | undefined>({
   )
 
   return (
-    <div
-      {...props}
-      data-theme={dataTheme}
-      className={classes}
-    >
+    <div {...props} data-theme={dataTheme} className={classes}>
       {children.map((child) => {
         return cloneElement(child, {
           variant,

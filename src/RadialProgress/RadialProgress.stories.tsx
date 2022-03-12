@@ -9,9 +9,7 @@ export default {
 } as Meta
 
 export const Default: Story<RadialProgressProps> = (args) => {
-  return (
-    <RadialProgress {...args}>{args.value}%</RadialProgress>
-  )
+  return <RadialProgress {...args}>{args.value}%</RadialProgress>
 }
 
 Default.args = {

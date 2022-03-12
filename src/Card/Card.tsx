@@ -12,10 +12,8 @@ export type CardActionsProps = ActionProps
 export type CardBodyProps = BodyProps
 export type CardTitleProps = TitleProps
 
-export type CardProps = 
-  & React.HTMLAttributes<HTMLDivElement>
-  & IComponentBaseProps
-  & {
+export type CardProps = React.HTMLAttributes<HTMLDivElement> &
+  IComponentBaseProps & {
     bordered?: boolean
     imageFull?: boolean
 
@@ -23,7 +21,7 @@ export type CardProps =
     normal?: ComponentSize | boolean // Applies default paddings
     compact?: ComponentSize | boolean // Applies smaller padding
     side?: ComponentSize | boolean // The image in <figure> will be on to the side
-}
+  }
 
 interface ModifierMap {
   [key: string]: {
@@ -64,7 +62,7 @@ const Card = ({
   className,
   ...props
 }: CardProps): JSX.Element => {
-    const classes = twMerge(
+  const classes = twMerge(
     'card',
     className,
     clsx({

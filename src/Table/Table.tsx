@@ -8,40 +8,34 @@ import TableHead from './TableHead'
 import TableBody from './TableBody'
 import TableRow from './TableRow'
 
-export type TableProps =
-    & React.TableHTMLAttributes<HTMLTableElement>
-    & IComponentBaseProps
-    & {
-        compact?: boolean
-        zebra?: boolean
-}
+export type TableProps = React.TableHTMLAttributes<HTMLTableElement> &
+  IComponentBaseProps & {
+    compact?: boolean
+    zebra?: boolean
+  }
 
 const Table = ({
-    children,
-    compact,
-    zebra,
-    dataTheme,
-    className,
-    ...props
+  children,
+  compact,
+  zebra,
+  dataTheme,
+  className,
+  ...props
 }: TableProps): JSX.Element => {
-    const classes = twMerge(
-        'table',
-        className,
-        clsx({
-            'table-zebra': zebra,
-            'table-compact': compact,
-        })
-    )
+  const classes = twMerge(
+    'table',
+    className,
+    clsx({
+      'table-zebra': zebra,
+      'table-compact': compact,
+    })
+  )
 
-    return (
-        <table
-            {...props}
-            data-theme={dataTheme}
-            className={classes}
-        >
-            {children}
-        </table>
-    )
+  return (
+    <table {...props} data-theme={dataTheme} className={classes}>
+      {children}
+    </table>
+  )
 }
 
 Table.Head = TableHead

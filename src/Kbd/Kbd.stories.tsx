@@ -11,11 +11,8 @@ export default {
 export const Default: Story<KbdProps> = (args) => {
   return (
     <>
-        <Kbd {...args}>ctrl</Kbd>
-        +
-        <Kbd {...args}>shift</Kbd>
-        +
-        <Kbd {...args}>del</Kbd>
+      <Kbd {...args}>ctrl</Kbd>+<Kbd {...args}>shift</Kbd>+
+      <Kbd {...args}>del</Kbd>
     </>
   )
 }

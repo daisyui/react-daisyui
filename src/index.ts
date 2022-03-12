@@ -14,6 +14,7 @@ import CodeMockup from './CodeMockup'
 import Collapse from './Collapse'
 import Countdown from './Countdown'
 import Divider from './Divider'
+import Drawer from './Drawer'
 import Dropdown from './Dropdown'
 import Footer from './Footer'
 import Form from './Form'
@@ -28,6 +29,7 @@ import Menu from './Menu'
 import Modal from './Modal'
 import Navbar from './Navbar'
 import PhoneMockup from './PhoneMockup'
+import Pagination from './Pagination'
 import Progress from './Progress'
 import RadialProgress from './RadialProgress'
 import Radio from './Radio'
@@ -36,6 +38,7 @@ import Rating from './Rating'
 import Select from './Select'
 import Stack from './Stack'
 import Stats from './Stats'
+import Steps from './Steps'
 import Swap from './Swap'
 import Table from './Table'
 import Tabs from './Tabs'
@@ -60,6 +63,7 @@ export {
   Collapse,
   Countdown,
   Divider,
+  Drawer,
   Dropdown,
   Footer,
   Form,
@@ -74,6 +78,7 @@ export {
   Modal,
   Navbar,
   PhoneMockup,
+  Pagination,
   Progress,
   RadialProgress,
   Radio,
@@ -82,6 +87,7 @@ export {
   Select,
   Stack,
   Stats,
+  Steps,
   Swap,
   Table,
   Tabs,

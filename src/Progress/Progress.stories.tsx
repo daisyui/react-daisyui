@@ -9,9 +9,7 @@ export default {
 } as Meta
 
 export const Default: Story<ProgressProps> = (args) => {
-  return (
-    <Progress {...args}/>
-  )
+  return <Progress {...args} />
 }
 Default.args = {
   value: 50,

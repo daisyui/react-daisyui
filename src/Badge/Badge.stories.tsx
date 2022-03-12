@@ -9,9 +9,7 @@ export default {
 } as Meta
 
 export const Default: Story<BadgeProps> = (args) => {
-  return (
-    <Badge {...args}>Example</Badge>
-  )
+  return <Badge {...args}>Example</Badge>
 }
 
 Default.args = {}

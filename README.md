@@ -4,7 +4,7 @@
 
 DaisyUI components built with React, Typescript and TailwindCSS.
 
-<a href="https://daisyui.github.io/react-daisyui/">Check out our Storybook!</a>
+<a href="https://react.daisyui.com/">Check out our Storybook!</a>
 
 ---
 
@@ -71,86 +71,91 @@ Use tools like the official <a href="https://daisyui.com/theme-generator/">daisy
 
 ---
 
-## 🚧 Components To-Do
+## ⚙️ Components
 
 <details>
 <summary>Actions:</summary>
   
-- [x] Button
-- [X] Dropdown
-- [X] Modal
-- [X] Swap
+- [x] <a href="https://react.daisyui.com/?path=/story/actions-button">Button</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/actions-dropdown">Dropdown</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/actions-modal">Modal</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/actions-swap">Swap</a>
 </details>
 
 <details>
 <summary>Data Display:</summary>
   
-- [x] Alert
-- [X] Avatar
-- [X] Badge
-- [X] Card
-- [X] Carousel
-- [X] Collapse
-- [X] Countdown
-- [X] Kbd
-- [X] Progress
-- [X] Radial Progress
-- [X] Stats
-- [X] Table
-- [X] Tooltip
+- [x] <a href="https://react.daisyui.com/?path=/story/data-display-alert">Alert</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-avatar">Avatar</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-badge">Badge</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-card">Card</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-carousel">Carousel</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-collapse">Collapse</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-countdown">Countdown</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-kbd">Kbd</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-progress">Progress</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-radial-progress">Radial Progress</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-stats">Stats</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-table">Table</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-tooltip">Tooltip</a>
 </details>
 
 <details>
 <summary>Data Input:</summary>
 
-- [x] Checkbox
-- [x] Input
-- [x] Radio
-- [x] Range
-- [x] Rating
-- [x] Select
-- [x] Textarea
-- [x] Toggle
+- [X] <a href="https://react.daisyui.com/?path=/story/data-input-checkbox">Checkbox</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-input-input">Input</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-input-radio">Radio</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-input-range">Range</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-input-rating">Rating</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-input-select">Select</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-input-textarea">Textarea</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-input-toggle">Toggle</a>
 </details>
 
 <details>
 <summary>Layout:</summary>
 
-- [x] Artboard
-- [x] Button-Group
-- [x] Divider
-- [x] Drawer
-- [x] Footer
-- [x] Hero
-- [x] Indicator
-- [x] Input Group
-- [x] Mask
-- [x] Stack
+- [X] <a href="https://react.daisyui.com/?path=/story/layout-artboard">Artboard</a>
+- [x] <a href="https://react.daisyui.com/?path=/story/layout-buttongroup">Button-Group</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/layout-divider">Divider</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/layout-drawer">Drawer</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/layout-footer">Footer</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/layout-hero">Hero</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/layout-indicator">Indicator</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/layout-inputgroup">Input Group</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/layout-mask">Mask</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/layout-stack">Stack</a>
 </details>
 
 <details>
 <summary>Navigation:</summary>
 
-- [x] Breadcrumbs
-- [x] Link
-- [x] Menu
-- [x] Navbar
-- [x] Pagination
-- [x] Steps
-- [x] Tab
+
+- [X] <a href="https://react.daisyui.com/?path=/story/navigation-breadcrumbs">Breadcrumbs</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/navigation-link">Link</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/navigation-menu">Menu</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/navigation-navbar">Navbar</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/navigation-pagination">Pagination</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/navigation-steps">Steps</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/navigation-tabs">Tabs</a>
 </details>
 
 <details>
 <summary>Mockup:</summary>
 
-- [x] Code
-- [x] Phone
-- [x] Window
+- [X] <a href="https://react.daisyui.com/?path=/story/mockup-code">Code</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/mockup-phone">Phone</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/mockup-window">Window</a>
 </details>
 
-## Contributions
+---
 
-We're looking for contributors on this component library! We could use some help building out stories and writing unit tests for components.
+## 🤝 Contributing
+
+We're looking for contributors to help write stories and unit tests for components.
+
+For story references, check out the official <a href="https://daisyui.com/components/">daisyUI examples.</a> 👈
 
 ### Creating new components
 

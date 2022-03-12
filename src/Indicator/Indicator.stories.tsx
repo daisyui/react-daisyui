@@ -11,12 +11,12 @@ export default {
 } as Meta
 
 export const Default: Story<IndicatorProps> = (args) => {
-  return (
-    <Indicator {...args}/>
-  )
+  return <Indicator {...args} />
 }
 
 Default.args = {
-    children: <Avatar src='http://daisyui.com/tailwind-css-component-profile-1@94w.png'/>,
-    item: <Badge color='error' />
+  children: (
+    <Avatar src="http://daisyui.com/tailwind-css-component-profile-1@94w.png" />
+  ),
+  item: <Badge color="error" />,
 }

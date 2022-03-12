@@ -9,12 +9,10 @@ export default {
 } as Meta
 
 export const Default: Story<SwapProps> = (args) => {
-  return (
-    <Swap {...args} />
-  )
+  return <Swap {...args} />
 }
 
 Default.args = {
-    onElement: <>ON</>,
-    offElement: <>OFF</>,
+  onElement: <>ON</>,
+  offElement: <>OFF</>,
 }

@@ -6,15 +6,15 @@ import { IComponentBaseProps } from '../types'
 
 import CarouselItem, { CarouselItemProps } from './CarouselItem'
 
-export type CarouselProps =
-  & React.HTMLAttributes<HTMLDivElement>
-  & IComponentBaseProps
-  & {
-    children?: ReactElement<CarouselItemProps> | ReactElement<CarouselItemProps>[]
+export type CarouselProps = React.HTMLAttributes<HTMLDivElement> &
+  IComponentBaseProps & {
+    children?:
+      | ReactElement<CarouselItemProps>
+      | ReactElement<CarouselItemProps>[]
     ref?: LegacyRef<HTMLDivElement>
     snap?: 'start' | 'center' | 'end'
     vertical?: boolean
-}
+  }
 
 const Carousel = ({
   children,
@@ -35,12 +35,7 @@ const Carousel = ({
   )
 
   return (
-    <div
-      {...props}
-      ref={ref}
-      data-theme={dataTheme}
-      className={classes}
-    >
+    <div {...props} ref={ref} data-theme={dataTheme} className={classes}>
       {children}
     </div>
   )

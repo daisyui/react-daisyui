@@ -6,28 +6,21 @@ import { IComponentBaseProps } from '../types'
 
 import FooterTitle from './FooterTitle'
 
-export type FooterProps = 
-  & React.HTMLAttributes<HTMLDivElement>
-  & IComponentBaseProps
-  & {
+export type FooterProps = React.HTMLAttributes<HTMLDivElement> &
+  IComponentBaseProps & {
     center: boolean
-}
+  }
 
 const Footer = ({ center, className, ...props }: FooterProps) => {
   const classes = twMerge(
     'footer',
     className,
     clsx({
-      'footer-center': center
+      'footer-center': center,
     })
   )
 
-  return (
-    <div
-      className={classes}
-      {...props}
-    />
-  )
+  return <div className={classes} {...props} />
 }
 
 Footer.Title = FooterTitle

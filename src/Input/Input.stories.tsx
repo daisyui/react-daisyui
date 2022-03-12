@@ -9,9 +9,7 @@ export default {
 } as Meta
 
 export const Default: Story<InputProps> = (args) => {
-  return (
-    <Input {...args} />
-  )
+  return <Input {...args} />
 }
 
 Default.args = {

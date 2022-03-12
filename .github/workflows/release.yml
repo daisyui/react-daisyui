@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - master
+      - main
 name: release-please-pr
 jobs:
   release-pr:
@@ -62,4 +62,6 @@ jobs:
       - run: npm ci
         if: ${{ steps.release.outputs.release_created }}
       - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         if: ${{ steps.release.outputs.release_created }}

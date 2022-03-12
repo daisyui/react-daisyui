@@ -1,11 +1,10 @@
 import React, { ReactNode } from 'react'
 import { twMerge } from 'tailwind-merge'
 
-import { IComponentBaseProps } from '../types';
+import { IComponentBaseProps } from '../types'
 
-export type FormProps =
-  & React.HTMLAttributes<HTMLDivElement>
-  & IComponentBaseProps
+export type FormProps = React.HTMLAttributes<HTMLDivElement> &
+  IComponentBaseProps
 
 const Form = ({
   children,
@@ -13,17 +12,10 @@ const Form = ({
   className,
   ...props
 }: FormProps): JSX.Element => {
-  const classes = twMerge(
-    'form-control',
-    className,
-  )
+  const classes = twMerge('form-control', className)
 
   return (
-    <div
-      {...props}
-      data-theme={dataTheme}
-      className={classes}
-    >
+    <div {...props} data-theme={dataTheme} className={classes}>
       {children}
     </div>
   )
