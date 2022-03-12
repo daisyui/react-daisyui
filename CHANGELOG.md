@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.3](https://www.github.com/daisyui/react-daisyui/compare/v1.0.2...v1.0.3) (2022-03-12)
+
+
+### Miscellaneous
+
+* added checkbox stories ([#23](https://www.github.com/daisyui/react-daisyui/issues/23)) ([a050e97](https://www.github.com/daisyui/react-daisyui/commit/a050e97f0098ae9e359f7e444bfbbf1a2df15799))
+
 ### [1.0.2](https://www.github.com/daisyui/react-daisyui/compare/v1.0.1...v1.0.2) (2022-03-12)
 
 
