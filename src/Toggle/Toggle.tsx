@@ -9,7 +9,7 @@ import {
   ComponentStatus,
 } from '../types'
 
-export type ToggleProps = React.InputHTMLAttributes<HTMLInputElement> &
+export type ToggleProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> &
   IComponentBaseProps & {
     color?: Omit<ComponentColor, ComponentStatus | 'ghost'>
     size?: ComponentSize

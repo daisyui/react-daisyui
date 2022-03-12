@@ -4,7 +4,7 @@ import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps, ComponentSize } from '../types'
 
-export type RangeProps = React.InputHTMLAttributes<HTMLInputElement> &
+export type RangeProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> &
   IComponentBaseProps & {
     value: number
     min?: number

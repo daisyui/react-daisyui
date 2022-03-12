@@ -4,7 +4,7 @@ import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps, ComponentSize } from '../types'
 
-export type RadioProps = React.InputHTMLAttributes<HTMLInputElement> &
+export type RadioProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> &
   IComponentBaseProps & {
     color?: 'primary' | 'secondary' | 'accent'
     size?: ComponentSize

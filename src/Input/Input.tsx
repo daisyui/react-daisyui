@@ -4,7 +4,7 @@ import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps, ComponentColor, ComponentSize } from '../types'
 
-export type InputProps = React.InputHTMLAttributes<HTMLInputElement> &
+export type InputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> &
   IComponentBaseProps & {
     value?: string
     placeholder?: string
