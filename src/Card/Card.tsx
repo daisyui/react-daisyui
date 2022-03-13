@@ -7,10 +7,12 @@ import { IComponentBaseProps, ComponentSize } from '../types'
 import CardActions, { CardActionsProps as ActionProps } from './CardActions'
 import CardBody, { CardBodyProps as BodyProps } from './CardBody'
 import CardTitle, { CardTitleProps as TitleProps } from './CardTitle'
+import CardImage, { CardImageProps as ImageProps } from './CardImage'
 
 export type CardActionsProps = ActionProps
 export type CardBodyProps = BodyProps
 export type CardTitleProps = TitleProps
+export type CardImageProps = ImageProps
 
 export type CardProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {
@@ -81,5 +83,6 @@ const Card = ({
 Card.Actions = CardActions
 Card.Body = CardBody
 Card.Title = CardTitle
+Card.Image = CardImage
 
 export default Card
