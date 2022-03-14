@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.2.2](https://www.github.com/daisyui/react-daisyui/compare/v1.2.1...v1.2.2) (2022-03-14)
+
+
+### Bug Fixes
+
+* removed automatically added storybook to tsconfig include ([4cd6779](https://www.github.com/daisyui/react-daisyui/commit/4cd677938c1076be27f2691b8f9a54aeb55aa869))
+
 ### [1.2.1](https://www.github.com/daisyui/react-daisyui/compare/v1.2.0...v1.2.1) (2022-03-14)
 
 
