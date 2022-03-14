@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.2.1](https://www.github.com/daisyui/react-daisyui/compare/v1.2.0...v1.2.1) (2022-03-14)
+
+
+### Bug Fixes
+
+* type declaration path in dist ([393e184](https://www.github.com/daisyui/react-daisyui/commit/393e18430d73f61a264d9c25d352541db61f29bf))
+
 ## [1.2.0](https://www.github.com/daisyui/react-daisyui/compare/v1.1.0...v1.2.0) (2022-03-14)
 
 
