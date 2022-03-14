@@ -18,5 +18,5 @@
     "jsxFactory": "",
     "jsxFragmentFactory": ""
   },
-  "include": ["./src", ".storybook/story-layout.tsx"]
+  "include": ["./src"]
 }
