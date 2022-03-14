@@ -19,7 +19,7 @@ export type ModalProps = React.HTMLAttributes<HTMLDivElement> &
     footer?: boolean
     acceptText?: string
     cancelText?: string
-    backdropClickCancels?: boolean
+    closeOnBlur?: boolean
     onAccept?: () => void
     onCancel?: () => void
   }
@@ -37,7 +37,7 @@ const Modal = forwardRef<ModalRef, ModalProps>(
       onCancel,
       dataTheme,
       className,
-      backdropClickCancels = true,
+      closeOnBlur = true,
       ...props
     },
     ref
@@ -64,7 +64,7 @@ const Modal = forwardRef<ModalRef, ModalProps>(
     const handleBackdropClick: React.MouseEventHandler = (e) => {
       if (e.target === e.currentTarget) {
         e.stopPropagation()
-        if (backdropClickCancels && onCancel) {
+        if (closeOnBlur && onCancel) {
           onCancel()
         }
       }
