@@ -15,6 +15,8 @@ export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
     shape?: ComponentShape
     size?: ComponentSize
     variant?: 'outline' | 'link'
+    startIcon?: React.ReactNode
+    endIcon?: React.ReactNode
     color?: ComponentColor
     fullWidth?: boolean
     responsive?: boolean
@@ -32,6 +34,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       size,
       variant,
       color,
+      startIcon,
+      endIcon,
       fullWidth,
       responsive,
       animation = true,
@@ -48,7 +52,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const classes = twMerge(
       'btn',
       className,
-      clsx({
+      clsx((startIcon || endIcon) && 'gap-2', {
         [`btn-${size}`]: size,
         [`btn-${shape}`]: shape,
         [`btn-${variant}`]: variant,
@@ -65,7 +69,9 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     if (href) {
       return (
         <a className={classes} style={style}>
+          {startIcon && startIcon}
           {children}
+          {endIcon && endIcon}
         </a>
       )
     } else {
@@ -77,7 +83,9 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           className={classes}
           style={style}
         >
+          {startIcon && startIcon}
           {children}
+          {endIcon && endIcon}
         </button>
       )
     }
