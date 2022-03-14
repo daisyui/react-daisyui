@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.2.0](https://www.github.com/daisyui/react-daisyui/compare/v1.1.0...v1.2.0) (2022-03-14)
+
+
+### Features
+
+* added badge stories ([2271a12](https://www.github.com/daisyui/react-daisyui/commit/2271a129125b3452d5e06480abeabb21a7068798))
+* added card image ([4b73b75](https://www.github.com/daisyui/react-daisyui/commit/4b73b750f3a88b10b3e6de7c0965899e4ee35190))
+* added menu title ([15d64f4](https://www.github.com/daisyui/react-daisyui/commit/15d64f4ee5fdb7c7d9ff92a710d4b56a674178c3))
+* avatar stories added ([#28](https://www.github.com/daisyui/react-daisyui/issues/28)) ([2b31df0](https://www.github.com/daisyui/react-daisyui/commit/2b31df0c5d64267b1cc79f88a166b1d2c3e43c9c))
+
+
+### Bug Fixes
+
+* add cname to docs automatically ([37c01a0](https://www.github.com/daisyui/react-daisyui/commit/37c01a038852fb0f3e1b4eb7c2d098274576b798))
+* added cname to docs manualy ([86d5a35](https://www.github.com/daisyui/react-daisyui/commit/86d5a359fa7eb18aa944f3cd16ffaea7f4792f6d))
+* changed text color of theme select to improve readability ([e7f31e7](https://www.github.com/daisyui/react-daisyui/commit/e7f31e74f2fa63c57e012e2482780eb6aedf4450))
+* export types from components ([8002b8e](https://www.github.com/daisyui/react-daisyui/commit/8002b8e8adc8f75b25ac61ee1b861607d4e50766))
+* manually ran docs because storybook never updated after release ([1379483](https://www.github.com/daisyui/react-daisyui/commit/1379483fe0527b1475df943f04b78cfa0ef12d93))
+* removed duplicate label component ([437cfe6](https://www.github.com/daisyui/react-daisyui/commit/437cfe6a384937fd8cccf5e1977893a86a9bb11c))
+
 ## [1.1.0](https://www.github.com/daisyui/react-daisyui/compare/v1.0.2...v1.1.0) (2022-03-12)
 
 
