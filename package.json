@@ -25,7 +25,7 @@
   "scripts": {
     "start": "start-storybook -p 6006",
     "dist": "microbundle --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react --globals react/jsx-runtime=jsx --css inline --compress false",
-    "docs": "build-storybook -o ./docs",
+    "docs": "build-storybook -o ./docs -s ./public",
     "test": "jest",
     "format": "prettier --write ./src",
     "prepublishOnly": "npm run dist",
