@@ -21,7 +21,7 @@
   "files": [
     "dist"
   ],
-  "types": "./dist/index.d.ts",
+  "types": "./dist/src/index.d.ts",
   "scripts": {
     "start": "start-storybook -p 6006",
     "dist": "microbundle --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react --globals react/jsx-runtime=jsx --css inline --compress false",
