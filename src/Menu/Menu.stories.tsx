@@ -12,9 +12,9 @@ export const Default: Story<MenuProps> = (args) => {
   return (
     <div className="bg-base-200">
       <Menu {...args} className="bg-base-100 w-56">
-        <Menu.Item title>
+        <Menu.Title>
           <a>This is a title</a>
-        </Menu.Item>
+        </Menu.Title>
         <Menu.Item>
           <a>Item 1</a>
         </Menu.Item>

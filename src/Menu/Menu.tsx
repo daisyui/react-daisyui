@@ -4,8 +4,10 @@ import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps, ComponentSize } from '../types'
 
+import MenuTitle, { MenuTitleProps as TitleProps } from './MenuTitle'
 import MenuItem, { MenuItemProps as ItemProps } from './MenuItem'
 
+export type MenuTitleProps = TitleProps
 export type MenuItemProps = ItemProps
 
 export type MenuProps = React.HTMLAttributes<HTMLUListElement> &
@@ -78,6 +80,7 @@ const Menu = ({
   return <ul className={classes} {...props} />
 }
 
+Menu.Title = MenuTitle
 Menu.Item = MenuItem
 
 export default Menu
