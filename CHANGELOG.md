@@ -1,5 +1,13 @@
 # Changelog
 
+### [1.2.3](https://www.github.com/daisyui/react-daisyui/compare/v1.2.2...v1.2.3) (2022-03-14)
+
+
+### Bug Fixes
+
+* do not build docs with storybook manager cache ([0b6489e](https://www.github.com/daisyui/react-daisyui/commit/0b6489ec4eb1e41b5efff87ffd96fe4e7883dbab))
+* reverted types path ([1741d65](https://www.github.com/daisyui/react-daisyui/commit/1741d659e346901fef77c8b1a5e5baee075b2bcf))
+
 ### [1.2.2](https://www.github.com/daisyui/react-daisyui/compare/v1.2.1...v1.2.2) (2022-03-14)
 
 
