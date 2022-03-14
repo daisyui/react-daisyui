@@ -19,6 +19,7 @@ export type ModalProps = React.HTMLAttributes<HTMLDivElement> &
     footer?: boolean
     acceptText?: string
     cancelText?: string
+    closeOnBlur?: boolean
     onAccept?: () => void
     onCancel?: () => void
   }
@@ -36,6 +37,7 @@ const Modal = forwardRef<ModalRef, ModalProps>(
       onCancel,
       dataTheme,
       className,
+      closeOnBlur = true,
       ...props
     },
     ref
@@ -59,8 +61,22 @@ const Modal = forwardRef<ModalRef, ModalProps>(
       }
     })
 
+    const handleBackdropClick: React.MouseEventHandler = (e) => {
+      if (e.target === e.currentTarget) {
+        e.stopPropagation()
+        if (closeOnBlur && onCancel) {
+          onCancel()
+        }
+      }
+    }
+
     return (
-      <div {...props} data-theme={dataTheme} className={classes}>
+      <div
+        {...props}
+        data-theme={dataTheme}
+        className={classes}
+        onClick={handleBackdropClick}
+      >
         <div className="modal-box">
           {title ? <div className="w-full mb-8 text-xl">{title}</div> : null}
 
