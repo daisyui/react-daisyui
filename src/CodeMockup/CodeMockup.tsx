@@ -1,14 +1,13 @@
-import React, { forwardRef, ReactNode } from 'react'
-import clsx from 'clsx'
+import React, { forwardRef } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 import { CodeMockupLine } from './CodeMockupLine'
 
-export type CodeProps = React.HTMLAttributes<HTMLDivElement> &
+export type CodeMockupProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps
 
-const CodeMockup = forwardRef<HTMLDivElement, CodeProps>(
+const CodeMockup = forwardRef<HTMLDivElement, CodeMockupProps>(
   ({ dataTheme, className, children, ...props }, ref): JSX.Element => {
     const classes = twMerge('mockup-code', className)
 

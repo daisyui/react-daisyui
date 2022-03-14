@@ -1,5 +1,3 @@
-export * from './WindowMockup'
-
 import WindowMockup, {
   WindowMockupProps as TWindowMockupProps,
 } from './WindowMockup'
