@@ -9,8 +9,10 @@ import {
 } from './constants'
 import { DEFAULT_THEMES } from './defaultThemes'
 
+export type DataTheme = typeof DEFAULT_THEMES[number] | string
+
 export interface IComponentBaseProps {
-  dataTheme?: typeof DEFAULT_THEMES[number] | string
+  dataTheme?: DataTheme
 }
 
 export type ComponentColor = typeof componentColors[number]
