@@ -1,5 +1,4 @@
-import { useContext, useState } from 'react'
-import { IComponentBaseProps } from '../types'
+import { useContext } from 'react'
 import { ThemeContext } from './ThemeContext'
 
 export const useTheme = () => {

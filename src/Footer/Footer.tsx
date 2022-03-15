@@ -11,7 +11,7 @@ export type FooterProps = React.HTMLAttributes<HTMLDivElement> &
     center: boolean
   }
 
-const Footer = ({ center, className, ...props }: FooterProps) => {
+const Footer = ({ center, dataTheme, className, ...props }: FooterProps) => {
   const classes = twMerge(
     'footer',
     className,
@@ -20,7 +20,7 @@ const Footer = ({ center, className, ...props }: FooterProps) => {
     })
   )
 
-  return <div className={classes} {...props} />
+  return <div data-theme={dataTheme} className={classes} {...props} />
 }
 
 Footer.Title = FooterTitle

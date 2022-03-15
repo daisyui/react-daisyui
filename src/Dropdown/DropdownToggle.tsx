@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 
 import { ComponentColor, ComponentSize, IComponentBaseProps } from '../types'
 
@@ -12,16 +12,17 @@ export type DropdownToggleProps = React.LabelHTMLAttributes<HTMLLabelElement> &
   }
 
 const DropdownToggle = ({
-  className,
+  children,
   color,
   size,
   button = true,
-  children,
+  dataTheme,
+  className,
 }: DropdownToggleProps) => {
   return (
     <label tabIndex={0} className={className}>
       {button ? (
-        <Button color={color} size={size}>
+        <Button dataTheme={dataTheme} color={color} size={size}>
           {children}
         </Button>
       ) : (

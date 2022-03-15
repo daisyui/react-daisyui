@@ -6,8 +6,6 @@ import { IComponentBaseProps, ComponentColor, ComponentSize } from '../types'
 
 export type InputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> &
   IComponentBaseProps & {
-    value?: string
-    placeholder?: string
     bordered?: boolean
     size?: ComponentSize
     color?: ComponentColor

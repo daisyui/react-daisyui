@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { DataTheme, IComponentBaseProps } from '../types'
+import { DataTheme } from '../types'
 
 export interface IThemeContext {
   theme: DataTheme

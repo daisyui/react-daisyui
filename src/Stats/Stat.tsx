@@ -8,10 +8,10 @@ import StatItem from './StatItem'
 export type StatProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps
 
-const Stat = ({ className, ...props }: StatProps): JSX.Element => {
+const Stat = ({ dataTheme, className, ...props }: StatProps): JSX.Element => {
   const classes = twMerge('stat', className)
 
-  return <div {...props} className={classes} />
+  return <div {...props} data-theme={dataTheme} className={classes} />
 }
 
 Stat.Item = StatItem

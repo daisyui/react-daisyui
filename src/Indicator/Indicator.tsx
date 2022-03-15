@@ -30,8 +30,8 @@ const Indicator = ({
   )
 
   return (
-    <div className="indicator">
-      <div {...props} data-theme={dataTheme} className={classes}>
+    <div data-theme={dataTheme} className="indicator">
+      <div {...props} className={classes}>
         {item}
       </div>
 

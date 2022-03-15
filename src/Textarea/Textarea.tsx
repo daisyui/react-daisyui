@@ -2,10 +2,12 @@ import React from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-import { ComponentColor } from '../types'
+import { ComponentColor, IComponentBaseProps } from '../types'
 
 export type TextareaProps =
-  React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
+  React.TextareaHTMLAttributes<HTMLTextAreaElement>
+  & IComponentBaseProps
+  & {
     color?: ComponentColor
     bordered?: boolean
   }
@@ -13,6 +15,7 @@ export type TextareaProps =
 const Textarea = ({
   bordered,
   color,
+  dataTheme,
   className,
   ...props
 }: TextareaProps): JSX.Element => {
@@ -25,7 +28,7 @@ const Textarea = ({
     })
   )
 
-  return <textarea {...props} className={classes} />
+  return <textarea {...props} data-theme={dataTheme} className={classes} />
 }
 
 export default Textarea

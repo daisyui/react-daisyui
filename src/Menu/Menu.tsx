@@ -56,11 +56,12 @@ const DYNAMIC_MODIFIERS: ModifierMap = {
 }
 
 const Menu = ({
-  className,
   normal,
   compact,
   horizontal,
   vertical,
+  dataTheme,
+  className,
   ...props
 }: MenuProps) => {
   const classes = twMerge(
@@ -77,7 +78,7 @@ const Menu = ({
     })
   )
 
-  return <ul className={classes} {...props} />
+  return <ul data-theme={dataTheme} className={classes} {...props} />
 }
 
 Menu.Title = MenuTitle
