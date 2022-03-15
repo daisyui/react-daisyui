@@ -24,6 +24,7 @@ export type SelectProps<T> = Omit<
     size?: ComponentSize
     color?: ComponentColor
     bordered?: boolean
+    borderOffset?: boolean
   }
 
 const Select = <T extends string | number | undefined>({
@@ -35,6 +36,7 @@ const Select = <T extends string | number | undefined>({
   size,
   color,
   bordered = true,
+  borderOffset,
   dataTheme,
   className,
   ...props
@@ -45,6 +47,7 @@ const Select = <T extends string | number | undefined>({
     clsx({
       [`select-${size}`]: size,
       [`select-${color}`]: color,
+      [`focus:outline-offset-0`]: !borderOffset,
       'select-bordered': bordered,
     })
   )
