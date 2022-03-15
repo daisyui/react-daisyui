@@ -5,10 +5,13 @@ import { twMerge } from 'tailwind-merge'
 import {
   IComponentBaseProps,
   ComponentBrandColors,
-  ComponentSize
+  ComponentSize,
 } from '../types'
 
-export type CheckboxProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> &
+export type CheckboxProps = Omit<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  'size'
+> &
   IComponentBaseProps & {
     color?: ComponentBrandColors
     size?: ComponentSize

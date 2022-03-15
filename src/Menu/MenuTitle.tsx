@@ -7,10 +7,7 @@ export type MenuTitleProps = React.LiHTMLAttributes<HTMLLIElement> &
   IComponentBaseProps
 
 const MenuTitle = ({ className, ...props }: MenuTitleProps) => {
-  const classes = twMerge(
-    'menu-title',
-    className,
-  )
+  const classes = twMerge('menu-title', className)
 
   return <li className={classes} {...props} />
 }

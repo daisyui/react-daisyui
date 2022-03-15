@@ -1,6 +1,9 @@
 import React from 'react'
 
-export type SelectOptionProps<T> = Omit<React.OptionHTMLAttributes<HTMLOptionElement>, 'value'> & {
+export type SelectOptionProps<T> = Omit<
+  React.OptionHTMLAttributes<HTMLOptionElement>,
+  'value'
+> & {
   selectedValue?: T
   value: T
 }
@@ -11,7 +14,11 @@ const SelectOption = <T extends string | number | undefined>({
   children,
   ...props
 }: SelectOptionProps<T>): JSX.Element => {
-  return <option {...props} selected={value === selectedValue}>{children}</option>
+  return (
+    <option {...props} selected={value === selectedValue}>
+      {children}
+    </option>
+  )
 }
 
 export default SelectOption

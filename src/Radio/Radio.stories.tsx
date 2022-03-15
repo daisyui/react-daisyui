@@ -35,15 +35,25 @@ Disabled.args = { disabled: true }
 
 export const WithLabelsAndForm: Story<RadioProps> = (args) => {
   return (
-    <div className='bg-base-200 w-1/4 p-4 rounded-lg shadow'>
+    <div className="bg-base-200 w-1/4 p-4 rounded-lg shadow">
       <Form>
         <Form.Label title="Red Pill">
-          <Radio {...args} name="radio1" className='checked:bg-red-500' defaultChecked />
+          <Radio
+            {...args}
+            name="radio1"
+            className="checked:bg-red-500"
+            defaultChecked
+          />
         </Form.Label>
       </Form>
       <Form>
         <Form.Label title="Blue Pill">
-          <Radio {...args} name="radio1" className='checked:bg-blue-500' defaultChecked />
+          <Radio
+            {...args}
+            name="radio1"
+            className="checked:bg-blue-500"
+            defaultChecked
+          />
         </Form.Label>
       </Form>
     </div>

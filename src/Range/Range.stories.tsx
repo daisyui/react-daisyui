@@ -29,7 +29,7 @@ AccentColor.args = { color: 'accent' }
 
 export const Sizes: Story<RangeProps> = (args) => {
   return (
-    <div className='flex flex-col gap-2'>
+    <div className="flex flex-col gap-2">
       <Range {...args} value="40" size="xs" />
       <Range {...args} value="50" size="sm" />
       <Range {...args} value="60" size="md" />
