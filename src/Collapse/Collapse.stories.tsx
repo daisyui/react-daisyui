@@ -37,13 +37,13 @@ WithBorderAndBackground.args = {
 export const WithArrow = Template.bind({})
 WithArrow.args = {
   className: 'border border-base-300 bg-base-100 rounded-box',
-  icon: "arrow"
+  icon: 'arrow',
 }
 
 export const WithPlusMinus = Template.bind({})
 WithPlusMinus.args = {
   className: 'border border-base-300 bg-base-100 rounded-box',
-  icon: "plus"
+  icon: 'plus',
 }
 
 export const ForceOpen = Template.bind({})
@@ -60,7 +60,7 @@ ForceClose.args = {
 
 export const CustomColorsWithFocus: Story<CollapseProps> = (args) => {
   return (
-    <Collapse {...args} className="group" >
+    <Collapse {...args} className="group">
       <Collapse.Title className="bg-primary text-primary-content group-focus:bg-secondary group-focus:text-secondary-content">
         Focus me to see content
       </Collapse.Title>
@@ -73,7 +73,7 @@ export const CustomColorsWithFocus: Story<CollapseProps> = (args) => {
 
 export const CustomColorsWithFocusCheckbox: Story<CollapseProps> = (args) => {
   return (
-    <Collapse {...args} className="group" checkbox >
+    <Collapse {...args} className="group" checkbox>
       <Collapse.Title className="bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
         Click me to show/hide content
       </Collapse.Title>

@@ -19,16 +19,32 @@ export const Colors: Story<BadgeProps> = (args) => {
     <div className="flex flex-col gap-2">
       <div className="flex gap-2">
         <Badge {...args}>neutral</Badge>
-        <Badge {...args} color="primary">primary</Badge>
-        <Badge {...args} color="secondary">secondary</Badge>
-        <Badge {...args} color="accent">accent</Badge>
-        <Badge {...args} color="ghost">ghost</Badge>
+        <Badge {...args} color="primary">
+          primary
+        </Badge>
+        <Badge {...args} color="secondary">
+          secondary
+        </Badge>
+        <Badge {...args} color="accent">
+          accent
+        </Badge>
+        <Badge {...args} color="ghost">
+          ghost
+        </Badge>
       </div>
       <div className="flex gap-2">
-        <Badge {...args} color="success">success</Badge>
-        <Badge {...args} color="info">info</Badge>
-        <Badge {...args} color="warning">warning</Badge>
-        <Badge {...args} color="error">error</Badge>
+        <Badge {...args} color="success">
+          success
+        </Badge>
+        <Badge {...args} color="info">
+          info
+        </Badge>
+        <Badge {...args} color="warning">
+          warning
+        </Badge>
+        <Badge {...args} color="error">
+          error
+        </Badge>
       </div>
     </div>
   )
@@ -38,10 +54,18 @@ Colors.args = {}
 export const Outline: Story<BadgeProps> = (args) => {
   return (
     <div className="flex gap-2">
-      <Badge {...args} variant="outline">neutral</Badge>
-      <Badge {...args} color="primary" variant="outline">primary</Badge>
-      <Badge {...args} color="secondary" variant="outline">secondary</Badge>
-      <Badge {...args} color="accent" variant="outline">accent</Badge>
+      <Badge {...args} variant="outline">
+        neutral
+      </Badge>
+      <Badge {...args} color="primary" variant="outline">
+        primary
+      </Badge>
+      <Badge {...args} color="secondary" variant="outline">
+        secondary
+      </Badge>
+      <Badge {...args} color="accent" variant="outline">
+        accent
+      </Badge>
     </div>
   )
 }
@@ -50,10 +74,18 @@ Outline.args = {}
 export const Sizes: Story<BadgeProps> = (args) => {
   return (
     <div className="flex gap-2 items-center">
-      <Badge {...args} size="lg">987,654</Badge>
-      <Badge {...args} size="md">987,654</Badge>
-      <Badge {...args} size="sm">987,654</Badge>
-      <Badge {...args} size="xs">987,654</Badge>
+      <Badge {...args} size="lg">
+        987,654
+      </Badge>
+      <Badge {...args} size="md">
+        987,654
+      </Badge>
+      <Badge {...args} size="sm">
+        987,654
+      </Badge>
+      <Badge {...args} size="xs">
+        987,654
+      </Badge>
     </div>
   )
 }
@@ -76,7 +108,9 @@ export const BadgeInText: Story<BadgeProps> = (args) => {
     <div className="flex gap-2 items-center">
       <h2 className="text-xl gap-2">
         Heading{' '}
-        <Badge {...args} size="lg">NEW</Badge>
+        <Badge {...args} size="lg">
+          NEW
+        </Badge>
       </h2>
     </div>
   )
@@ -92,7 +126,9 @@ export const BadgeInAButton: Story<BadgeProps> = (args) => {
       </Button>
       <Button className="gap-2">
         Inbox
-        <Badge {...args} color="primary">+99</Badge>
+        <Badge {...args} color="primary">
+          +99
+        </Badge>
       </Button>
     </div>
   )

@@ -18,7 +18,7 @@ Default.args = {}
 
 const FormTemplate: Story<CheckboxProps> = (args) => {
   return (
-    <Form className='shadow bg-base-200 w-64 rounded-lg p-4'>
+    <Form className="shadow bg-base-200 w-64 rounded-lg p-4">
       <Form.Label title="Remember me">
         <Checkbox {...args} />
       </Form.Label>
@@ -39,7 +39,7 @@ FormControlAccent.args = { color: 'accent' }
 
 export const Sizes: Story<CheckboxProps> = (args) => {
   return (
-    <div className='flex flex-col items-center float-left gap-2'>
+    <div className="flex flex-col items-center float-left gap-2">
       <Checkbox {...args} checked size="xs" />
       <Checkbox {...args} checked size="sm" />
       <Checkbox {...args} checked size="md" />

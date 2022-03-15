@@ -28,9 +28,21 @@ export const Default: Story<StackProps> = (args) => {
 export const StackedImages: Story<StackProps> = (args) => {
   return (
     <Stack {...args}>
-      <img src="https://api.lorem.space/image/face?w=100&h=100&hash=8B7BCDC2" alt="Image 1" className="rounded"/> 
-      <img src="https://api.lorem.space/image/face?w=100&h=100&hash=500B67FB" alt="Image 2" className="rounded"/> 
-      <img src="https://api.lorem.space/image/face?w=100&h=100&hash=A89D0DE6" alt="Image 3" className="rounded"/>
+      <img
+        src="https://api.lorem.space/image/face?w=100&h=100&hash=8B7BCDC2"
+        alt="Image 1"
+        className="rounded"
+      />
+      <img
+        src="https://api.lorem.space/image/face?w=100&h=100&hash=500B67FB"
+        alt="Image 2"
+        className="rounded"
+      />
+      <img
+        src="https://api.lorem.space/image/face?w=100&h=100&hash=A89D0DE6"
+        alt="Image 3"
+        className="rounded"
+      />
     </Stack>
   )
 }
@@ -38,13 +50,13 @@ export const StackedImages: Story<StackProps> = (args) => {
 export const StackedCardsWithBorder: Story<StackProps> = (args) => {
   return (
     <Stack {...args}>
-      <Card className='text-center border border-base-content w-36 bg-base-100'>
+      <Card className="text-center border border-base-content w-36 bg-base-100">
         <Card.Body>A</Card.Body>
       </Card>
-      <Card className='text-center border border-base-content w-36 bg-base-100'>
+      <Card className="text-center border border-base-content w-36 bg-base-100">
         <Card.Body>B</Card.Body>
       </Card>
-      <Card className='text-center border border-base-content w-36 bg-base-100'>
+      <Card className="text-center border border-base-content w-36 bg-base-100">
         <Card.Body>C</Card.Body>
       </Card>
     </Stack>
@@ -54,13 +66,13 @@ export const StackedCardsWithBorder: Story<StackProps> = (args) => {
 export const StackedCardsWithShadow: Story<StackProps> = (args) => {
   return (
     <Stack {...args}>
-      <Card className='text-center shadow-md w-36 bg-base-200'>
+      <Card className="text-center shadow-md w-36 bg-base-200">
         <Card.Body>A</Card.Body>
       </Card>
-      <Card className='text-center shadow-md w-36 bg-base-200'>
+      <Card className="text-center shadow-md w-36 bg-base-200">
         <Card.Body>B</Card.Body>
       </Card>
-      <Card className='text-center shadow-md w-36 bg-base-200'>
+      <Card className="text-center shadow-md w-36 bg-base-200">
         <Card.Body>C</Card.Body>
       </Card>
     </Stack>
@@ -70,19 +82,19 @@ export const StackedCardsWithShadow: Story<StackProps> = (args) => {
 export const StackedCards: Story<StackProps> = (args) => {
   return (
     <Stack {...args}>
-      <Card className='text-center shadow-md bg-primary text-primary-content'>
+      <Card className="text-center shadow-md bg-primary text-primary-content">
         <Card.Body>
           <Card.Title>Notification 1</Card.Title>
           <p>You have 3 unread messages. Tap here to see.</p>
         </Card.Body>
       </Card>
-      <Card className='text-center shadow-md bg-primary text-primary-content'>
+      <Card className="text-center shadow-md bg-primary text-primary-content">
         <Card.Body>
           <Card.Title>Notification 2</Card.Title>
           <p>You have 3 unread messages. Tap here to see.</p>
         </Card.Body>
       </Card>
-      <Card className='text-center shadow-md bg-primary text-primary-content'>
+      <Card className="text-center shadow-md bg-primary text-primary-content">
         <Card.Body>
           <Card.Title>Notification 3</Card.Title>
           <p>You have 3 unread messages. Tap here to see.</p>
