@@ -1,5 +1,29 @@
 # Changelog
 
+## [1.3.0](https://www.github.com/daisyui/react-daisyui/compare/v1.2.2...v1.3.0) (2022-03-15)
+
+
+### Features
+
+* added backdrop click ability to cancel modal ([5bcb227](https://www.github.com/daisyui/react-daisyui/commit/5bcb227d5cd053b606bcbd52b4b780a304b54c71))
+* added contextprovider for theme and useTheme hook ([374dc10](https://www.github.com/daisyui/react-daisyui/commit/374dc108f77dcae4f86a0373f3fc533a290c2ae0))
+* added startIcon and endIcon props ([#34](https://www.github.com/daisyui/react-daisyui/issues/34)) ([75a17d1](https://www.github.com/daisyui/react-daisyui/commit/75a17d1e8d39db416d0f9e1e3fe5af7a67eae143))
+
+
+### Bug Fixes
+
+* do not build docs with storybook manager cache ([0b6489e](https://www.github.com/daisyui/react-daisyui/commit/0b6489ec4eb1e41b5efff87ffd96fe4e7883dbab))
+* reverted types path ([1741d65](https://www.github.com/daisyui/react-daisyui/commit/1741d659e346901fef77c8b1a5e5baee075b2bcf))
+
+
+### Miscellaneous
+
+* added missing datatheme to components ([c5d8ad0](https://www.github.com/daisyui/react-daisyui/commit/c5d8ad031f8996d7064af993de45f737bee2c4ab))
+* made input border offset optional ([#38](https://www.github.com/daisyui/react-daisyui/issues/38)) ([e67ae52](https://www.github.com/daisyui/react-daisyui/commit/e67ae5299a11594bdeca2e0d5e3e2acaaf2ba9ad))
+* ran prettier ([#39](https://www.github.com/daisyui/react-daisyui/issues/39)) ([b6eed6a](https://www.github.com/daisyui/react-daisyui/commit/b6eed6a461b8e24dacc4d05f0395d18cae5d85a3))
+* removed themecontexttest story ([ec3c03e](https://www.github.com/daisyui/react-daisyui/commit/ec3c03e4f0326dea9aa6d2a0151e51241f418127))
+* rename prop ([f0d5652](https://www.github.com/daisyui/react-daisyui/commit/f0d5652ac21518a25f5ecfe39e6e62186a210ead))
+
 ### [1.2.2](https://www.github.com/daisyui/react-daisyui/compare/v1.2.1...v1.2.2) (2022-03-14)
 
 
