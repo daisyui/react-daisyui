@@ -10,10 +10,12 @@ export type TextareaProps =
   & {
     color?: ComponentColor
     bordered?: boolean
+    borderOffset?: boolean
   }
 
 const Textarea = ({
-  bordered,
+  bordered = true,
+  borderOffset,
   color,
   dataTheme,
   className,
@@ -24,6 +26,7 @@ const Textarea = ({
     className,
     clsx({
       [`textarea-${color}`]: color,
+      [`focus:outline-offset-0`]: !borderOffset,
       'textarea-bordered': bordered,
     })
   )

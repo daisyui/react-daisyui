@@ -7,6 +7,7 @@ import { IComponentBaseProps, ComponentColor, ComponentSize } from '../types'
 export type InputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> &
   IComponentBaseProps & {
     bordered?: boolean
+    borderOffset?: boolean
     size?: ComponentSize
     color?: ComponentColor
   }
@@ -16,7 +17,8 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
     {
       value,
       placeholder,
-      bordered,
+      bordered = true,
+      borderOffset,
       size,
       color,
       dataTheme,
@@ -31,6 +33,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       clsx({
         [`input-${size}`]: size,
         [`input-${color}`]: color,
+        [`focus:outline-offset-0`]: !borderOffset,
         'input-bordered': bordered,
       })
     )
