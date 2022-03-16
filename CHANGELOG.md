@@ -1,5 +1,13 @@
 # Changelog
 
+### [1.5.1](https://www.github.com/daisyui/react-daisyui/compare/v1.5.0...v1.5.1) (2022-03-16)
+
+
+### Bug Fixes
+
+* added disabled prop to dropdown toggle ([7d2543c](https://www.github.com/daisyui/react-daisyui/commit/7d2543c758418564f67fc30f78a32a693b4c1200))
+* readded lost commit from rebase ([41edb8b](https://www.github.com/daisyui/react-daisyui/commit/41edb8b91d35fa3b0fdcd8f3d1c7f72ef8fccd3b))
+
 ## [1.5.0](https://www.github.com/daisyui/react-daisyui/compare/v1.4.0...v1.5.0) (2022-03-16)
 
 
