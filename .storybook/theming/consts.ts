@@ -1,4 +1,4 @@
-export const DEFAUlT_THEME = 'dark'
+export const DEFAULT_THEME = 'dark'
 export const STORAGE_KEY = 'sb-react-daisyui-preview-theme'
 
 export const THEME_PICKER_LIST = [

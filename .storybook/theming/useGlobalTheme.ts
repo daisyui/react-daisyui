@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 
-import { STORAGE_KEY, DEFAUlT_THEME } from '.'
+import { STORAGE_KEY, DEFAULT_THEME } from '.'
 
 export const useGlobalTheme = () => {
   const [theme, setTheme] = useState(
-    window.localStorage.getItem(STORAGE_KEY) || DEFAUlT_THEME
+    window.localStorage.getItem(STORAGE_KEY) || DEFAULT_THEME
   )
 
   useEffect(() => {
@@ -12,7 +12,7 @@ export const useGlobalTheme = () => {
       let storageTheme = window.localStorage.getItem(STORAGE_KEY)
 
       if (!storageTheme) {
-        setTheme(DEFAUlT_THEME)
+        setTheme(DEFAULT_THEME)
       } else {
         setTheme(storageTheme)
       }

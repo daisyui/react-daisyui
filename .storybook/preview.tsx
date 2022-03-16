@@ -5,7 +5,7 @@ import React from 'react'
 import StoryLayout from './story-layout'
 
 import '../src/styles.css'
-import { DEFAUlT_THEME, STORAGE_KEY, THEME_PICKER_LIST } from './theming'
+import { DEFAULT_THEME, STORAGE_KEY, THEME_PICKER_LIST } from './theming'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -34,7 +34,7 @@ export const parameters = {
     },
   },
   themes: {
-    default: window.localStorage.getItem(STORAGE_KEY) || DEFAUlT_THEME,
+    default: window.localStorage.getItem(STORAGE_KEY) || DEFAULT_THEME,
     onChange: (theme) => {
       // STORAGE_KEY does not work in onChange... not sure why
       if (theme) {
