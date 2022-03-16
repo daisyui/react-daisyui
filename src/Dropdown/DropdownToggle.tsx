@@ -21,11 +21,18 @@ const DropdownToggle = ({
   button = true,
   dataTheme,
   className,
+  disabled,
+  ...props
 }: DropdownToggleProps) => {
   return (
-    <label tabIndex={0} className={className}>
+    <label tabIndex={0} className={className} {...props}>
       {button ? (
-        <Button dataTheme={dataTheme} color={color} size={size}>
+        <Button
+          dataTheme={dataTheme}
+          color={color}
+          size={size}
+          disabled={disabled}
+        >
           {children}
         </Button>
       ) : (
