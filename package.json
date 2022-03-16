@@ -72,6 +72,7 @@
     "postcss": "^8.4.8",
     "prettier": "^2.3.2",
     "react-test-renderer": "^17.0.2",
+    "storybook-addon-themes": "^6.1.0",
     "storybook-builder-vite": "^0.1.18",
     "styled-jsx": "^5.0.0",
     "tailwind-merge": "^1.2.0",
