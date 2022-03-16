@@ -12,6 +12,7 @@ export type DropdownToggleProps = Omit<
     color?: ComponentColor
     size?: ComponentSize
     button?: boolean
+    disabled?: boolean
   }
 
 const DropdownToggle = ({
