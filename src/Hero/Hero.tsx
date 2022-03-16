@@ -9,22 +9,19 @@ import HeroOverlay from './HeroOverlay'
 export type HeroProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps
 
-const Hero = ({
-  dataTheme,
-  className,
-  children,
-  ...props
-}: HeroProps): JSX.Element => {
-  const classes = twMerge('hero', className)
+const Hero = React.forwardRef<HTMLDivElement, HeroProps>(
+  ({ dataTheme, className, children, ...props }, ref): JSX.Element => {
+    const classes = twMerge('hero', className)
 
-  return (
-    <div {...props} data-theme={dataTheme} className={classes}>
-      {children}
-    </div>
-  )
-}
+    return (
+      <div {...props} data-theme={dataTheme} className={classes} ref={ref}>
+        {children}
+      </div>
+    )
+  }
+)
 
-Hero.Content = HeroContent
-Hero.Overlay = HeroOverlay
-
-export default Hero
+export default Object.assign(Hero, {
+  Content: HeroContent,
+  Overlay: HeroOverlay,
+})

@@ -30,22 +30,25 @@ export type MaskProps = React.ImgHTMLAttributes<HTMLImageElement> &
       | 'half-2'
   }
 
-const Mask = ({
-  src,
-  variant,
-  dataTheme,
-  className,
-  ...props
-}: MaskProps): JSX.Element => {
-  const classes = twMerge(
-    'mask',
-    className,
-    clsx({
-      [`mask-${variant}`]: variant,
-    })
-  )
+const Mask = React.forwardRef<HTMLImageElement, MaskProps>(
+  ({ src, variant, dataTheme, className, ...props }, ref): JSX.Element => {
+    const classes = twMerge(
+      'mask',
+      className,
+      clsx({
+        [`mask-${variant}`]: variant,
+      })
+    )
 
-  return <img {...props} data-theme={dataTheme} className={classes} src={src} />
-}
-
+    return (
+      <img
+        {...props}
+        data-theme={dataTheme}
+        className={classes}
+        src={src}
+        ref={ref}
+      />
+    )
+  }
+)
 export default Mask

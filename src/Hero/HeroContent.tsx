@@ -6,19 +6,16 @@ import { IComponentBaseProps } from '../types'
 export type HeroContentProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps
 
-const HeroContent = ({
-  dataTheme,
-  className,
-  children,
-  ...props
-}: HeroContentProps): JSX.Element => {
-  const classes = twMerge('hero-content', className)
+const HeroContent = React.forwardRef<HTMLDivElement, HeroContentProps>(
+  ({ dataTheme, className, children, ...props }, ref): JSX.Element => {
+    const classes = twMerge('hero-content', className)
 
-  return (
-    <div {...props} data-theme={dataTheme} className={classes}>
-      {children}
-    </div>
-  )
-}
+    return (
+      <div {...props} data-theme={dataTheme} className={classes} ref={ref}>
+        {children}
+      </div>
+    )
+  }
+)
 
 export default HeroContent

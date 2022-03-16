@@ -8,6 +8,9 @@ const { Option } = Select
 export default {
   title: 'Data Input/Select',
   component: Select,
+  parameters: {
+    controls: { exclude: ['ref'] },
+  },
 } as Meta
 
 export const Default: Story<SelectProps<string>> = (args) => {

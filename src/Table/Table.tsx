@@ -14,32 +14,30 @@ export type TableProps = React.TableHTMLAttributes<HTMLTableElement> &
     zebra?: boolean
   }
 
-const Table = ({
-  children,
-  compact,
-  zebra,
-  dataTheme,
-  className,
-  ...props
-}: TableProps): JSX.Element => {
-  const classes = twMerge(
-    'table',
-    className,
-    clsx({
-      'table-zebra': zebra,
-      'table-compact': compact,
-    })
-  )
+const Table = React.forwardRef<HTMLTableElement, TableProps>(
+  (
+    { children, compact, zebra, dataTheme, className, ...props },
+    ref
+  ): JSX.Element => {
+    const classes = twMerge(
+      'table',
+      className,
+      clsx({
+        'table-zebra': zebra,
+        'table-compact': compact,
+      })
+    )
 
-  return (
-    <table {...props} data-theme={dataTheme} className={classes}>
-      {children}
-    </table>
-  )
-}
+    return (
+      <table {...props} data-theme={dataTheme} className={classes} ref={ref}>
+        {children}
+      </table>
+    )
+  }
+)
 
-Table.Head = TableHead
-Table.Body = TableBody
-Table.Row = TableRow
-
-export default Table
+export default Object.assign(Table, {
+  Head: TableHead,
+  Body: TableBody,
+  Row: TableRow,
+})

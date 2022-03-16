@@ -8,21 +8,16 @@ import Label from './Label'
 export type FormProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps
 
-const Form = ({
-  children,
-  dataTheme,
-  className,
-  ...props
-}: FormProps): JSX.Element => {
-  const classes = twMerge('form-control', className)
+const Form = React.forwardRef<HTMLDivElement, FormProps>(
+  ({ children, dataTheme, className, ...props }, ref): JSX.Element => {
+    const classes = twMerge('form-control', className)
 
-  return (
-    <div {...props} data-theme={dataTheme} className={classes}>
-      {children}
-    </div>
-  )
-}
+    return (
+      <div {...props} data-theme={dataTheme} className={classes} ref={ref}>
+        {children}
+      </div>
+    )
+  }
+)
 
-Form.Label = Label
-
-export default Form
+export default Object.assign(Form, { Label })

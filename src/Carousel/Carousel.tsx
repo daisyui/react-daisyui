@@ -1,4 +1,4 @@
-import React, { LegacyRef, ReactElement } from 'react'
+import React, { forwardRef, LegacyRef, ReactElement } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
@@ -11,36 +11,30 @@ export type CarouselProps = React.HTMLAttributes<HTMLDivElement> &
     children?:
       | ReactElement<CarouselItemProps>
       | ReactElement<CarouselItemProps>[]
-    ref?: LegacyRef<HTMLDivElement>
     snap?: 'start' | 'center' | 'end'
     vertical?: boolean
   }
 
-const Carousel = ({
-  children,
-  ref,
-  snap,
-  vertical,
-  dataTheme,
-  className,
-  ...props
-}: CarouselProps): JSX.Element => {
-  const classes = twMerge(
-    'carousel',
-    className,
-    clsx({
-      [`carousel-${snap}`]: snap,
-      'carousel-vertical': vertical,
-    })
-  )
+const Carousel = forwardRef<HTMLDivElement, CarouselProps>(
+  (
+    { children, snap, vertical, dataTheme, className, ...props },
+    ref
+  ): JSX.Element => {
+    const classes = twMerge(
+      'carousel',
+      className,
+      clsx({
+        [`carousel-${snap}`]: snap,
+        'carousel-vertical': vertical,
+      })
+    )
 
-  return (
-    <div {...props} ref={ref} data-theme={dataTheme} className={classes}>
-      {children}
-    </div>
-  )
-}
+    return (
+      <div {...props} ref={ref} data-theme={dataTheme} className={classes}>
+        {children}
+      </div>
+    )
+  }
+)
 
-Carousel.Item = CarouselItem
-
-export default Carousel
+export default Object.assign(Carousel, { Item: CarouselItem })

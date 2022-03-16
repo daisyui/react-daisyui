@@ -5,8 +5,10 @@ import { IComponentBaseProps } from '../types'
 export type CardBodyProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps
 
-const CardBody = ({ className, ...props }: CardBodyProps) => (
-  <div className={twMerge('card-body', className)} {...props} />
+const CardBody = React.forwardRef<HTMLDivElement, CardBodyProps>(
+  ({ className, ...props }, ref) => (
+    <div {...props} className={twMerge('card-body', className)} ref={ref} />
+  )
 )
 
 export default CardBody

@@ -16,17 +16,21 @@ export type TabsProps<T> = React.HTMLAttributes<HTMLDivElement> &
     boxed?: boolean
   }
 
-const Tabs = <T extends string | number | undefined>({
-  children,
-  value,
-  onChange,
-  variant,
-  size,
-  boxed,
-  dataTheme,
-  className,
-  ...props
-}: TabsProps<T>): JSX.Element => {
+const TabsInner = <T extends string | number | undefined>(
+  props: TabsProps<T>,
+  ref?: React.ForwardedRef<T>
+): JSX.Element => {
+  const {
+    children,
+    value,
+    onChange,
+    variant,
+    size,
+    boxed,
+    dataTheme,
+    className,
+    ...rest
+  } = props
   const [activeValue, setActiveValue] = useState<T | undefined>(value)
 
   const classes = twMerge(
@@ -38,7 +42,7 @@ const Tabs = <T extends string | number | undefined>({
   )
 
   return (
-    <div {...props} data-theme={dataTheme} className={classes}>
+    <div {...rest} data-theme={dataTheme} className={classes}>
       {children.map((child) => {
         return cloneElement(child, {
           variant,
@@ -54,6 +58,9 @@ const Tabs = <T extends string | number | undefined>({
   )
 }
 
-Tabs.Tab = Tab
+// Make forwardRef work with generic component
+const Tabs = React.forwardRef(TabsInner) as <T>(
+  props: TabsProps<T> & { ref?: React.ForwardedRef<HTMLDivElement> }
+) => ReturnType<typeof TabsInner>
 
-export default Tabs
+export default Object.assign(Tabs, { Tab })

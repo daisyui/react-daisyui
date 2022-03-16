@@ -6,6 +6,11 @@ import Alert, { AlertProps } from '.'
 export default {
   title: 'Data Display/Alert',
   component: Alert,
+  argTypes: {
+    icon: {
+      control: false,
+    },
+  },
 } as Meta
 
 export const Default: Story<AlertProps> = (args) => {

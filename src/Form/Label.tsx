@@ -8,21 +8,19 @@ export type LabelProps = React.LabelHTMLAttributes<HTMLLabelElement> &
     title?: string
   }
 
-const Label = ({
-  children,
-  title,
-  dataTheme,
-  className,
-  ...props
-}: LabelProps): JSX.Element => {
-  const classes = twMerge('label', className)
+const Label = React.forwardRef<HTMLLabelElement, LabelProps>(
+  ({ children, title, dataTheme, className, ...props }, ref): JSX.Element => {
+    const classes = twMerge('label', className)
 
-  return (
-    <label {...props} className={classes}>
-      <span className="label-text cursor-pointer">{title}</span>
-      {children}
-    </label>
-  )
-}
+    return (
+      <label {...props} className={classes}>
+        <span className="label-text cursor-pointer" ref={ref}>
+          {title}
+        </span>
+        {children}
+      </label>
+    )
+  }
+)
 
 export default Label

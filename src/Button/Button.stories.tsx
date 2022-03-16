@@ -6,7 +6,21 @@ import Button, { ButtonProps } from '.'
 export default {
   title: 'Actions/Button',
   component: Button,
+  argTypes: {
+    startIcon: {
+      control: false,
+    },
+    endIcon: {
+      control: false,
+    },
+  },
 } as Meta
+
+const Template: Story = ({ children = 'Button', ...rest }) => (
+  <Button {...rest}>{children}</Button>
+)
+export const Default = Template.bind({})
+Default.args = {}
 
 export const Colors: Story<ButtonProps> = (args) => {
   return (

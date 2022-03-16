@@ -9,35 +9,42 @@ export type IndicatorProps = React.HTMLAttributes<HTMLDivElement> &
     item?: ReactNode
     horizontal?: 'start' | 'center' | 'end'
     vertical?: 'top' | 'middle' | 'bottom'
+    innerRef?: React.Ref<HTMLDivElement>
   }
 
-const Indicator = ({
-  children,
-  item,
-  horizontal = 'end',
-  vertical = 'top',
-  dataTheme,
-  className,
-  ...props
-}: IndicatorProps): JSX.Element => {
-  const classes = twMerge(
-    'indicator-item',
-    className,
-    clsx({
-      [`indicator-${horizontal}`]: horizontal,
-      [`indicator-${vertical}`]: vertical,
-    })
-  )
+const Indicator = React.forwardRef<HTMLDivElement, IndicatorProps>(
+  (
+    {
+      children,
+      item,
+      horizontal = 'end',
+      vertical = 'top',
+      dataTheme,
+      className,
+      innerRef,
+      ...props
+    },
+    ref
+  ): JSX.Element => {
+    const classes = twMerge(
+      'indicator-item',
+      className,
+      clsx({
+        [`indicator-${horizontal}`]: horizontal,
+        [`indicator-${vertical}`]: vertical,
+      })
+    )
 
-  return (
-    <div data-theme={dataTheme} className="indicator">
-      <div {...props} className={classes}>
-        {item}
+    return (
+      <div data-theme={dataTheme} className="indicator" ref={ref}>
+        <div {...props} className={classes} ref={innerRef}>
+          {item}
+        </div>
+
+        {children}
       </div>
-
-      {children}
-    </div>
-  )
-}
+    )
+  }
+)
 
 export default Indicator

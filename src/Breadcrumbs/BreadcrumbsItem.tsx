@@ -4,14 +4,14 @@ export type BreadcrumbsItemProps = React.LiHTMLAttributes<HTMLLIElement> & {
   href?: string
 }
 
-const BreadcrumbsItem = ({
-  children,
-  href,
-  ...props
-}: BreadcrumbsItemProps): JSX.Element => {
-  return (
-    <li {...props}>{href ? <a href={href}>{children}</a> : <>{children}</>}</li>
-  )
-}
+const BreadcrumbsItem = React.forwardRef<HTMLLIElement, BreadcrumbsItemProps>(
+  ({ children, href, ...props }, ref): JSX.Element => {
+    return (
+      <li {...props} ref={ref}>
+        {href ? <a href={href}>{children}</a> : <>{children}</>}
+      </li>
+    )
+  }
+)
 
 export default BreadcrumbsItem

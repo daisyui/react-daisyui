@@ -6,7 +6,7 @@ import { IComponentBaseProps, ComponentColor, ComponentSize } from '../types'
 
 export type InputProps = Omit<
   React.InputHTMLAttributes<HTMLInputElement>,
-  'size'
+  'size' | 'color'
 > &
   IComponentBaseProps & {
     bordered?: boolean

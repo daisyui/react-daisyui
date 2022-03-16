@@ -6,6 +6,11 @@ import Dropdown, { DropdownProps } from '.'
 export default {
   title: 'Actions/Dropdown',
   component: Dropdown,
+  argTypes: {
+    item: {
+      control: false,
+    },
+  },
 } as Meta
 
 export const Default: Story<DropdownProps> = (args) => {

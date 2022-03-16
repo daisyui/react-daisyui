@@ -55,34 +55,31 @@ const DYNAMIC_MODIFIERS: ModifierMap = {
   },
 }
 
-const Card = ({
-  bordered = true,
-  imageFull,
-  normal,
-  compact,
-  side,
-  className,
-  ...props
-}: CardProps): JSX.Element => {
-  const classes = twMerge(
-    'card',
-    className,
-    clsx({
-      'card-bordered': bordered,
-      'image-full': imageFull,
-      [(compact && DYNAMIC_MODIFIERS.compact[compact.toString()]) || '']:
-        compact,
-      [(normal && DYNAMIC_MODIFIERS.normal[normal.toString()]) || '']: normal,
-      [(side && DYNAMIC_MODIFIERS.side[side.toString()]) || '']: side,
-    })
-  )
+const Card = React.forwardRef<HTMLDivElement, CardProps>(
+  (
+    { bordered = true, imageFull, normal, compact, side, className, ...props },
+    ref
+  ): JSX.Element => {
+    const classes = twMerge(
+      'card',
+      className,
+      clsx({
+        'card-bordered': bordered,
+        'image-full': imageFull,
+        [(compact && DYNAMIC_MODIFIERS.compact[compact.toString()]) || '']:
+          compact,
+        [(normal && DYNAMIC_MODIFIERS.normal[normal.toString()]) || '']: normal,
+        [(side && DYNAMIC_MODIFIERS.side[side.toString()]) || '']: side,
+      })
+    )
 
-  return <div className={classes} {...props} />
-}
+    return <div {...props} className={classes} ref={ref} />
+  }
+)
 
-Card.Actions = CardActions
-Card.Body = CardBody
-Card.Title = CardTitle
-Card.Image = CardImage
-
-export default Card
+export default Object.assign(Card, {
+  Actions: CardActions,
+  Body: CardBody,
+  Title: CardTitle,
+  Image: CardImage,
+})

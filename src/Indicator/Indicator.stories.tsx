@@ -8,6 +8,17 @@ import Badge from '../Badge'
 export default {
   title: 'Layout/Indicator',
   component: Indicator,
+  argTypes: {
+    innerRef: {
+      control: false,
+    },
+    children: {
+      control: false,
+    },
+    item: {
+      control: false,
+    },
+  },
 } as Meta
 
 export const Default: Story<IndicatorProps> = (args) => {

@@ -6,6 +6,14 @@ import Swap, { SwapProps } from '.'
 export default {
   title: 'Actions/Swap',
   component: Swap,
+  argTypes: {
+    onElement: {
+      control: false,
+    },
+    offElement: {
+      control: false,
+    },
+  },
 } as Meta
 
 const Template: Story<SwapProps> = (args) => {
@@ -14,8 +22,8 @@ const Template: Story<SwapProps> = (args) => {
 
 export const Text = Template.bind({})
 Text.args = {
-  onElement: <>ON</>,
-  offElement: <>OFF</>,
+  onElement: 'ON',
+  offElement: 'OFF',
 }
 
 export const Volume = Template.bind({})

@@ -6,10 +6,12 @@ import { IComponentBaseProps } from '../types'
 export type MenuTitleProps = React.LiHTMLAttributes<HTMLLIElement> &
   IComponentBaseProps
 
-const MenuTitle = ({ className, ...props }: MenuTitleProps) => {
-  const classes = twMerge('menu-title', className)
+const MenuTitle = React.forwardRef<HTMLLIElement, MenuTitleProps>(
+  ({ className, ...props }, ref) => {
+    const classes = twMerge('menu-title', className)
 
-  return <li className={classes} {...props} />
-}
+    return <li className={classes} {...props} ref={ref} />
+  }
+)
 
 export default MenuTitle

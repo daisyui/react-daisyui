@@ -9,19 +9,17 @@ export type StatItemProps = React.HTMLAttributes<HTMLDivElement> &
     variant: 'title' | 'value' | 'desc' | 'figure'
   }
 
-const StatItem = ({
-  variant,
-  className,
-  ...props
-}: StatItemProps): JSX.Element => {
-  const classes = twMerge(
-    className,
-    clsx({
-      [`stat-${variant}`]: variant,
-    })
-  )
+const StatItem = React.forwardRef<HTMLDivElement, StatItemProps>(
+  ({ variant, className, ...props }, ref): JSX.Element => {
+    const classes = twMerge(
+      className,
+      clsx({
+        [`stat-${variant}`]: variant,
+      })
+    )
 
-  return <div {...props} className={classes} />
-}
+    return <div {...props} className={classes} ref={ref} />
+  }
+)
 
 export default StatItem

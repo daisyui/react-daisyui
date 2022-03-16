@@ -9,7 +9,10 @@ import {
   ComponentSize,
 } from '../types'
 
-export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
+export type ButtonProps = Omit<
+  React.ButtonHTMLAttributes<HTMLButtonElement>,
+  'color'
+> &
   IComponentBaseProps & {
     href?: string
     shape?: ComponentShape
