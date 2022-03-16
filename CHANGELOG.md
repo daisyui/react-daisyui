@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.4.0](https://www.github.com/daisyui/react-daisyui/compare/v1.3.0...v1.4.0) (2022-03-16)
+
+
+### Features
+
+* persistent storybook global theme ([b43200e](https://www.github.com/daisyui/react-daisyui/commit/b43200ec44b6c299e3bc9dcbefb5dc9e12e02bb7))
+
+
+### Bug Fixes
+
+* lowercase letter in constant ([5949be7](https://www.github.com/daisyui/react-daisyui/commit/5949be7e9b6131c5968caf292602c0f474ffc7cd))
+
+
+### Miscellaneous
+
+* fixed missing forwardRefs, cleaned up story controls ([#41](https://www.github.com/daisyui/react-daisyui/issues/41)) ([3727aeb](https://www.github.com/daisyui/react-daisyui/commit/3727aebf867f7674588b7865315d7c274fcd3528))
+* removed console logs ([20a6157](https://www.github.com/daisyui/react-daisyui/commit/20a61576f1d12cc90df9b951519c7cfaa189ed6f))
+
 ## [1.3.0](https://www.github.com/daisyui/react-daisyui/compare/v1.2.2...v1.3.0) (2022-03-15)
 
 
