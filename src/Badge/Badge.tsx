@@ -9,11 +9,12 @@ export type BadgeProps = Omit<React.HTMLAttributes<HTMLDivElement>, 'color'> &
     variant?: 'outline'
     size?: ComponentSize
     color?: ComponentColor
+    responsive?: boolean
   }
 
 const Badge = forwardRef<HTMLDivElement, BadgeProps>(
   (
-    { children, variant, size, color, dataTheme, className, ...props },
+    { children, variant, size, color, responsive, dataTheme, className, ...props },
     ref
   ): JSX.Element => {
     const classes = twMerge(
@@ -23,6 +24,7 @@ const Badge = forwardRef<HTMLDivElement, BadgeProps>(
         [`badge-${size}`]: size,
         [`badge-${variant}`]: variant,
         [`badge-${color}`]: color,
+        'badge-xs md:badge-sm lg:badge-md xl:badge-lg': responsive,
       })
     )
 
