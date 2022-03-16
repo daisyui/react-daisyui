@@ -56,15 +56,10 @@ const DYNAMIC_MODIFIERS: ModifierMap = {
 }
 
 const Menu = React.forwardRef<HTMLUListElement, MenuProps>(
-  ({
-    normal,
-    compact,
-    horizontal,
-    vertical,
-    dataTheme,
-    className,
-    ...props
-  }: MenuProps) => {
+  (
+    { normal, compact, horizontal, vertical, dataTheme, className, ...props },
+    ref
+  ) => {
     const classes = twMerge(
       'menu',
       className,
@@ -79,7 +74,9 @@ const Menu = React.forwardRef<HTMLUListElement, MenuProps>(
       })
     )
 
-    return <ul data-theme={dataTheme} className={classes} {...props} />
+    return (
+      <ul data-theme={dataTheme} className={classes} {...props} ref={ref} />
+    )
   }
 )
 
