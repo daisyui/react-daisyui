@@ -1,4 +1,4 @@
-import React, { forwardRef, LegacyRef, ReactElement } from 'react'
+import React, { forwardRef, ReactElement } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 

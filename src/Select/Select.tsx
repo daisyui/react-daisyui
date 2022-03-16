@@ -1,4 +1,4 @@
-import React, { cloneElement, LegacyRef, ReactElement, useState } from 'react'
+import React, { cloneElement, ReactElement, useState } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 

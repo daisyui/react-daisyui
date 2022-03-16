@@ -1,4 +1,4 @@
-import React, { LegacyRef, ReactElement } from 'react'
+import React, { ReactElement } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
