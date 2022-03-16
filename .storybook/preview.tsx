@@ -5,13 +5,12 @@ import StoryLayout from './story-layout'
 import '../src/styles.css'
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  "previewTabs": {
-    'storybook/docs/panel': { hidden: true }
+  actions: { argTypesRegex: '^on[A-Z].*' },
+  previewTabs: {
+    'storybook/docs/panel': { hidden: true },
   },
   controls: {
     matchers: {
-      color: /(background|color)$/i,
       date: /Date$/,
     },
   },
@@ -19,25 +18,22 @@ export const parameters = {
   options: {
     storySort: {
       order: [
-        "Home",
-        "Actions",
-        "Data Display",
-        "Data Input",
-        "Layout",
-        "Navigation",
-        "Mockup",
-        "Utils"
-      ]
-    }
+        'Home',
+        'Actions',
+        'Data Display',
+        'Data Input',
+        'Layout',
+        'Navigation',
+        'Mockup',
+        'Utils',
+      ],
+    },
   },
 }
 
 export const decorators = [
   (Story, options) => (
-    <StoryLayout
-      title={options.title}
-      description={options.story}
-    >
+    <StoryLayout title={options.title} description={options.story}>
       <Story />
     </StoryLayout>
   ),
