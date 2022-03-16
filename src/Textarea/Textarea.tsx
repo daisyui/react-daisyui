@@ -4,7 +4,10 @@ import { twMerge } from 'tailwind-merge'
 
 import { ComponentColor, IComponentBaseProps } from '../types'
 
-export type TextareaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> &
+export type TextareaProps = Omit<
+  React.TextareaHTMLAttributes<HTMLTextAreaElement>,
+  'color'
+> &
   IComponentBaseProps & {
     color?: ComponentColor
     bordered?: boolean

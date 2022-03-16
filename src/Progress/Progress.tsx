@@ -4,7 +4,10 @@ import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps, ComponentColor } from '../types'
 
-export type ProgressProps = React.ProgressHTMLAttributes<HTMLProgressElement> &
+export type ProgressProps = Omit<
+  React.ProgressHTMLAttributes<HTMLProgressElement>,
+  'color'
+> &
   IComponentBaseProps & {
     color?: ComponentColor
   }

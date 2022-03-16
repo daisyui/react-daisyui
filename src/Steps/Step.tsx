@@ -4,7 +4,10 @@ import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps, ComponentColor } from '../types'
 
-export type StepProps = React.LiHTMLAttributes<HTMLLIElement> &
+export type StepProps = Omit<
+  React.LiHTMLAttributes<HTMLLIElement>,
+  'value' | 'color'
+> &
   IComponentBaseProps & {
     value?: string
     color?: ComponentColor

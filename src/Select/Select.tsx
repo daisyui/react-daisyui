@@ -13,7 +13,7 @@ export type SelectOption<T> = {
 
 export type SelectProps<T> = Omit<
   React.SelectHTMLAttributes<HTMLSelectElement>,
-  'onChange' | 'value'
+  'onChange' | 'value' | 'size' | 'color'
 > &
   IComponentBaseProps & {
     children: ReactElement<SelectOptionProps<T>>[]

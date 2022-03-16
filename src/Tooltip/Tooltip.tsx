@@ -8,7 +8,7 @@ import {
   ComponentPosition,
 } from '../types'
 
-export type TooltipProps = React.HTMLAttributes<HTMLDivElement> &
+export type TooltipProps = Omit<React.HTMLAttributes<HTMLDivElement>, 'color'> &
   IComponentBaseProps & {
     message: string
     open?: boolean
