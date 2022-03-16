@@ -15,7 +15,6 @@ type Props = {
 
 const StoryLayout = ({ children, title, description }: Props): JSX.Element => {
   const globalTheme = useGlobalTheme()
-  console.log({ globalTheme })
 
   return (
     <Theme dataTheme={globalTheme} className="w-full h-screen p-8 bg-base-100">
