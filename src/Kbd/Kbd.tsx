@@ -9,26 +9,22 @@ export type KbdProps = React.HTMLAttributes<HTMLElement> &
     size?: ComponentSize
   }
 
-const Kbd = ({
-  children,
-  size,
-  dataTheme,
-  className,
-  ...props
-}: KbdProps): JSX.Element => {
-  const classes = twMerge(
-    'kbd',
-    className,
-    clsx({
-      [`kbd-${size}`]: size,
-    })
-  )
+const Kbd = React.forwardRef<HTMLElement, KbdProps>(
+  ({ children, size, dataTheme, className, ...props }, ref): JSX.Element => {
+    const classes = twMerge(
+      'kbd',
+      className,
+      clsx({
+        [`kbd-${size}`]: size,
+      })
+    )
 
-  return (
-    <kbd {...props} data-theme={dataTheme} className={classes}>
-      {children}
-    </kbd>
-  )
-}
+    return (
+      <kbd {...props} data-theme={dataTheme} className={classes} ref={ref}>
+        {children}
+      </kbd>
+    )
+  }
+)
 
 export default Kbd

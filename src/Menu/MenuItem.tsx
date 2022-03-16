@@ -9,15 +9,17 @@ export type MenuItemProps = React.LiHTMLAttributes<HTMLLIElement> &
     disabled?: boolean
   }
 
-const MenuItem = ({ className, disabled, ...props }: MenuItemProps) => {
-  const classes = twMerge(
-    className,
-    clsx({
-      disabled: disabled,
-    })
-  )
+const MenuItem = React.forwardRef<HTMLLIElement, MenuItemProps>(
+  ({ className, disabled, ...props }, ref) => {
+    const classes = twMerge(
+      className,
+      clsx({
+        disabled: disabled,
+      })
+    )
 
-  return <li className={classes} {...props} />
-}
+    return <li className={classes} {...props} ref={ref} />
+  }
+)
 
 export default MenuItem

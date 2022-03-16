@@ -15,16 +15,22 @@ export type TabProps<T> = {
   style?: Record<string, string | number>
 }
 
-const Tab = <T extends string | number | undefined>({
-  children,
-  value,
-  activeValue,
-  onClick,
-  size,
-  variant,
-  className,
-  style,
-}: TabProps<T>): JSX.Element => {
+const TabInner = <T extends string | number | undefined>(
+  props: TabProps<T>,
+  ref?: React.ForwardedRef<T>
+): JSX.Element => {
+  const {
+    children,
+    value,
+    activeValue,
+    onClick,
+    size,
+    variant,
+    className,
+    style,
+    ...rest
+  } = props
+
   const classes = twMerge(
     'tab',
     className,
@@ -37,6 +43,7 @@ const Tab = <T extends string | number | undefined>({
 
   return (
     <a
+      {...rest}
       className={classes}
       style={style}
       onClick={() => onClick && onClick(value)}
@@ -45,5 +52,10 @@ const Tab = <T extends string | number | undefined>({
     </a>
   )
 }
+
+// Make forwardRef work with generic component
+const Tab = React.forwardRef(TabInner) as <T>(
+  props: TabProps<T> & { ref?: React.ForwardedRef<HTMLAnchorElement> }
+) => ReturnType<typeof TabInner>
 
 export default Tab

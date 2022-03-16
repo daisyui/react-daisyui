@@ -7,18 +7,16 @@ type AvatarGroupProps = React.HTMLAttributes<HTMLDivElement> & {
   children: ReactElement<AvatarProps> | ReactElement<AvatarProps>[]
 }
 
-const AvatarGroup = ({
-  children,
-  className,
-  style,
-}: AvatarGroupProps): JSX.Element => {
-  const classes = clsx('avatar-group', '-space-x-6', className)
+const AvatarGroup = React.forwardRef<HTMLDivElement, AvatarGroupProps>(
+  ({ children, className, ...props }, ref): JSX.Element => {
+    const classes = clsx('avatar-group', '-space-x-6', className)
 
-  return (
-    <div className={classes} style={style}>
-      {children}
-    </div>
-  )
-}
+    return (
+      <div {...props} className={classes} ref={ref}>
+        {children}
+      </div>
+    )
+  }
+)
 
 export default AvatarGroup

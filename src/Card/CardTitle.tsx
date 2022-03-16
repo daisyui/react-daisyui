@@ -7,10 +7,14 @@ export type CardTitleProps = React.HTMLAttributes<HTMLDivElement> &
     tag?: ElementType
   }
 
-const CardTitle = ({ className, tag = 'div', ...props }: CardTitleProps) => {
-  const Tag = tag
+const CardTitle = React.forwardRef<HTMLElement, CardTitleProps>(
+  ({ className, tag = 'div', ...props }, ref) => {
+    const Tag = tag
 
-  return <Tag className={twMerge('card-title', className)} {...props} />
-}
+    return (
+      <Tag {...props} className={twMerge('card-title', className)} ref={ref} />
+    )
+  }
+)
 
 export default CardTitle

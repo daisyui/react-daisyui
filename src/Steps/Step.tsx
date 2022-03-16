@@ -13,32 +13,30 @@ export type StepProps = Omit<
     color?: ComponentColor
   }
 
-const Step = ({
-  children,
-  value,
-  color,
-  dataTheme,
-  className,
-  ...props
-}: StepProps): JSX.Element => {
-  const classes = twMerge(
-    'step',
-    className,
-    clsx({
-      [`step-${color}`]: color,
-    })
-  )
+const Step = React.forwardRef<HTMLLIElement, StepProps>(
+  (
+    { children, value, color, dataTheme, className, ...props },
+    ref
+  ): JSX.Element => {
+    const classes = twMerge(
+      'step',
+      className,
+      clsx({
+        [`step-${color}`]: color,
+      })
+    )
 
-  return (
-    <li
-      {...props}
-      data-theme={dataTheme}
-      data-content={value}
-      className={classes}
-    >
-      {children}
-    </li>
-  )
-}
-
+    return (
+      <li
+        {...props}
+        data-theme={dataTheme}
+        data-content={value}
+        className={classes}
+        ref={ref}
+      >
+        {children}
+      </li>
+    )
+  }
+)
 export default Step

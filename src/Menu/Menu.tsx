@@ -55,33 +55,32 @@ const DYNAMIC_MODIFIERS: ModifierMap = {
   },
 }
 
-const Menu = ({
-  normal,
-  compact,
-  horizontal,
-  vertical,
-  dataTheme,
-  className,
-  ...props
-}: MenuProps) => {
-  const classes = twMerge(
-    'menu',
+const Menu = React.forwardRef<HTMLUListElement, MenuProps>(
+  ({
+    normal,
+    compact,
+    horizontal,
+    vertical,
+    dataTheme,
     className,
-    clsx({
-      [(compact && DYNAMIC_MODIFIERS.compact[compact.toString()]) || '']:
-        compact,
-      [(normal && DYNAMIC_MODIFIERS.normal[normal.toString()]) || '']: normal,
-      [(horizontal && DYNAMIC_MODIFIERS.horizontal[horizontal.toString()]) ||
-      '']: horizontal,
-      [(vertical && DYNAMIC_MODIFIERS.vertical[vertical.toString()]) || '']:
-        vertical,
-    })
-  )
+    ...props
+  }: MenuProps) => {
+    const classes = twMerge(
+      'menu',
+      className,
+      clsx({
+        [(compact && DYNAMIC_MODIFIERS.compact[compact.toString()]) || '']:
+          compact,
+        [(normal && DYNAMIC_MODIFIERS.normal[normal.toString()]) || '']: normal,
+        [(horizontal && DYNAMIC_MODIFIERS.horizontal[horizontal.toString()]) ||
+        '']: horizontal,
+        [(vertical && DYNAMIC_MODIFIERS.vertical[vertical.toString()]) || '']:
+          vertical,
+      })
+    )
 
-  return <ul data-theme={dataTheme} className={classes} {...props} />
-}
+    return <ul data-theme={dataTheme} className={classes} {...props} />
+  }
+)
 
-Menu.Title = MenuTitle
-Menu.Item = MenuItem
-
-export default Menu
+export default Object.assign(Menu, { Title: MenuTitle, Item: MenuItem })

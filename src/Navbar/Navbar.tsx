@@ -8,33 +8,35 @@ import NavbarSection, { NavbarSectionProps } from './NavbarSection'
 export type NavbarProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps
 
-const Navbar = ({
-  children,
-  dataTheme,
-  className,
-  ...props
-}: NavbarProps): JSX.Element => {
-  const classes = twMerge('navbar', className)
+const Navbar = React.forwardRef<HTMLDivElement, NavbarProps>(
+  ({ children, dataTheme, className, ...props }, ref): JSX.Element => {
+    const classes = twMerge('navbar', className)
 
-  return (
-    <div {...props} data-theme={dataTheme} className={classes}>
-      {children}
-    </div>
-  )
-}
-
-const NavbarStart = (props: Omit<NavbarSectionProps, 'section'>) => (
-  <NavbarSection {...props} section="start" />
-)
-const NavbarCenter = (props: Omit<NavbarSectionProps, 'section'>) => (
-  <NavbarSection {...props} section="center" />
-)
-const NavbarEnd = (props: Omit<NavbarSectionProps, 'section'>) => (
-  <NavbarSection {...props} section="end" />
+    return (
+      <div {...props} data-theme={dataTheme} className={classes} ref={ref}>
+        {children}
+      </div>
+    )
+  }
 )
 
-Navbar.Start = NavbarStart
-Navbar.Center = NavbarCenter
-Navbar.End = NavbarEnd
+const NavbarStart = React.forwardRef<
+  HTMLDivElement,
+  Omit<NavbarSectionProps, 'section'>
+>((props, ref) => <NavbarSection {...props} section="start" ref={ref} />)
 
-export default Navbar
+const NavbarCenter = React.forwardRef<
+  HTMLDivElement,
+  Omit<NavbarSectionProps, 'section'>
+>((props, ref) => <NavbarSection {...props} section="center" ref={ref} />)
+
+const NavbarEnd = React.forwardRef<
+  HTMLDivElement,
+  Omit<NavbarSectionProps, 'section'>
+>((props, ref) => <NavbarSection {...props} section="end" ref={ref} />)
+
+export default Object.assign(Navbar, {
+  Start: NavbarStart,
+  Center: NavbarCenter,
+  End: NavbarEnd,
+})

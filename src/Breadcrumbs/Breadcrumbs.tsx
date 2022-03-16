@@ -10,25 +10,25 @@ export type BreadcrumbsProps = React.HTMLAttributes<HTMLDivElement> &
     children?:
       | ReactElement<BreadcrumbsItemProps>
       | ReactElement<BreadcrumbsItemProps>[]
-    ref?: LegacyRef<HTMLDivElement>
+    innerRef?: React.Ref<HTMLUListElement>
+    innerProps?: React.HTMLAttributes<HTMLUListElement>
   }
 
-const Breadcrumbs = ({
-  children,
-  ref,
-  dataTheme,
-  className,
-  ...props
-}: BreadcrumbsProps): JSX.Element => {
-  const classes = twMerge('breadcrumbs', 'text-sm', className)
+const Breadcrumbs = React.forwardRef<HTMLDivElement, BreadcrumbsProps>(
+  (
+    { children, dataTheme, className, innerProps, innerRef, ...props },
+    ref
+  ): JSX.Element => {
+    const classes = twMerge('breadcrumbs', 'text-sm', className)
 
-  return (
-    <div {...props} ref={ref} data-theme={dataTheme} className={classes}>
-      <ul>{children}</ul>
-    </div>
-  )
-}
+    return (
+      <div {...props} data-theme={dataTheme} className={classes} ref={ref}>
+        <ul {...innerProps} ref={innerRef}>
+          {children}
+        </ul>
+      </div>
+    )
+  }
+)
 
-Breadcrumbs.Item = BreadcrumbsItem
-
-export default Breadcrumbs
+export default Object.assign(Breadcrumbs, { Item: BreadcrumbsItem })
