@@ -50,6 +50,7 @@ export type CarouselProps = TCarouselProps
 // Data Display > Collapse
 export { default as Collapse } from './Collapse'
 import { CollapseProps as TCollapseProps } from './Collapse'
+export { useCollapseContext } from './Collapse/useCollapseContext'
 export type CollapseProps = TCollapseProps
 
 // Data Display > Countdown
