@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.5.0](https://www.github.com/daisyui/react-daisyui/compare/v1.4.0...v1.5.0) (2022-03-16)
+
+
+### Features
+
+* **Dropdown:** support disabled DropdownToggle ([#47](https://www.github.com/daisyui/react-daisyui/issues/47)) ([1d00816](https://www.github.com/daisyui/react-daisyui/commit/1d0081677f8cb59ccc6487d9433bbce029a76569))
+
+
+### Bug Fixes
+
+* added disabled prop onto button to prevent click event from firing ([f3046d0](https://www.github.com/daisyui/react-daisyui/commit/f3046d0b46184798d63a0048505fb012048bf2b1))
+* added missing href prop from a tag in Button and wrote unit test ([46455e6](https://www.github.com/daisyui/react-daisyui/commit/46455e60321dd9e11d4789e71b1d58debf0a767a))
+* installed ts-jest and updated configs to fix jest tests ([#43](https://www.github.com/daisyui/react-daisyui/issues/43)) ([7203a25](https://www.github.com/daisyui/react-daisyui/commit/7203a2567f434573443da9d4153b02215cdcbf40))
+
+
+### Miscellaneous
+
+* added responsive option to badge ([72e093f](https://www.github.com/daisyui/react-daisyui/commit/72e093f7b6c2b91d1c89a9e0faafeffbb9553fd6))
+* hide start icon when loading ([#45](https://www.github.com/daisyui/react-daisyui/issues/45)) ([af14f31](https://www.github.com/daisyui/react-daisyui/commit/af14f31382529bbb6c2a64ee772f6dc9535f00c0))
+* removed unused import legacyref ([dbfdfb3](https://www.github.com/daisyui/react-daisyui/commit/dbfdfb3c18be0c7b2214ad46f45771fb25d9debe))
+
 ## [1.4.0](https://www.github.com/daisyui/react-daisyui/compare/v1.3.0...v1.4.0) (2022-03-16)
 
 
