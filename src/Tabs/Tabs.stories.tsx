@@ -8,6 +8,9 @@ const { Tab } = Tabs
 export default {
   title: 'Navigation/Tabs',
   component: Tabs,
+  parameters: {
+    controls: { exclude: ['ref'] },
+  },
 } as Meta
 
 export const Default: Story<TabsProps<number>> = (args) => {
