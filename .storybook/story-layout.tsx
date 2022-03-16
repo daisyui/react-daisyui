@@ -1,10 +1,8 @@
 import React, { ReactNode, useState } from 'react'
 
-import { DEFAULT_THEMES } from '../src/defaultThemes'
 import { useGlobalTheme } from './theming'
 
 import Navbar from '../src/Navbar'
-import Select from '../src/Select'
 import Theme from '../src/Theme'
 
 type Props = {
