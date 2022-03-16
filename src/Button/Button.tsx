@@ -85,6 +85,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           data-theme={dataTheme}
           className={classes}
           style={style}
+          disabled={disabled}
         >
           {startIcon && startIcon}
           {children}
