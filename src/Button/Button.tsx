@@ -55,7 +55,9 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const classes = twMerge(
       'btn',
       className,
-      clsx((startIcon || endIcon) && 'gap-2', {
+      clsx(
+        ((startIcon && !loading) || endIcon) && 'gap-2',
+      {
         [`btn-${size}`]: size,
         [`btn-${shape}`]: shape,
         [`btn-${variant}`]: variant,
@@ -87,7 +89,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           style={style}
           disabled={disabled}
         >
-          {startIcon && startIcon}
+          {startIcon && !loading && startIcon}
           {children}
           {endIcon && endIcon}
         </button>
