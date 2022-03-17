@@ -12,3 +12,12 @@ export const Default: Story<LinkProps> = (args) => {
   return <Link {...args}>It's just a simple link</Link>
 }
 Default.args = {}
+
+export const LinkWithHref: Story<LinkProps> = (args) => {
+  return (
+    <Link {...args} href="https://google.com" target="_blank">
+      Take me to Google!
+    </Link>
+  )
+}
+LinkWithHref.args = {}

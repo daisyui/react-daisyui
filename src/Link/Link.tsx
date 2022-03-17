@@ -27,7 +27,13 @@ const Link = forwardRef<HTMLAnchorElement, LinkProps>(
     )
 
     return (
-      <a {...props} data-theme={dataTheme} className={classes} ref={ref}>
+      <a
+        {...props}
+        href={href}
+        data-theme={dataTheme}
+        className={classes}
+        ref={ref}
+      >
         {children}
       </a>
     )
