@@ -1,5 +1,13 @@
 # Changelog
 
+### [1.5.2](https://www.github.com/daisyui/react-daisyui/compare/v1.5.1...v1.5.2) (2022-03-17)
+
+
+### Miscellaneous
+
+* added shields and link to discord ([3796cc0](https://www.github.com/daisyui/react-daisyui/commit/3796cc0090575b6d899fb5014125b40d6ef958c8))
+* fixed menu ref ([605174b](https://www.github.com/daisyui/react-daisyui/commit/605174b4c5d475fb4cffaef20cb282e67c0361ad))
+
 ### [1.5.1](https://www.github.com/daisyui/react-daisyui/compare/v1.5.0...v1.5.1) (2022-03-16)
 
 
