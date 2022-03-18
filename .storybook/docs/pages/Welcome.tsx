@@ -6,6 +6,7 @@ import '../styles/welcome.css'
 import { DocsWrapper } from '../DocsWrapper'
 import CodeMockup from '../../../src/CodeMockup'
 import Tooltip from '../../../src/Tooltip'
+import { CopyButton } from '../components/CopyButton'
 
 const githubMark = (
   <svg
@@ -87,7 +88,14 @@ export const HomePage = () => {
 
               <CodeMockup className="border-base-content w-full max-w-sm flex-1 border-2 border-opacity-20 bg-transparent pb-6 text-left text-current lg:mx-0">
                 <CodeMockup.Line>
-                  npm i daisyui react-daisyui <Tooltip message="Copy"></Tooltip>
+                  npm i daisyui react-daisyui{' '}
+                  <Tooltip message="Copy">
+                    <CopyButton
+                      color="ghost"
+                      size="xs"
+                      text="npm i daisyui react-daisyui"
+                    />
+                  </Tooltip>
                 </CodeMockup.Line>
               </CodeMockup>
             </div>
