@@ -32,15 +32,14 @@ type ButtonElProps = ButtonBaseProps &
 type AnchorElProps = ButtonBaseProps &
   React.AnchorHTMLAttributes<HTMLAnchorElement>
 
+export type ButtonProps = ButtonElProps | AnchorElProps
+
 type PolymorphicButton = {
   (props: AnchorElProps): JSX.Element
   (props: ButtonElProps): JSX.Element
 }
 
-const Button = forwardRef<
-  HTMLButtonElement | HTMLAnchorElement,
-  ButtonElProps | AnchorElProps
->(
+const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
   (
     {
       children,
