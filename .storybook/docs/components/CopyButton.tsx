@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { ButtonProps } from '../../../src/Button'
 import Button from '../../../src/Button'
 
@@ -19,8 +19,6 @@ export const CopyButton = ({ text = '', ...rest }: CopyButtonProps) => {
   const handleClick: React.MouseEventHandler = () => {
     copy()
   }
-
-  const useRefButton = React.useRef<HTMLButtonElement>()
 
   return (
     <Button {...rest} onClick={handleClick}>
