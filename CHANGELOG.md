@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.6.1](https://www.github.com/daisyui/react-daisyui/compare/v1.6.0...v1.6.1) (2022-03-18)
+
+
+### Bug Fixes
+
+* fixed buttonprops type name ([9ea2f21](https://www.github.com/daisyui/react-daisyui/commit/9ea2f212c09b2c4d80fba0a25fffc9d899025512))
+
 ## [1.6.0](https://www.github.com/daisyui/react-daisyui/compare/v1.5.1...v1.6.0) (2022-03-18)
 
 
