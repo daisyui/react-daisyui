@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Theme from '../Theme'
+import Theme from '../../src/Theme'
 import { useGlobalTheme } from '../../.storybook/theming/useGlobalTheme'
 
 import './styles/docs.css'
