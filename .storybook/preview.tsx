@@ -6,6 +6,7 @@ import StoryLayout from './story-layout'
 
 import '../src/styles.css'
 import { DEFAULT_THEME, STORAGE_KEY, THEME_PICKER_LIST } from './theming'
+import { docsTheme } from './theme.cjs'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -21,7 +22,7 @@ export const parameters = {
   options: {
     storySort: {
       order: [
-        'Home',
+        'Welcome',
         'Actions',
         'Data Display',
         'Data Input',
@@ -46,6 +47,12 @@ export const parameters = {
       }
     },
     list: THEME_PICKER_LIST,
+  },
+  docs: {
+    theme: docsTheme,
+    options: {
+      layout: 'fullscreen',
+    },
   },
 }
 
