@@ -1,12 +1,15 @@
 import React from 'react'
+
 import Button from '../../../src/Button'
+import CodeMockup from '../../../src/CodeMockup'
 import Hero from '../../../src/Hero'
 import Link from '../../../src/Link'
-import '../styles/welcome.css'
-import { DocsWrapper } from '../DocsWrapper'
-import CodeMockup from '../../../src/CodeMockup'
 import Tooltip from '../../../src/Tooltip'
+
+import { DocsWrapper } from '../DocsWrapper'
 import { CopyButton } from '../components/CopyButton'
+
+import '../styles/welcome.css'
 
 const githubMark = (
   <svg
