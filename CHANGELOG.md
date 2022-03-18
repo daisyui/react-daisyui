@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.6.0](https://www.github.com/daisyui/react-daisyui/compare/v1.5.1...v1.6.0) (2022-03-18)
+
+
+### Features
+
+* added href to anchor props so the link actually works :) ([e49adf0](https://www.github.com/daisyui/react-daisyui/commit/e49adf079bc2e54bce218e6437ecbe8c4084436a))
+* added landing page matching daisyui.com ([d21ce24](https://www.github.com/daisyui/react-daisyui/commit/d21ce247569931afb58acb5e74e5e9dc1c6748b1))
+
+
+### Bug Fixes
+
+* button typing for button/anchors, fixed styling of buttons with certain variants ([0af0ed2](https://www.github.com/daisyui/react-daisyui/commit/0af0ed2bf50dc3aff38df77856e9ad42ab3bd8e4))
+
+
+### Miscellaneous
+
+* added shields and link to discord ([3796cc0](https://www.github.com/daisyui/react-daisyui/commit/3796cc0090575b6d899fb5014125b40d6ef958c8))
+* fixed menu ref ([605174b](https://www.github.com/daisyui/react-daisyui/commit/605174b4c5d475fb4cffaef20cb282e67c0361ad))
+
 ### [1.5.1](https://www.github.com/daisyui/react-daisyui/compare/v1.5.0...v1.5.1) (2022-03-16)
 
 
