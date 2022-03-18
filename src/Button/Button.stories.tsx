@@ -101,3 +101,19 @@ export const Icons: Story<ButtonProps> = (args) => {
     </div>
   )
 }
+
+export const AsHref: Story<ButtonProps> = (args) => {
+  return (
+    <div className="flex gap-x-2">
+      <Button
+        {...args}
+        onClick={() => alert('See, I have an onClick event and no href.')}
+      >
+        I'm a {`<button>`}
+      </Button>
+      <Button {...args} href="https://google.com" target="_blank">
+        I'm an {`<a>`}
+      </Button>
+    </div>
+  )
+}
