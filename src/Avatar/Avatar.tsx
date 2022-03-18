@@ -17,6 +17,7 @@ export type AvatarProps = React.HTMLAttributes<HTMLDivElement> &
     letters?: string
     size?: ComponentSize
     shape?: ComponentShape
+    color?: ComponentColor
     border?: boolean
     borderColor?: ComponentColor
     online?: boolean
@@ -30,6 +31,7 @@ const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
       letters,
       size,
       shape,
+      color,
       border,
       borderColor,
       online,
@@ -61,20 +63,20 @@ const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
       'w-10 h-10': size === 'xs',
     })
 
-    const placeholderClasses = clsx(
-      'bg-neutral-focus',
-      'text-neutral-content',
-      {
-        'ring ring-offset-base-100 ring-offset-2': border,
-        [`ring-${borderColor}`]: borderColor,
-        'rounded-btn': shape === 'square',
-        'rounded-full': shape === 'circle',
-        'w-32 h-32 text-3xl': size === 'lg',
-        'w-24 h-24 text-xl': !size || size === 'md',
-        'w-14 h-14': size === 'sm',
-        'w-10 h-10': size === 'xs',
-      }
-    )
+    const placeholderClasses = clsx({
+      'bg-neutral-focus': !color,
+      'text-neutral-content': !color,
+      [`bg-${color}`]: color,
+      [`text-${color}-content`]: color,
+      'ring ring-offset-base-100 ring-offset-2': border,
+      [`ring-${borderColor}`]: borderColor,
+      'rounded-btn': shape === 'square',
+      'rounded-full': shape === 'circle',
+      'w-32 h-32 text-3xl': size === 'lg',
+      'w-24 h-24 text-xl': !size || size === 'md',
+      'w-14 h-14': size === 'sm',
+      'w-10 h-10': size === 'xs',
+    })
 
     return (
       <div
