@@ -9,30 +9,41 @@ import {
   ComponentSize,
 } from '../types'
 
-export type ButtonProps = Omit<
-  React.ButtonHTMLAttributes<HTMLButtonElement>,
-  'color'
-> &
-  IComponentBaseProps & {
-    href?: string
-    shape?: ComponentShape
-    size?: ComponentSize
-    variant?: 'outline' | 'link'
-    color?: ComponentColor
-    fullWidth?: boolean
-    responsive?: boolean
-    animation?: boolean
-    loading?: boolean
-    active?: boolean
-    startIcon?: ReactNode
-    endIcon?: ReactNode
-  }
+type ButtonBaseProps = IComponentBaseProps & {
+  shape?: ComponentShape
+  size?: ComponentSize
+  variant?: 'outline' | 'link'
+  color?: ComponentColor
+  fullWidth?: boolean
+  responsive?: boolean
+  animation?: boolean
+  loading?: boolean
+  active?: boolean
+  startIcon?: ReactNode
+  endIcon?: ReactNode
+  disabled?: boolean
+}
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+// Allow for proper typing when button is rendered as an anchor tag or a button tag
+
+type ButtonElProps = ButtonBaseProps &
+  React.ButtonHTMLAttributes<HTMLButtonElement> & { href?: never }
+
+type AnchorElProps = ButtonBaseProps &
+  React.AnchorHTMLAttributes<HTMLAnchorElement>
+
+type PolymorphicButton = {
+  (props: AnchorElProps): JSX.Element
+  (props: ButtonElProps): JSX.Element
+}
+
+const Button = forwardRef<
+  HTMLButtonElement | HTMLAnchorElement,
+  ButtonElProps | AnchorElProps
+>(
   (
     {
       children,
-      href,
       shape,
       size,
       variant,
@@ -52,31 +63,40 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref
   ): JSX.Element => {
-    const classes = twMerge(
+    const baseClasses = twMerge(
       'btn',
       className,
-      clsx(
-        ((startIcon && !loading) || endIcon) && 'gap-2',
-      {
+      clsx(((startIcon && !loading) || endIcon) && 'gap-2', {
         [`btn-${size}`]: size,
         [`btn-${shape}`]: shape,
-        [`btn-${variant}`]: variant,
         [`btn-${color}`]: color,
         'btn-block': fullWidth,
         'btn-xs md:btn-sm lg:btn-md xl:btn-lg': responsive,
         'no-animation': !animation,
-        'btn-active': active,
-        'btn-disabled': disabled,
+        'btn-active': active && !disabled, // !disabled only matters when rendering an active, disabled button as <a>...
         loading: loading,
       })
     )
 
-    if (href) {
+    if (props.href) {
+      // Handle disabled outline buttons differently when they are an anchor.
+      // <a> tags do not support the disabled attribute, so instead we apply the same classes
+      // that the disabled psuedotag applies to a regular button.
+      const classes = twMerge(
+        baseClasses,
+        disabled && 'btn-disabled',
+        variant === 'outline' &&
+          (disabled ? 'border border-current' : 'btn-outline'),
+        variant === 'link' && !disabled && 'btn-link'
+      )
       return (
         <a
+          {...props}
+          data-theme={dataTheme}
           className={classes}
           style={style}
-          href={href}
+          href={props.href}
+          ref={ref as React.ForwardedRef<HTMLAnchorElement>}
         >
           {startIcon && startIcon}
           {children}
@@ -84,10 +104,18 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         </a>
       )
     } else {
+      const classes = twMerge(
+        baseClasses,
+        disabled && 'btn-disabled',
+        clsx({
+          [`btn-${variant}`]: variant,
+        })
+      )
+
       return (
         <button
-          {...props}
-          ref={ref}
+          {...(props as ButtonElProps)}
+          ref={ref as React.ForwardedRef<HTMLButtonElement>}
           data-theme={dataTheme}
           className={classes}
           style={style}
@@ -100,8 +128,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       )
     }
   }
-)
+) as PolymorphicButton
 
-Button.displayName = 'Button'
-
-export default Button
+export default Object.assign(Button, { displayName: 'Button' })
