@@ -16,7 +16,12 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "jsxFactory": "",
-    "jsxFragmentFactory": ""
+    "jsxFragmentFactory": "",
+    // Enable import alias
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["./*"],
+    },
   },
   "include": ["./src"]
 }
