@@ -1,5 +1,18 @@
 # Changelog
 
+### [1.7.1](https://www.github.com/daisyui/react-daisyui/compare/v1.7.0...v1.7.1) (2022-03-18)
+
+
+### Bug Fixes
+
+* moved docs folder to .storybook ([#64](https://www.github.com/daisyui/react-daisyui/issues/64)) ([fd61e96](https://www.github.com/daisyui/react-daisyui/commit/fd61e96a7280c3df92e77ee9caf7510f50696f70))
+* temporary fix for button component ([#65](https://www.github.com/daisyui/react-daisyui/issues/65)) ([acf034b](https://www.github.com/daisyui/react-daisyui/commit/acf034bf82a1b12d5ebabd42165d67d640994cbe))
+
+
+### Miscellaneous
+
+* enable import alias ([#62](https://www.github.com/daisyui/react-daisyui/issues/62)) ([d0ba0fb](https://www.github.com/daisyui/react-daisyui/commit/d0ba0fb526b3b4e523021dbef561483b28ae1806))
+
 ## [1.7.0](https://www.github.com/daisyui/react-daisyui/compare/v1.6.1...v1.7.0) (2022-03-18)
 
 
