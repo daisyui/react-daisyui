@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://www.github.com/daisyui/react-daisyui/compare/v1.6.1...v1.7.0) (2022-03-18)
+
+
+### Features
+
+* **Avatar:** add configurable avatar placeholder color ([#60](https://www.github.com/daisyui/react-daisyui/issues/60)) ([aae6cb1](https://www.github.com/daisyui/react-daisyui/commit/aae6cb1b73231d6184e86e4ef98baa50f2ec72b5))
+
 ### [1.6.1](https://www.github.com/daisyui/react-daisyui/compare/v1.6.0...v1.6.1) (2022-03-18)
 
 
