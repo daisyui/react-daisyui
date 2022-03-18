@@ -14,6 +14,7 @@ const Template: Story<AvatarProps> = (args) => {
 
 export const Default = Template.bind({})
 Default.args = {
+  color: 'primary',
   src: 'http://daisyui.com/tailwind-css-component-profile-1@94w.png',
 }
 
