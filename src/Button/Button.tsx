@@ -9,7 +9,6 @@ import {
   ComponentSize,
 } from '../types'
 
-/* 
 type ButtonBaseProps = IComponentBaseProps & {
   shape?: ComponentShape
   size?: ComponentSize
@@ -25,127 +24,104 @@ type ButtonBaseProps = IComponentBaseProps & {
   disabled?: boolean
 }
 
-// Allow for proper typing when button is rendered as an anchor tag or a button tag
-
-type ButtonElProps = ButtonBaseProps &
-  Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, keyof ButtonBaseProps> & {
-    href?: never
+type ButtonElProps = Omit<
+  JSX.IntrinsicElements['button'],
+  'ref' | keyof ButtonBaseProps
+> &
+  ButtonBaseProps & {
+    href?: undefined
+    ref?: React.MutableRefObject<Partial<HTMLButtonElement>>
   }
 
-type AnchorElProps = ButtonBaseProps &
-  Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, keyof ButtonBaseProps> & {
+type AnchorProps = Omit<
+  JSX.IntrinsicElements['a'],
+  'ref' | keyof ButtonBaseProps
+> &
+  ButtonBaseProps & {
     href: string
+    ref?: React.MutableRefObject<Partial<HTMLAnchorElement>>
   }
 
-export type ButtonProps = ButtonElProps | AnchorElProps
+export type ButtonProps = ButtonElProps | AnchorProps
 
 type PolymorphicButton = {
-  (props: AnchorElProps): JSX.Element
-  (props: ButtonElProps): JSX.Element
+  (props: AnchorProps): JSX.Element
+  (props: ButtonProps): JSX.Element
 }
 
-*/
-
-export type ButtonProps = Omit<
-  React.ButtonHTMLAttributes<HTMLButtonElement>,
-  'color'
-> &
-  IComponentBaseProps & {
-    href?: string
-    target?: HTMLAnchorElement['target']
-    shape?: ComponentShape
-    size?: ComponentSize
-    variant?: 'outline' | 'link'
-    color?: ComponentColor
-    fullWidth?: boolean
-    responsive?: boolean
-    animation?: boolean
-    loading?: boolean
-    active?: boolean
-    startIcon?: ReactNode
-    endIcon?: ReactNode
-  }
-
-const isAnchor = (props: ButtonProps) => {
-  //: props is AnchorElProps => {
+const isAnchor = (props: ButtonProps): props is AnchorProps => {
   return props.href != undefined
 }
 
-const makeClassName = (props: ButtonProps) => {
+const makeButtonClasses = (props: ButtonProps) => {
+  return twMerge(
+    'btn',
+    props.className,
+    clsx(((props.startIcon && !props.loading) || props.endIcon) && 'gap-2', {
+      [`btn-${props.size}`]: props.size,
+      [`btn-${props.shape}`]: props.shape,
+      [`btn-${props.color}`]: props.color,
+      'btn-block': props.fullWidth,
+      'btn-xs md:btn-sm lg:btn-md xl:btn-lg': props.responsive,
+      'no-animation': !props.animation,
+      [`btn-${props.variant}`]: props.variant,
+      'btn-active': props.active,
+      loading: props.loading,
+      'btn-disabled': props.disabled,
+    })
+  )
+}
+
+export const Button = React.forwardRef<
+  HTMLButtonElement | HTMLAnchorElement,
+  ButtonProps
+>((props, ref) => {
   const {
-    variant,
-    className,
     startIcon,
-    loading,
     endIcon,
-    size,
+    children,
+    dataTheme,
+    loading,
+    active,
     shape,
+    size,
+    variant,
     color,
     fullWidth,
     responsive,
     animation,
-    active,
-    disabled,
+    ...rest
   } = props
 
-  return twMerge(
-    'btn',
-    className,
-    clsx(((startIcon && !loading) || endIcon) && 'gap-2', {
-      [`btn-${size}`]: size,
-      [`btn-${shape}`]: shape,
-      [`btn-${color}`]: color,
-      'btn-block': fullWidth,
-      'btn-xs md:btn-sm lg:btn-md xl:btn-lg': responsive,
-      'no-animation': !animation,
-      'btn-active': active && !disabled, // !disabled only matters when rendering an active, disabled button as <a>...
-      loading: loading,
-    }),
-    isAnchor(props)
-      ? twMerge(
-          disabled && 'btn-disabled',
-          variant === 'outline' &&
-            (disabled ? 'border border-current' : 'btn-outline'),
-          variant === 'link' && !disabled && 'btn-link'
-        )
-      : twMerge(
-          disabled && 'btn-disabled',
-          clsx({
-            [`btn-${variant}`]: variant,
-          })
-        )
-  )
-}
+  const classes = makeButtonClasses(props)
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
-  const classes = makeClassName(props)
-
-  const { href, style, children, startIcon, endIcon, loading, target } = props
-
-  return isAnchor(props) ? (
-    <a
-      className={classes}
-      style={style}
-      href={href}
-      target={target}
-      data-theme={props.dataTheme}
-      //ref={(ref as React.ForwardedRef<HTMLAnchorElement>) || null}
-    >
-      {startIcon && !loading && startIcon}
-      {children}
-      {endIcon && endIcon}
-    </a>
-  ) : (
-    <button
-      {...props}
-      className={classes}
-      ref={(ref as React.ForwardedRef<HTMLButtonElement>) || null}
-    >
-      {startIcon && !loading && startIcon}
-      {children}
-      {endIcon && endIcon}
-    </button>
-  )
-}) //as PolymorphicButton
+  if (isAnchor(props)) {
+    return (
+      <a
+        {...(rest as Partial<AnchorProps>)}
+        className={classes}
+        data-theme={dataTheme}
+        ref={ref as React.ForwardedRef<HTMLAnchorElement>}
+      >
+        {startIcon && !loading && startIcon}
+        {children}
+        {endIcon && endIcon}
+      </a>
+    )
+  } else {
+    return (
+      <button
+        {...(rest as Partial<ButtonElProps>)}
+        className={classes}
+        data-theme={dataTheme}
+        ref={ref as React.ForwardedRef<HTMLButtonElement>}
+      >
+        {startIcon && !loading && startIcon}
+        {children}
+        {endIcon && endIcon}
+      </button>
+    )
+  }
+}) as PolymorphicButton
 
 export default Object.assign(Button, { displayName: 'Button' })

@@ -1,3 +1,5 @@
+import React from 'react'
+
 import {
   componentStatuses,
   componentColors,
@@ -23,3 +25,10 @@ export type ComponentSize = typeof componentSizes[number]
 export type ComponentStatus = typeof componentStatuses[number]
 export type ComponentBrandColors = typeof brandColors[number]
 export type ComponentBgColors = typeof bgColors[number]
+
+// Allow anchor elements to have disabled attribute
+declare module 'react' {
+  interface AnchorHTMLAttributes<T> extends HTMLAttributes<T> {
+    disabled?: boolean
+  }
+}
