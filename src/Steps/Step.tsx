@@ -28,6 +28,7 @@ const Step = React.forwardRef<HTMLLIElement, StepProps>(
 
     return (
       <li
+        aria-label="Step"
         {...props}
         data-theme={dataTheme}
         data-content={value}

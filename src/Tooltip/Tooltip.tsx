@@ -42,6 +42,7 @@ const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
 
     return (
       <div
+        role="tooltip"
         {...props}
         ref={ref}
         data-theme={dataTheme}

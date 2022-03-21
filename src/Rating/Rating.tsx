@@ -29,7 +29,13 @@ const Rating = React.forwardRef<HTMLDivElement, RatingProps>(
     )
 
     return (
-      <div {...props} ref={ref} data-theme={dataTheme} className={classes}>
+      <div
+        aria-label="Rating"
+        {...props}
+        ref={ref}
+        data-theme={dataTheme}
+        className={classes}
+      >
         {children}
       </div>
     )

@@ -25,7 +25,13 @@ const Alert = forwardRef<HTMLDivElement, AlertProps>(
     )
 
     return (
-      <div {...props} ref={ref} data-theme={dataTheme} className={classes}>
+      <div
+        role="alert"
+        {...props}
+        ref={ref}
+        data-theme={dataTheme}
+        className={classes}
+      >
         <div className="flex-1">
           {icon}
           <label>{children}</label>

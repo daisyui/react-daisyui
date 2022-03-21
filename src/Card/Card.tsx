@@ -73,7 +73,7 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
       })
     )
 
-    return <div {...props} className={classes} ref={ref} />
+    return <div aria-label="Card" {...props} className={classes} ref={ref} />
   }
 )
 

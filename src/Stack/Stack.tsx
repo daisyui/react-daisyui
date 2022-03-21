@@ -11,7 +11,7 @@ const Stack = forwardRef<HTMLDivElement, StackProps>(
     const classes = twMerge('stack', className)
 
     return (
-      <div {...props} ref={ref} data-theme={dataTheme} className={classes}>
+      <div aria-label="Stack" {...props} ref={ref} data-theme={dataTheme} className={classes}>
         {children}
       </div>
     )

@@ -20,7 +20,7 @@ const Countdown = ({
   const countdownStyle: Record<string, number> = { '--value': displayedValue }
 
   return (
-    <span {...props} data-theme={dataTheme} className={classes}>
+    <span role="timer" {...props} data-theme={dataTheme} className={classes}>
       <span style={countdownStyle} />
     </span>
   )

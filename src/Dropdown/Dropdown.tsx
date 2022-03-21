@@ -33,7 +33,7 @@ const Dropdown = React.forwardRef<HTMLDivElement, DropdownProps>(
     )
 
     return (
-      <div {...props} ref={ref} data-theme={dataTheme} className={classes}>
+      <div role="listbox" {...props} ref={ref} data-theme={dataTheme} className={classes}>
         <label tabIndex={0}>{children}</label>
         <ul className="dropdown-content">{item}</ul>
       </div>

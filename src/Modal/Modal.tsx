@@ -72,6 +72,9 @@ const Modal = forwardRef<ModalRef, ModalProps>(
 
     return (
       <div
+        aria-label="Modal"
+        aria-hidden={!open}
+        aria-modal={open}
         {...props}
         data-theme={dataTheme}
         className={classes}

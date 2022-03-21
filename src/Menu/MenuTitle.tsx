@@ -10,7 +10,7 @@ const MenuTitle = React.forwardRef<HTMLLIElement, MenuTitleProps>(
   ({ className, ...props }, ref) => {
     const classes = twMerge('menu-title', className)
 
-    return <li className={classes} {...props} ref={ref} />
+    return <li {...props} className={classes} ref={ref} />
   }
 )
 

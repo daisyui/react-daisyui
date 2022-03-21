@@ -43,6 +43,7 @@ const TabInner = <T extends string | number | undefined>(
 
   return (
     <a
+      role="tab"
       {...rest}
       className={classes}
       style={style}

@@ -14,7 +14,7 @@ const Hero = React.forwardRef<HTMLDivElement, HeroProps>(
     const classes = twMerge('hero', className)
 
     return (
-      <div {...props} data-theme={dataTheme} className={classes} ref={ref}>
+      <div role="banner" {...props} data-theme={dataTheme} className={classes} ref={ref}>
         {children}
       </div>
     )

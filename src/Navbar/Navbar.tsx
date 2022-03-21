@@ -13,7 +13,7 @@ const Navbar = React.forwardRef<HTMLDivElement, NavbarProps>(
     const classes = twMerge('navbar', className)
 
     return (
-      <div {...props} data-theme={dataTheme} className={classes} ref={ref}>
+      <div role="navigation" aria-label="Navbar" {...props} data-theme={dataTheme} className={classes} ref={ref}>
         {children}
       </div>
     )

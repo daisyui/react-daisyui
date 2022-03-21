@@ -30,7 +30,14 @@ const Carousel = forwardRef<HTMLDivElement, CarouselProps>(
     )
 
     return (
-      <div {...props} ref={ref} data-theme={dataTheme} className={classes}>
+      <div
+        role="listbox"
+        aria-label="Image carousel"
+        {...props}
+        ref={ref}
+        data-theme={dataTheme}
+        className={classes}
+      >
         {children}
       </div>
     )

@@ -37,7 +37,7 @@ const Indicator = React.forwardRef<HTMLDivElement, IndicatorProps>(
 
     return (
       <div data-theme={dataTheme} className="indicator" ref={ref}>
-        <div {...props} className={classes} ref={innerRef}>
+        <div aria-label="Indicator" {...props} className={classes} ref={innerRef}>
           {item}
         </div>
 

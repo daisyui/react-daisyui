@@ -29,7 +29,13 @@ const Badge = forwardRef<HTMLDivElement, BadgeProps>(
     )
 
     return (
-      <div {...props} ref={ref} data-theme={dataTheme} className={classes}>
+      <div
+        aria-label="Badge"
+        {...props}
+        data-theme={dataTheme}
+        className={classes}
+        ref={ref}
+      >
         {children}
       </div>
     )

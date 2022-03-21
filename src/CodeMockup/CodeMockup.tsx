@@ -12,14 +12,14 @@ const CodeMockup = forwardRef<HTMLDivElement, CodeMockupProps>(
     const classes = twMerge('mockup-code', className)
 
     return (
-      <div {...props} data-theme={dataTheme} className={classes} ref={ref}>
+      <div aria-label="Code mockup" {...props} data-theme={dataTheme} className={classes} ref={ref}>
         {children}
       </div>
     )
   }
 )
 
-CodeMockup.displayName = 'CodeMoickup'
+CodeMockup.displayName = 'CodeMockup'
 const CodeMockupNamespace = Object.assign(CodeMockup, { Line: CodeMockupLine })
 
 export { CodeMockupNamespace as CodeMockup }
