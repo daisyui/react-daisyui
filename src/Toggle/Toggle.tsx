@@ -6,7 +6,7 @@ import {
   IComponentBaseProps,
   ComponentBrandColors,
   ComponentSize,
-} from '../types'
+} from '@/types'
 
 export type ToggleProps = Omit<
   React.InputHTMLAttributes<HTMLInputElement>,

@@ -1,7 +1,7 @@
 import React from 'react'
 import { twMerge } from 'tailwind-merge'
 
-import { IComponentBaseProps } from '../types'
+import { IComponentBaseProps } from '@/types'
 
 export type CollapseTitleProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps

@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-import { ComponentSize } from '../types'
+import { ComponentSize } from '@/types'
 
 export type TabProps<T> = {
   children?: ReactNode | ReactNode[]

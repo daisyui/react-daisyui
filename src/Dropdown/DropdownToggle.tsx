@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { ComponentColor, ComponentSize, IComponentBaseProps } from '../types'
+import { ComponentColor, ComponentSize, IComponentBaseProps } from '@/types'
 
 import Button from '../Button'
 

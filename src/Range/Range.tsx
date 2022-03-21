@@ -6,7 +6,7 @@ import {
   IComponentBaseProps,
   ComponentBrandColors,
   ComponentSize,
-} from '../types'
+} from '@/types'
 
 export type RangeProps = Omit<
   React.InputHTMLAttributes<HTMLInputElement>,
