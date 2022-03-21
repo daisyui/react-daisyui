@@ -7,7 +7,11 @@ export type BreadcrumbsItemProps = React.LiHTMLAttributes<HTMLLIElement> & {
 const BreadcrumbsItem = React.forwardRef<HTMLLIElement, BreadcrumbsItemProps>(
   ({ children, href, ...props }, ref): JSX.Element => {
     return (
-      <li {...props} ref={ref}>
+      <li
+        role="link"
+        {...props}
+        ref={ref}
+      >
         {href ? <a href={href}>{children}</a> : <>{children}</>}
       </li>
     )

@@ -27,7 +27,12 @@ const Artboard = forwardRef<HTMLDivElement, ArtboardProps>(
     )
 
     return (
-      <div {...props} ref={ref} data-theme={dataTheme} className={classes}>
+      <div 
+        aria-label="Artboard"
+        {...props} ref={ref}
+        data-theme={dataTheme} 
+        className={classes}
+      >
         {children}
       </div>
     )

@@ -78,7 +78,7 @@ const WindowMockup = forwardRef<HTMLDivElement, WindowMockupProps>(
       )
 
     return (
-      <div {...props} data-theme={dataTheme} className={classes} ref={ref}>
+      <div aria-label="Window mockup" {...props} data-theme={dataTheme} className={classes} ref={ref}>
         {innerEl}
       </div>
     )

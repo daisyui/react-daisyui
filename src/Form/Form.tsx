@@ -13,7 +13,7 @@ const Form = React.forwardRef<HTMLDivElement, FormProps>(
     const classes = twMerge('form-control', className)
 
     return (
-      <div {...props} data-theme={dataTheme} className={classes} ref={ref}>
+      <div role="form" {...props} data-theme={dataTheme} className={classes} ref={ref}>
         {children}
       </div>
     )

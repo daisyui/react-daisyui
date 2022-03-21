@@ -16,7 +16,14 @@ const Steps = React.forwardRef<HTMLUListElement, StepsProps>(
     const classes = twMerge('steps', className)
 
     return (
-      <ul {...props} data-theme={dataTheme} className={classes} ref={ref}>
+      <ul
+        aria-label="Steps"
+        role="group"
+        {...props}
+        data-theme={dataTheme} 
+        className={classes} 
+        ref={ref}
+      >
         {children}
       </ul>
     )

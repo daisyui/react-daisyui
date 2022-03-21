@@ -72,7 +72,7 @@ const makeButtonClasses = (props: ButtonProps) => {
   )
 }
 
-export const Button = React.forwardRef<
+export const Button = forwardRef<
   HTMLButtonElement | HTMLAnchorElement,
   ButtonProps
 >((props, ref) => {

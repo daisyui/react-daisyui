@@ -31,6 +31,7 @@ const Collapse = React.forwardRef<HTMLDivElement, CollapseProps>(
 
     return (
       <div
+        aria-expanded={open}
         {...props}
         ref={ref}
         tabIndex={0}

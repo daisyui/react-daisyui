@@ -17,6 +17,10 @@ const RadialProgress = forwardRef<HTMLDivElement, RadialProgressProps>(
 
     return (
       <div
+        role="progressbar"
+        aria-valuenow={displayedValue}
+        aria-valuemin={0}
+        aria-valuemax={100}
         {...props}
         ref={ref}
         data-theme={dataTheme}

@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React, { forwardRef } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
@@ -9,7 +9,7 @@ export type KbdProps = React.HTMLAttributes<HTMLElement> &
     size?: ComponentSize
   }
 
-const Kbd = React.forwardRef<HTMLElement, KbdProps>(
+const Kbd = forwardRef<HTMLElement, KbdProps>(
   ({ children, size, dataTheme, className, ...props }, ref): JSX.Element => {
     const classes = twMerge(
       'kbd',

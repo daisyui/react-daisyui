@@ -75,7 +75,7 @@ const Menu = React.forwardRef<HTMLUListElement, MenuProps>(
     )
 
     return (
-      <ul data-theme={dataTheme} className={classes} {...props} ref={ref} />
+      <ul role="menu" data-theme={dataTheme} className={classes} {...props} ref={ref} />
     )
   }
 )

@@ -22,7 +22,14 @@ const Breadcrumbs = React.forwardRef<HTMLDivElement, BreadcrumbsProps>(
     const classes = twMerge('breadcrumbs', 'text-sm', className)
 
     return (
-      <div {...props} data-theme={dataTheme} className={classes} ref={ref}>
+      <div
+        role="navigation"
+        aria-label="Breadcrumbs"
+        {...props}
+        data-theme={dataTheme}
+        className={classes}
+        ref={ref}
+      >
         <ul {...innerProps} ref={innerRef}>
           {children}
         </ul>

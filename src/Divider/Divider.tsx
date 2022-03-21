@@ -26,7 +26,7 @@ const Divider = ({
   )
 
   return (
-    <div {...props} data-theme={dataTheme} className={classes}>
+    <div role="separator" {...props} data-theme={dataTheme} className={classes}>
       {children}
     </div>
   )

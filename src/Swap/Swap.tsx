@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
-import { isValidAndNotFragment, wrapWithElementIfInvalid } from '../utils'
+import { wrapWithElementIfInvalid } from '../utils'
 
 export type SwapProps = React.LabelHTMLAttributes<HTMLLabelElement> &
   IComponentBaseProps & {
@@ -52,7 +52,11 @@ const Swap = React.forwardRef<HTMLLabelElement, SwapProps>(
     })
 
     return (
-      <label {...props} data-theme={dataTheme} className={classes} ref={ref}>
+      <label
+        {...props} data-theme={dataTheme}
+        className={classes}
+        ref={ref}
+      >
         <input type="checkbox" />
         {onEl}
         {offEl}

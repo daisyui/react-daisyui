@@ -80,6 +80,7 @@ const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
 
     return (
       <div
+        aria-label="Avatar photo"
         {...props}
         data-theme={dataTheme}
         className={containerClasses}
