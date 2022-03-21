@@ -9,7 +9,7 @@ import {
   ComponentColor,
   ComponentShape,
   ComponentSize,
-} from '../types'
+} from '@/types'
 
 export type AvatarProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {

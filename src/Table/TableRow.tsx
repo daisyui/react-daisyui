@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-import { IComponentBaseProps } from '../types'
+import { IComponentBaseProps } from '@/types'
 
 export type TableRowProps = React.TableHTMLAttributes<HTMLTableRowElement> &
   IComponentBaseProps & {

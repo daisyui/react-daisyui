@@ -3,7 +3,7 @@ import { colorOptions, htmlTagOptions } from '../options/index.js'
 export const buildComponentData = (data) => {
   data.twPrefix && data.twPrefix.toLowerCase()
 
-  // Add to import ___ from '../types', props, spread props, and classes
+  // Add to import ___ from '@/types', props, spread props, and classes
   data.typeImports = []
   data.propTypes = []
   data.spreadProps = []
