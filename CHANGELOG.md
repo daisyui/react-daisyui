@@ -1,5 +1,19 @@
 # Changelog
 
+### [1.7.2](https://www.github.com/daisyui/react-daisyui/compare/v1.7.1...v1.7.2) (2022-03-21)
+
+
+### Bug Fixes
+
+* added storybook to tailwind content and cleaned up imports ([77f213e](https://www.github.com/daisyui/react-daisyui/commit/77f213efc1ed92e67cde696c418629908863401d))
+
+
+### Miscellaneous
+
+* added aria labels ([#68](https://www.github.com/daisyui/react-daisyui/issues/68)) ([63dc716](https://www.github.com/daisyui/react-daisyui/commit/63dc716dd2d27f2203dcd54246254c9dbe8c884d))
+* complete rewrite of button component ([#66](https://www.github.com/daisyui/react-daisyui/issues/66)) ([7751360](https://www.github.com/daisyui/react-daisyui/commit/77513609a29c4d9e8dc8f21a32f8e9edcf55361e))
+* use alias imports for types ([#70](https://www.github.com/daisyui/react-daisyui/issues/70)) ([0868ea2](https://www.github.com/daisyui/react-daisyui/commit/0868ea2b78525471bf56718a56dcedb53c8290c6))
+
 ### [1.7.1](https://www.github.com/daisyui/react-daisyui/compare/v1.7.0...v1.7.1) (2022-03-18)
 
 
