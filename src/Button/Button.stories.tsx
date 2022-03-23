@@ -16,8 +16,8 @@ export default {
   },
 } as Meta
 
-const Template: Story = ({ children = 'Button', ...rest }) => (
-  <Button {...rest}>{children}</Button>
+const Template: Story<ButtonProps> = (args) => (
+  <Button {...args} />
 )
 export const Default = Template.bind({})
 Default.args = {}
@@ -106,12 +106,12 @@ export const AsHref: Story<ButtonProps> = (args) => {
   return (
     <div className="flex gap-x-2">
       <Button
-        {...args}
+       {...args} 
         onClick={() => alert('See, I have an onClick event and no href.')}
       >
         I'm a {`<button>`}
       </Button>
-      <Button {...args} href="https://google.com" target="_blank">
+      <Button href="https://google.com" target="_blank">
         I'm an {`<a>`}
       </Button>
     </div>
