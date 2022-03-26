@@ -18,7 +18,7 @@ export const isReactFragment = (node: React.ReactNode) => {
   if ((node as React.ReactElement)?.type) {
     return (node as React.ReactElement)?.type === React.Fragment
   }
-  
+
   return node === React.Fragment
 }
 
@@ -54,4 +54,10 @@ export const wrapWithElementIfInvalid = ({
       className: twMerge(node.props?.className, props?.className),
     })
   }
+}
+
+export const getValidChildren = (children: React.ReactNode) => {
+  return React.Children.toArray(children).filter((child) =>
+    React.isValidElement(child)
+  ) as React.ReactElement[]
 }

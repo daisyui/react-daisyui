@@ -8,7 +8,7 @@ export default {
   component: Carousel,
 } as Meta
 
-export const Default: Story<CarouselProps> = (args) => {
+const Template: Story<CarouselProps> = (args) => {
   return (
     <Carousel {...args}>
       <Carousel.Item src="https://picsum.photos/id/500/256/144" />
@@ -21,4 +21,12 @@ export const Default: Story<CarouselProps> = (args) => {
     </Carousel>
   )
 }
+
+export const Default = Template.bind({})
 Default.args = {}
+
+export const Vertical = Template.bind({})
+Vertical.args = { vertical: true, className: 'max-h-96' }
+
+export const IndicatorButtons = Template.bind({})
+IndicatorButtons.args = { indicatorButtons: true }
