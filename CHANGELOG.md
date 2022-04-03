@@ -1,5 +1,19 @@
 # Changelog
 
+### [1.7.3](https://www.github.com/daisyui/react-daisyui/compare/v1.7.2...v1.7.3) (2022-04-03)
+
+
+### Bug Fixes
+
+* jsx runtime ([#75](https://www.github.com/daisyui/react-daisyui/issues/75)) ([795ecdb](https://www.github.com/daisyui/react-daisyui/commit/795ecdb6fec143e531295135d3bf1e9f178b474d))
+* move registry auth from npmrc to release config ([#76](https://www.github.com/daisyui/react-daisyui/issues/76)) ([761aadb](https://www.github.com/daisyui/react-daisyui/commit/761aadb0b97eefe83b787ca250d16ab8020d7e55))
+
+
+### Miscellaneous
+
+* **Button:** remove button anchor polymorphism ([#72](https://www.github.com/daisyui/react-daisyui/issues/72)) ([0e0edd3](https://www.github.com/daisyui/react-daisyui/commit/0e0edd39e523892447eb2fc38e8daa47ae07c90f))
+* **Carousel:** added controls for alternative display modes ([#74](https://www.github.com/daisyui/react-daisyui/issues/74)) ([d2d254a](https://www.github.com/daisyui/react-daisyui/commit/d2d254a87b5597f70fe81cf757cbe28c29939ef7))
+
 ### [1.7.2](https://www.github.com/daisyui/react-daisyui/compare/v1.7.1...v1.7.2) (2022-03-21)
 
 
