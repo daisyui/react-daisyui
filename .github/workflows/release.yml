@@ -34,7 +34,7 @@ jobs:
         if: ${{ steps.release-please.outputs.pr }}
         with:
           ref: ${{ steps.extract-branch.outputs.result }}
-      - run: npm ci
+      - run: npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}" && npm ci
         if: ${{ steps.release-please.outputs.pr }}
       - run: npm run docs
         if: ${{ steps.release-please.outputs.pr }}
@@ -58,9 +58,9 @@ jobs:
         with:
           node-version: '16.x'
         if: ${{ steps.release.outputs.release_created }}
-      - run: npm ci
+      - run: npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}" && npm ci
         if: ${{ steps.release.outputs.release_created }}
-      - run: npm publish
+      - run: npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}" && npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         if: ${{ steps.release.outputs.release_created }}
