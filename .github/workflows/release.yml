@@ -62,5 +62,5 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
       - run: npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}" && npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         if: ${{ steps.release.outputs.release_created }}
