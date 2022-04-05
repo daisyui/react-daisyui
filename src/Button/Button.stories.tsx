@@ -113,7 +113,7 @@ export const AsHref: Story<ButtonProps> = (args) => {
       >
         I'm a {`<button>`}
       </Button>
-      <Button href="https://google.com" target="_blank">
+      <Button href="https://google.com">
         I'm an {`<a>`}
       </Button>
     </div>

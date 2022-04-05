@@ -9,35 +9,30 @@ import {
   ComponentSize,
 } from '../types'
 
-type ButtonBaseProps = IComponentBaseProps & {
-  shape?: ComponentShape
-  size?: ComponentSize
-  variant?: 'outline' | 'link'
-  color?: ComponentColor
-  fullWidth?: boolean
-  responsive?: boolean
-  animation?: boolean
-  loading?: boolean
-  active?: boolean
-  startIcon?: ReactNode
-  endIcon?: ReactNode
-}
+export type ButtonProps = Omit<
+  React.ButtonHTMLAttributes<HTMLButtonElement>,
+  'color'
+> &
+  IComponentBaseProps & {
+    href?: string
+    shape?: ComponentShape
+    size?: ComponentSize
+    variant?: 'outline' | 'link'
+    color?: ComponentColor
+    fullWidth?: boolean
+    responsive?: boolean
+    animation?: boolean
+    loading?: boolean
+    active?: boolean
+    startIcon?: ReactNode
+    endIcon?: ReactNode
+  }
 
-type ButtonElementProps = ButtonBaseProps & React.ButtonHTMLAttributes<HTMLButtonElement> & {
-  as?: 'button'
-}
-
-type AnchorElementProps = ButtonBaseProps & React.AnchorHTMLAttributes<HTMLAnchorElement> & {
-  as: 'link'
-  href: string
-}
-
-export type ButtonProps = ButtonElementProps | AnchorElementProps
-
-const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       children,
+      href,
       shape,
       size,
       variant,
@@ -76,19 +71,12 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
       })
     )
 
-    if ('href' in props)
-    {
-      props.as = 'link'
-    }
-
-    if (props.as === 'link') {
+    if (href) {
       return (
         <a
-          {...props}
-          ref={ref as React.ForwardedRef<HTMLAnchorElement>}
           className={classes}
           style={style}
-          href={props.href}
+          href={href}
         >
           {startIcon && startIcon}
           {children}
@@ -99,7 +87,7 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
       return (
         <button
           {...props}
-          ref={ref as React.ForwardedRef<HTMLButtonElement>}
+          ref={ref}
           data-theme={dataTheme}
           className={classes}
           style={style}
