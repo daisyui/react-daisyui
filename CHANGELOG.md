@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.7.6](https://www.github.com/daisyui/react-daisyui/compare/v1.7.5...v1.7.6) (2022-04-05)
+
+
+### Bug Fixes
+
+* **Button:** reverted polymorphism ([09f4e16](https://www.github.com/daisyui/react-daisyui/commit/09f4e1619e268c5036e29477d55edd6c787c2668))
+
 ### [1.7.4](https://www.github.com/daisyui/react-daisyui/compare/v1.7.3...v1.7.4) (2022-04-05)
 
 
