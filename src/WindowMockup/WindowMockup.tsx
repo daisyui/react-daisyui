@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-import { IComponentBaseProps } from '@/types'
+import { IComponentBaseProps } from '../types'
 import { bgColors, brandColors, componentStatuses } from '../constants'
 
 export const windowMockupColors = [

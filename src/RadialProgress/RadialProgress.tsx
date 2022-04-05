@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react'
 import { twMerge } from 'tailwind-merge'
 
-import { IComponentBaseProps } from '@/types'
+import { IComponentBaseProps } from '../types'
 
 export type RadialProgressProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {

@@ -10,7 +10,7 @@ import React, {
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-import { IComponentBaseProps } from '@/types'
+import { IComponentBaseProps } from '../types'
 
 import CarouselItem, { CarouselItemProps } from './CarouselItem'
 import Button from '../Button'

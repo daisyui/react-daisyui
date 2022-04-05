@@ -17,11 +17,6 @@
     "jsx": "react-jsx",
     "jsxFactory": "",
     "jsxFragmentFactory": "",
-    // Enable import alias
-    "baseUrl": "./src",
-    "paths": {
-      "@/*": ["./*"],
-    },
   },
   "include": ["./src"]
 }

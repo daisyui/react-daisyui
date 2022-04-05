@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-import { IComponentBaseProps, ComponentColor } from '@/types'
+import { IComponentBaseProps, ComponentColor } from '../types'
 
 export type ProgressProps = Omit<
   React.ProgressHTMLAttributes<HTMLProgressElement>,

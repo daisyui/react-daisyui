@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-import { IComponentBaseProps, ComponentColor, ComponentSize } from '@/types'
+import { IComponentBaseProps, ComponentColor, ComponentSize } from '../types'
 
 export type InputProps = Omit<
   React.InputHTMLAttributes<HTMLInputElement>,
