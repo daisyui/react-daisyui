@@ -2,7 +2,7 @@ import React, { cloneElement, ReactElement, useState } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-import { IComponentBaseProps, ComponentSize } from '@/types'
+import { IComponentBaseProps, ComponentSize } from '../types'
 
 import Tab, { TabProps } from './Tab'
 

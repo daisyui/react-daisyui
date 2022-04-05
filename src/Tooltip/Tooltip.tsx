@@ -6,7 +6,7 @@ import {
   IComponentBaseProps,
   ComponentColor,
   ComponentPosition,
-} from '@/types'
+} from '../types'
 
 export type TooltipProps = Omit<React.HTMLAttributes<HTMLDivElement>, 'color'> &
   IComponentBaseProps & {

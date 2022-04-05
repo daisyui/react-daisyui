@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react'
 import clsx from 'clsx'
 
-import { AvatarProps } from '@/Avatar'
+import { AvatarProps } from '../Avatar'
 
 type AvatarGroupProps = React.HTMLAttributes<HTMLDivElement> & {
   children: ReactElement<AvatarProps>[]

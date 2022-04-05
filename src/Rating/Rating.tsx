@@ -2,7 +2,7 @@ import React from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-import { IComponentBaseProps, ComponentSize } from '@/types'
+import { IComponentBaseProps, ComponentSize } from '../types'
 
 import RatingItem from './RatingItem'
 

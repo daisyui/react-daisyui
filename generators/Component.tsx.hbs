@@ -7,7 +7,7 @@ import {
   {{#each typeImports}}
   {{{this}}},
   {{/each}}
-} from '@/types'
+} from '../types'
 
 export type {{properCase name}}Props = 
   & {{htmlAttributesType}}<{{refType}}>

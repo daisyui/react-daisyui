@@ -2,7 +2,7 @@ import React from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-import { IComponentBaseProps, ComponentSize } from '@/types'
+import { IComponentBaseProps, ComponentSize } from '../types'
 
 import MenuTitle, { MenuTitleProps as TitleProps } from './MenuTitle'
 import MenuItem, { MenuItemProps as ItemProps } from './MenuItem'

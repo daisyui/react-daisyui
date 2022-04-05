@@ -20,7 +20,9 @@ const Template: Story<ButtonProps> = (args) => (
   <Button {...args} />
 )
 export const Default = Template.bind({})
-Default.args = {}
+Default.args = {
+  children: 'Button'
+}
 
 export const Colors: Story<ButtonProps> = (args) => {
   return (

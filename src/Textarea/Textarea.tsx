@@ -2,7 +2,7 @@ import React from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-import { ComponentColor, IComponentBaseProps } from '@/types'
+import { ComponentColor, IComponentBaseProps } from '../types'
 
 export type TextareaProps = Omit<
   React.TextareaHTMLAttributes<HTMLTextAreaElement>,

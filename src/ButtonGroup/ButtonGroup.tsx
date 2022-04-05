@@ -1,9 +1,9 @@
 import React, { ReactElement } from 'react'
 import { twMerge } from 'tailwind-merge'
 
-import { IComponentBaseProps } from '@/types'
+import { IComponentBaseProps } from '../types'
 
-import { ButtonProps } from '@/Button'
+import { ButtonProps } from '../Button'
 
 export type ButtonGroupProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {

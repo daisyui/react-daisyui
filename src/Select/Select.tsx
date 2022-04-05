@@ -2,7 +2,7 @@ import React, { cloneElement, ReactElement, useState } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-import { IComponentBaseProps, ComponentColor, ComponentSize } from '@/types'
+import { IComponentBaseProps, ComponentColor, ComponentSize } from '../types'
 
 import SelectOption, { SelectOptionProps } from './SelectOption'
 
