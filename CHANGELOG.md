@@ -1,12 +1,5 @@
 # Changelog
 
-### [1.7.5](https://www.github.com/daisyui/react-daisyui/compare/v1.7.4...v1.7.5) (2022-04-05)
-
-
-### Bug Fixes
-
-* removed polymorphic typing from types.ts ([be13cfa](https://www.github.com/daisyui/react-daisyui/commit/be13cfac9165a5a3ce3f0c1608c4b9c93f05152d))
-
 ### [1.7.4](https://www.github.com/daisyui/react-daisyui/compare/v1.7.3...v1.7.4) (2022-04-05)
 
 
