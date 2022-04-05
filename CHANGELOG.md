@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.7.4](https://www.github.com/daisyui/react-daisyui/compare/v1.7.3...v1.7.4) (2022-04-05)
+
+
+### Bug Fixes
+
+* removed alias imports ([#78](https://www.github.com/daisyui/react-daisyui/issues/78)) ([bac644f](https://www.github.com/daisyui/react-daisyui/commit/bac644fd9486dc0d5083632820f59b3055085632))
+
 ### [1.7.3](https://www.github.com/daisyui/react-daisyui/compare/v1.7.2...v1.7.3) (2022-04-03)
 
 
