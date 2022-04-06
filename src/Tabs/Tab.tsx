@@ -4,7 +4,7 @@ import { twMerge } from 'tailwind-merge'
 
 import { ComponentSize } from '../types'
 
-export type TabProps<T> = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+export type TabProps<T> = Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'onClick'> & {
   value: T
   activeValue?: T
   onClick?: (value: T) => void
