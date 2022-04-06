@@ -6,8 +6,6 @@ import { IComponentBaseProps, ComponentColor } from '../types'
 
 export type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> &
   IComponentBaseProps & {
-    children: string
-    href?: string
     color?: 'neutral' | ComponentColor
     hover?: boolean
   }

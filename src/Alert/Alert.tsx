@@ -6,7 +6,6 @@ import { IComponentBaseProps, ComponentStatus } from '../types'
 
 export type AlertProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {
-    children?: ReactNode | ReactNode[]
     icon?: ReactNode
     status?: ComponentStatus
   }

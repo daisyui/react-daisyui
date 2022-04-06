@@ -13,7 +13,6 @@ export type ModalRef = {
 
 export type ModalProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {
-    children?: ReactNode | ReactNode[]
     open?: boolean
     title?: string
     footer?: boolean

@@ -1,25 +1,19 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
 import { ComponentSize } from '../types'
 
-export type TabProps<T> = {
-  children?: ReactNode | ReactNode[]
+export type TabProps<T> = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   value: T
   activeValue?: T
   onClick?: (value: T) => void
   size?: ComponentSize
   variant?: 'bordered' | 'lifted'
-  className?: string
-  style?: Record<string, string | number>
 }
 
 const TabInner = <T extends string | number | undefined>(
-  props: TabProps<T>,
-  ref?: React.ForwardedRef<T>
-): JSX.Element => {
-  const {
+  {
     children,
     value,
     activeValue,
@@ -28,9 +22,10 @@ const TabInner = <T extends string | number | undefined>(
     variant,
     className,
     style,
-    ...rest
-  } = props
-
+    ...props
+  }: TabProps<T>,
+  ref?: React.ForwardedRef<T>
+): JSX.Element => {
   const classes = twMerge(
     'tab',
     className,
@@ -44,7 +39,7 @@ const TabInner = <T extends string | number | undefined>(
   return (
     <a
       role="tab"
-      {...rest}
+      {...props}
       className={classes}
       style={style}
       onClick={() => onClick && onClick(value)}

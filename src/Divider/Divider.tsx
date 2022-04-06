@@ -6,7 +6,6 @@ import { IComponentBaseProps } from '../types'
 
 export type DividerProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {
-    children?: string
     vertical?: boolean
   }
 
