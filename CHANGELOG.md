@@ -1,5 +1,13 @@
 # Changelog
 
+### [1.7.6](https://www.github.com/daisyui/react-daisyui/compare/v1.7.5...v1.7.6) (2022-04-06)
+
+
+### Bug Fixes
+
+* removed hardcoded children props ([7d93caa](https://www.github.com/daisyui/react-daisyui/commit/7d93caa6c373ec636372df1d8109d148235c79f0))
+* **Tabs:** omit onClick from tab type ([338991c](https://www.github.com/daisyui/react-daisyui/commit/338991cd31ffec75e9e14fbfbeb585e16d661d93))
+
 ### [1.7.5](https://www.github.com/daisyui/react-daisyui/compare/v1.7.4...v1.7.5) (2022-04-05)
 
 
