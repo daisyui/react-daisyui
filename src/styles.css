@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --base-content: theme('colors.base-content');
+    --base-100: theme('colors.base-100');
+    --base-200: theme('colors.base-200');
+    --alpha: 0.2;
+}
+
+/* FIXME: this class should add the polka-dotted background to story previews. 
+ * however we cannot add transparency to the base-content color variable.
+ */
+.preview {
+    background: radial-gradient(
+        var(--base-100), 0.5px,
+        var(--base-200) 0.5px
+    );
+    background-size: 5px 5px;
+}

@@ -1,5 +1,3 @@
-import { addons } from '@storybook/addons'
-import { themes } from '@storybook/theming'
 import React from 'react'
 
 import StoryLayout from './story-layout'
@@ -58,7 +56,20 @@ export const parameters = {
 
 export const decorators = [
   (Story, options) => (
-    <StoryLayout title={options.title} description={options.story}>
+    <StoryLayout
+      title={options.title}
+      description={options.story}
+      source={
+        options.parameters.storySource.source.
+        /* TODO: clean up all this string formatting/regex */
+        /* Removes the args arrow function */
+        replace('(args) => {', '').
+        /* Removes leftover newline from previous replace */
+        replace('\n', '').
+        /* Removes the last occurence of a closing bracket (from the lambda) */
+        replace(/}([^}]*)$/, '$1')
+      }
+    >
       <Story />
     </StoryLayout>
   ),

@@ -17,9 +17,9 @@ const meta: Meta = {
 
 export default meta
 
-const Template: Story = ({ children = 'Hi.', ...rest }) => (
-  <PhoneMockup {...rest}>{children}</PhoneMockup>
-)
+const Template: Story<PhoneMockupProps> = (args) => {
+  return <PhoneMockup {...args}>Hi.</PhoneMockup>
+}
 
 export const Default = Template.bind({})
 Default.args = {}
