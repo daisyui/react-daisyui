@@ -1,97 +1,70 @@
-import React, { forwardRef, ReactNode, useImperativeHandle } from 'react'
+import React, { forwardRef } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
-import Button from '../Button'
-
-export type ModalRef = {
-  accept: () => void
-  cancel: () => void
-}
+import ModalActions from './ModalActions'
+import ModalBody from './ModalBody'
+import ModalHeader from './ModalHeader'
 
 export type ModalProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {
     open?: boolean
-    title?: string
-    footer?: boolean
-    acceptText?: string
-    cancelText?: string
-    closeOnBlur?: boolean
-    onAccept?: () => void
-    onCancel?: () => void
+    responsive?: boolean
+    onClickBackdrop?: () => void
   }
 
-const Modal = forwardRef<ModalRef, ModalProps>(
+const Modal = forwardRef<HTMLDivElement, ModalProps>(
   (
     {
       children,
       open,
-      title,
-      footer = true,
-      acceptText = 'Accept',
-      cancelText = 'Close',
-      onAccept,
-      onCancel,
+      responsive,
+      onClickBackdrop,
       dataTheme,
       className,
-      closeOnBlur = true,
       ...props
     },
     ref
   ): JSX.Element => {
-    const classes = twMerge(
+    const containerClasses = twMerge(
       'modal',
-      className,
       clsx({
         'modal-open': open,
+        'modal-bottom sm:modal-middle': responsive,
       })
     )
 
-    useImperativeHandle(ref, (): ModalRef => {
-      return {
-        accept: () => {
-          onAccept && onAccept()
-        },
-        cancel: () => {
-          onCancel && onCancel()
-        },
-      }
-    })
-
-    const handleBackdropClick: React.MouseEventHandler = (e) => {
-      if (e.target === e.currentTarget) {
-        e.stopPropagation()
-        if (closeOnBlur && onCancel) {
-          onCancel()
-        }
-      }
-    }
+    const bodyClasses = twMerge(
+      'modal-box',
+      className
+    )
 
     return (
       <div
         aria-label="Modal"
         aria-hidden={!open}
         aria-modal={open}
-        {...props}
         data-theme={dataTheme}
-        className={classes}
-        onClick={handleBackdropClick}
+        className={containerClasses}
+        onClick={(e) => {
+          e.stopPropagation()
+          if (e.target === e.currentTarget) {
+            e.stopPropagation()
+            if (onClickBackdrop) {
+              onClickBackdrop()
+            }
+          }
+        }}
       >
-        <div className="modal-box">
-          {title ? <div className="w-full mb-8 text-xl">{title}</div> : null}
-
-          <div>{children}</div>
-
-          {footer ? (
-            <div className="modal-action">
-              <Button onClick={onAccept} color="primary">
-                {acceptText}
-              </Button>
-              <Button onClick={onCancel}>{cancelText}</Button>
-            </div>
-          ) : null}
+        <div
+          {...props}
+          data-theme={dataTheme}
+          className={bodyClasses}
+          ref={ref}
+        >
+          {children}
         </div>
       </div>
     )
@@ -100,4 +73,8 @@ const Modal = forwardRef<ModalRef, ModalProps>(
 
 Modal.displayName = 'Modal'
 
-export default Modal
+export default Object.assign(Modal, {
+  Header: ModalHeader,
+  Body: ModalBody,
+  Actions: ModalActions,
+})
