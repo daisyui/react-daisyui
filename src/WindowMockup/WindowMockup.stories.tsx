@@ -3,7 +3,6 @@ import { Story, Meta } from '@storybook/react'
 
 import WindowMockup, { WindowMockupProps } from '.'
 import { componentColors } from '../constants'
-import { twMerge } from 'tailwind-merge'
 
 const meta: Meta = {
   title: `Mockup/WindowMockup`,
@@ -18,11 +17,13 @@ const meta: Meta = {
 
 export default meta
 
-const Template: Story = ({ children = 'Hello!', ...rest }) => (
-  <WindowMockup {...rest}>
-    <div className="flex justify-center px-4 py-16">{children}</div>
-  </WindowMockup>
-)
+const Template: Story<WindowMockupProps> = (args) => {
+  return (
+    <WindowMockup {...args}>
+      <div className="flex justify-center px-4 py-16 w-96">Hello!</div>
+    </WindowMockup>
+  )
+}
 
 export const Default = Template.bind({})
 Default.args = {}

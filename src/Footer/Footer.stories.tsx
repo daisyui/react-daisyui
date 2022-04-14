@@ -2,7 +2,6 @@ import React from 'react'
 import { Story, Meta } from '@storybook/react'
 
 import Footer, { FooterProps } from '.'
-import FooterTitle from './FooterTitle'
 
 export default {
   title: 'Layout/Footer',
@@ -13,21 +12,21 @@ export const Default: Story<FooterProps> = (args) => {
   return (
     <Footer className="p-10 bg-neutral text-neutral-content" {...args}>
       <div>
-        <FooterTitle>Services</FooterTitle>
+        <Footer.Title>Services</Footer.Title>
         <a className="link link-hover">Branding</a>
         <a className="link link-hover">Design</a>
         <a className="link link-hover">Marketing</a>
         <a className="link link-hover">Advertisement</a>
       </div>
       <div>
-        <FooterTitle>Company</FooterTitle>
+        <Footer.Title>Company</Footer.Title>
         <a className="link link-hover">About us</a>
         <a className="link link-hover">Contact</a>
         <a className="link link-hover">Jobs</a>
         <a className="link link-hover">Press kit</a>
       </div>
       <div>
-        <FooterTitle>Legal</FooterTitle>
+        <Footer.Title>Legal</Footer.Title>
         <a className="link link-hover">Terms of use</a>
         <a className="link link-hover">Privacy policy</a>
         <a className="link link-hover">Cookie policy</a>
@@ -59,21 +58,21 @@ export const WithLogo: Story<FooterProps> = (args) => {
       </div>
 
       <div>
-        <FooterTitle>Services</FooterTitle>
+        <Footer.Title>Services</Footer.Title>
         <a className="link link-hover">Branding</a>
         <a className="link link-hover">Design</a>
         <a className="link link-hover">Marketing</a>
         <a className="link link-hover">Advertisement</a>
       </div>
       <div>
-        <FooterTitle>Company</FooterTitle>
+        <Footer.Title>Company</Footer.Title>
         <a className="link link-hover">About us</a>
         <a className="link link-hover">Contact</a>
         <a className="link link-hover">Jobs</a>
         <a className="link link-hover">Press kit</a>
       </div>
       <div>
-        <FooterTitle>Legal</FooterTitle>
+        <Footer.Title>Legal</Footer.Title>
         <a className="link link-hover">Terms of use</a>
         <a className="link link-hover">Privacy policy</a>
         <a className="link link-hover">Cookie policy</a>
@@ -105,21 +104,21 @@ export const WithLogoAndLightBackground: Story<FooterProps> = (args) => {
       </div>
 
       <div>
-        <FooterTitle>Services</FooterTitle>
+        <Footer.Title>Services</Footer.Title>
         <a className="link link-hover">Branding</a>
         <a className="link link-hover">Design</a>
         <a className="link link-hover">Marketing</a>
         <a className="link link-hover">Advertisement</a>
       </div>
       <div>
-        <FooterTitle>Company</FooterTitle>
+        <Footer.Title>Company</Footer.Title>
         <a className="link link-hover">About us</a>
         <a className="link link-hover">Contact</a>
         <a className="link link-hover">Jobs</a>
         <a className="link link-hover">Press kit</a>
       </div>
       <div>
-        <FooterTitle>Legal</FooterTitle>
+        <Footer.Title>Legal</Footer.Title>
         <a className="link link-hover">Terms of use</a>
         <a className="link link-hover">Privacy policy</a>
         <a className="link link-hover">Cookie policy</a>

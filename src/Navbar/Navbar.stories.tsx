@@ -4,8 +4,6 @@ import { Story, Meta } from '@storybook/react'
 import Navbar, { NavbarProps } from '.'
 import Button from '../Button'
 
-const { Start, Center, End } = Navbar
-
 export default {
   title: 'Navigation/Navbar',
   component: Navbar,
@@ -14,20 +12,20 @@ export default {
 export const Default: Story<NavbarProps> = (args) => {
   return (
     <Navbar {...args}>
-      <Start className="px-2 mx-2">
+      <Navbar.Start className="px-2 mx-2">
         <span className="text-lg font-bold">daisyUI</span>
-      </Start>
+      </Navbar.Start>
 
-      <Center className="px-2 mx-2">
+      <Navbar.Center className="px-2 mx-2">
         <div className="flex items-stretch">
           <a className="btn btn-ghost btn-sm rounded-btn">Home</a>
           <a className="btn btn-ghost btn-sm rounded-btn">Portfolio</a>
           <a className="btn btn-ghost btn-sm rounded-btn">About</a>
           <a className="btn btn-ghost btn-sm rounded-btn">Contact</a>
         </div>
-      </Center>
+      </Navbar.Center>
 
-      <End className="px-2 mx-2">
+      <Navbar.End className="px-2 mx-2">
         <Button shape="square" color="ghost">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +56,7 @@ export const Default: Story<NavbarProps> = (args) => {
             ></path>
           </svg>
         </Button>
-      </End>
+      </Navbar.End>
     </Navbar>
   )
 }

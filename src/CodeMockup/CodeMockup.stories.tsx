@@ -1,9 +1,7 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react'
 
-import Code, { CodeProps } from '.'
-
-import CodeMockup from '.'
+import CodeMockup, { CodeMockupProps } from '.'
 
 const meta: Meta = {
   title: `Mockup/CodeMockup`,
@@ -16,11 +14,9 @@ const meta: Meta = {
 
 export default meta
 
-const Template: Story = ({ children, ...rest }) => (
-  <div className="w-96">
-    <CodeMockup {...rest}>{children}</CodeMockup>
-  </div>
-)
+const Template: Story<CodeMockupProps> = (args) => {
+  return <CodeMockup {...args} />
+}
 
 export const Default = Template.bind({})
 Default.args = {

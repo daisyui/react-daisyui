@@ -11,7 +11,7 @@ export default {
   component: Theme,
 } as Meta
 
-export const Default: Story<ThemeProps> = () => {
+export const Default: Story<ThemeProps> = (args) => {
   return (
     <div className="flex flex-col gap-y-4">
       {DEFAULT_THEMES.map((theme) => (
@@ -20,7 +20,9 @@ export const Default: Story<ThemeProps> = () => {
           dataTheme={theme}
           className="p-8 bg-neutral rounded-2xl"
         >
-          <h2 className="text-xl font-semibold mb-4">{toTitleCase(theme)}</h2>
+          <h2 className="text-xl font-semibold mb-4">
+            {toTitleCase(theme)}
+          </h2>
           <div className="flex gap-x-2">
             <Button>Default</Button>
             <Button color="primary">Primary</Button>

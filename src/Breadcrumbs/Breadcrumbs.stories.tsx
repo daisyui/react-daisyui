@@ -13,9 +13,9 @@ export default {
 export const Default: Story<BreadcrumbsProps> = (args) => {
   return (
     <Breadcrumbs {...args}>
-      <Item href="/">Home</Item>
-      <Item href="/">Documents</Item>
-      <Item href="/">Add Document</Item>
+      <Breadcrumbs.Item href="/">Home</Breadcrumbs.Item>
+      <Breadcrumbs.Item href="/">Documents</Breadcrumbs.Item>
+      <Breadcrumbs.Item href="/">Add Document</Breadcrumbs.Item>
     </Breadcrumbs>
   )
 }
