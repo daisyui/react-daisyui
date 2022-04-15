@@ -9,12 +9,17 @@ export default {
   component: Checkbox,
 } as Meta
 
-export const Template: Story<CheckboxProps> = (args) => {
+const Template: Story<CheckboxProps> = (args) => {
   return <Checkbox {...args} />
 }
 
 export const Default = Template.bind({})
 Default.args = {}
+
+export const Indeterminate = Template.bind({})
+Indeterminate.args = {
+  indeterminate: true
+}
 
 const FormTemplate: Story<CheckboxProps> = (args) => {
   return (
