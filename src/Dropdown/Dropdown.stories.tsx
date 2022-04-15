@@ -15,13 +15,14 @@ export default {
 
 export const Default: Story<DropdownProps> = (args) => {
   return (
-    <Dropdown {...args}>
-      <Dropdown.Toggle>Click</Dropdown.Toggle>
-      <Dropdown.Menu className="w-52">
-        <Dropdown.Item>Item 1</Dropdown.Item>
-        <Dropdown.Item>Item 2</Dropdown.Item>
-        <Dropdown.Item>Item 3</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
+    <div className="mb-32">
+      <Dropdown {...args}>
+        <Dropdown.Toggle>Click</Dropdown.Toggle>
+        <Dropdown.Menu className="w-52">
+          <Dropdown.Item>Item 1</Dropdown.Item>
+          <Dropdown.Item>Item 2</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+    </div>
   )
 }
