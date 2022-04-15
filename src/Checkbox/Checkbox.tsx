@@ -1,4 +1,9 @@
-import React, { forwardRef } from 'react'
+import React, {
+  forwardRef,
+  useEffect,
+  useImperativeHandle,
+  useRef
+} from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
@@ -15,6 +20,7 @@ export type CheckboxProps = Omit<
   IComponentBaseProps & {
     color?: ComponentBrandColors
     size?: ComponentSize
+    indeterminate?: boolean
   }
 
 const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
@@ -24,6 +30,7 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       defaultChecked = false,
       color,
       size,
+      indeterminate,
       dataTheme,
       className,
       ...props
@@ -39,10 +46,25 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       })
     )
 
+    const checkboxRef = useRef<HTMLInputElement>(null)
+    useImperativeHandle(ref, () => checkboxRef.current as HTMLInputElement)
+
+    useEffect(() => {
+      if (!checkboxRef.current) {
+        return
+      }
+
+      if (indeterminate) {
+        checkboxRef.current.indeterminate = true
+      } else {
+        checkboxRef.current.indeterminate = false
+      }
+    }, [indeterminate])
+
     return (
       <input
         {...props}
-        ref={ref}
+        ref={checkboxRef}
         type="checkbox"
         checked={checked}
         defaultChecked={defaultChecked}
