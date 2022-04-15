@@ -11,9 +11,11 @@ export default {
 
 export const Default: Story<TooltipProps> = (args) => {
   return (
-    <Tooltip {...args}>
-      <Button>Hover me</Button>
-    </Tooltip>
+    <div className='my-6'>
+      <Tooltip {...args}>
+        <Button>Hover me</Button>
+      </Tooltip>
+    </div>
   )
 }
 Default.args = {
