@@ -21,13 +21,13 @@ export const parameters = {
     storySort: {
       order: [
         'Welcome',
+        'Utils',
         'Actions',
         'Data Display',
         'Data Input',
         'Layout',
         'Navigation',
         'Mockup',
-        'Utils',
       ],
     },
   },
