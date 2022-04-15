@@ -7,6 +7,7 @@ import { IComponentBaseProps } from '../types'
 import TableHead from './TableHead'
 import TableBody from './TableBody'
 import TableRow from './TableRow'
+import TableFooter from './TableFooter'
 
 export type TableProps = React.TableHTMLAttributes<HTMLTableElement> &
   IComponentBaseProps & {
@@ -40,4 +41,5 @@ export default Object.assign(Table, {
   Head: TableHead,
   Body: TableBody,
   Row: TableRow,
+  Footer: TableFooter,
 })
