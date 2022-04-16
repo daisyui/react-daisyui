@@ -20,8 +20,8 @@ const Steps = React.forwardRef<HTMLUListElement, StepsProps>(
         aria-label="Steps"
         role="group"
         {...props}
-        data-theme={dataTheme} 
-        className={classes} 
+        data-theme={dataTheme}
+        className={classes}
         ref={ref}
       >
         {children}

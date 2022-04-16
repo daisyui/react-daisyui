@@ -34,7 +34,12 @@ const Drawer = ({
   )
 
   return (
-    <div aria-expanded={open} {...props} data-theme={dataTheme} className={classes}>
+    <div
+      aria-expanded={open}
+      {...props}
+      data-theme={dataTheme}
+      className={classes}
+    >
       <input id={id} type="checkbox" className="drawer-toggle" checked={open} />
       <div className="drawer-content">{children}</div>
       <div className="drawer-side">

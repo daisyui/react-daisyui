@@ -2,7 +2,7 @@ import React, {
   forwardRef,
   useEffect,
   useImperativeHandle,
-  useRef
+  useRef,
 } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'

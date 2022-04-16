@@ -25,7 +25,13 @@ const PhoneMockup = forwardRef<HTMLDivElement, PhoneMockupProps>(
     )
 
     return (
-      <div aria-label="Phone mockup" {...props} data-theme={dataTheme} className={classes} ref={ref}>
+      <div
+        aria-label="Phone mockup"
+        {...props}
+        data-theme={dataTheme}
+        className={classes}
+        ref={ref}
+      >
         <div className="camera" />
         <div className="display">
           <div

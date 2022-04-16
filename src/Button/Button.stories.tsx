@@ -21,7 +21,7 @@ const Template: Story<ButtonProps> = (args) => {
 }
 export const Default = Template.bind({})
 Default.args = {
-  children: 'Button'
+  children: 'Button',
 }
 
 export const Colors: Story<ButtonProps> = (args) => {
@@ -108,14 +108,12 @@ export const AsHref: Story<ButtonProps> = (args) => {
   return (
     <div className="flex gap-x-2">
       <Button
-       {...args} 
+        {...args}
         onClick={() => alert('See, I have an onClick event and no href.')}
       >
         I'm a {`<button>`}
       </Button>
-      <Button href="https://google.com">
-        I'm an {`<a>`}
-      </Button>
+      <Button href="https://google.com">I'm an {`<a>`}</Button>
     </div>
   )
 }

@@ -12,7 +12,13 @@ const CodeMockup = forwardRef<HTMLDivElement, CodeMockupProps>(
     const classes = twMerge('mockup-code', className)
 
     return (
-      <div aria-label="Code mockup" {...props} data-theme={dataTheme} className={classes} ref={ref}>
+      <div
+        aria-label="Code mockup"
+        {...props}
+        data-theme={dataTheme}
+        className={classes}
+        ref={ref}
+      >
         {children}
       </div>
     )

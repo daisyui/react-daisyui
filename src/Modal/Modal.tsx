@@ -36,10 +36,7 @@ const Modal = forwardRef<HTMLDivElement, ModalProps>(
       })
     )
 
-    const bodyClasses = twMerge(
-      'modal-box',
-      className
-    )
+    const bodyClasses = twMerge('modal-box', className)
 
     return (
       <div

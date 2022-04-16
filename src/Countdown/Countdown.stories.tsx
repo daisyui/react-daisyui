@@ -13,7 +13,7 @@ export const Default: Story<CountdownProps> = (args) => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setValue((v) => v <= 0 ? args.value : v - 1)
+      setValue((v) => (v <= 0 ? args.value : v - 1))
     }, 1000)
 
     return () => {
@@ -21,7 +21,7 @@ export const Default: Story<CountdownProps> = (args) => {
     }
   }, [value])
 
-  return <Countdown className='text-2xl' value={value} />
+  return <Countdown className="text-2xl" value={value} />
 }
 Default.args = {
   value: 50,
@@ -32,7 +32,7 @@ export const Clock: Story<CountdownProps> = (args) => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setValue((v) => v <= 0 ? args.value : v - 1)
+      setValue((v) => (v <= 0 ? args.value : v - 1))
     }, 1000)
 
     return () => {
@@ -41,7 +41,7 @@ export const Clock: Story<CountdownProps> = (args) => {
   }, [value])
 
   return (
-    <span className='font-mono text-2xl'>
+    <span className="font-mono text-2xl">
       <Countdown value={10} />:
       <Countdown value={24} />:
       <Countdown value={value} />
@@ -57,7 +57,7 @@ export const WithLabels: Story<CountdownProps> = (args) => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setValue((v) => v <= 0 ? args.value : v - 1)
+      setValue((v) => (v <= 0 ? args.value : v - 1))
     }, 1000)
 
     return () => {
@@ -66,21 +66,21 @@ export const WithLabels: Story<CountdownProps> = (args) => {
   }, [value])
 
   return (
-    <div className='grid grid-flow-col gap-5 text-center auto-cols-max'>
-      <div className='flex flex-col'>
-        <Countdown className='font-mono text-5xl' value={15} />
+    <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
+      <div className="flex flex-col">
+        <Countdown className="font-mono text-5xl" value={15} />
         days
       </div>
-      <div className='flex flex-col'>
-        <Countdown className='font-mono text-5xl' value={10} />
+      <div className="flex flex-col">
+        <Countdown className="font-mono text-5xl" value={10} />
         hours
       </div>
-      <div className='flex flex-col'>
-        <Countdown className='font-mono text-5xl' value={24} />
+      <div className="flex flex-col">
+        <Countdown className="font-mono text-5xl" value={24} />
         min
       </div>
-      <div className='flex flex-col'>
-        <Countdown className='font-mono text-5xl' value={value} />
+      <div className="flex flex-col">
+        <Countdown className="font-mono text-5xl" value={value} />
         sec
       </div>
     </div>
@@ -95,7 +95,7 @@ export const WithBoxes: Story<CountdownProps> = (args) => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setValue((v) => v <= 0 ? args.value : v - 1)
+      setValue((v) => (v <= 0 ? args.value : v - 1))
     }, 1000)
 
     return () => {
@@ -104,21 +104,21 @@ export const WithBoxes: Story<CountdownProps> = (args) => {
   }, [value])
 
   return (
-    <div className='grid grid-flow-col gap-5 text-center auto-cols-max'>
-      <div className='flex flex-col p-2 bg-neutral rounded-box text-neutral-content'>
-        <Countdown className='font-mono text-5xl' value={15} />
+    <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
+      <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+        <Countdown className="font-mono text-5xl" value={15} />
         days
       </div>
-      <div className='flex flex-col p-2 bg-neutral rounded-box text-neutral-content'>
-        <Countdown className='font-mono text-5xl' value={10} />
+      <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+        <Countdown className="font-mono text-5xl" value={10} />
         hours
       </div>
-      <div className='flex flex-col p-2 bg-neutral rounded-box text-neutral-content'>
-        <Countdown className='font-mono text-5xl' value={24} />
+      <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+        <Countdown className="font-mono text-5xl" value={24} />
         min
       </div>
-      <div className='flex flex-col p-2 bg-neutral rounded-box text-neutral-content'>
-        <Countdown className='font-mono text-5xl' value={value} />
+      <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+        <Countdown className="font-mono text-5xl" value={value} />
         sec
       </div>
     </div>
