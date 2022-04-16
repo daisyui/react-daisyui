@@ -31,13 +31,9 @@ describe('Button', () => {
   })
 
   it('Renders an anchor tag when an href exists', () => {
-    const { getByRole } = render(
-      <Button href="/home">
-        Home
-      </Button>
-    )
+    const { getByRole } = render(<Button href="/home">Home</Button>)
 
-    expect(getByRole("link")).toBeTruthy()
+    expect(getByRole('link')).toBeTruthy()
     expect(getByRole('link')).toHaveAttribute('href', '/home')
   })
 })

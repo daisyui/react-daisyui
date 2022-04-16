@@ -10,7 +10,7 @@ export default {
 
 const Template: Story<ProgressProps> = (args) => {
   return (
-    <div className='flex flex-col gap-y-2'>
+    <div className="flex flex-col gap-y-2">
       <Progress {...args} className="w-56" value={0} />
       <Progress {...args} className="w-56" value={10} />
       <Progress {...args} className="w-56" value={40} />
@@ -28,43 +28,43 @@ Default.args = {
 export const PrimaryColor = Template.bind({})
 PrimaryColor.args = {
   max: 100,
-  color: 'primary'
+  color: 'primary',
 }
 
 export const SecondaryColor = Template.bind({})
 SecondaryColor.args = {
   max: 100,
-  color: 'secondary'
+  color: 'secondary',
 }
 
 export const AccentColor = Template.bind({})
 AccentColor.args = {
   max: 100,
-  color: 'accent'
+  color: 'accent',
 }
 
 export const SuccessColor = Template.bind({})
 SuccessColor.args = {
   max: 100,
-  color: 'success'
+  color: 'success',
 }
 
 export const InfoColor = Template.bind({})
 InfoColor.args = {
   max: 100,
-  color: 'info'
+  color: 'info',
 }
 
 export const WarningColor = Template.bind({})
 WarningColor.args = {
   max: 100,
-  color: 'warning'
+  color: 'warning',
 }
 
 export const ErrorColor = Template.bind({})
 ErrorColor.args = {
   max: 100,
-  color: 'error'
+  color: 'error',
 }
 
 export const Indeterminate: Story<ProgressProps> = (args) => {

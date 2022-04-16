@@ -22,7 +22,13 @@ const Footer = React.forwardRef<HTMLDivElement, FooterProps>(
     )
 
     return (
-      <div role="contentinfo" {...props} data-theme={dataTheme} className={classes} ref={ref} />
+      <div
+        role="contentinfo"
+        {...props}
+        data-theme={dataTheme}
+        className={classes}
+        ref={ref}
+      />
     )
   }
 )

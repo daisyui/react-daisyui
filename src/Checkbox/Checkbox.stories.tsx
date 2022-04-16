@@ -18,7 +18,7 @@ Default.args = {}
 
 export const Indeterminate = Template.bind({})
 Indeterminate.args = {
-  indeterminate: true
+  indeterminate: true,
 }
 
 const FormTemplate: Story<CheckboxProps> = (args) => {

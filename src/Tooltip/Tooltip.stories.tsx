@@ -11,7 +11,7 @@ export default {
 
 const Template: Story<TooltipProps> = (args) => {
   return (
-    <div className='my-6'>
+    <div className="my-6">
       <Tooltip {...args}>
         <Button>Hover me</Button>
       </Tooltip>
@@ -34,54 +34,36 @@ export const Bottom = Template.bind({})
 Bottom.args = {
   message: 'hello',
   open: true,
-  position: 'bottom'
+  position: 'bottom',
 }
 
 export const Left = Template.bind({})
 Left.args = {
   message: 'hello',
   open: true,
-  position: 'left'
+  position: 'left',
 }
 
 export const Right = Template.bind({})
 Right.args = {
   message: 'hello',
   open: true,
-  position: 'right'
+  position: 'right',
 }
 
 export const Colors: Story<TooltipProps> = (args) => {
   return (
-    <div className='flex gap-2 mt-6'>
-      <Tooltip
-        {...args}
-        color='primary'
-        message='primary'
-      >
-        <Button color='primary'>
-          Primary
-        </Button>
+    <div className="flex gap-2 mt-6">
+      <Tooltip {...args} color="primary" message="primary">
+        <Button color="primary">Primary</Button>
       </Tooltip>
 
-      <Tooltip
-        {...args}
-        color='secondary'
-        message='secondary'
-      >
-        <Button color='secondary'>
-          Secondary
-        </Button>
+      <Tooltip {...args} color="secondary" message="secondary">
+        <Button color="secondary">Secondary</Button>
       </Tooltip>
 
-      <Tooltip
-        {...args}
-        color='accent'
-        message='accent'
-      >
-        <Button color='accent'>
-          Accent
-        </Button>
+      <Tooltip {...args} color="accent" message="accent">
+        <Button color="accent">Accent</Button>
       </Tooltip>
     </div>
   )
@@ -92,45 +74,21 @@ Colors.args = {
 
 export const Statuses: Story<TooltipProps> = (args) => {
   return (
-    <div className='flex gap-2 mt-6'>
-      <Tooltip
-        {...args}
-        color='info'
-        message='info'
-      >
-        <Button color='info'>
-          Info
-        </Button>
+    <div className="flex gap-2 mt-6">
+      <Tooltip {...args} color="info" message="info">
+        <Button color="info">Info</Button>
       </Tooltip>
 
-      <Tooltip
-        {...args}
-        color='success'
-        message='success'
-      >
-        <Button color='success'>
-          Success
-        </Button>
+      <Tooltip {...args} color="success" message="success">
+        <Button color="success">Success</Button>
       </Tooltip>
 
-      <Tooltip
-        {...args}
-        color='warning'
-        message='warning'
-      >
-        <Button color='warning'>
-          Warning
-        </Button>
+      <Tooltip {...args} color="warning" message="warning">
+        <Button color="warning">Warning</Button>
       </Tooltip>
 
-      <Tooltip
-        {...args}
-        color='error'
-        message='error'
-      >
-        <Button color='error'>
-          Error
-        </Button>
+      <Tooltip {...args} color="error" message="error">
+        <Button color="error">Error</Button>
       </Tooltip>
     </div>
   )

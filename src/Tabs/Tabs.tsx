@@ -42,12 +42,7 @@ const TabsInner = <T extends string | number | undefined>(
   )
 
   return (
-    <div
-      role="tablist"
-      {...rest}
-      data-theme={dataTheme}
-      className={classes}
-    >
+    <div role="tablist" {...rest} data-theme={dataTheme} className={classes}>
       {children.map((child) => {
         return cloneElement(child, {
           variant,

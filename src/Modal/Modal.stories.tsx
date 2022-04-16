@@ -20,22 +20,20 @@ export const Default: Story<ModalProps> = (args) => {
     <>
       <Button onClick={toggleVisible}>Open Modal</Button>
       <Modal {...args} open={visible} onClickBackdrop={toggleVisible}>
-          <Modal.Header>Lorem Ipsum</Modal.Header>
+        <Modal.Header>Lorem Ipsum</Modal.Header>
 
-          <Modal.Body>
-            Enim dolorem dolorum omnis atque necessitatibus. Consequatur aut
-            adipisci qui iusto illo eaque. Consequatur repudiandae et. Nulla ea
-            quasi eligendi. Saepe velit autem minima.
-          </Modal.Body>
+        <Modal.Body>
+          Enim dolorem dolorum omnis atque necessitatibus. Consequatur aut
+          adipisci qui iusto illo eaque. Consequatur repudiandae et. Nulla ea
+          quasi eligendi. Saepe velit autem minima.
+        </Modal.Body>
 
-          <Modal.Actions>
-            <Button onClick={toggleVisible} color="primary">
-              Accept
-            </Button>
-            <Button onClick={toggleVisible}>
-              Cancel
-            </Button>
-          </Modal.Actions>
+        <Modal.Actions>
+          <Button onClick={toggleVisible} color="primary">
+            Accept
+          </Button>
+          <Button onClick={toggleVisible}>Cancel</Button>
+        </Modal.Actions>
       </Modal>
     </>
   )

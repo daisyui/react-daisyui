@@ -13,16 +13,19 @@ export type RadialProgressProps = React.HTMLAttributes<HTMLDivElement> &
   }
 
 const RadialProgress = forwardRef<HTMLDivElement, RadialProgressProps>(
-  ({
-    value,
-    size = '4rem',
-    thickness = '4px',
-    color,
-    dataTheme,
-    className,
-    children,
-    ...props
-  }, ref): JSX.Element => {
+  (
+    {
+      value,
+      size = '4rem',
+      thickness = '4px',
+      color,
+      dataTheme,
+      className,
+      children,
+      ...props
+    },
+    ref
+  ): JSX.Element => {
     const classes = twMerge(
       'radial-progress',
       className,

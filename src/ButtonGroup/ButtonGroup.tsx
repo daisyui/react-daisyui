@@ -17,9 +17,9 @@ const ButtonGroup = React.forwardRef<HTMLDivElement, ButtonGroupProps>(
     return (
       <div
         aria-label={`Group of ${children.length} buttons`}
-        {...props} 
-        data-theme={dataTheme} 
-        className={classes} 
+        {...props}
+        data-theme={dataTheme}
+        className={classes}
         ref={ref}
       >
         {children}

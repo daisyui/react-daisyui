@@ -1,18 +1,21 @@
 import React, {
   cloneElement,
-  createRef, 
+  createRef,
   forwardRef,
   ReactElement,
   RefObject,
   useEffect,
-  useState
+  useState,
 } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
-import CarouselItem, { CarouselItemProps, CarouselItemWidth } from './CarouselItem'
+import CarouselItem, {
+  CarouselItemProps,
+  CarouselItemWidth,
+} from './CarouselItem'
 import Button from '../Button'
 
 export type CarouselProps = React.HTMLAttributes<HTMLDivElement> &
@@ -27,7 +30,8 @@ export type CarouselProps = React.HTMLAttributes<HTMLDivElement> &
 
 const Carousel = forwardRef<HTMLDivElement, CarouselProps>(
   (
-    { children,
+    {
+      children,
       display = 'slider',
       snap,
       vertical,
@@ -45,7 +49,7 @@ const Carousel = forwardRef<HTMLDivElement, CarouselProps>(
       clsx({
         [`carousel-${snap}`]: snap,
         'carousel-vertical': vertical,
-        'w-full': display !== 'slider'
+        'w-full': display !== 'slider',
       })
     )
 
@@ -87,22 +91,22 @@ const Carousel = forwardRef<HTMLDivElement, CarouselProps>(
               width: display !== 'slider' ? 'full' : width,
               hasButtons: display === 'sequential',
               buttonStyle,
-              onPrev: () => scrollToIndex(i - 1 < 0 ? children.length - 1 : i - 1),
-              onNext: () => scrollToIndex(i + 1 > children.length - 1 ? 0 : i + 1),
+              onPrev: () =>
+                scrollToIndex(i - 1 < 0 ? children.length - 1 : i - 1),
+              onNext: () =>
+                scrollToIndex(i + 1 > children.length - 1 ? 0 : i + 1),
               ...child.props,
             })
           })}
         </div>
         {display === 'numbered' && (
-          <div className='flex justify-center w-full py-2 gap-2'>
+          <div className="flex justify-center w-full py-2 gap-2">
             {children.map((_, i) => {
               if (buttonStyle != null) {
-                return (
-                  cloneElement(buttonStyle((i + 1).toString()), {
-                    key: i,
-                    onClick: () => scrollToIndex(i)
-                  })
-                )
+                return cloneElement(buttonStyle((i + 1).toString()), {
+                  key: i,
+                  onClick: () => scrollToIndex(i),
+                })
               }
 
               return (

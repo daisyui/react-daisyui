@@ -52,11 +52,7 @@ const Swap = React.forwardRef<HTMLLabelElement, SwapProps>(
     })
 
     return (
-      <label
-        {...props} data-theme={dataTheme}
-        className={classes}
-        ref={ref}
-      >
+      <label {...props} data-theme={dataTheme} className={classes} ref={ref}>
         <input type="checkbox" />
         {onEl}
         {offEl}

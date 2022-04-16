@@ -33,7 +33,7 @@ const CarouselItem = ({
   ...props
 }: CarouselItemProps): JSX.Element => {
   const classes = twMerge(
-    "carousel-item relative",
+    'carousel-item relative',
     className,
     clsx({
       'w-full': width === 'full',
@@ -51,10 +51,10 @@ const CarouselItem = ({
       return (
         <>
           {cloneElement(buttonStyle('❮'), {
-            onClick: onPrev
+            onClick: onPrev,
           })}
           {cloneElement(buttonStyle('❯'), {
-            onClick: onNext
+            onClick: onNext,
           })}
         </>
       )
@@ -62,8 +62,12 @@ const CarouselItem = ({
 
     return (
       <>
-        <Button onClick={onPrev} shape="circle">❮</Button>
-        <Button onClick={onNext} shape="circle">❯</Button>
+        <Button onClick={onPrev} shape="circle">
+          ❮
+        </Button>
+        <Button onClick={onNext} shape="circle">
+          ❯
+        </Button>
       </>
     )
   }

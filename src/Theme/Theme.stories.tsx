@@ -20,9 +20,7 @@ export const Default: Story<ThemeProps> = (args) => {
           dataTheme={theme}
           className="p-8 bg-neutral rounded-2xl"
         >
-          <h2 className="text-xl font-semibold mb-4">
-            {toTitleCase(theme)}
-          </h2>
+          <h2 className="text-xl font-semibold mb-4">{toTitleCase(theme)}</h2>
           <div className="flex gap-x-2">
             <Button>Default</Button>
             <Button color="primary">Primary</Button>
