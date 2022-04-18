@@ -1,5 +1,29 @@
 # Changelog
 
+## [2.0.0](https://www.github.com/daisyui/react-daisyui/compare/v1.7.6...v2.0.0) (2022-04-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Carousel:** refactored fullWidth prop to width type
+* **Modal:** removed all props in favor of passing in subcomponents
+
+### Miscellaneous
+
+* added margins to storys to prevent overflow from preview container ([#88](https://www.github.com/daisyui/react-daisyui/issues/88)) ([ac11a6d](https://www.github.com/daisyui/react-daisyui/commit/ac11a6df9ab9e8d23af40228014484bbb1ee8ab4))
+* **Carousel:** customizable button renderprops and added stories ([#90](https://www.github.com/daisyui/react-daisyui/issues/90)) ([506cbe5](https://www.github.com/daisyui/react-daisyui/commit/506cbe5cf9cce3c7e0bd328051ae9481557e7f80))
+* **Checkbox:** added indeterminate state ([#93](https://www.github.com/daisyui/react-daisyui/issues/93)) ([6added7](https://www.github.com/daisyui/react-daisyui/commit/6added7e374278631df8f35a32afeebd4ee756ec))
+* **Countdown:** added stories ([0d06591](https://www.github.com/daisyui/react-daisyui/commit/0d06591130586246700ade4b0db768400c55fb49))
+* **Modal:** refactored modal for better customization ([#85](https://www.github.com/daisyui/react-daisyui/issues/85)) ([a24406c](https://www.github.com/daisyui/react-daisyui/commit/a24406cce30f351c2eeb3fa1c9183ac2eab508c0))
+* **Progress:** added stories ([#94](https://www.github.com/daisyui/react-daisyui/issues/94)) ([81fc70e](https://www.github.com/daisyui/react-daisyui/commit/81fc70e936352f9f9cbcbddaee2ac17e6e979cba))
+* **Radial Progress:** added size and thickness props and stories ([#92](https://www.github.com/daisyui/react-daisyui/issues/92)) ([7928e56](https://www.github.com/daisyui/react-daisyui/commit/7928e5636466e356d06fa26742c58e5bbd02c1b2))
+* ran prettier ([#95](https://www.github.com/daisyui/react-daisyui/issues/95)) ([f46ac7d](https://www.github.com/daisyui/react-daisyui/commit/f46ac7dd481d9b5935009a69ec355a8704b7424c))
+* restyled preview to match daisyui and provide source code ([#87](https://www.github.com/daisyui/react-daisyui/issues/87)) ([6a69ef4](https://www.github.com/daisyui/react-daisyui/commit/6a69ef40713421fed7d25f7b495ef8a93d869a07))
+* **Table:** added footer and stories ([#91](https://www.github.com/daisyui/react-daisyui/issues/91)) ([822eea9](https://www.github.com/daisyui/react-daisyui/commit/822eea94d29650b01ce28017600ab440f17c0c7c))
+* **Theme:** added theme context stories ([#96](https://www.github.com/daisyui/react-daisyui/issues/96)) ([52fdbd7](https://www.github.com/daisyui/react-daisyui/commit/52fdbd72926bb95189c4b4a6b5a1b7557a677cd5))
+* **Tooltip:** added stories ([#89](https://www.github.com/daisyui/react-daisyui/issues/89)) ([edad1ca](https://www.github.com/daisyui/react-daisyui/commit/edad1caa1fa1d911189fc4ed867f0b3af434f9dd))
+* updated daisyui to v 2.14.0 ([f5f385a](https://www.github.com/daisyui/react-daisyui/commit/f5f385aec323a6f9074f0e3d52bb89905f4e9e7d))
+
 ### [1.7.6](https://www.github.com/daisyui/react-daisyui/compare/v1.7.5...v1.7.6) (2022-04-06)
 
 
