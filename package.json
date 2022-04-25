@@ -24,7 +24,7 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "start": "start-storybook -p 6006",
-    "dist": "microbundle --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react --globals react/jsx-runtime=jsx --format modern,cjs --css inline --compress false",
+    "dist": "microbundle --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react --globals react/jsx-runtime=jsx --format modern,cjs,esm --css inline --compress false",
     "docs": "build-storybook -o ./docs -s ./public --no-manager-cache",
     "test": "jest",
     "format": "prettier --write ./src",
