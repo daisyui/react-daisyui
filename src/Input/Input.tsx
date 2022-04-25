@@ -26,6 +26,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       color,
       dataTheme,
       className,
+      type,
       ...props
     },
     ref
@@ -45,7 +46,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       <input
         {...props}
         ref={ref}
-        type="text"
+        type={type}
         value={value}
         placeholder={placeholder}
         data-theme={dataTheme}
