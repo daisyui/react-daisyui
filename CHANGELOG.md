@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.0.1](https://www.github.com/daisyui/react-daisyui/compare/v2.0.0...v2.0.1) (2022-04-25)
+
+
+### Bug Fixes
+
+* **Input:** removed hardcoded "text" in type prop ([#102](https://www.github.com/daisyui/react-daisyui/issues/102)) ([7e6b53b](https://www.github.com/daisyui/react-daisyui/commit/7e6b53b2e43783f62ea7856e5c9bc74aef4e73bb))
+
 ## [2.0.0](https://www.github.com/daisyui/react-daisyui/compare/v1.7.6...v2.0.0) (2022-04-18)
 
 
