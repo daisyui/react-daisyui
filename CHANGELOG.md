@@ -1,5 +1,13 @@
 # Changelog
 
+### [2.0.1](https://www.github.com/daisyui/react-daisyui/compare/v2.0.0...v2.0.1) (2022-04-25)
+
+
+### Bug Fixes
+
+* **Input:** removed hardcoded "text" in type prop ([#102](https://www.github.com/daisyui/react-daisyui/issues/102)) ([7e6b53b](https://www.github.com/daisyui/react-daisyui/commit/7e6b53b2e43783f62ea7856e5c9bc74aef4e73bb))
+* re-added esm output from microbundle ([#106](https://www.github.com/daisyui/react-daisyui/issues/106)) ([1bcd5a0](https://www.github.com/daisyui/react-daisyui/commit/1bcd5a01c4d0552c6299cb86ccec9c1191a361fd))
+
 ## [2.0.0](https://www.github.com/daisyui/react-daisyui/compare/v1.7.6...v2.0.0) (2022-04-18)
 
 
