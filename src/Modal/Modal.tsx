@@ -8,11 +8,11 @@ import ModalActions from './ModalActions'
 import ModalBody from './ModalBody'
 import ModalHeader from './ModalHeader'
 
-export type ModalProps = React.HTMLAttributes<HTMLDivElement> &
+export type ModalProps = Omit<React.HTMLAttributes<HTMLDivElement>, 'onBlur'> &
   IComponentBaseProps & {
     open?: boolean
     responsive?: boolean
-    onClickBackdrop?: () => void
+    onBlur?: () => void
   }
 
 const Modal = forwardRef<HTMLDivElement, ModalProps>(
@@ -21,7 +21,7 @@ const Modal = forwardRef<HTMLDivElement, ModalProps>(
       children,
       open,
       responsive,
-      onClickBackdrop,
+      onBlur,
       dataTheme,
       className,
       ...props
@@ -49,8 +49,8 @@ const Modal = forwardRef<HTMLDivElement, ModalProps>(
           e.stopPropagation()
           if (e.target === e.currentTarget) {
             e.stopPropagation()
-            if (onClickBackdrop) {
-              onClickBackdrop()
+            if (onBlur) {
+              onBlur()
             }
           }
         }}
