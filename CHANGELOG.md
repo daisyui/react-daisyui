@@ -1,5 +1,21 @@
 # Changelog
 
+## [3.0.0](https://www.github.com/daisyui/react-daisyui/compare/v2.0.0...v3.0.0) (2022-04-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Modal:** modal onClickBackdrop will no longer work
+
+### Bug Fixes
+
+* **Input:** removed hardcoded "text" in type prop ([#102](https://www.github.com/daisyui/react-daisyui/issues/102)) ([7e6b53b](https://www.github.com/daisyui/react-daisyui/commit/7e6b53b2e43783f62ea7856e5c9bc74aef4e73bb))
+
+
+### Miscellaneous
+
+* **Modal:** renamed onClickBackdrop to onBlur ([#99](https://www.github.com/daisyui/react-daisyui/issues/99)) ([5a08013](https://www.github.com/daisyui/react-daisyui/commit/5a080136e26e3bea6e68a66c598d11001148be6d))
+
 ## [2.0.0](https://www.github.com/daisyui/react-daisyui/compare/v1.7.6...v2.0.0) (2022-04-18)
 
 
