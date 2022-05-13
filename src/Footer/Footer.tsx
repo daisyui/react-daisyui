@@ -8,7 +8,7 @@ import FooterTitle from './FooterTitle'
 
 export type FooterProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {
-    center: boolean
+    center?: boolean
   }
 
 const Footer = React.forwardRef<HTMLDivElement, FooterProps>(
