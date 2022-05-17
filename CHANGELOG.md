@@ -1,5 +1,19 @@
 # Changelog
 
+### [2.0.2](https://github.com/daisyui/react-daisyui/compare/v2.0.1...v2.0.2) (2022-05-17)
+
+
+### Bug Fixes
+
+* fixed overflowing stories on mobile ([2908bcc](https://github.com/daisyui/react-daisyui/commit/2908bcc5eee474d6e597c21cd09004d30f1153a9))
+* **Footer:** made center prop optional ([#110](https://github.com/daisyui/react-daisyui/issues/110)) ([dfcbe8b](https://github.com/daisyui/react-daisyui/commit/dfcbe8b041e0f705094797456ed28a0ebf19af3e))
+
+
+### Miscellaneous
+
+* hide preview window on mobile ([cf81f9d](https://github.com/daisyui/react-daisyui/commit/cf81f9df2a8f36cc5a26e32c5c7241d78d18205a))
+* updated release please to v3 ([#111](https://github.com/daisyui/react-daisyui/issues/111)) ([4ef1efc](https://github.com/daisyui/react-daisyui/commit/4ef1efc9c8ba9affc987597758e79ab0afdd6bba))
+
 ### [2.0.1](https://www.github.com/daisyui/react-daisyui/compare/v2.0.0...v2.0.1) (2022-04-25)
 
 
