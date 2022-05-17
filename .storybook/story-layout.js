@@ -4,9 +4,9 @@ import theme from "prism-react-renderer/themes/vsDark"
 
 import { useGlobalTheme } from './theming'
 
+import CodeMockup from '../src/CodeMockup'
 import Navbar from '../src/Navbar'
 import Tabs from '../src/Tabs'
-import CodeMockup from '../src/CodeMockup'
 import Theme from '../src/Theme'
 
 const StoryLayout = ({ children, title, description, source }) => {
@@ -29,7 +29,28 @@ const StoryLayout = ({ children, title, description, source }) => {
         <h1 className="text-4xl text-base-content font-bold">{title}</h1>
         <p className="text-base-content">{description}</p>
         <div className="my-4">
-          <div className='grid'>
+          {/* Mobile view */}
+          <div className='block sm:hidden'>
+            {children}
+            <CodeMockup className="w-full mb-8 mt-3">
+              <Highlight {...defaultProps} theme={theme} code={source} language="jsx">
+                {({ tokens, getLineProps, getTokenProps }) => (
+                  <pre slot="html">
+                    {tokens.map((line, i) => (
+                      <div {...getLineProps({ line, key: i })}>
+                        {line.map((token, key) => (
+                          <span {...getTokenProps({ token, key })} />
+                        ))}
+                      </div>
+                    ))}
+                  </pre>
+                )}
+              </Highlight>
+            </CodeMockup>
+          </div>
+
+          {/* Desktop view */}
+          <div className='hidden sm:grid'>
             <Tabs
               className='z-10 -mb-px'
               variant='lifted'
@@ -57,17 +78,17 @@ const StoryLayout = ({ children, title, description, source }) => {
               ) : (
                 <CodeMockup className="w-full mb-8">
                   <Highlight {...defaultProps} theme={theme} code={source} language="jsx">
-                  {({ tokens, getLineProps, getTokenProps }) => (
-                    <pre slot="html">
-                      {tokens.map((line, i) => (
-                        <div {...getLineProps({ line, key: i })}>
-                          {line.map((token, key) => (
-                            <span {...getTokenProps({ token, key })} />
-                          ))}
-                        </div>
-                      ))}
-                    </pre>
-                  )}
+                    {({ tokens, getLineProps, getTokenProps }) => (
+                      <pre slot="html">
+                        {tokens.map((line, i) => (
+                          <div {...getLineProps({ line, key: i })}>
+                            {line.map((token, key) => (
+                              <span {...getTokenProps({ token, key })} />
+                            ))}
+                          </div>
+                        ))}
+                      </pre>
+                    )}
                   </Highlight>
                 </CodeMockup>
               )}
