@@ -18,9 +18,9 @@ Default.args = {}
 
 const FormTemplate: Story<ToggleProps> = (args) => {
   return (
-    <Form className="bg-base-200 w-1/4 p-4 rounded-lg shadow">
+    <Form className="bg-base-200 p-4 rounded-lg shadow">
       <Form.Label title="Remember me">
-        <Toggle {...args} />
+        <Toggle {...args} className="m-2" />
       </Form.Label>
     </Form>
   )

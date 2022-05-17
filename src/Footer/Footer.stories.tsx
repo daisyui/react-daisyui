@@ -8,7 +8,7 @@ export default {
   component: Footer,
 } as Meta
 
-export const Default: Story<FooterProps> = (args) => {
+const Template: Story<FooterProps> = (args) => {
   return (
     <Footer className="p-10 bg-neutral text-neutral-content" {...args}>
       <div>
@@ -33,6 +33,14 @@ export const Default: Story<FooterProps> = (args) => {
       </div>
     </Footer>
   )
+}
+
+export const Default = Template.bind({})
+Default.args = {}
+
+export const Centered = Template.bind({})
+Centered.args = {
+  center: true
 }
 
 export const WithLogo: Story<FooterProps> = (args) => {

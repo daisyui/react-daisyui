@@ -16,8 +16,8 @@ Default.args = {}
 
 export const Colors: Story<BadgeProps> = (args) => {
   return (
-    <div className="flex flex-col gap-2">
-      <div className="flex gap-2">
+    <div>
+      <div>
         <Badge {...args}>neutral</Badge>
         <Badge {...args} color="primary">
           primary
@@ -32,7 +32,7 @@ export const Colors: Story<BadgeProps> = (args) => {
           ghost
         </Badge>
       </div>
-      <div className="flex gap-2">
+      <div>
         <Badge {...args} color="success">
           success
         </Badge>
@@ -49,11 +49,13 @@ export const Colors: Story<BadgeProps> = (args) => {
     </div>
   )
 }
-Colors.args = {}
+Colors.args = {
+  className: 'm-1'
+}
 
 export const Outline: Story<BadgeProps> = (args) => {
   return (
-    <div className="flex gap-2">
+    <div>
       <Badge {...args} variant="outline">
         neutral
       </Badge>
@@ -69,11 +71,13 @@ export const Outline: Story<BadgeProps> = (args) => {
     </div>
   )
 }
-Outline.args = {}
+Outline.args = {
+  className: 'm-1'
+}
 
 export const Sizes: Story<BadgeProps> = (args) => {
   return (
-    <div className="flex gap-2 items-center">
+    <div>
       <Badge {...args} size="lg">
         987,654
       </Badge>
@@ -89,7 +93,9 @@ export const Sizes: Story<BadgeProps> = (args) => {
     </div>
   )
 }
-Sizes.args = {}
+Sizes.args = {
+  className: 'm-1'
+}
 
 export const Empty: Story<BadgeProps> = (args) => {
   return (

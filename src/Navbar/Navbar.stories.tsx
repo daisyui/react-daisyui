@@ -13,15 +13,24 @@ export const Default: Story<NavbarProps> = (args) => {
   return (
     <Navbar {...args}>
       <Navbar.Start className="px-2 mx-2">
+        <svg
+          className="block sm:hidden mr-2 fill-current"
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 512 512"
+        >
+          <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
+        </svg>
         <span className="text-lg font-bold">daisyUI</span>
       </Navbar.Start>
 
       <Navbar.Center className="px-2 mx-2">
-        <div className="flex items-stretch">
-          <a className="btn btn-ghost btn-sm rounded-btn">Home</a>
-          <a className="btn btn-ghost btn-sm rounded-btn">Portfolio</a>
-          <a className="btn btn-ghost btn-sm rounded-btn">About</a>
-          <a className="btn btn-ghost btn-sm rounded-btn">Contact</a>
+        <div className="hidden sm:flex items-stretch">
+          <Button size="sm">Home</Button>
+          <Button size="sm">Portfolio</Button>
+          <Button size="sm">About</Button>
+          <Button size="sm">Contact</Button>
         </div>
       </Navbar.Center>
 

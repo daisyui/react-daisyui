@@ -26,8 +26,8 @@ Default.args = {
 
 export const Colors: Story<ButtonProps> = (args) => {
   return (
-    <div className="flex flex-col gap-y-2">
-      <div className="flex gap-x-2">
+    <div>
+      <div>
         <Button {...args}>Default</Button>
         <Button {...args} color="primary">
           Primary
@@ -42,7 +42,7 @@ export const Colors: Story<ButtonProps> = (args) => {
           Ghost
         </Button>
       </div>
-      <div className="flex gap-x-2">
+      <div>
         <Button {...args} color="success">
           Success
         </Button>
@@ -58,6 +58,9 @@ export const Colors: Story<ButtonProps> = (args) => {
       </div>
     </div>
   )
+}
+Colors.args = {
+  className: "m-1"
 }
 
 export const Variants: Story<ButtonProps> = (args) => {
