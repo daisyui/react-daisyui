@@ -1,13 +1,15 @@
 import React from 'react'
 
-export type DropdownItemProps = React.AnchorHTMLAttributes<HTMLAnchorElement>
-
-const DropdownItem = ({ className, ...props }: DropdownItemProps) => {
-  return (
-    <li className={className}>
-      <a {...props} />
-    </li>
-  )
+export type DropdownItemProps = React.LiHTMLAttributes<HTMLLIElement> & {
+  href?: string;
 }
 
-export default DropdownItem
+const DropdownItem = React.forwardRef<HTMLLIElement, DropdownItemProps>(({ children, href, ...props }, ref) => {
+  return (
+    <li role={href ? "link" : undefined} {...props} ref={ref}>
+      {href ? <a href={href}>{children}</a> : <>{children}</>}
+    </li>
+  )
+});
+
+export default DropdownItem;
