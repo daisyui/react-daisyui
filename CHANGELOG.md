@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.0.3](https://github.com/daisyui/react-daisyui/compare/v2.0.2...v2.0.3) (2022-06-10)
+
+
+### Bug Fixes
+
+* **Dropdown:** Enable forwarding refs to DropdownItem ([#117](https://github.com/daisyui/react-daisyui/issues/117)) ([6f0e6d9](https://github.com/daisyui/react-daisyui/commit/6f0e6d9a352600e12f66f6a0126a0528203a60bc))
+
+
+### Miscellaneous
+
+* **Table:** first column fixed position when table overflows horizontally ([#114](https://github.com/daisyui/react-daisyui/issues/114)) ([8a75404](https://github.com/daisyui/react-daisyui/commit/8a7540430b936c15fb371b1071a1894800b4517e))
+
 ### [2.0.2](https://github.com/daisyui/react-daisyui/compare/v2.0.1...v2.0.2) (2022-05-17)
 
 
