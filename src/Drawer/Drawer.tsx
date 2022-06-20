@@ -7,10 +7,10 @@ import { IComponentBaseProps } from '../types'
 export type DrawerProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {
     side: ReactNode
-    id: string
     open?: boolean
     mobile?: boolean
     end?: boolean
+    onClickOverlay?: () => void
   }
 
 const Drawer = ({
@@ -19,9 +19,9 @@ const Drawer = ({
   open,
   mobile,
   end,
-  id,
   dataTheme,
   className,
+  onClickOverlay,
   ...props
 }: DrawerProps) => {
   const classes = twMerge(
@@ -40,10 +40,10 @@ const Drawer = ({
       data-theme={dataTheme}
       className={classes}
     >
-      <input id={id} type="checkbox" className="drawer-toggle" checked={open} />
+      <input type="checkbox" className="drawer-toggle" checked={open} />
       <div className="drawer-content">{children}</div>
       <div className="drawer-side">
-        <label htmlFor={id} className="drawer-overlay"></label>
+        <label className="drawer-overlay" onClick={onClickOverlay}></label>
         {side}
       </div>
     </div>
