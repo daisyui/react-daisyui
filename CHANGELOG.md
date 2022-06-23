@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.0.4](https://github.com/daisyui/react-daisyui/compare/v2.0.3...v2.0.4) (2022-06-23)
+
+
+### Miscellaneous
+
+* **ButtonGroup:** added vertical prop ([#135](https://github.com/daisyui/react-daisyui/issues/135)) ([fdc05e2](https://github.com/daisyui/react-daisyui/commit/fdc05e2dd6f32e2afcd267f0128df94f6e1ef532))
+* **Drawer:** add onClickOverlay and add storybook of drawer ([#125](https://github.com/daisyui/react-daisyui/issues/125)) ([6a266bf](https://github.com/daisyui/react-daisyui/commit/6a266bfb7489e67bb342453ac3b9b9df052b1ee7))
+* update daisyui to 2.17.0 ([#134](https://github.com/daisyui/react-daisyui/issues/134)) ([682a2ed](https://github.com/daisyui/react-daisyui/commit/682a2edb8ab107cbca517d1fad05031306db67cc))
+
 ## [2.0.3](https://github.com/daisyui/react-daisyui/compare/v2.0.2...v2.0.3) (2022-06-10)
 
 
