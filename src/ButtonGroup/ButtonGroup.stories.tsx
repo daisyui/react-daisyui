@@ -3,20 +3,25 @@ import { Story, Meta } from '@storybook/react'
 
 import ButtonGroup, { ButtonGroupProps } from '.'
 import Button from '../Button'
+import Radio from '../Radio'
 
 export default {
   title: 'Layout/ButtonGroup',
   component: ButtonGroup,
 } as Meta
 
-export const Default: Story<ButtonGroupProps> = (args) => {
+const Template: Story<ButtonGroupProps> = (args) => {
   return (
     <ButtonGroup {...args}>
-      <Button>1</Button>
-      <Button>2</Button>
-      <Button>3</Button>
-      <Button>4</Button>
+      <Button active>Button</Button>
+      <Button>Button</Button>
+      <Button>Button</Button>
     </ButtonGroup>
   )
 }
-Default.args = {}
+
+export const Default = Template.bind({})
+Default.args = { }
+
+export const Vertical = Template.bind({})
+Vertical.args = { vertical: true }
