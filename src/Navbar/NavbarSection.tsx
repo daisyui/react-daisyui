@@ -11,9 +11,9 @@ export type NavbarSectionProps = NavbarProps & {
 const NavbarSection = React.forwardRef<HTMLDivElement, NavbarSectionProps>(
   ({ children, section, dataTheme, className, style }, ref): JSX.Element => {
     const classes = twMerge(
-      'flex-1',
       className,
       clsx({
+        ['flex-1']: section !== 'center',
         [`navbar-${section}`]: section,
       })
     )
