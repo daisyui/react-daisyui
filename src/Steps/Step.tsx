@@ -10,7 +10,7 @@ export type StepProps = Omit<
 > &
   IComponentBaseProps & {
     value?: string
-    color?: ComponentColor
+    color?: 'neutral' | ComponentColor
   }
 
 const Step = React.forwardRef<HTMLLIElement, StepProps>(

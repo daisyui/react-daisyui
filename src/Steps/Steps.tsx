@@ -1,4 +1,5 @@
 import React from 'react'
+import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
@@ -12,8 +13,18 @@ export type StepsProps = React.HTMLAttributes<HTMLUListElement> &
   }
 
 const Steps = React.forwardRef<HTMLUListElement, StepsProps>(
-  ({ children, dataTheme, className, ...props }, ref): JSX.Element => {
-    const classes = twMerge('steps', className)
+  (
+    { children, dataTheme, className, vertical, horizontal, ...props },
+    ref
+  ): JSX.Element => {
+    const classes = twMerge(
+      'steps',
+      className,
+      clsx({
+        ['steps-vertical']: vertical,
+        ['steps-horizontal']: horizontal,
+      })
+    )
 
     return (
       <ul
