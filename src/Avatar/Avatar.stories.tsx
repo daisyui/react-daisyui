@@ -6,6 +6,11 @@ import Avatar, { AvatarProps } from '.'
 export default {
   title: 'Data Display/Avatar',
   component: Avatar,
+  argTypes: {
+    size: {
+      control: { type: 'radio', options: ['lg', 'md', 'sm', 'xs'] },
+    },
+  },
 } as Meta
 
 const Template: Story<AvatarProps> = (args) => {
@@ -22,6 +27,19 @@ export const Rounded = Template.bind({})
 Rounded.args = {
   src: 'http://daisyui.com/tailwind-css-component-profile-1@94w.png',
   shape: 'circle',
+}
+
+export const CustomSize = Template.bind({})
+CustomSize.args = {
+  src: 'http://daisyui.com/tailwind-css-component-profile-1@94w.png',
+  shape: 'circle',
+  size: 30,
+}
+
+CustomSize.argTypes = {
+  size: {
+    control: { type: 'number', min: 1, step: 1 },
+  },
 }
 
 export const Group: Story<AvatarProps> = (args) => {
