@@ -15,7 +15,7 @@ const SelectOption = <T extends string | number | undefined>({
   ...props
 }: SelectOptionProps<T>): JSX.Element => {
   return (
-    <option {...props} selected={value === selectedValue}>
+    <option {...props} value={value} selected={value === selectedValue}>
       {children}
     </option>
   )
