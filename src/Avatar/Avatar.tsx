@@ -15,7 +15,7 @@ export type AvatarProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {
     src?: string
     letters?: string
-    size?: ComponentSize
+    size?: ComponentSize | number
     shape?: ComponentShape
     color?: ComponentColor
     border?: boolean
@@ -27,9 +27,9 @@ export type AvatarProps = React.HTMLAttributes<HTMLDivElement> &
 const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
   (
     {
+      size = 'md',
       src,
       letters,
-      size,
       shape,
       color,
       border,
@@ -58,7 +58,7 @@ const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
       'rounded-btn': shape === 'square',
       'rounded-full': shape === 'circle',
       'w-32 h-32': size === 'lg',
-      'w-24 h-24': !size || size === 'md',
+      'w-24 h-24': size === 'md',
       'w-14 h-14': size === 'sm',
       'w-10 h-10': size === 'xs',
     })
@@ -73,10 +73,13 @@ const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
       'rounded-btn': shape === 'square',
       'rounded-full': shape === 'circle',
       'w-32 h-32 text-3xl': size === 'lg',
-      'w-24 h-24 text-xl': !size || size === 'md',
+      'w-24 h-24 text-xl': size === 'md',
       'w-14 h-14': size === 'sm',
       'w-10 h-10': size === 'xs',
     })
+
+    const customImgDimension =
+      typeof size === 'number' ? { width: size, height: size } : {}
 
     return (
       <div
@@ -87,11 +90,11 @@ const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
         ref={ref}
       >
         {src ? (
-          <div className={imgClasses}>
+          <div className={imgClasses} style={customImgDimension}>
             <img src={src} />
           </div>
         ) : (
-          <div className={placeholderClasses}>
+          <div className={placeholderClasses} style={customImgDimension}>
             <span>{letters}</span>
           </div>
         )}
