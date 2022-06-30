@@ -8,7 +8,7 @@ export default {
   component: Avatar,
   argTypes: {
     size: {
-      control: { type: 'radio' },
+      control: { type: 'radio', options: ['lg', 'md', 'sm', 'xs'] },
     },
   },
 } as Meta
