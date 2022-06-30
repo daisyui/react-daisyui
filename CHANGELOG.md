@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.0.5](https://github.com/daisyui/react-daisyui/compare/v2.0.4...v2.0.5) (2022-06-30)
+
+
+### Bug Fixes
+
+* **Navbar:** fix center ([#139](https://github.com/daisyui/react-daisyui/issues/139)) ([565512e](https://github.com/daisyui/react-daisyui/commit/565512e7ac509c987cac27c3bb6b971ba1096abb))
+* **Select:** add missing value prop to option ([#148](https://github.com/daisyui/react-daisyui/issues/148)) ([ee5e8f0](https://github.com/daisyui/react-daisyui/commit/ee5e8f0227bdfa22ee214e4eee8546337a8a7506))
+
+
+### Miscellaneous
+
+* **Avatar:** custom dimension ([#149](https://github.com/daisyui/react-daisyui/issues/149)) ([1386164](https://github.com/daisyui/react-daisyui/commit/13861641bf1e3c35fe43d799ba7d02d0d8bbc06e))
+
 ## [2.0.4](https://github.com/daisyui/react-daisyui/compare/v2.0.3...v2.0.4) (2022-06-23)
 
 
