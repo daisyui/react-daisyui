@@ -14,10 +14,16 @@ DaisyUI components built with React, Typescript and TailwindCSS.
 
 Make sure you've installed <a href="https://tailwindcss.com/docs/installation">TailwindCSS</a> and <a href="https://daisyui.com/docs/install/">daisyUI</a>.
 
-Install the package with npm or yarn:
+Install the package with npm
 
 ```bash
 npm install react-daisyui
+```
+
+... or yarn:
+
+```bash
+yarn add react-daisyui
 ```
 
 To prevent TailwindCSS from purging your styles, add the following line to your tailwind.config.js:
