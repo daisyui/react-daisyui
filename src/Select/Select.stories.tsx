@@ -24,7 +24,7 @@ export const Default: Story<SelectProps<string>> = (args) => {
         <Option value={undefined} disabled selected>
           Pick your favorite Simpson
         </Option>
-        <Option value={'Horner'}>Horner</Option>
+        <Option value={'Homer'}>Homer</Option>
         <Option value={'Marge'}>Marge</Option>
         <Option value={'Bart'}>Bart</Option>
         <Option value={'Lisa'}>Lisa</Option>
