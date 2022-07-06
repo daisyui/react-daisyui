@@ -29,6 +29,30 @@ module.exports = {
 }
 ```
 
+<details>
+<summary>For Next.js:</summary>
+Install next-transpile modules:
+
+```bash
+npm install next-transpile-modules
+```
+
+And import the package inside your `next.config.js` file:
+
+```js
+const withTM = require('next-transpile-modules')(['react-daisyui'])
+```
+
+Finally, you can wrap your module.exports using withTM like so:
+
+```js
+module.exports = withTM({
+  //... your content here
+  reactStrictMode: true,
+})
+```
+</details>
+
 ## ⚡ Quick Start
 
 Import react-daisyui components within your component files:
