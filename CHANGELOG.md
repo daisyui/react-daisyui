@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.6](https://github.com/daisyui/react-daisyui/compare/v2.0.5...v2.0.6) (2022-07-07)
+
+
+### Bug Fixes
+
+* **Tabs:** omit onChange from types ([#158](https://github.com/daisyui/react-daisyui/issues/158)) ([1251acd](https://github.com/daisyui/react-daisyui/commit/1251acd049b916325cf8340ac9557e6afa00423d))
+
 ## [2.0.5](https://github.com/daisyui/react-daisyui/compare/v2.0.4...v2.0.5) (2022-06-30)
 
 
