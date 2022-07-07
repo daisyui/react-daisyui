@@ -6,7 +6,7 @@ import { IComponentBaseProps, ComponentSize } from '../types'
 
 import Tab, { TabProps } from './Tab'
 
-export type TabsProps<T> = React.HTMLAttributes<HTMLDivElement> &
+export type TabsProps<T> = Omit<React.HTMLAttributes<HTMLDivElement>, 'onChange'> &
   IComponentBaseProps & {
     children: ReactElement<TabProps<T>>[]
     value?: T
@@ -17,10 +17,7 @@ export type TabsProps<T> = React.HTMLAttributes<HTMLDivElement> &
   }
 
 const TabsInner = <T extends string | number | undefined>(
-  props: TabsProps<T>,
-  ref?: React.ForwardedRef<T>
-): JSX.Element => {
-  const {
+  {
     children,
     value,
     onChange,
@@ -29,8 +26,10 @@ const TabsInner = <T extends string | number | undefined>(
     boxed,
     dataTheme,
     className,
-    ...rest
-  } = props
+    ...props
+  }: TabsProps<T>,
+  ref?: React.ForwardedRef<T>
+): JSX.Element => {
   const [activeValue, setActiveValue] = useState<T | undefined>(value)
 
   const classes = twMerge(
@@ -42,7 +41,13 @@ const TabsInner = <T extends string | number | undefined>(
   )
 
   return (
-    <div role="tablist" {...rest} data-theme={dataTheme} className={classes}>
+    <div
+      ref={ref as React.ForwardedRef<HTMLDivElement>} 
+      role="tablist"
+      {...props}
+      data-theme={dataTheme}
+      className={classes}
+    >
       {children.map((child) => {
         return cloneElement(child, {
           variant,
