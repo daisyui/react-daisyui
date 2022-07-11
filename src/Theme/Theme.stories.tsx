@@ -12,7 +12,9 @@ export default {
   component: Theme,
 } as Meta
 
-export const Default: Story<ThemeProps> = (args) => {
+export const Default: Story<ThemeProps<React.ElementType<HTMLDivElement>>> = (
+  args
+) => {
   const { theme, setTheme } = useTheme()
 
   return (
@@ -43,7 +45,24 @@ export const Default: Story<ThemeProps> = (args) => {
 }
 Default.args = {}
 
-export const NestedThemes: Story<ThemeProps> = (args) => {
+export const AsCustomTag: Story<
+  ThemeProps<React.ElementType<HTMLBodyElement>>
+> = (args) => {
+  const { theme, setTheme } = useTheme()
+
+  return (
+    <Theme dataTheme={theme} as="body">
+      <div>
+        <ThemeItem dataTheme={theme} />
+      </div>
+    </Theme>
+  )
+}
+AsCustomTag.args = {}
+
+export const NestedThemes: Story<
+  ThemeProps<React.ElementType<HTMLDivElement>>
+> = (args) => {
   const { theme, setTheme } = useTheme()
 
   const renderNestedThemes = (themes: readonly string[]) => {
