@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Story, Meta } from '@storybook/react'
 
 import Collapse, { CollapseProps } from '.'
@@ -81,5 +81,77 @@ export const CustomColorsWithFocusCheckbox: Story<CollapseProps> = (args) => {
         <p>tabindex="0" attribute is necessary to make the div focusable</p>
       </Collapse.Content>
     </Collapse>
+  )
+}
+
+export const HandlingEvents: Story<CollapseProps> = (args) => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const handleToggle = () => {
+    console.log('toggled!')
+  }
+
+  const handleOpen = () => {
+    setIsOpen(true)
+  }
+
+  const handleClose = () => {
+    setIsOpen(false)
+  }
+
+  return (
+    <div>
+      <span>Checkbox is {isOpen ? 'open' : 'closed'}.</span>
+      <Collapse
+        {...args}
+        className="group"
+        onClose={handleClose}
+        onOpen={handleOpen}
+        onToggle={handleToggle}
+      >
+        <Collapse.Title className="bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+          Click me to show/hide content
+        </Collapse.Title>
+        <Collapse.Content className="bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+          <p>tabindex="0" attribute is necessary to make the div focusable</p>
+        </Collapse.Content>
+      </Collapse>
+    </div>
+  )
+}
+
+export const CheckboxEvents: Story<CollapseProps> = (args) => {
+  const [isOpen, setIsOpen] = useState(false)
+  const handleToggle = () => {
+    console.log('toggled!')
+  }
+
+  const handleOpen = () => {
+    setIsOpen(true)
+  }
+
+  const handleClose = () => {
+    setIsOpen(false)
+  }
+
+  return (
+    <div>
+      <span>Checkbox is {isOpen ? 'open' : 'closed'}.</span>
+      <Collapse
+        {...args}
+        className="group"
+        onClose={handleClose}
+        onOpen={handleOpen}
+        onToggle={handleToggle}
+        checkbox
+      >
+        <Collapse.Title className="bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+          Click me to show/hide content
+        </Collapse.Title>
+        <Collapse.Content className="bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+          <p>tabindex="0" attribute is necessary to make the div focusable</p>
+        </Collapse.Content>
+      </Collapse>
+    </div>
   )
 }
