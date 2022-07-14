@@ -55,3 +55,13 @@ export const wrapWithElementIfInvalid = ({
     })
   }
 }
+
+// Returns true if there is a single, string child element
+export const isSingleStringChild = (children?: React.ReactNode) => {
+  return (
+    children &&
+    React.Children.count(children) === 1 &&
+    React.isValidElement(children) &&
+    typeof children.props.children === 'string'
+  )
+}

@@ -1,6 +1,7 @@
 import React from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
+import { isSingleStringChild } from '../utils'
 
 import AvatarGroup from './AvatarGroup'
 
@@ -22,6 +23,7 @@ export type AvatarProps = React.HTMLAttributes<HTMLDivElement> &
     borderColor?: ComponentColor
     online?: boolean
     offline?: boolean
+    children?: React.ReactNode
   }
 
 const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
@@ -38,6 +40,7 @@ const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
       offline,
       dataTheme,
       className,
+      children,
       ...props
     },
     ref
@@ -81,6 +84,41 @@ const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
     const customImgDimension =
       typeof size === 'number' ? { width: size, height: size } : {}
 
+    const renderAvatarContents = () => {
+      // Base case, if src is provided, render img
+      if (src) {
+        return (
+          <div className={imgClasses} style={customImgDimension}>
+            <img src={src} />
+          </div>
+        )
+      }
+      // Render a text avatar if letters are provided, or a single child that is a string
+      else if (letters || isSingleStringChild(children)) {
+        return (
+          <div className={placeholderClasses} style={customImgDimension}>
+            <span>{letters ? letters : children}</span>
+          </div>
+        )
+      }
+      // Render if a single, not string child was provided (allows for SVGs) and merges classes and styles
+      else if (React.Children.count(children) === 1) {
+        const firstChild = React.Children.only(children) as React.ReactElement
+        return React.cloneElement(firstChild, {
+          className: twMerge(imgClasses, firstChild.props.className),
+          style: { ...customImgDimension, ...firstChild.props.style },
+        })
+      }
+      // Render a wrapping div around all children if there is more than one child.
+      else {
+        return (
+          <div className={imgClasses} style={customImgDimension}>
+            {children}
+          </div>
+        )
+      }
+    }
+
     return (
       <div
         aria-label="Avatar photo"
@@ -89,15 +127,7 @@ const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
         className={containerClasses}
         ref={ref}
       >
-        {src ? (
-          <div className={imgClasses} style={customImgDimension}>
-            <img src={src} />
-          </div>
-        ) : (
-          <div className={placeholderClasses} style={customImgDimension}>
-            <span>{letters}</span>
-          </div>
-        )}
+        {renderAvatarContents()}
       </div>
     )
   }
