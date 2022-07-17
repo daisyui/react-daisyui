@@ -40,7 +40,7 @@ const Drawer = ({
       data-theme={dataTheme}
       className={classes}
     >
-      <input type="checkbox" className="drawer-toggle" checked={open} />
+      <input type="checkbox" className="drawer-toggle" checked={open} readOnly />
       <div className="drawer-content">{children}</div>
       <div className="drawer-side">
         <label className="drawer-overlay" onClick={onClickOverlay}></label>
