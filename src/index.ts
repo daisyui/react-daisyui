@@ -245,5 +245,5 @@ export type WindowMockupProps = TWindowMockupProps
 // Utils > Theme
 export { default as Theme } from './Theme'
 import { ThemeProps as TThemeProps } from './Theme'
-export type ThemeProps = TThemeProps
+export type ThemeProps<T extends React.ElementType> = TThemeProps<T>
 export { useTheme } from './Theme/useTheme'
