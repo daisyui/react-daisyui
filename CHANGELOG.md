@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.1.0](https://github.com/daisyui/react-daisyui/compare/v2.0.6...v2.1.0) (2022-07-19)
+
+
+### Features
+
+* added ability to set an initial value for the useTheme hook ([#174](https://github.com/daisyui/react-daisyui/issues/174)) ([6b88b49](https://github.com/daisyui/react-daisyui/commit/6b88b49ae3c953db15be6ac2912651b876cb627a))
+* allow SVGs in Avatar [#146](https://github.com/daisyui/react-daisyui/issues/146) ([#164](https://github.com/daisyui/react-daisyui/issues/164)) ([8ba2767](https://github.com/daisyui/react-daisyui/commit/8ba2767f8f4ff96062449cd8f0c67af0709544b6))
+* collapse now allows onOpen, onClose, and onToggle props ([#165](https://github.com/daisyui/react-daisyui/issues/165)) ([c9deedf](https://github.com/daisyui/react-daisyui/commit/c9deedfd12c1d203e82e6a0f2ba88fb309080ee7))
+
+
+### Bug Fixes
+
+* changed installs badge to total, and added link to npm ([#176](https://github.com/daisyui/react-daisyui/issues/176)) ([9332d05](https://github.com/daisyui/react-daisyui/commit/9332d05d321496eb17e2fd5f516275b8a77118cc))
+* **Drawer:** made checkbox readonly to address warning ([#169](https://github.com/daisyui/react-daisyui/issues/169)) ([5a22ad0](https://github.com/daisyui/react-daisyui/commit/5a22ad068006c3632abe52658a57ea946fd4fba8))
+* prevent bundling story type definitions [#131](https://github.com/daisyui/react-daisyui/issues/131) ([#163](https://github.com/daisyui/react-daisyui/issues/163)) ([f44da69](https://github.com/daisyui/react-daisyui/commit/f44da6993012a6a742ced4fcf96618bed9ec2347))
+* refactor alert to allow customization [#173](https://github.com/daisyui/react-daisyui/issues/173) ([#175](https://github.com/daisyui/react-daisyui/issues/175)) ([9f990b7](https://github.com/daisyui/react-daisyui/commit/9f990b7a073a33e63c7f59b8743559d91f5d325f))
+
 ## [2.0.6](https://github.com/daisyui/react-daisyui/compare/v2.0.5...v2.0.6) (2022-07-07)
 
 
