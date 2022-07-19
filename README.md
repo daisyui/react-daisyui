@@ -1,4 +1,4 @@
-[![NPM Version](https://img.shields.io/npm/v/react-daisyui.svg?branch=master)](https://www.npmjs.com/package/react-daisyui) [![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-daisyui)](https://bundlephobia.com/result?p=react-daisyui) ![npm](https://img.shields.io/npm/dm/react-daisyui?label=installs) [![License](https://img.shields.io/npm/l/react-daisyui.svg)](https://github.com/daisyui/react-daisyui/blob/master/LICENSE) [![Discord Invite](https://img.shields.io/discord/951593480625459340?color=%237289DA&label=chat&logo=discord&logoColor=white)](https://discord.gg/4v2eS3VQNv)
+[![NPM Version](https://img.shields.io/npm/v/react-daisyui.svg?branch=master)](https://www.npmjs.com/package/react-daisyui) [![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-daisyui)](https://bundlephobia.com/result?p=react-daisyui) [![npm](https://img.shields.io/npm/dt/react-daisyui?label=installs)](https://www.npmjs.com/package/react-daisyui) [![License](https://img.shields.io/npm/l/react-daisyui.svg)](https://github.com/daisyui/react-daisyui/blob/master/LICENSE) [![Discord Invite](https://img.shields.io/discord/951593480625459340?color=%237289DA&label=chat&logo=discord&logoColor=white)](https://discord.gg/4v2eS3VQNv)
 
 # react-daisyui 🌼
 
@@ -24,8 +24,8 @@ To prevent TailwindCSS from purging your styles, add the following line to your 
 
 ```js
 module.exports = {
-  content: ["node_modules/daisyui/dist/**/*.js"],
-  plugins: [require("daisyui")],
+  content: ['node_modules/daisyui/dist/**/*.js'],
+  plugins: [require('daisyui')],
 }
 ```
 
@@ -51,6 +51,7 @@ module.exports = withTM({
   reactStrictMode: true,
 })
 ```
+
 </details>
 
 ## ⚡ Quick Start
