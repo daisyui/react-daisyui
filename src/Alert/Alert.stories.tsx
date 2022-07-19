@@ -2,6 +2,7 @@ import React from 'react'
 import { Story, Meta } from '@storybook/react'
 
 import Alert, { AlertProps } from '.'
+import Button from '../Button'
 
 export default {
   title: 'Data Display/Alert',
@@ -144,4 +145,40 @@ export const Colors: Story<AlertProps> = (args) => {
       </Alert>
     </div>
   )
+}
+
+export const CustomContents: Story<AlertProps> = ({
+  color = 'info',
+  ...args
+}) => {
+  return (
+    <Alert
+      icon={
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          className="w-6 h-6 mx-2 stroke-current"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          ></path>
+        </svg>
+      }
+      color={color}
+      {...args}
+    >
+      <div className="w-full flex-row justify-between gap-2">
+        <h3 className="text-lg font-bold">This is a custom alert!</h3>
+        <h4>Some information about the alert...</h4>
+      </div>
+      <Button>Dismiss</Button>
+    </Alert>
+  )
+}
+CustomContents.args = {
+  status: 'info',
 }
