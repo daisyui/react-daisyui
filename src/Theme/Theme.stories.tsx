@@ -43,6 +43,22 @@ export const Default: Story<ThemeProps> = (args) => {
 }
 Default.args = {}
 
+export const WithInitialValue: Story<ThemeProps> = (args) => {
+  const { theme, setTheme } = useTheme('corporate')
+
+  return (
+    <div className="flex flex-wrap gap-4">
+      <ThemeItem
+        dataTheme={theme}
+        role="button"
+        aria-label="Theme select"
+        tabIndex={0}
+      />
+    </div>
+  )
+}
+WithInitialValue.args = {}
+
 export const NestedThemes: Story<ThemeProps> = (args) => {
   const { theme, setTheme } = useTheme()
 

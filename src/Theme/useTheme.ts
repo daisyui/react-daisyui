@@ -1,7 +1,15 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
+import { DataTheme } from '../types'
 import { ThemeContext } from './ThemeContext'
 
-export const useTheme = () => {
-  const context = useContext(ThemeContext)
-  return { theme: context.theme, setTheme: context.setTheme }
+export const useTheme = (value?: DataTheme) => {
+  const { theme, setTheme } = useContext(ThemeContext)
+
+  useEffect(() => {
+    if (value && theme !== value) {
+      setTheme(value)
+    }
+  }, [value])
+
+  return { theme, setTheme }
 }
