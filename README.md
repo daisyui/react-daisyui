@@ -24,7 +24,7 @@ To prevent TailwindCSS from purging your styles, add the following line to your 
 
 ```js
 module.exports = {
-  content: ['node_modules/daisyui/dist/**/*.js'],
+  content: ['node_modules/daisyui/dist/**/*.js', 'node_modules/react-daisyui/dist/**/*.js'],
   plugins: [require('daisyui')],
 }
 ```
