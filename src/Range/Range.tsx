@@ -28,6 +28,9 @@ const Range = forwardRef<HTMLInputElement, RangeProps>(
       })
     )
 
+    const isNumeric = (n: any): n is number =>
+      !isNaN(parseFloat(n)) && isFinite(n)
+
     const numSteps = useMemo(() => {
       const safeStep = Math.max(1, Number(step))
       return Math.ceil(100 / safeStep) ?? 1
@@ -43,7 +46,7 @@ const Range = forwardRef<HTMLInputElement, RangeProps>(
           data-theme={dataTheme}
           className={classes}
         />
-        {step != null && (
+        {isNumeric(step) && (
           <div className="w-full flex justify-between text-xs px-2">
             {[...Array(numSteps + 1)].map(() => {
               return <span>|</span>
