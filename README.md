@@ -1,8 +1,18 @@
-[![NPM Version](https://img.shields.io/npm/v/react-daisyui.svg?branch=master)](https://www.npmjs.com/package/react-daisyui) [![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-daisyui)](https://bundlephobia.com/result?p=react-daisyui) [![npm](https://img.shields.io/npm/dt/react-daisyui?label=installs)](https://www.npmjs.com/package/react-daisyui) [![License](https://img.shields.io/npm/l/react-daisyui.svg)](https://github.com/daisyui/react-daisyui/blob/master/LICENSE) [![Discord Invite](https://img.shields.io/discord/951593480625459340?color=%237289DA&label=chat&logo=discord&logoColor=white)](https://discord.gg/4v2eS3VQNv)
+<div align="center">
+
+<img src="https://user-images.githubusercontent.com/64439681/181564610-a0fd8fef-b552-4cc5-b115-8652dc142065.svg">
+
+**daisyUI components built with React, Typescript and TailwindCSS**  
+
+[ [See all components](https://react.daisyui.com/) ]
+
+</div>
+
+![card-3](https://user-images.githubusercontent.com/64439681/181566540-b1e37814-c72a-48af-bbe2-80367b000770.png)
 
 # react-daisyui 🌼
 
-DaisyUI components built with React, Typescript and TailwindCSS.
+[![NPM Version](https://img.shields.io/npm/v/react-daisyui.svg?branch=master)](https://www.npmjs.com/package/react-daisyui) [![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-daisyui)](https://bundlephobia.com/result?p=react-daisyui) [![npm](https://img.shields.io/npm/dt/react-daisyui?label=installs)](https://www.npmjs.com/package/react-daisyui) [![License](https://img.shields.io/npm/l/react-daisyui.svg)](https://github.com/daisyui/react-daisyui/blob/master/LICENSE) [![Discord Invite](https://img.shields.io/discord/951593480625459340?color=%237289DA&label=chat&logo=discord&logoColor=white)](https://discord.gg/4v2eS3VQNv)
 
 📖 Check out our <a href="https://react.daisyui.com/">Storybook</a> | 🎲 Try it with <a href="https://codesandbox.io/s/react-daisyui-example-840os3?file=/src/App.tsx">CodeSandbox</a>
 
