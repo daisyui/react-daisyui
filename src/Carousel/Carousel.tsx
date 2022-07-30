@@ -54,6 +54,7 @@ const Carousel = forwardRef<HTMLDivElement, CarouselProps>(
     )
 
     const [itemRefs, setItemRefs] = useState<RefObject<HTMLDivElement>[]>([])
+    const [activeIndex, setActiveIndex] = useState(0)
 
     useEffect(() => {
       const newRefs: RefObject<HTMLDivElement>[] = []
@@ -69,6 +70,7 @@ const Carousel = forwardRef<HTMLDivElement, CarouselProps>(
         block: 'nearest',
         inline: snap,
       })
+      setActiveIndex(index)
     }
 
     return (
@@ -110,7 +112,11 @@ const Carousel = forwardRef<HTMLDivElement, CarouselProps>(
               }
 
               return (
-                <Button key={i} onClick={() => scrollToIndex(i)}>
+                <Button
+                  active={i === activeIndex}
+                  key={i}
+                  onClick={() => scrollToIndex(i)}
+                >
                   {i + 1}
                 </Button>
               )
