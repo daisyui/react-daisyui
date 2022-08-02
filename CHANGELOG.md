@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/daisyui/react-daisyui/compare/v2.1.0...v2.1.1) (2022-08-02)
+
+
+### Miscellaneous
+
+* **Carousel:** show active button on carousel ([#182](https://github.com/daisyui/react-daisyui/issues/182)) ([84a2077](https://github.com/daisyui/react-daisyui/commit/84a207766c151e26ebb845b722b5ead71cd0d2fc))
+
 ## [2.1.0](https://github.com/daisyui/react-daisyui/compare/v2.0.6...v2.1.0) (2022-07-19)
 
 
