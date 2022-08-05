@@ -8,7 +8,6 @@ import Button from '../Button'
 export default {
   title: 'Layout/Toast',
   component: Toast,
-  controls: {},
 } as Meta
 
 const horizontalMapping = {
