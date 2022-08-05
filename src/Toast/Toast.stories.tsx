@@ -8,30 +8,69 @@ import Button from '../Button'
 export default {
   title: 'Layout/Toast',
   component: Toast,
+  controls: {},
 } as Meta
 
-export const Default: Story<ToastProps> = (args) => {
+const horizontalMapping = {
+  start: 'left',
+  end: 'right',
+  center: 'center',
+} as const
+
+export const Default: Story<ToastProps> = ({
+  vertical = 'bottom',
+  horizontal = 'end',
+  ...args
+}) => {
   return (
-    <div className="w-full h-full">
-      <Toast {...args}>Default toast</Toast>
-    </div>
+    <>
+      <span>
+        Look at the {vertical} {horizontalMapping[horizontal]} of this story to
+        see the toast.
+      </span>
+      <div className="w-full h-full">
+        <Toast {...args} vertical={vertical} horizontal={horizontal}>
+          Default toast
+        </Toast>
+      </div>
+    </>
   )
 }
 
-export const WithAlert: Story<ToastProps> = (args) => {
+export const WithAlert: Story<ToastProps> = ({
+  vertical = 'bottom',
+  horizontal = 'end',
+  ...args
+}) => {
   return (
-    <Toast {...args}>
-      <Alert status="info">New message arrived.</Alert>
-    </Toast>
+    <>
+      <span>
+        Look at the {vertical} {horizontalMapping[horizontal]} of this story to
+        see the toast.
+      </span>
+      <Toast {...args} vertical={vertical} horizontal={horizontal}>
+        <Alert status="info">New message arrived.</Alert>
+      </Toast>
+    </>
   )
 }
 
-export const WithMultipleAlerts: Story<ToastProps> = (args) => {
+export const WithMultipleAlerts: Story<ToastProps> = ({
+  vertical = 'bottom',
+  horizontal = 'end',
+  ...args
+}) => {
   return (
-    <Toast {...args}>
-      <Alert status="info">New message arrived.</Alert>
-      <Alert status="success">Message sent successfully.</Alert>
-    </Toast>
+    <>
+      <span>
+        Look at the {vertical} {horizontalMapping[horizontal]} of this story to
+        see the toast.
+      </span>
+      <Toast {...args} vertical={vertical} horizontal={horizontal}>
+        <Alert status="info">New message arrived.</Alert>
+        <Alert status="success">Message sent successfully.</Alert>
+      </Toast>
+    </>
   )
 }
 
