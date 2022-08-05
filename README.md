@@ -157,6 +157,7 @@ Use tools like the official <a href="https://daisyui.com/theme-generator/">daisy
 - [x] <a href="https://react.daisyui.com/?path=/story/layout-inputgroup">Input Group</a>
 - [x] <a href="https://react.daisyui.com/?path=/story/layout-mask">Mask</a>
 - [x] <a href="https://react.daisyui.com/?path=/story/layout-stack">Stack</a>
+- [x] <a href="https://react.daisyui.com/?path=/story/layout-toast">Toast</a>
 </details>
 
 <details>

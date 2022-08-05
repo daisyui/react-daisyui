@@ -186,6 +186,11 @@ export { default as Stack } from './Stack'
 import { StackProps as TStackProps } from './Stack'
 export type StackProps = TStackProps
 
+// Layout > Stack
+export { default as Toast } from './Toast'
+import { ToastProps as TToastProps } from './Toast'
+export type ToastProps = TToastProps
+
 // ----------------------- < Navigation > ----------------------- //
 
 // Navigation > Breadcrumbs
