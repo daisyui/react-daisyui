@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.2.0](https://github.com/daisyui/react-daisyui/compare/v2.1.0...v2.2.0) (2022-08-05)
+
+
+### Features
+
+* added toast component ([#185](https://github.com/daisyui/react-daisyui/issues/185)) ([0db1e6c](https://github.com/daisyui/react-daisyui/commit/0db1e6c61513c877f6fd0d683e0cc0df686362c3))
+
+
+### Miscellaneous
+
+* **Carousel:** show active button on carousel ([#182](https://github.com/daisyui/react-daisyui/issues/182)) ([84a2077](https://github.com/daisyui/react-daisyui/commit/84a207766c151e26ebb845b722b5ead71cd0d2fc))
+
 ## [2.1.0](https://github.com/daisyui/react-daisyui/compare/v2.0.6...v2.1.0) (2022-07-19)
 
 
