@@ -198,6 +198,11 @@ export { default as Breadcrumbs } from './Breadcrumbs'
 import { BreadcrumbsProps as TBreadcrumbsProps } from './Breadcrumbs'
 export type BreadcrumbsProps = TBreadcrumbsProps
 
+// Navigation > BottomNavigation
+export { default as BottomNavigation } from './BottomNavigation'
+import { BottomNavigationProps as TBottomNavigationProps } from './BottomNavigation'
+export type BottomNavigationProps = TBottomNavigationProps
+
 // Navigation > Link
 export { default as Link } from './Link'
 import { LinkProps as TLinkProps } from './Link'
