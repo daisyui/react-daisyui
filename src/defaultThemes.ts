@@ -21,4 +21,11 @@ export const DEFAULT_THEMES = [
   'luxury',
   'dracula',
   'cmyk',
+  'autumn',
+  'business',
+  'acid',
+  'lemonade',
+  'night',
+  'coffee',
+  'winter'
 ] as const
