@@ -10,6 +10,10 @@ export type DrawerProps = React.HTMLAttributes<HTMLDivElement> &
     open?: boolean
     mobile?: boolean
     end?: boolean
+    toggleClassName?: string
+    contentClassName?: string
+    sideClassName?: string
+    overlayClassName?: string
     onClickOverlay?: () => void
   }
 
@@ -21,6 +25,10 @@ const Drawer = ({
   end,
   dataTheme,
   className,
+  toggleClassName,
+  contentClassName,
+  sideClassName,
+  overlayClassName,
   onClickOverlay,
   ...props
 }: DrawerProps) => {
@@ -40,10 +48,18 @@ const Drawer = ({
       data-theme={dataTheme}
       className={classes}
     >
-      <input type="checkbox" className="drawer-toggle" checked={open} readOnly />
-      <div className="drawer-content">{children}</div>
-      <div className="drawer-side">
-        <label className="drawer-overlay" onClick={onClickOverlay}></label>
+      <input
+        type="checkbox"
+        className={clsx('drawer-toggle', toggleClassName)}
+        checked={open}
+        readOnly
+      />
+      <div className={clsx('drawer-content', contentClassName)}>{children}</div>
+      <div className={clsx('drawer-side', sideClassName)}>
+        <label
+          className={clsx('drawer-overlay', overlayClassName)}
+          onClick={onClickOverlay}
+        ></label>
         {side}
       </div>
     </div>
