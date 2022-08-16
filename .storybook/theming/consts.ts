@@ -28,4 +28,7 @@ export const THEME_PICKER_LIST = [
   { name: 'business', class: 'business', color: '#1C4E80' },
   { name: 'acid', class: 'acid', color: '#FF00F4' },
   { name: 'lemonade', class: 'lemonade', color: '#519903' },
+  { name: 'night', class: 'night', color: '#3BBEF8' },
+  { name: 'coffee', class: 'coffee', color: '#DD944C' },
+  { name: 'winter', class: 'winter', color: '#067AFF' },
 ]
