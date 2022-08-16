@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.3.0](https://github.com/daisyui/react-daisyui/compare/v2.2.0...v2.3.0) (2022-08-16)
+
+
+### Features
+
+* bottom navigation component ([#187](https://github.com/daisyui/react-daisyui/issues/187)) ([6875e81](https://github.com/daisyui/react-daisyui/commit/6875e81d5f6b5294406e23c729bc3e5fbf0139ea))
+
+
+### Bug Fixes
+
+* **Drawer:** Add ability to override drawer internal classNames ([#188](https://github.com/daisyui/react-daisyui/issues/188)) ([e34093b](https://github.com/daisyui/react-daisyui/commit/e34093b587fb44dbffbbb0672e723302a21aad6d))
+
+
+### Miscellaneous
+
+* added new themes ([#190](https://github.com/daisyui/react-daisyui/issues/190)) ([dbfe402](https://github.com/daisyui/react-daisyui/commit/dbfe4027fbcbf2e567b6c6f6aa6530afa29cc841))
+
 ## [2.2.0](https://github.com/daisyui/react-daisyui/compare/v2.1.0...v2.2.0) (2022-08-05)
 
 
