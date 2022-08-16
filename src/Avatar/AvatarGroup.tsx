@@ -1,14 +1,16 @@
-import React, { ReactElement } from 'react'
+import React, { cloneElement, ReactElement } from 'react'
 import clsx from 'clsx'
 
-import { AvatarProps } from '../Avatar'
+import Avatar, { AvatarProps } from '../Avatar'
 
-type AvatarGroupProps = React.HTMLAttributes<HTMLDivElement> & {
+type AvatarGroupProps = Omit<React.HTMLAttributes<HTMLDivElement>, 'children'> &
+  Omit<AvatarProps, 'children'> & {
   children: ReactElement<AvatarProps>[]
+  max?: number
 }
 
 const AvatarGroup = React.forwardRef<HTMLDivElement, AvatarGroupProps>(
-  ({ children, className, ...props }, ref): JSX.Element => {
+  ({ max = Infinity, children, className, ...props }, ref): JSX.Element => {
     const classes = clsx('avatar-group', '-space-x-6', className)
 
     return (
@@ -18,7 +20,16 @@ const AvatarGroup = React.forwardRef<HTMLDivElement, AvatarGroupProps>(
         className={classes}
         ref={ref}
       >
-        {children}
+        {children.slice(0, Math.min(children.length, max)).map((child) => (
+          cloneElement(child, {...props})
+        ))}
+        {children.length > max && (
+          <Avatar
+            className='bg-neutral-focus text-neutral-content'
+            letters={'+' + (children.length - max).toString()}
+            {...props}
+          />
+        )}
       </div>
     )
   }
