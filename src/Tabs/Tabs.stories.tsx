@@ -16,7 +16,7 @@ export default {
   },
 } as Meta
 
-export const Default: Story<TabsProps<number>> = (args) => {
+const Template: Story<TabsProps<number>> = (args) => {
   return (
     <Tabs {...args}>
       <Tab value={0}>Tab 1</Tab>
@@ -26,9 +26,21 @@ export const Default: Story<TabsProps<number>> = (args) => {
   )
 }
 
+export const Default = Template.bind({})
+Default.args = {}
+
+export const Bordered = Template.bind({})
+Bordered.args = { variant: 'bordered' }
+
+export const Lifted = Template.bind({})
+Lifted.args = { variant: 'lifted' }
+
+export const Boxed = Template.bind({})
+Boxed.args = { boxed: true }
+
 export const Sizes: Story<TabsProps<number>> = ({ size, ...args }) => {
   return (
-    <div className="flex flex-col gap-4 items-center">
+    <div className="flex flex-col gap-6 items-center">
       <Tabs {...args} size="xs">
         <Tab value={0}>Tiny</Tab>
         <Tab value={1}>Tiny</Tab>
@@ -52,3 +64,4 @@ export const Sizes: Story<TabsProps<number>> = ({ size, ...args }) => {
     </div>
   )
 }
+Sizes.args = { variant: 'lifted' }
