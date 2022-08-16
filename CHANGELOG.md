@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.1](https://github.com/daisyui/react-daisyui/compare/v2.3.0...v2.3.1) (2022-08-16)
+
+
+### Miscellaneous
+
+* add new themes to storybook ([#193](https://github.com/daisyui/react-daisyui/issues/193)) ([2c75be0](https://github.com/daisyui/react-daisyui/commit/2c75be0bb74e068a5adda2aaf419af677eeaf2ae))
+
 ## [2.3.0](https://github.com/daisyui/react-daisyui/compare/v2.2.0...v2.3.0) (2022-08-16)
 
 
