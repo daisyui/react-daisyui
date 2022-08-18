@@ -12,7 +12,8 @@
   "exports": {
     "import": "./dist/react-daisyui.modern.js",
     "require": "./dist/react-daisyui.cjs",
-    "default": "./dist/react-daisyui.modern.js"
+    "default": "./dist/react-daisyui.modern.js",
+    "types": "./dist/index.d.ts"
   },
   "main": "./dist/react-daisyui.cjs",
   "module": "./dist/react-daisyui.esm.js",
