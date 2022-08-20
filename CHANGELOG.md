@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.2](https://github.com/daisyui/react-daisyui/compare/v2.3.1...v2.3.2) (2022-08-20)
+
+
+### Bug Fixes
+
+* fix typings reference for ESM ([#198](https://github.com/daisyui/react-daisyui/issues/198)) ([63dc62e](https://github.com/daisyui/react-daisyui/commit/63dc62ebdb35636b8dcb938715a1c756aa1a14bf))
+
 ## [2.3.1](https://github.com/daisyui/react-daisyui/compare/v2.3.0...v2.3.1) (2022-08-16)
 
 
