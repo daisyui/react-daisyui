@@ -10,7 +10,7 @@ import React, {
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-import { IComponentBaseProps } from '../types'
+import { IComponentBaseProps, ComponentColor } from '../types'
 
 import CarouselItem, {
   CarouselItemProps,
@@ -25,6 +25,7 @@ export type CarouselProps = React.HTMLAttributes<HTMLDivElement> &
     snap?: 'start' | 'center' | 'end'
     vertical?: boolean
     width?: CarouselItemWidth
+    color?: ComponentColor
     buttonStyle?: (value: string) => React.ReactElement
   }
 
@@ -39,6 +40,7 @@ const Carousel = forwardRef<HTMLDivElement, CarouselProps>(
       buttonStyle,
       dataTheme,
       className,
+      color,
       ...props
     },
     ref
@@ -113,6 +115,7 @@ const Carousel = forwardRef<HTMLDivElement, CarouselProps>(
 
               return (
                 <Button
+                  color={color}
                   active={i === activeIndex}
                   key={i}
                   onClick={() => scrollToIndex(i)}
