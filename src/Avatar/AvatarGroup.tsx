@@ -3,13 +3,15 @@ import clsx from 'clsx'
 
 import { AvatarProps } from '../Avatar'
 
-type AvatarGroupProps = React.HTMLAttributes<HTMLDivElement> & {
+export type AvatarGroupProps = React.HTMLAttributes<HTMLDivElement> & {
   children: ReactElement<AvatarProps>[]
+  space?: number
 }
 
 const AvatarGroup = React.forwardRef<HTMLDivElement, AvatarGroupProps>(
-  ({ children, className, ...props }, ref): JSX.Element => {
-    const classes = clsx('avatar-group', '-space-x-6', className)
+  ({ children, space = -6, className, ...props }, ref): JSX.Element => {
+    const spacingClassName = `${space < 0 ? '-':''}space-x-${Math.abs(space)}`
+    const classes = clsx('avatar-group', spacingClassName, className)
 
     return (
       <div

@@ -2,6 +2,7 @@ import React from 'react'
 import { Story, Meta } from '@storybook/react'
 
 import Avatar, { AvatarProps } from '.'
+import { AvatarGroupProps } from './AvatarGroup'
 
 export default {
   title: 'Data Display/Avatar',
@@ -42,9 +43,9 @@ CustomSize.argTypes = {
   },
 }
 
-export const Group: Story<AvatarProps> = (args) => {
+export const Group: Story<AvatarProps & AvatarGroupProps> = (args) => {
   return (
-    <Avatar.Group>
+    <Avatar.Group space={args.space}>
       <Avatar {...args} />
       <Avatar {...args} />
       <Avatar {...args} />
@@ -53,6 +54,7 @@ export const Group: Story<AvatarProps> = (args) => {
 }
 Group.args = {
   src: 'http://daisyui.com/tailwind-css-component-profile-1@94w.png',
+  space: -6
 }
 
 export const Ring = Template.bind({})
