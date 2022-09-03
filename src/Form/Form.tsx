@@ -5,15 +5,15 @@ import { IComponentBaseProps } from '../types'
 
 import Label from './Label'
 
-export type FormProps = React.HTMLAttributes<HTMLDivElement> &
+export type FormProps = React.HTMLAttributes<HTMLFormElement> &
   IComponentBaseProps
 
-const Form = React.forwardRef<HTMLDivElement, FormProps>(
+const Form = React.forwardRef<HTMLFormElement, FormProps>(
   ({ children, dataTheme, className, ...props }, ref): JSX.Element => {
     const classes = twMerge('form-control', className)
 
     return (
-      <div
+      <form
         role="form"
         {...props}
         data-theme={dataTheme}
@@ -21,7 +21,7 @@ const Form = React.forwardRef<HTMLDivElement, FormProps>(
         ref={ref}
       >
         {children}
-      </div>
+      </form>
     )
   }
 )
