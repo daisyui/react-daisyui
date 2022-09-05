@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.4.0](https://github.com/daisyui/react-daisyui/compare/v2.3.2...v2.4.0) (2022-09-04)
+
+
+### Features
+
+* **AvatarGroup:** add optional space prop ([#202](https://github.com/daisyui/react-daisyui/issues/202)) ([f1814fd](https://github.com/daisyui/react-daisyui/commit/f1814fd0ff51b3b701bf258a382c72581deb95cb))
+
+
+### Bug Fixes
+
+* **Form:** Using <form> as root element instead of <div> element ([#205](https://github.com/daisyui/react-daisyui/issues/205)) ([b382f4d](https://github.com/daisyui/react-daisyui/commit/b382f4d6a1b73c23ba29932017fb47a286f8e02e))
+
 ## [2.3.2](https://github.com/daisyui/react-daisyui/compare/v2.3.1...v2.3.2) (2022-08-20)
 
 
