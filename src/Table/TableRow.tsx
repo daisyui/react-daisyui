@@ -24,7 +24,7 @@ const TableRow = React.forwardRef<HTMLTableRowElement, TableRowProps>(
     return (
       <tr {...props} className={classes} ref={ref}>
         {children?.map((child, i) => 
-          i < 1 ? <th>{child}</th> : <td>{child}</td>
+          i < 1 ? <th key={i}>{child}</th> : <td key={i}>{child}</td>
         )}
       </tr>
     )
