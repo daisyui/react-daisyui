@@ -24,13 +24,13 @@ const Dropdown = React.forwardRef<HTMLDivElement, DropdownProps>(
   ): JSX.Element => {
     const classes = twMerge(
       'dropdown',
+      className,
       clsx({
         [`dropdown-${horizontal}`]: horizontal,
         [`dropdown-${vertical}`]: vertical,
         'dropdown-hover': hover,
         'dropdown-open': open,
-      }),
-      className
+      })
     )
 
     return (
