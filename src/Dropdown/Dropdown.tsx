@@ -19,7 +19,7 @@ export type DropdownProps = React.HTMLAttributes<HTMLDivElement> &
 
 const Dropdown = React.forwardRef<HTMLDivElement, DropdownProps>(
   (
-    { children, item, horizontal, vertical, hover, open, dataTheme, ...props },
+    { children, className, item, horizontal, vertical, hover, open, dataTheme, ...props },
     ref
   ): JSX.Element => {
     const classes = twMerge(
@@ -29,7 +29,8 @@ const Dropdown = React.forwardRef<HTMLDivElement, DropdownProps>(
         [`dropdown-${vertical}`]: vertical,
         'dropdown-hover': hover,
         'dropdown-open': open,
-      })
+      }),
+      className
     )
 
     return (
