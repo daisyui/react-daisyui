@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.4.1](https://github.com/daisyui/react-daisyui/compare/v2.4.0...v2.4.1) (2022-09-11)
+
+
+### Bug Fixes
+
+* **Dropdown:** the Dropdown didn't handle its custom className from its props properly ([#210](https://github.com/daisyui/react-daisyui/issues/210)) ([f177e18](https://github.com/daisyui/react-daisyui/commit/f177e18a67aad67ff46ec71ca59be82d18159254))
+* **Table:** not passing the 'key' prop to children of lists ([#208](https://github.com/daisyui/react-daisyui/issues/208)) ([60910e8](https://github.com/daisyui/react-daisyui/commit/60910e863373e6bcd301c7d0b734cb93be35fa79))
+
 ## [2.4.0](https://github.com/daisyui/react-daisyui/compare/v2.3.2...v2.4.0) (2022-09-04)
 
 
