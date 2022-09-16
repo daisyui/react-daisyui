@@ -31,3 +31,14 @@ Default.args = {
   ),
   item: <Badge color="error" />,
 }
+
+export const ResponsiveNotificationBubble: Story<IndicatorProps> = (args) => {
+  return <Indicator {...args} />
+}
+
+ResponsiveNotificationBubble.args = {
+  children: (
+    <Avatar src="http://daisyui.com/tailwind-css-component-profile-1@94w.png" />
+  ),
+  item: <Badge responsive={true} color="success" children={<div>7</div>} />,
+}
