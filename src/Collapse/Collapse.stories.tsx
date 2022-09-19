@@ -24,7 +24,18 @@ const Template: Story<CollapseProps> = (args) => {
 export const Default = Template.bind({})
 Default.args = {}
 
-export const Checkbox = Template.bind({})
+export const Checkbox = (args) => {
+  return (
+    <Collapse {...args}>
+      <Collapse.Title className="text-xl font-medium">
+        Click me to show/hide content
+      </Collapse.Title>
+      <Collapse.Content>
+        hello
+      </Collapse.Content>
+    </Collapse>
+  )
+}
 Checkbox.args = {
   checkbox: true,
 }
@@ -46,13 +57,35 @@ WithPlusMinus.args = {
   icon: 'plus',
 }
 
-export const ForceOpen = Template.bind({})
+export const ForceOpen = (args) => {
+  return (
+    <Collapse {...args}>
+      <Collapse.Title className="text-xl font-medium">
+        I have collapse-open class
+      </Collapse.Title>
+      <Collapse.Content>
+        tabindex="0" attribute is necessary to make the div focusable
+      </Collapse.Content>
+    </Collapse>
+  )
+}
 ForceOpen.args = {
   className: 'border border-base-300 bg-base-100 rounded-box',
   open: true,
 }
 
-export const ForceClose = Template.bind({})
+export const ForceClose = (args) => {
+  return (
+    <Collapse {...args}>
+      <Collapse.Title className="text-xl font-medium">
+        I have collapse-close class
+      </Collapse.Title>
+      <Collapse.Content>
+        tabindex="0" attribute is necessary to make the div focusable
+      </Collapse.Content>
+    </Collapse>
+  )
+}
 ForceClose.args = {
   className: 'border border-base-300 bg-base-100 rounded-box',
   open: false,

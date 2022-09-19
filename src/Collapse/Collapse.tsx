@@ -1,4 +1,4 @@
-import React, { MutableRefObject, useEffect, useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
@@ -43,6 +43,7 @@ const Collapse = React.forwardRef<HTMLDivElement, CollapseProps>(
       })
     )
 
+    const [isChecked, setIsChecked] = useState(open)
     const checkboxRef = useRef<HTMLInputElement>(null)
 
     // Handle events for checkbox changes
@@ -55,6 +56,8 @@ const Collapse = React.forwardRef<HTMLDivElement, CollapseProps>(
       } else if (onClose && !checkboxRef.current?.checked) {
         onClose()
       }
+      
+      setIsChecked(checkboxRef.current?.checked)
     }
 
     // Handle blur events, specifically handling open/close for non checkbox types
@@ -76,7 +79,7 @@ const Collapse = React.forwardRef<HTMLDivElement, CollapseProps>(
         aria-expanded={open}
         {...props}
         ref={ref}
-        tabIndex={0}
+        tabIndex={isChecked === true ? undefined : 0}
         data-theme={dataTheme}
         className={classes}
         onBlur={handleBlur}
@@ -85,6 +88,7 @@ const Collapse = React.forwardRef<HTMLDivElement, CollapseProps>(
         {checkbox && (
           <input
             type="checkbox"
+            tabIndex={isChecked === true ? 0 : undefined}
             className="peer"
             ref={checkboxRef}
             onChange={handleCheckboxChange}
