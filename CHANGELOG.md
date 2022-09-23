@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.4.2](https://github.com/daisyui/react-daisyui/compare/v2.4.1...v2.4.2) (2022-09-19)
+
+
+### Bug Fixes
+
+* **Checkbox:** remove checked and defaultChecked props ([#216](https://github.com/daisyui/react-daisyui/issues/216)) ([c8e5b2f](https://github.com/daisyui/react-daisyui/commit/c8e5b2fbc929ddd9dec4f21febca22a29940e992))
+* **Collapse:** checkbox not closing on ios while focusable tabindex ([#217](https://github.com/daisyui/react-daisyui/issues/217)) ([3fa2329](https://github.com/daisyui/react-daisyui/commit/3fa232967bd6fc3e00b213286ae83d54130e1d8a))
+
 ## [2.4.1](https://github.com/daisyui/react-daisyui/compare/v2.4.0...v2.4.1) (2022-09-11)
 
 
