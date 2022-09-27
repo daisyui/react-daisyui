@@ -10,70 +10,69 @@ export default {
 
 export const Default: Story<RatingProps> = (args) => {
   return (
-    <Rating {...args}>
+    <Rating onRatingChange={console.log} {...args}>
       <Rating.Item name="rating-1" className="mask mask-star" />
-      <Rating.Item name="rating-1" className="mask mask-star" checked />
+      <Rating.Item name="rating-1" className="mask mask-star" />
       <Rating.Item name="rating-1" className="mask mask-star" />
       <Rating.Item name="rating-1" className="mask mask-star" />
       <Rating.Item name="rating-1" className="mask mask-star" />
     </Rating>
   )
+}
+Default.args = {
+  rating: 2,
 }
 
 export const MaskStart2WithWarningColor: Story<RatingProps> = (args) => {
   return (
-    <Rating {...args}>
+    <Rating onRatingChange={console.log} {...args}>
       <Rating.Item name="rating-2" className="mask mask-star-2 bg-orange-400" />
-      <Rating.Item
-        name="rating-2"
-        className="mask mask-star-2 bg-orange-400"
-        checked
-      />
+      <Rating.Item name="rating-2" className="mask mask-star-2 bg-orange-400" />
       <Rating.Item name="rating-2" className="mask mask-star-2 bg-orange-400" />
       <Rating.Item name="rating-2" className="mask mask-star-2 bg-orange-400" />
       <Rating.Item name="rating-2" className="mask mask-star-2 bg-orange-400" />
     </Rating>
   )
 }
+MaskStart2WithWarningColor.args = {
+  rating: 2,
+}
 
 export const MaskHeartWithMultipleColors: Story<RatingProps> = (args) => {
   return (
-    <Rating {...args}>
+    <Rating onRatingChange={console.log} {...args}>
       <Rating.Item name="rating-3" className="mask mask-heart bg-red-400" />
-      <Rating.Item
-        name="rating-3"
-        className="mask mask-heart bg-orange-400"
-        checked
-      />
+      <Rating.Item name="rating-3" className="mask mask-heart bg-orange-400" />
       <Rating.Item name="rating-3" className="mask mask-heart bg-yellow-400" />
       <Rating.Item name="rating-3" className="mask mask-heart bg-lime-400" />
       <Rating.Item name="rating-3" className="mask mask-heart bg-green-400" />
     </Rating>
   )
 }
+MaskHeartWithMultipleColors.args = {
+  rating: 2,
+}
 
 export const MaskStart2WithGreen500Color: Story<RatingProps> = (args) => {
   return (
-    <Rating {...args}>
+    <Rating onRatingChange={console.log} {...args}>
       <Rating.Item name="rating-4" className="mask mask-star-2 bg-green-500" />
-      <Rating.Item
-        name="rating-4"
-        className="mask mask-star-2 bg-green-500"
-        checked
-      />
+      <Rating.Item name="rating-4" className="mask mask-star-2 bg-green-500" />
       <Rating.Item name="rating-4" className="mask mask-star-2 bg-green-500" />
       <Rating.Item name="rating-4" className="mask mask-star-2 bg-green-500" />
       <Rating.Item name="rating-4" className="mask mask-star-2 bg-green-500" />
     </Rating>
   )
 }
+MaskStart2WithGreen500Color.args = {
+  rating: 2,
+}
 
 export const RatingHidden: Story<RatingProps> = (args) => {
   return (
-    <Rating {...args}>
-      <Rating.Item name="rating-9" className="rating-hidden" />
+    <Rating onRatingChange={console.log} {...args}>
       <Rating.Item name="rating-9" className="mask mask-star" />
-      <Rating.Item name="rating-9" className="mask mask-star" checked />
+      <Rating.Item name="rating-9" className="mask mask-star" />
       <Rating.Item name="rating-9" className="mask mask-star" />
       <Rating.Item name="rating-9" className="mask mask-star" />
       <Rating.Item name="rating-9" className="mask mask-star" />
@@ -82,12 +81,12 @@ export const RatingHidden: Story<RatingProps> = (args) => {
 }
 RatingHidden.args = {
   size: 'lg',
+  rating: 0,
 }
 
 export const HalfStars: Story<RatingProps> = (args) => {
   return (
-    <Rating {...args}>
-      <Rating.Item name="rating-10" className="rating-hidden" />
+    <Rating onRatingChange={console.log} {...args}>
       <Rating.Item
         name="rating-10"
         className="mask mask-star-2 mask-half-1 bg-green-500"
@@ -99,7 +98,6 @@ export const HalfStars: Story<RatingProps> = (args) => {
       <Rating.Item
         name="rating-10"
         className="mask mask-star-2 mask-half-1 bg-green-500"
-        checked
       />
       <Rating.Item
         name="rating-10"
@@ -138,4 +136,5 @@ export const HalfStars: Story<RatingProps> = (args) => {
 HalfStars.args = {
   size: 'lg',
   half: true,
+  rating: 3,
 }
