@@ -40,7 +40,6 @@ const Rating = React.forwardRef<HTMLDivElement, RatingProps>(
     }
 
     useEffect(() => {
-      console.log('Rating useEffect')
       setRatingState(rating)
     }, [rating])
 
