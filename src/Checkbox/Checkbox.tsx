@@ -26,8 +26,6 @@ export type CheckboxProps = Omit<
 const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
   (
     {
-      checked,
-      defaultChecked = false,
       color,
       size,
       indeterminate,
@@ -66,8 +64,6 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
         {...props}
         ref={checkboxRef}
         type="checkbox"
-        checked={checked}
-        defaultChecked={defaultChecked}
         data-theme={dataTheme}
         className={classes}
       />
