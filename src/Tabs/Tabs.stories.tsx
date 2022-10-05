@@ -17,8 +17,9 @@ export default {
 } as Meta
 
 const Template: Story<TabsProps<number>> = (args) => {
+  const [tabValue, setTabValue] = React.useState(0)
   return (
-    <Tabs {...args}>
+    <Tabs {...args} value={tabValue} onChange={setTabValue}>
       <Tab value={0}>Tab 1</Tab>
       <Tab value={1}>Tab 2</Tab>
       <Tab value={2}>Tab 3</Tab>
