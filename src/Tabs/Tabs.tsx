@@ -1,4 +1,4 @@
-import React, { cloneElement, ReactElement, useState } from 'react'
+import React, { cloneElement, ReactElement } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
@@ -6,7 +6,10 @@ import { IComponentBaseProps, ComponentSize } from '../types'
 
 import Tab, { TabProps } from './Tab'
 
-export type TabsProps<T> = Omit<React.HTMLAttributes<HTMLDivElement>, 'onChange'> &
+export type TabsProps<T> = Omit<
+  React.HTMLAttributes<HTMLDivElement>,
+  'onChange'
+> &
   IComponentBaseProps & {
     children: ReactElement<TabProps<T>>[]
     value?: T
@@ -30,8 +33,6 @@ const TabsInner = <T extends string | number | undefined>(
   }: TabsProps<T>,
   ref?: React.ForwardedRef<T>
 ): JSX.Element => {
-  const [activeValue, setActiveValue] = useState<T | undefined>(value)
-
   const classes = twMerge(
     'tabs',
     className,
@@ -42,19 +43,19 @@ const TabsInner = <T extends string | number | undefined>(
 
   return (
     <div
-      ref={ref as React.ForwardedRef<HTMLDivElement>} 
+      ref={ref as React.ForwardedRef<HTMLDivElement>}
       role="tablist"
       {...props}
       data-theme={dataTheme}
       className={classes}
     >
-      {children.map((child) => {
+      {children.map((child, index) => {
         return cloneElement(child, {
+          key: child.props.value,
           variant,
           size,
-          activeValue: activeValue,
+          activeValue: value,
           onClick: (value: T) => {
-            setActiveValue(value)
             onChange && onChange(value)
           },
         })
