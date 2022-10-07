@@ -69,12 +69,9 @@ const SelectInner = <T extends string | number | undefined>(
         setSelectedValue(e.currentTarget.value as T)
         onChange && onChange(e.currentTarget.value as T)
       }}
+      value={selectedValue}
     >
-      {children.map((child) => {
-        return cloneElement(child, {
-          selectedValue: selectedValue,
-        })
-      })}
+      {children}
     </select>
   )
 }
