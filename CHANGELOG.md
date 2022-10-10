@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.4.3](https://github.com/daisyui/react-daisyui/compare/v2.4.2...v2.4.3) (2022-10-10)
+
+
+### Bug Fixes
+
+* handle Tabs state externally ([#226](https://github.com/daisyui/react-daisyui/issues/226)) ([e0eb9c0](https://github.com/daisyui/react-daisyui/commit/e0eb9c07086c64715cb9dfbcab0f7ca41605b360))
+* Link (<a/> tag) is vulnerable when use `target="_blank"` ([#228](https://github.com/daisyui/react-daisyui/issues/228)) ([40cf7a0](https://github.com/daisyui/react-daisyui/commit/40cf7a044da6b42d9badf3caaaa27412ac89b4e5))
+* **Rating:** rebuild component to a controlled React component ([#222](https://github.com/daisyui/react-daisyui/issues/222)) ([2708419](https://github.com/daisyui/react-daisyui/commit/2708419c0c8f9d3ac8e630904576db94799ee39d))
+* **Select:** fix component warning and update examples ([#224](https://github.com/daisyui/react-daisyui/issues/224)) ([84d78cc](https://github.com/daisyui/react-daisyui/commit/84d78cc8cdfb93a6cad43fb02c3dcc53aafb8c99))
+
 ## [2.4.2](https://github.com/daisyui/react-daisyui/compare/v2.4.1...v2.4.2) (2022-09-19)
 
 
