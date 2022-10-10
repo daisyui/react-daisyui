@@ -11,37 +11,37 @@ export type RatingProps = React.HTMLAttributes<HTMLDivElement> &
     size?: ComponentSize
     half?: boolean
     hidden?: boolean
-    rating: number
-    onRatingChange?: (newRating: number) => void
+    value: number
+    onChange?: (newRating: number) => void
   }
 
 const Rating = React.forwardRef<HTMLDivElement, RatingProps>(
   (
-    { children, size, half, hidden, dataTheme, className, rating, onRatingChange, ...props },
+    { children, size, half, hidden, dataTheme, className, value, onChange, ...props },
     ref
   ): JSX.Element => {
-    const [ratingState, setRatingState] = useState(rating)
+    const [rating, setRating] = useState(value)
     const classes = twMerge(
       'rating',
       className,
       clsx({
         [`rating-${size}`]: size,
         'rating-half': half,
-        'rating-hidden': hidden || ratingState === 0,
+        'rating-hidden': hidden || rating === 0,
       })
     )
 
     const handleOnRatingChange = (newRating: number) => {
-      if (newRating === ratingState) {
+      if (newRating === rating) {
         return
       }
-      setRatingState(newRating)
-      onRatingChange?.(newRating)
+      setRating(newRating)
+      onChange?.(newRating)
     }
 
     useEffect(() => {
-      setRatingState(rating)
-    }, [rating])
+      setRating(value)
+    }, [value])
 
     return (
       <div
@@ -51,7 +51,7 @@ const Rating = React.forwardRef<HTMLDivElement, RatingProps>(
         data-theme={dataTheme}
         className={classes}
       >
-        {ratingState === 0 && (
+        {rating === 0 && (
           <RatingItem
             className={clsx(classes, 'hidden')}
             checked
@@ -61,9 +61,9 @@ const Rating = React.forwardRef<HTMLDivElement, RatingProps>(
         {React.Children.map(children, (child, index) => {
           const childComponent = child as ReactElement<RatingItemProps>
           return React.cloneElement(childComponent, {
-            key: index + ratingState,
-            checked: ratingState === index + 1,
-            readOnly: onRatingChange == null,
+            key: index + rating,
+            checked: rating === index + 1,
+            readOnly: onChange == null,
             onChange: () => handleOnRatingChange(index + 1),
           })
         })}
