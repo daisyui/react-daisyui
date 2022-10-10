@@ -26,6 +26,7 @@ const Link = forwardRef<HTMLAnchorElement, LinkProps>(
 
     return (
       <a
+        rel="noopener noreferrer"
         {...props}
         href={href}
         data-theme={dataTheme}
