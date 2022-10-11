@@ -50,8 +50,6 @@ const WindowMockup = forwardRef<HTMLDivElement, WindowMockupProps>(
       className
     )
 
-    console.log('classes', classes)
-
     // If border is true, then we need to add the border-t and padding classes to the children
     // if more than one child is passed in, or the single child is not a valid element, then we need to wrap the child/children in a div
 
@@ -65,12 +63,10 @@ const WindowMockup = forwardRef<HTMLDivElement, WindowMockupProps>(
       'p-4'
     )
 
-    console.log('innerClasses', innerClasses)
-
     // Add the innerClasses to the child element, merging classNames if existing, or wrapping with div and adding innerClasses
     const innerEl =
       firstChild && React.isValidElement(firstChild) ? (
-        React.cloneElement(firstChild, {
+        React.cloneElement(firstChild as React.ReactElement, {
           className: twMerge(innerClasses, firstChild.props.className),
         })
       ) : (

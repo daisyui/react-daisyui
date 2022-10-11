@@ -13,7 +13,7 @@ const meta: Meta = {
   argTypes: {
     color: {
       control: { type: 'select' },
-      options: componentColors
+      options: componentColors,
     },
   },
 }
