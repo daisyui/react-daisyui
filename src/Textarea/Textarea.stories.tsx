@@ -7,7 +7,7 @@ export default {
   title: 'Data Input/Textarea',
   component: Textarea,
   args: {
-    placeHolder: 'Bio',
+    placeholder: 'Bio',
     disabled: false,
   },
 } as Meta
