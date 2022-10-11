@@ -11,7 +11,6 @@ export default {
     size: {
       name: 'size',
       control: { type: 'radio' },
-      defaultValue: 'md',
       options: ['lg', 'md', 'sm', 'xs'],
     },
   },
