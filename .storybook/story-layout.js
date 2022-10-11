@@ -55,7 +55,7 @@ const StoryLayout = ({ children, title, description, source }) => {
               className='z-10 -mb-px'
               variant='lifted'
               value={tab}
-              onChange={(t) => setTab(t)}
+              onChange={(tab) => setTab(tab === 'fullWidthClick' ? 'html' : tab)}
             >
               <Tabs.Tab value="preview" className="[--tab-bg:hsl(var(--b2))]">
                 Preview
@@ -63,7 +63,7 @@ const StoryLayout = ({ children, title, description, source }) => {
               <Tabs.Tab value="html" className={tab === 'html' ? "[--tab-bg:hsl(var(--n))] [--tab-border-color:hsl(var(--n))] [--tab-color:hsl(var(--nc))]" : ""}>
                 HTML
               </Tabs.Tab> 
-              <Tabs.Tab value="html" className="mr-6 flex-1 cursor-default [--tab-border-color:transparent]" /> 
+              <Tabs.Tab value="fullWidthClick" className="mr-6 flex-1 cursor-default [--tab-border-color:transparent]" /> 
             </Tabs>
             <div className='rounded-b-box rounded-tr-box relative overflow-x-auto'>
               {tab === 'preview' ? (
