@@ -1,4 +1,5 @@
 import React from 'react'
+import { twMerge } from 'tailwind-merge'
 
 import StoryLayout from './story-layout'
 
@@ -59,6 +60,12 @@ export const decorators = [
     <StoryLayout
       title={options.title}
       description={options.story}
+      containerClassName={
+        twMerge(
+          options.parameters?.defaultContainerClassName,
+          options.parameters?.containerClassName,
+        )
+      }
       source={
         options.parameters.storySource.source.
         /* TODO: clean up all this string formatting/regex */

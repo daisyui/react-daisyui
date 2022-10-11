@@ -33,7 +33,7 @@ const StoryLayout = ({ children, title, description, source, containerClassName 
           {/* Mobile view */}
           <div className='block sm:hidden'>
             <div className={twMerge('block', containerClassName)}>
-              {children}
+            {children}
             </div>
             <CodeMockup className="w-full mb-8 mt-3">
               <Highlight {...defaultProps} theme={theme} code={source} language="jsx">
@@ -58,7 +58,7 @@ const StoryLayout = ({ children, title, description, source, containerClassName 
               className='z-10 -mb-px'
               variant='lifted'
               value={tab}
-              onChange={(t) => setTab(t)}
+              onChange={(tab) => setTab(tab === 'fullWidthClick' ? 'html' : tab)}
             >
               <Tabs.Tab value="preview" className="[--tab-bg:hsl(var(--b2))]">
                 Preview
@@ -66,19 +66,14 @@ const StoryLayout = ({ children, title, description, source, containerClassName 
               <Tabs.Tab value="html" className={tab === 'html' ? "[--tab-bg:hsl(var(--n))] [--tab-border-color:hsl(var(--n))] [--tab-color:hsl(var(--nc))]" : ""}>
                 HTML
               </Tabs.Tab> 
-              <Tabs.Tab value="html" className="mr-6 flex-1 cursor-default [--tab-border-color:transparent]" /> 
+              <Tabs.Tab value="fullWidthClick" className="mr-6 flex-1 cursor-default [--tab-border-color:transparent]" /> 
             </Tabs>
             <div className='rounded-b-box rounded-tr-box relative overflow-x-auto'>
               {tab === 'preview' ? (
                 <div
-                  className={
-                    twMerge(
-                      "preview border-base-300 bg-base-200 rounded-b-box rounded-tr-box \
-                      flex min-h-[6rem] min-w-[18rem] flex-wrap items-center justify-center gap-2 \
-                      overflow-x-hidden overflow-y-hidden border bg-cover bg-top p-4",
-                      containerClassName
-                    )
-                  }
+                  className={twMerge("preview border-base-300 bg-base-200 rounded-b-box rounded-tr-box \
+                            flex min-h-[6rem] min-w-[18rem] flex-wrap items-center justify-center gap-2 \
+                            overflow-x-hidden overflow-y-hidden border bg-cover bg-top p-4", containerClassName)}
                   style={{ backgroundSize: '5px 5px' }}
                 >
                   {children}
