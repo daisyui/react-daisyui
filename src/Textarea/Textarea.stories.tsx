@@ -4,10 +4,10 @@ import { Story, Meta } from '@storybook/react'
 import Textarea, { TextareaProps } from '.'
 
 export default {
-  title: 'Data input/TextArea',
+  title: 'Data Input/Textarea',
   component: Textarea,
   args: {
-    placeHolder: 'Bio',
+    placeholder: 'Bio',
     disabled: false,
   },
 } as Meta

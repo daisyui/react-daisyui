@@ -11,7 +11,10 @@ const meta: Meta = {
     controls: { expanded: true },
   },
   argTypes: {
-    color: { control: { type: 'select', options: componentColors } },
+    color: {
+      control: { type: 'select' },
+      options: componentColors,
+    },
   },
 }
 

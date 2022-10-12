@@ -28,6 +28,8 @@ Install the package with npm or yarn:
 
 ```bash
 npm install react-daisyui
+or
+yarn add react-daisyui
 ```
 
 To prevent TailwindCSS from purging your styles, add the following line to your tailwind.config.js:
