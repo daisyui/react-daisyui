@@ -85,6 +85,7 @@ const Carousel = forwardRef<HTMLDivElement, CarouselProps>(
         >
           {children.map((child, i) => {
             return cloneElement(child, {
+              key: i,
               innerRef: itemRefs[i],
               index: i + 1,
               children: child.props.children,
