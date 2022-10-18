@@ -36,7 +36,10 @@ const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
       clsx({
         'tooltip-open': open,
         [`tooltip-${color}`]: color,
-        [`tooltip-${position}`]: position,
+        'tooltip-top': position === 'top',
+        'tooltip-bottom': position === 'bottom',
+        'tooltip-left': position === 'left',
+        'tooltip-right': position === 'right',
       })
     )
 
