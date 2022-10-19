@@ -48,8 +48,8 @@ const Range = forwardRef<HTMLInputElement, RangeProps>(
         />
         {isNumeric(step) && (
           <div className="w-full flex justify-between text-xs px-2">
-            {[...Array(numSteps + 1)].map(() => {
-              return <span>|</span>
+            {[...Array(numSteps + 1)].map((_, i) => {
+              return <span key={i}>|</span>
             })}
           </div>
         )}

@@ -9,7 +9,9 @@ export default {
   component: Avatar,
   argTypes: {
     size: {
-      control: { type: 'radio', options: ['lg', 'md', 'sm', 'xs'] },
+      name: 'size',
+      control: { type: 'radio' },
+      options: ['lg', 'md', 'sm', 'xs'],
     },
   },
 } as Meta
@@ -80,14 +82,14 @@ const reactLogoSvg = (
     width="600px"
     height="600px"
     viewBox="0 0 600 600"
-    enable-background="new 0 0 600 600"
+    enableBackground="new 0 0 600 600"
   >
     <g id="Layer_2">
       <path
         fill="none"
         stroke="#E91E63"
-        stroke-width="24"
-        stroke-miterlimit="10"
+        strokeWidth="24"
+        strokeMiterlimit="10"
         d="M371.987,227.641
 		c47.628,47.628,85.039,98.708,106.914,143.552c26.358,54.033,30.096,99.722,11.103,118.714
 		c-19.793,19.793-68.267,15.884-125.731-12.979c-43.445-21.821-92.031-59.119-137.242-104.331
@@ -97,8 +99,8 @@ const reactLogoSvg = (
       <path
         fill="none"
         stroke="#E91E63"
-        stroke-width="24"
-        stroke-miterlimit="10"
+        strokeWidth="24"
+        strokeMiterlimit="10"
         d="M272.931,201.125
 		c65.052-17.465,127.989-24.354,177.767-20.902c59.974,4.16,101.42,23.747,108.385,49.688
 		c7.259,27.033-20.345,67.073-74.054,102.434c-40.608,26.733-97.189,50.188-158.941,66.769
@@ -108,8 +110,8 @@ const reactLogoSvg = (
       <path
         fill="none"
         stroke="#E91E63"
-        stroke-width="24"
-        stroke-miterlimit="10"
+        strokeWidth="24"
+        strokeMiterlimit="10"
         d="M200.469,273.707
 		c17.357-65.081,42.82-123.05,70.671-164.45c33.556-49.882,71.225-76.008,97.178-69.086c27.045,7.212,47.949,51.123,51.76,115.315
 		c2.883,48.533-5.055,109.266-21.531,171.046c-16.892,63.341-40.126,121.389-67.562,162.365

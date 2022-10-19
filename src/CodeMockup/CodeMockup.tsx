@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
-import { CodeMockupLine } from './CodeMockupLine'
+import { CodeMockupLine, CodeMockupLineProps } from './CodeMockupLine'
 
 export type CodeMockupProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps
@@ -19,7 +19,12 @@ const CodeMockup = forwardRef<HTMLDivElement, CodeMockupProps>(
         className={classes}
         ref={ref}
       >
-        {children}
+        {React.Children.map(children, (child, index) => {
+          const childComponent = child as React.ReactElement<CodeMockupLineProps>
+          return React.cloneElement(childComponent, {
+              key: index,
+          })
+        })}
       </div>
     )
   }
