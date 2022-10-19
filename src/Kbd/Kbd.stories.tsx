@@ -18,9 +18,9 @@ export const Default: Story<KbdProps> = (args) => {
 
 export const InText: Story<KbdProps> = (args) => {
   return (
-    <div className="font-sans">
+    <>
       Press <Kbd {...args}>F</Kbd> to pay respects.
-    </div>
+    </>
   )
 }
 InText.args = {

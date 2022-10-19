@@ -25,7 +25,7 @@ export const Default: Story<StatsProps> = (args) => {
 
 export const IconsOrImage: Story<StatsProps> = (args) => {
   return (
-    <Stats {...args} className="shadow font-sans">
+    <Stats {...args} className="shadow">
       <Stats.Stat>
         <Stat.Item variant="figure" className="text-primary">
           <svg
@@ -108,7 +108,7 @@ export const IconsOrImage: Story<StatsProps> = (args) => {
 
 export const CenteredItems: Story<StatsProps> = (args) => {
   return (
-    <Stats {...args} className="shadow font-sans">
+    <Stats {...args} className="shadow">
       <Stats.Stat className="place-items-center">
         <Stat.Item variant="title">Downloads</Stat.Item>
         <Stat.Item variant="value">31K</Stat.Item>
@@ -136,7 +136,7 @@ export const CenteredItems: Story<StatsProps> = (args) => {
 
 export const Vertical: Story<StatsProps> = (args) => {
   return (
-    <Stats {...args} className="shadow font-sans">
+    <Stats {...args} className="shadow">
       <Stats.Stat>
         <Stat.Item variant="title">Downloads</Stat.Item>
         <Stat.Item variant="value">31K</Stat.Item>
@@ -187,7 +187,7 @@ export const Responsive: Story<StatsProps> = (args) => {
 
 export const CustomColorsAndButton: Story<StatsProps> = (args) => {
   return (
-    <Stats {...args} className="font-sans bg-primary text-primary-content">
+    <Stats {...args} className="bg-primary text-primary-content">
       <Stats.Stat>
         <Stat.Item variant="title">Account balance</Stat.Item>
         <Stat.Item variant="value">$89,400</Stat.Item>

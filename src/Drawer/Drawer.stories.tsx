@@ -78,7 +78,6 @@ export const NavbarMenuForDesktopSidebarDrawerForMobile: Story<DrawerProps> = (
       {...args}
       open={visible}
       onClickOverlay={toggleVisible}
-      className="font-sans"
     >
       <Navbar>
         <div className="flex-none lg:hidden">

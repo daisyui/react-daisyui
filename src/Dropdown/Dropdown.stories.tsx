@@ -48,7 +48,7 @@ export const AsCard: Story<DropdownProps> = (args) => {
 
 export const InNavbar: Story<DropdownProps> = ({ dataTheme, ...args }) => {
   return (
-    <Navbar className="my-32 px-2 font-sans" color="dark" dataTheme={dataTheme}>
+    <Navbar className="my-32 px-2" color="dark" dataTheme={dataTheme}>
       <Navbar.Start>
         <span className="text-lg font-bold">daisyUI</span>
       </Navbar.Start>
@@ -70,7 +70,7 @@ export const InNavbar: Story<DropdownProps> = ({ dataTheme, ...args }) => {
 
 export const Helper: Story<DropdownProps> = (args) => {
   return (
-    <div className="my-32 font-sans">
+    <div className="my-32">
       A normal text and a helper dropdown
       <Dropdown {...args}>
         <Button shape="circle" className="text-info" color="ghost" size="xs">

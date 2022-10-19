@@ -13,13 +13,9 @@
  * however we cannot add transparency to the base-content color variable.
  */
 .preview {
-  background: radial-gradient(var(--base-100), 0.5px, var(--base-200) 0.5px);
-  background-size: 5px 5px;
-}
-.component-preview {
-  background-image: radial-gradient(
-    hsla(var(--bc) / 0.2) 0.5px,
-    hsla(var(--b2) / 1) 0.5px
+  background: radial-gradient(
+    var(--base-100), 0.5px,
+    var(--base-200) 0.5px
   );
   background-size: 5px 5px;
 }

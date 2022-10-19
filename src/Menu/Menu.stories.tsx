@@ -9,9 +9,6 @@ const responsiveArgType = {
 export default {
   title: 'Navigation/Menu',
   component: Menu,
-  parameters: {
-    defaultContainerClassName: 'font-sans',
-  },
   args: {
     className: 'bg-base-100 w-56 shadow-xl',
   },

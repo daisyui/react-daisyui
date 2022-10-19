@@ -75,7 +75,7 @@ const StoryLayout = ({ children, title, description, source, containerClassName 
                     twMerge(
                       "preview border-base-300 bg-base-200 rounded-b-box rounded-tr-box \
                       flex min-h-[6rem] min-w-[18rem] flex-wrap items-center justify-center gap-2 \
-                      overflow-x-hidden overflow-y-hidden border bg-cover bg-top p-4",
+                      overflow-x-hidden overflow-y-hidden border bg-cover bg-top p-4 font-sans",
                       containerClassName
                     )
                   }

@@ -6,9 +6,6 @@ import Input, { InputProps } from '.'
 export default {
   title: 'Data Input/Input',
   component: Input,
-  parameters: {
-    defaultContainerClassName: 'font-sans',
-  },
   args: {
     placeholder: 'Type here',
     className: 'w-full max-w-xs',

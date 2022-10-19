@@ -19,52 +19,48 @@ export default {
 
 export const Default: Story<SelectProps<string>> = (args) => {
   return (
-    <div className="flex w-full component-preview p-4 items-center justify-center gap-2 font-sans">
-      <Select 
-        initialValue={'default'}
-        onChange={console.log}
-        {...args}
-      >
-        <Option value={'default'} disabled>
-          Pick your favorite Simpson
-        </Option>
-        <Option value={'Homer'}>Homer</Option>
-        <Option value={'Marge'}>Marge</Option>
-        <Option value={'Bart'}>Bart</Option>
-        <Option value={'Lisa'}>Lisa</Option>
-        <Option value={'Maggie'}>Maggie</Option>
-      </Select>
-    </div>
+    <Select
+      initialValue={'default'}
+      onChange={console.log}
+      {...args}
+    >
+      <Option value={'default'} disabled>
+        Pick your favorite Simpson
+      </Option>
+      <Option value={'Homer'}>Homer</Option>
+      <Option value={'Marge'}>Marge</Option>
+      <Option value={'Bart'}>Bart</Option>
+      <Option value={'Lisa'}>Lisa</Option>
+      <Option value={'Maggie'}>Maggie</Option>
+    </Select>
   )
 }
 
 export const FormControlAndLabels: Story<SelectProps<string>> = (args) => {
   return (
-    <div className="flex w-full component-preview p-4 items-center justify-center gap-2 font-sans">
-      <div className="form-control w-full max-w-xs">
-        <label className="label">
-          <span className="label-text">Pick the best fantasy franchise</span>
-          <span className="label-text-alt">Alt label</span>
-        </label>
-        <Select
-          initialValue={'default'}
-          onChange={console.log}
-          {...args}
-        >
-          <Option value={'default'} disabled>
-            Pick one
-          </Option>
-          <Option value="Star Wars">Star Wars</Option>
-          <Option value="Harry Potter">Harry Potter</Option>
-          <Option value="Lord of the Rings">Lord of the Rings</Option>
-          <Option value="Planet of the Apes">Planet of the Apes</Option>
-          <Option value="Star Trek">Star Trek</Option>
-        </Select>
-        <label className="label">
-          <span className="label-text-alt">Alt label</span>
-          <span className="label-text-alt">Alt label</span>
-        </label>
-      </div>
+    <div className="form-control w-full max-w-xs">
+      <label className="label">
+        <span className="label-text">Pick the best fantasy franchise</span>
+        <span className="label-text-alt">Alt label</span>
+      </label>
+      <Select
+        initialValue={'default'}
+        onChange={console.log}
+        {...args}
+      >
+        <Option value={'default'} disabled>
+          Pick one
+        </Option>
+        <Option value="Star Wars">Star Wars</Option>
+        <Option value="Harry Potter">Harry Potter</Option>
+        <Option value="Lord of the Rings">Lord of the Rings</Option>
+        <Option value="Planet of the Apes">Planet of the Apes</Option>
+        <Option value="Star Trek">Star Trek</Option>
+      </Select>
+      <label className="label">
+        <span className="label-text-alt">Alt label</span>
+        <span className="label-text-alt">Alt label</span>
+      </label>
     </div>
   )
 }

@@ -15,9 +15,6 @@ import Card from '../Card'
 export default {
   title: 'Navigation/Navbar',
   component: Navbar,
-  parameters: {
-    defaultContainerClassName: 'font-sans',
-  },
   args: {
     className: 'bg-base-100 shadow-xl rounded-box',
   },

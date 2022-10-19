@@ -17,7 +17,7 @@ export const Default: Story<ModalProps> = (args) => {
   }
 
   return (
-    <div className="font-sans">
+    <>
       <Button onClick={toggleVisible}>Open Modal</Button>
       <Modal {...args} open={visible}>
         <Modal.Header className="font-bold">
@@ -33,7 +33,7 @@ export const Default: Story<ModalProps> = (args) => {
           <Button onClick={toggleVisible}>Yay!</Button>
         </Modal.Actions>
       </Modal>
-    </div>
+    </>
   )
 }
 
@@ -45,7 +45,7 @@ export const CloseButton: Story<ModalProps> = (args) => {
   }
 
   return (
-    <div className="font-sans">
+    <>
       <Button onClick={toggleVisible}>Open Modal</Button>
       <Modal {...args} open={visible}>
         <Button
@@ -65,7 +65,7 @@ export const CloseButton: Story<ModalProps> = (args) => {
           use Wikipedia for free!
         </Modal.Body>
       </Modal>
-    </div>
+    </>
   )
 }
 
@@ -77,7 +77,7 @@ export const ClickedOutside: Story<ModalProps> = (args) => {
   }
 
   return (
-    <div className="font-sans">
+    <>
       <Button onClick={toggleVisible}>Open Modal</Button>
       <Modal {...args} open={visible} onClickBackdrop={toggleVisible}>
         <Modal.Header className="font-bold">
@@ -89,7 +89,7 @@ export const ClickedOutside: Story<ModalProps> = (args) => {
           use Wikipedia for free!
         </Modal.Body>
       </Modal>
-    </div>
+    </>
   )
 }
 
@@ -101,7 +101,7 @@ export const CustomWidth: Story<ModalProps> = (args) => {
   }
 
   return (
-    <div className="font-sans">
+    <>
       <Button onClick={toggleVisible}>Open Modal</Button>
       <Modal {...args} open={visible}>
         <Modal.Header className="font-bold">
@@ -117,7 +117,7 @@ export const CustomWidth: Story<ModalProps> = (args) => {
           <Button onClick={toggleVisible}>Yay!</Button>
         </Modal.Actions>
       </Modal>
-    </div>
+    </>
   )
 }
 
