@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Story, Meta } from '@storybook/react'
 
 import Select, { SelectProps } from '.'
@@ -18,12 +18,14 @@ export default {
 } as Meta
 
 export const Default: Story<SelectProps<string>> = (args) => {
+  const [value, setValue] = useState('default')
+
   return (
     <div className="flex w-full component-preview p-4 items-center justify-center gap-2 font-sans">
       <Select 
-        initialValue={'default'}
-        onChange={console.log}
         {...args}
+        value={value}
+        onChange={setValue}
       >
         <Option value={'default'} disabled>
           Pick your favorite Simpson
@@ -47,7 +49,7 @@ export const FormControlAndLabels: Story<SelectProps<string>> = (args) => {
           <span className="label-text-alt">Alt label</span>
         </label>
         <Select
-          initialValue={'default'}
+          defaultValue={'default'}
           onChange={console.log}
           {...args}
         >
