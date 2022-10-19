@@ -47,4 +47,19 @@ describe('Footer', () => {
     const quantityLinks = container.getElementsByClassName('link link-hover')
     expect(quantityLinks.length).toBe(4)
   })
+
+  it('Should render Footer link list', () => {
+    const {container} = render(
+      <Footer className="p-10 bg-neutral text-neutral-content">
+      <div>
+        <Footer.Title>{footerTitle}</Footer.Title>
+        {linkList.map((links) => (
+          <a key= {links} className="link link-hover">{links}</a>
+        ))}
+      </div>
+    </Footer>
+    )
+    const linksClassName = container.getElementsByClassName('link link-hover')
+    expect(linksClassName).toBeTruthy()
+  })
 })
