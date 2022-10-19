@@ -1,4 +1,4 @@
-import React, { cloneElement, ReactElement, useState } from 'react'
+import React, { ReactElement } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
@@ -17,7 +17,6 @@ export type SelectProps<T> = Omit<
 > &
   IComponentBaseProps & {
     children: ReactElement<SelectOptionProps<T>>[]
-    initialValue?: T
     value?: T
     onChange?: (value: T) => void
     size?: ComponentSize
@@ -32,7 +31,6 @@ const SelectInner = <T extends string | number | undefined>(
 ): JSX.Element => {
   const {
     children,
-    initialValue,
     value,
     onChange,
     size,
@@ -55,21 +53,14 @@ const SelectInner = <T extends string | number | undefined>(
     })
   )
 
-  const [selectedValue, setSelectedValue] = useState<T | undefined>(
-    value || initialValue
-  )
-
   return (
     <select
       {...rest}
       ref={ref}
       data-theme={dataTheme}
       className={classes}
-      onChange={(e) => {
-        setSelectedValue(e.currentTarget.value as T)
-        onChange && onChange(e.currentTarget.value as T)
-      }}
-      value={selectedValue}
+      onChange={(e) => onChange?.(e.currentTarget.value as T)}
+      value={value}
     >
       {children}
     </select>

@@ -21,7 +21,7 @@ export const Default: Story<SelectProps<string>> = (args) => {
   return (
     <div className="flex w-full component-preview p-4 items-center justify-center gap-2 font-sans">
       <Select 
-        initialValue={'default'}
+        defaultValue={'default'}
         onChange={console.log}
         {...args}
       >
@@ -47,7 +47,7 @@ export const FormControlAndLabels: Story<SelectProps<string>> = (args) => {
           <span className="label-text-alt">Alt label</span>
         </label>
         <Select
-          initialValue={'default'}
+          defaultValue={'default'}
           onChange={console.log}
           {...args}
         >
