@@ -1,9 +1,8 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import Form from '../Form'
-import Radio from './Radio'
-import '@testing-library/jest-dom'
 import userEvent from '@testing-library/user-event'
+import Radio from './Radio'
+import Form from '../Form'
 import Button from '../Button'
 
 const TestRadio2 = () => {

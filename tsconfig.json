@@ -16,8 +16,8 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "jsxFactory": "",
-    "jsxFragmentFactory": "",
+    "jsxFragmentFactory": ""
   },
-  "include": ["./src"],
-  "exclude": ["./src/**/*.stories.tsx"],
+  "include": ["./src", "test-setup.ts"],
+  "exclude": ["./src/**/*.stories.tsx"]
 }
