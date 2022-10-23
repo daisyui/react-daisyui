@@ -1,8 +1,5 @@
-import '@testing-library/jest-dom'
-import React from 'react'
-
-import Range from './Range'
 import { render, screen } from '@testing-library/react'
+import Range from './Range'
 
 describe('Range', () => {
   it('should not render with invalid step', () => {

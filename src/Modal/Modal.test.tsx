@@ -1,9 +1,8 @@
+import React from 'react'
 import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import Modal from './'
 import Button from '../Button'
-import '@testing-library/jest-dom'
-import React from 'react'
-import userEvent from '@testing-library/user-event'
 
 const TestModal = ({ state }: { state: boolean }) => {
   const [open, setOpen] = React.useState(state)

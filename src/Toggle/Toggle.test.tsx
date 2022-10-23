@@ -1,9 +1,8 @@
-import { render, screen } from '@testing-library/react'
-import Toggle from './Toggle'
-import '@testing-library/jest-dom'
-import Form from '../Form'
 import { useState } from 'react'
+import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import Toggle from './Toggle'
+import Form from '../Form'
 
 const ToggleTest = () => {
   const [toggleState, setToggleState] = useState(false)
