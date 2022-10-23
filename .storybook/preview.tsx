@@ -63,9 +63,7 @@ export const decorators = [
         options.parameters.storySource.source.
         /* TODO: clean up all this string formatting/regex */
         /* Removes the args arrow function */
-        replace('(args) => {', '').
-        /* Removes leftover newline from previous replace */
-        replace('\n', '').
+        replace(/\(.*args.*\)\s*=>\s*\{\s*\n/, '').
         /* Removes the last occurence of a closing bracket (from the lambda) */
         replace(/}([^}]*)$/, '$1')
       }

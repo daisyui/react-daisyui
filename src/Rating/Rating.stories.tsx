@@ -11,7 +11,7 @@ export default {
 export const Default: Story<RatingProps> = ({value, onChange, ...args}) => {
   const [rating, setRating] = useState(value)
 
-  // For the Storybook to update the value
+  // For Storybook to update the value with the controls
   useEffect(() => {
     setRating(value)
   }, [value])
@@ -33,7 +33,7 @@ Default.args = {
 export const MaskStart2WithWarningColor: Story<RatingProps> = ({value, onChange, ...args}) => {
   const [rating, setRating] = useState(value)
 
-  // For the Storybook to update the value
+  // For Storybook to update the value with the controls
   useEffect(() => {
     setRating(value)
   }, [value])
@@ -55,7 +55,7 @@ MaskStart2WithWarningColor.args = {
 export const MaskHeartWithMultipleColors: Story<RatingProps> = ({value, onChange, ...args}) => {
   const [rating, setRating] = useState(value)
 
-  // For the Storybook to update the value
+  // For Storybook to update the value with the controls
   useEffect(() => {
     setRating(value)
   }, [value])
@@ -77,7 +77,7 @@ MaskHeartWithMultipleColors.args = {
 export const MaskStart2WithGreen500Color: Story<RatingProps> = ({value, onChange, ...args}) => {
   const [rating, setRating] = useState(value)
 
-  // For the Storybook to update the value
+  // For Storybook to update the value with the controls
   useEffect(() => {
     setRating(value)
   }, [value])
@@ -99,7 +99,7 @@ MaskStart2WithGreen500Color.args = {
 export const RatingHidden: Story<RatingProps> = ({value, onChange, ...args}) => {
   const [rating, setRating] = useState(value)
 
-  // For the Storybook to update the value
+  // For Storybook to update the value with the controls
   useEffect(() => {
     setRating(value)
   }, [value])
@@ -122,7 +122,7 @@ RatingHidden.args = {
 export const HalfStars: Story<RatingProps> = ({value, onChange, ...args}) => {
   const [rating, setRating] = useState(value)
 
-  // For the Storybook to update the value
+  // For Storybook to update the value with the controls
   useEffect(() => {
     setRating(value)
   }, [value])
