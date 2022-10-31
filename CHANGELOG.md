@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.4.5](https://github.com/daisyui/react-daisyui/compare/v2.4.4...v2.4.5) (2022-10-31)
+
+
+### Bug Fixes
+
+* **Tooltip:** positions string interpolation broken ([#235](https://github.com/daisyui/react-daisyui/issues/235)) ([e2e6b10](https://github.com/daisyui/react-daisyui/commit/e2e6b10727a88198b46d2ba7fcec155022594ea4))
+
+
+### Miscellaneous
+
+* **Rating:** uncontrolled rating ([#241](https://github.com/daisyui/react-daisyui/issues/241)) ([96070ac](https://github.com/daisyui/react-daisyui/commit/96070acb7c5f14a73a75defbdaeaa1600c827b0f))
+
 ## [2.4.4](https://github.com/daisyui/react-daisyui/compare/v2.4.3...v2.4.4) (2022-10-19)
 
 
