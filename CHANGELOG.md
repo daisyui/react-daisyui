@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.6](https://github.com/daisyui/react-daisyui/compare/v2.4.5...v2.4.6) (2022-11-01)
+
+
+### Bug Fixes
+
+* types getting generated inside dist/src instead of dist ([#247](https://github.com/daisyui/react-daisyui/issues/247)) ([403a805](https://github.com/daisyui/react-daisyui/commit/403a805d7b303a5cbbdea4e52ba30f4b4fff2646))
+
 ## [2.4.5](https://github.com/daisyui/react-daisyui/compare/v2.4.4...v2.4.5) (2022-10-31)
 
 
