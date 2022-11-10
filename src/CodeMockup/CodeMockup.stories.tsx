@@ -15,9 +15,11 @@ const meta: Meta = {
 export default meta
 
 export const Default: Story<CodeMockupProps> = (args) => {
-  return (<CodeMockup {...args} >
-     <CodeMockup.Line>yarn add daisyui react-daisyui</CodeMockup.Line>
-    </CodeMockup>)
+  return (
+    <CodeMockup {...args}>
+      <CodeMockup.Line>yarn add daisyui react-daisyui</CodeMockup.Line>
+    </CodeMockup>
+  )
 }
 
 export const LinePrefix : Story<CodeMockupProps> = (args) => {
