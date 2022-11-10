@@ -29,6 +29,4 @@ describe('codeMockup', ()=> {
         
         expect(getComputedStyle(screen.getByTestId('code-line'), ':before').getPropertyValue("content")).toEqual("")
     })  
-
-    it('should ')
 })
