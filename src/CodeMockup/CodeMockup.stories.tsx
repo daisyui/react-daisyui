@@ -14,55 +14,59 @@ const meta: Meta = {
 
 export default meta
 
-const Template: Story<CodeMockupProps> = (args) => {
-  return <CodeMockup {...args} />
+export const Default: Story<CodeMockupProps> = (args) => {
+  return (
+    <CodeMockup {...args}>
+      <CodeMockup.Line>yarn add daisyui react-daisyui</CodeMockup.Line>
+    </CodeMockup>
+  )
 }
 
-export const Default = Template.bind({})
-Default.args = {
-  children: <CodeMockup.Line>yarn add daisyui react-daisyui</CodeMockup.Line>,
+export const LinePrefix : Story<CodeMockupProps> = (args) => {
+  return (
+    <CodeMockup {...args}>
+      <CodeMockup.Line dataPrefix="$">
+        yarn add daisyui react-daisyui
+      </CodeMockup.Line>
+    </CodeMockup>
+  )
 }
 
-export const LinePrefix = Template.bind({})
-LinePrefix.args = {
-  children: (
-    <CodeMockup.Line dataPrefix="$">
-      yarn add daisyui react-daisyui
-    </CodeMockup.Line>
-  ),
+export const MultiLine: Story<CodeMockupProps> = (args) => {
+  return (
+    <CodeMockup {...args}>
+      <CodeMockup.Line>yarn add daisyui react-daisyui</CodeMockup.Line>
+      <CodeMockup.Line className="text-warning">installing...</CodeMockup.Line>
+      <CodeMockup.Line className="text-success">Done!</CodeMockup.Line>
+    </CodeMockup>
+  )
 }
 
-export const MultiLine = Template.bind({})
-MultiLine.args = {
-  children: [
-    <CodeMockup.Line>yarn add daisyui react-daisyui</CodeMockup.Line>,
-    <CodeMockup.Line className="text-warning">installing...</CodeMockup.Line>,
-    <CodeMockup.Line className="text-success">Done!</CodeMockup.Line>,
-  ],
+export const HighlightedLine: Story<CodeMockupProps> = (args) => {
+  return (
+    <CodeMockup {...args}>
+      <CodeMockup.Line>yarn add daisyui react-daisyui</CodeMockup.Line>
+      <CodeMockup.Line>installing...</CodeMockup.Line>
+      <CodeMockup.Line status="warning">Error!</CodeMockup.Line>
+    </CodeMockup>
+  )
 }
 
-export const HighlightedLine = Template.bind({})
-HighlightedLine.args = {
-  children: [
-    <CodeMockup.Line>yarn add daisyui react-daisyui</CodeMockup.Line>,
-    <CodeMockup.Line>installing...</CodeMockup.Line>,
-    <CodeMockup.Line status="warning">Error!</CodeMockup.Line>,
-  ],
+export const LongLineWithScroll: Story<CodeMockupProps> = (args) => {
+  return (
+    <CodeMockup {...args}>
+      <CodeMockup.Line dataPrefix="~">
+        Magnam dolore beatae necessitatibus nemopsum itaque sit. Et porro quae qui
+        et et dolore ratione.
+      </CodeMockup.Line>
+    </CodeMockup>
+  )
 }
 
-export const LongLineWithScroll = Template.bind({})
-LongLineWithScroll.args = {
-  children: (
-    <CodeMockup.Line dataPrefix="~">
-      Magnam dolore beatae necessitatibus nemopsum itaque sit. Et porro quae qui
-      et et dolore ratione.
-    </CodeMockup.Line>
-  ),
-}
-
-export const WithoutPrefix = Template.bind({})
-WithoutPrefix.args = {
-  children: (
-    <CodeMockup.Line dataPrefix={false}>without prefix</CodeMockup.Line>
-  ),
+export const WithoutPrefix: Story<CodeMockupProps> = (args) => {
+  return (
+    <CodeMockup {...args}>
+      <CodeMockup.Line dataPrefix={false}>without prefix</CodeMockup.Line>
+    </CodeMockup>
+  )
 }
