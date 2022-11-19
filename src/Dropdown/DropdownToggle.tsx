@@ -29,6 +29,7 @@ const DropdownToggle = ({
     <label tabIndex={0} className={className} {...props}>
       {button ? (
         <Button
+          type='button'
           dataTheme={dataTheme}
           color={color}
           size={size}
