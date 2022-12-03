@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.4.7](https://github.com/daisyui/react-daisyui/compare/v2.4.6...v2.4.7) (2022-12-03)
+
+
+### Miscellaneous
+
+* added new colors for data inputs from daisyui 2.35 ([#259](https://github.com/daisyui/react-daisyui/issues/259)) ([d54bc32](https://github.com/daisyui/react-daisyui/commit/d54bc3254db2543442971cae452614914ddea2a5))
+* updated vite and storybook ([#261](https://github.com/daisyui/react-daisyui/issues/261)) ([8971c9c](https://github.com/daisyui/react-daisyui/commit/8971c9c55ae8ddda032c732014414411af643aaf))
+
 ## [2.4.6](https://github.com/daisyui/react-daisyui/compare/v2.4.5...v2.4.6) (2022-11-01)
 
 
