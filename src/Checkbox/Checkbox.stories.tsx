@@ -33,14 +33,20 @@ const FormTemplate: Story<CheckboxProps> = (args) => {
 export const FormControl = FormTemplate.bind({})
 FormControl.args = {}
 
-export const FormControlPrimary = FormTemplate.bind({})
-FormControlPrimary.args = { color: 'primary' }
-
-export const FormControlSecondary = FormTemplate.bind({})
-FormControlSecondary.args = { color: 'secondary' }
-
-export const FormControlAccent = FormTemplate.bind({})
-FormControlAccent.args = { color: 'accent' }
+export const Colors: Story<CheckboxProps> = (args) => {
+  return (
+    <div className="flex flex-col items-center float-left gap-2">
+      <Checkbox {...args} defaultChecked color="primary" />
+      <Checkbox {...args} defaultChecked color="secondary" />
+      <Checkbox {...args} defaultChecked color="accent" />
+      <Checkbox {...args} defaultChecked color="success" />
+      <Checkbox {...args} defaultChecked color="warning" />
+      <Checkbox {...args} defaultChecked color="info" />
+      <Checkbox {...args} defaultChecked color="error" />
+    </div>
+  )
+}
+Colors.args = {}
 
 export const Sizes: Story<CheckboxProps> = (args) => {
   return (

@@ -4,7 +4,7 @@ import { twMerge } from 'tailwind-merge'
 
 import {
   IComponentBaseProps,
-  ComponentBrandColors,
+  ComponentColor,
   ComponentSize,
 } from '../types'
 
@@ -13,7 +13,7 @@ export type RangeProps = Omit<
   'size'
 > &
   IComponentBaseProps & {
-    color?: ComponentBrandColors
+    color?: ComponentColor
     size?: ComponentSize
   }
 
