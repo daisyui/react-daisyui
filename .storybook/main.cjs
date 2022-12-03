@@ -1,3 +1,5 @@
+const { mergeConfig } = require('vite')
+
 module.exports = {
   stories: [
     './docs/pages/Welcome.stories.mdx',
@@ -27,5 +29,13 @@ module.exports = {
       },
     },
   ],
+  core: {
+    builder: '@storybook/builder-vite',
+  },
   framework: '@storybook/react',
+  async viteFinal(config) {
+    return mergeConfig(config, {
+      optimizeDeps: {},
+    })
+  }
 }
