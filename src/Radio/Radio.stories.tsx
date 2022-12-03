@@ -21,14 +21,18 @@ const Template: Story<RadioProps> = (args) => {
 export const Default = Template.bind({})
 Default.args = {}
 
-export const PrimaryColor = Template.bind({})
-PrimaryColor.args = { color: 'primary' }
-
-export const SecondaryColor = Template.bind({})
-SecondaryColor.args = { color: 'secondary' }
-
-export const AccentColor = Template.bind({})
-AccentColor.args = { color: 'accent' }
+export const Colors: Story<RadioProps> = (args) => (
+  <div className="flex flex-col items-center float-left gap-2">
+    <Radio {...args} defaultChecked color="primary" />
+    <Radio {...args} defaultChecked color="secondary" />
+    <Radio {...args} defaultChecked color="accent" />
+    <Radio {...args} defaultChecked color="success" />
+    <Radio {...args} defaultChecked color="warning" />
+    <Radio {...args} defaultChecked color="info" />
+    <Radio {...args} defaultChecked color="error" />
+  </div>
+)
+Colors.args = {}
 
 export const Disabled = Template.bind({})
 Disabled.args = { disabled: true }
