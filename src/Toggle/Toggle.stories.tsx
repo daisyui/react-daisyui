@@ -29,14 +29,20 @@ const FormTemplate: Story<ToggleProps> = (args) => {
 export const WithLabelAndForm = FormTemplate.bind({})
 WithLabelAndForm.args = {}
 
-export const PrimaryColor = FormTemplate.bind({})
-PrimaryColor.args = { color: 'primary' }
-
-export const SecondaryColor = FormTemplate.bind({})
-SecondaryColor.args = { color: 'secondary' }
-
-export const AccentColor = FormTemplate.bind({})
-AccentColor.args = { color: 'accent' }
+export const Colors: Story<ToggleProps> = (args) => {
+  return (
+    <div className="flex flex-col items-center float-left gap-2">
+      <Toggle {...args} defaultChecked color="primary" />
+      <Toggle {...args} defaultChecked color="secondary" />
+      <Toggle {...args} defaultChecked color="accent" />
+      <Toggle {...args} defaultChecked color="success" />
+      <Toggle {...args} defaultChecked color="warning" />
+      <Toggle {...args} defaultChecked color="info" />
+      <Toggle {...args} defaultChecked color="error" />
+    </div>
+  )
+}
+Colors.args = {}
 
 export const Disabled = Template.bind({})
 Disabled.args = { disabled: true }

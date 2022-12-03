@@ -9,7 +9,7 @@ import { twMerge } from 'tailwind-merge'
 
 import {
   IComponentBaseProps,
-  ComponentBrandColors,
+  ComponentColor,
   ComponentSize,
 } from '../types'
 
@@ -18,7 +18,7 @@ export type CheckboxProps = Omit<
   'size'
 > &
   IComponentBaseProps & {
-    color?: ComponentBrandColors
+    color?: ComponentColor
     size?: ComponentSize
     indeterminate?: boolean
   }
