@@ -42,7 +42,7 @@ module.exports = {
 ```
 
 <details>
-<summary>For Next.js:</summary>
+<summary>For Next.js 12:</summary>
 Install next-transpile modules:
 
 ```bash
