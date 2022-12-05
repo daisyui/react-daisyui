@@ -9,24 +9,32 @@ import {
   ComponentSize,
 } from '../types'
 
-export type ButtonProps = Omit<
+type _ButtonProps = {
+  href?: string
+  shape?: ComponentShape
+  size?: ComponentSize
+  variant?: 'outline' | 'link'
+  color?: ComponentColor
+  fullWidth?: boolean
+  responsive?: boolean
+  animation?: boolean
+  loading?: boolean
+  active?: boolean
+  startIcon?: ReactNode
+  endIcon?: ReactNode
+}
+
+type _ButtonElementProps = Omit<
   React.ButtonHTMLAttributes<HTMLButtonElement>,
   'color'
-> &
-  IComponentBaseProps & {
-    href?: string
-    shape?: ComponentShape
-    size?: ComponentSize
-    variant?: 'outline' | 'link'
-    color?: ComponentColor
-    fullWidth?: boolean
-    responsive?: boolean
-    animation?: boolean
-    loading?: boolean
-    active?: boolean
-    startIcon?: ReactNode
-    endIcon?: ReactNode
-  }
+>
+
+type _AnchorElementProps = React.AnchorHTMLAttributes<HTMLAnchorElement>
+
+export type ButtonProps = _ButtonElementProps &
+  _AnchorElementProps &
+  IComponentBaseProps &
+  _ButtonProps
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
@@ -71,7 +79,12 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
     if (href) {
       return (
-        <a className={classes} style={style} href={href}>
+        <a
+          {...props as _AnchorElementProps}
+          className={classes}
+          style={style}
+          href={href} 
+        >
           {startIcon && startIcon}
           {children}
           {endIcon && endIcon}
@@ -80,7 +93,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     } else {
       return (
         <button
-          {...props}
+          {...props as _ButtonElementProps}
           ref={ref}
           data-theme={dataTheme}
           className={classes}
