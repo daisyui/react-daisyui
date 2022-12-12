@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.5.0](https://github.com/daisyui/react-daisyui/compare/v2.4.7...v2.5.0) (2022-12-12)
+
+
+### Features
+
+* add ChatBubble component ([#270](https://github.com/daisyui/react-daisyui/issues/270)) ([1938b01](https://github.com/daisyui/react-daisyui/commit/1938b010fd21dd7fd30710f975843d64f73a5119))
+* **file-input:** add FileInput component ([#273](https://github.com/daisyui/react-daisyui/issues/273)) ([2b4c9ce](https://github.com/daisyui/react-daisyui/commit/2b4c9cec0971a2f561739fd3517a2c035ca88c69))
+
+
+### Bug Fixes
+
+* invalid prop names on welcome page ([#265](https://github.com/daisyui/react-daisyui/issues/265)) ([4962d4c](https://github.com/daisyui/react-daisyui/commit/4962d4c73864e23093f169bbc69e777d6b258f3f))
+
 ## [2.4.7](https://github.com/daisyui/react-daisyui/compare/v2.4.6...v2.4.7) (2022-12-03)
 
 
