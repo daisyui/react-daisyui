@@ -139,6 +139,11 @@ export { default as Textarea } from './Textarea'
 import { TextareaProps as TTextareaProps } from './Textarea'
 export type TextareaProps = TTextareaProps
 
+// Data Input > FileInput
+export { default as FileInput } from './FileInput'
+import { FileInputProps as TFileInputProps } from './FileInput'
+export type FileInputProps = TFileInputProps
+
 // ----------------------- < Layout > ----------------------- //
 
 // Layout > Artboard
