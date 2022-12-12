@@ -47,6 +47,11 @@ export { default as Carousel } from './Carousel'
 import { CarouselProps as TCarouselProps } from './Carousel'
 export type CarouselProps = TCarouselProps
 
+// Data Display > ChatBubble
+export { default as ChatBubble } from './ChatBubble'
+import { ChatBubbleProps as TChatBubbleProps } from './ChatBubble'
+export type ChatBubbleProps = TChatBubbleProps
+
 // Data Display > Collapse
 export { default as Collapse } from './Collapse'
 import { CollapseProps as TCollapseProps } from './Collapse'
