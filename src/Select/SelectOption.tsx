@@ -1,22 +1,13 @@
 import React from 'react'
 
-export type SelectOptionProps<T> = Omit<
-  React.OptionHTMLAttributes<HTMLOptionElement>,
-  'value'
-> & {
-  value: T
-}
+export type SelectOptionProps = React.OptionHTMLAttributes<HTMLOptionElement>
 
-const SelectOption = <T extends string | number | undefined>({
-  value,
+const SelectOption = ({
   children,
   ...props
-}: SelectOptionProps<T>): JSX.Element => {
+}: SelectOptionProps): JSX.Element => {
   return (
-    <option 
-      {...props} 
-      value={value}
-    >
+    <option {...props}>
       {children}
     </option>
   )
