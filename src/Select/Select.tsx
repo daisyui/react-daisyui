@@ -6,33 +6,25 @@ import { IComponentBaseProps, ComponentColor, ComponentSize } from '../types'
 
 import SelectOption, { SelectOptionProps } from './SelectOption'
 
-export type SelectOption<T> = {
-  value: T
-  label: string
-}
-
-export type SelectProps<T> = Omit<
+export type SelectProps = Omit<
   React.SelectHTMLAttributes<HTMLSelectElement>,
-  'onChange' | 'value' | 'size' | 'color'
+  'size' | 'color'
 > &
   IComponentBaseProps & {
-    children: ReactElement<SelectOptionProps<T>>[]
-    value?: T
-    onChange?: (value: T) => void
+    children: ReactElement<SelectOptionProps>[]
+
     size?: ComponentSize
     color?: ComponentColor
     bordered?: boolean
     borderOffset?: boolean
   }
 
-const SelectInner = <T extends string | number | undefined>(
-  props: SelectProps<T>,
+const SelectInner = (
+  props: SelectProps,
   ref: React.ForwardedRef<HTMLSelectElement>
 ): JSX.Element => {
   const {
     children,
-    value,
-    onChange,
     size,
     color,
     bordered = true,
@@ -54,22 +46,11 @@ const SelectInner = <T extends string | number | undefined>(
   )
 
   return (
-    <select
-      {...rest}
-      ref={ref}
-      data-theme={dataTheme}
-      className={classes}
-      onChange={(e) => onChange?.(e.currentTarget.value as T)}
-      value={value}
-    >
+    <select {...rest} ref={ref} data-theme={dataTheme} className={classes}>
       {children}
     </select>
   )
 }
 
-// Make forwardRef work with generic component
-const Select = React.forwardRef(SelectInner) as <T>(
-  props: SelectProps<T> & { ref?: React.ForwardedRef<HTMLSelectElement> }
-) => ReturnType<typeof SelectInner>
-
+const Select = React.forwardRef(SelectInner)
 export default Object.assign(Select, { Option: SelectOption })
