@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/daisyui/react-daisyui/compare/v3.0.0...v3.0.1) (2022-12-30)
+
+
+### Bug Fixes
+
+* **Select:** removed leftover generic on props type ([ab1d997](https://github.com/daisyui/react-daisyui/commit/ab1d997a7d57c055417ff823e099d880dd233676))
+
 ## [3.0.0](https://github.com/daisyui/react-daisyui/compare/v2.5.0...v3.0.0) (2022-12-30)
 
 
