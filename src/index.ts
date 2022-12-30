@@ -127,7 +127,7 @@ export type RatingProps = TRatingProps
 // Data Input > Select
 export { default as Select } from './Select'
 import { SelectProps as TSelectProps } from './Select'
-export type SelectProps<T> = TSelectProps<T>
+export type SelectProps = TSelectProps
 
 // Data Input > Toggle
 export { default as Toggle } from './Toggle'

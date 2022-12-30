@@ -12,7 +12,6 @@ export type SelectProps = Omit<
 > &
   IComponentBaseProps & {
     children: ReactElement<SelectOptionProps>[]
-
     size?: ComponentSize
     color?: ComponentColor
     bordered?: boolean

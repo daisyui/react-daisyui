@@ -17,7 +17,7 @@ export default {
   },
 } as Meta
 
-export const Default: Story<SelectProps<string>> = (args) => {
+export const Default: Story<SelectProps> = (args) => {
   const [value, setValue] = useState('default')
 
   return (
@@ -40,7 +40,7 @@ export const Default: Story<SelectProps<string>> = (args) => {
   )
 }
 
-export const FormControlAndLabels: Story<SelectProps<string>> = (args) => {
+export const FormControlAndLabels: Story<SelectProps> = (args) => {
   return (
     <div className="flex w-full component-preview p-4 items-center justify-center gap-2 font-sans">
       <div className="form-control w-full max-w-xs">
