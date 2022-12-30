@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.0.0](https://github.com/daisyui/react-daisyui/compare/v2.5.0...v3.0.0) (2022-12-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* select refactor
+
+### Bug Fixes
+
+* mark release as breaking ([899ef58](https://github.com/daisyui/react-daisyui/commit/899ef584e4c223f33a12ba7b8c6980a1455ef145))
+* Removed generic on Select ([#276](https://github.com/daisyui/react-daisyui/issues/276)) ([e9c9f6d](https://github.com/daisyui/react-daisyui/commit/e9c9f6df71740b24549fe429341328a77615eaef))
+
 ## [2.5.0](https://github.com/daisyui/react-daisyui/compare/v2.4.7...v2.5.0) (2022-12-12)
 
 
