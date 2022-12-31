@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.2](https://github.com/daisyui/react-daisyui/compare/v3.0.1...v3.0.2) (2022-12-31)
+
+
+### Bug Fixes
+
+* **Form:** retyped form props intersection with FormHTMLAttributes ([#287](https://github.com/daisyui/react-daisyui/issues/287)) ([a18f7e7](https://github.com/daisyui/react-daisyui/commit/a18f7e772e9218439b99ae334372244041233c31))
+
 ## [3.0.1](https://github.com/daisyui/react-daisyui/compare/v3.0.0...v3.0.1) (2022-12-30)
 
 
