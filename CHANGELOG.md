@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.3](https://github.com/daisyui/react-daisyui/compare/v3.0.2...v3.0.3) (2023-02-21)
+
+
+### Miscellaneous
+
+* update tailwind and daisyui versions ([#300](https://github.com/daisyui/react-daisyui/issues/300)) ([cfb4d8e](https://github.com/daisyui/react-daisyui/commit/cfb4d8eef57e7827635e6806ce12c0e686d8fcd9))
+
 ## [3.0.2](https://github.com/daisyui/react-daisyui/compare/v3.0.1...v3.0.2) (2022-12-31)
 
 
