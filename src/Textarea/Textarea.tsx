@@ -2,7 +2,7 @@ import React from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-import { ComponentColor, IComponentBaseProps } from '../types'
+import { ComponentColor, ComponentSize, IComponentBaseProps } from '../types'
 
 export type TextareaProps = Omit<
   React.TextareaHTMLAttributes<HTMLTextAreaElement>,
@@ -10,13 +10,14 @@ export type TextareaProps = Omit<
 > &
   IComponentBaseProps & {
     color?: ComponentColor
+    size?: ComponentSize
     bordered?: boolean
     borderOffset?: boolean
   }
 
 const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
   (
-    { bordered = true, borderOffset, color, dataTheme, className, ...props },
+    { bordered = true, borderOffset, color, size, dataTheme, className, ...props },
     ref
   ): JSX.Element => {
     const classes = twMerge(
@@ -24,6 +25,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
       className,
       clsx({
         [`textarea-${color}`]: color,
+        [`textarea-${size}`]: size,
         [`focus:outline-offset-0`]: !borderOffset,
         'textarea-bordered': bordered,
       })
