@@ -18,7 +18,14 @@ const Progress = forwardRef<HTMLProgressElement, ProgressProps>(
       'progress',
       className,
       clsx({
-        [`progress-${color}`]: color,
+        ['progress-accent']: color === 'accent',
+        ['progress-error']: color === 'error',
+        ['progress-ghost']: color === 'ghost',
+        ['progress-info']: color === 'info',
+        ['progress-primary']: color === 'primary',
+        ['progress-secondary']: color === 'secondary',
+        ['progress-success']: color === 'success',
+        ['progress-warning']: color === 'warning',
       })
     )
 
