@@ -30,7 +30,13 @@ const RadialProgress = forwardRef<HTMLDivElement, RadialProgressProps>(
       'radial-progress',
       className,
       clsx({
-        [`text-${color}`]: color,
+        'text-primary': color === 'primary',
+        'text-secondary': color === 'secondary',
+        'text-accent': color === 'accent',
+        'text-info': color === 'info',
+        'text-success': color === 'success',
+        'text-warning': color === 'warning',
+        'text-error': color === 'error',
       })
     )
 
