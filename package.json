@@ -35,7 +35,7 @@
     "generate": "plop"
   },
   "peerDependencies": {
-    "daisyui": "^2.50.2",
+    "daisyui": "^2.51.5",
     "react": ">=16",
     "react-dom": ">=16",
     "tailwindcss": "^3.2.7"
