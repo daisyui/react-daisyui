@@ -11,23 +11,27 @@ import DropdownToggle from './DropdownToggle'
 export type DropdownProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {
     item?: ReactNode
-    horizontal?: 'left' | 'center' | 'right'
-    vertical?: 'top' | 'middle' | 'end'
+    horizontal?: 'left' | 'right'
+    vertical?: 'top' | 'bottom'
+    end?: boolean
     hover?: boolean
     open?: boolean
   }
 
 const Dropdown = React.forwardRef<HTMLDivElement, DropdownProps>(
   (
-    { children, className, item, horizontal, vertical, hover, open, dataTheme, ...props },
+    { children, className, item, horizontal, vertical, end, hover, open, dataTheme, ...props },
     ref
   ): JSX.Element => {
     const classes = twMerge(
       'dropdown',
       className,
       clsx({
-        [`dropdown-${horizontal}`]: horizontal,
-        [`dropdown-${vertical}`]: vertical,
+        'dropdown-left': horizontal === 'left',
+        'dropdown-right': horizontal === 'right',
+        'dropdown-top': vertical === 'top',
+        'dropdown-bottom': vertical === 'bottom',
+        'dropdown-end': end,
         'dropdown-hover': hover,
         'dropdown-open': open,
       })
