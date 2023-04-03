@@ -48,7 +48,7 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
       - uses: actions/setup-node@v3
         with:
-          node-version: '16.x'
+          node-version: '17.x'
         if: ${{ steps.release.outputs.release_created }}
       - run: npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}" && npm ci
         if: ${{ steps.release.outputs.release_created }}
