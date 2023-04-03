@@ -1,9 +1,9 @@
 import React from 'react'
-import { Story, Meta } from '@storybook/react'
+import { StoryFn as Story, Meta } from '@storybook/react'
 import ChatBubble, { ChatBubbleProps } from '.'
 
 const meta: Meta = {
-  title: `Data Display/Chat Bubble`,
+  title: 'Data Display/Chat Bubble',
   component: ChatBubble,
   decorators: [
     (Story) => (

@@ -1,10 +1,10 @@
 import React from 'react'
-import { Story, Meta } from '@storybook/react'
+import { StoryFn as Story, Meta } from '@storybook/react'
 
 import CodeMockup, { CodeMockupProps } from '.'
 
 const meta: Meta = {
-  title: `Mockup/CodeMockup`,
+  title: 'Mockup/CodeMockup',
   component: CodeMockup,
   subcomponents: { 'CodeMockup.Line': CodeMockup.Line },
   parameters: {

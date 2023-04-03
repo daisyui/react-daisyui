@@ -6,7 +6,7 @@ export type CopyButtonProps = ButtonProps & {
   text?: string
 }
 
-export const CopyButton = ({ text = '', ...rest }: CopyButtonProps) => {
+export const CopyButton = ({ text = '', ...props }: CopyButtonProps) => {
   const [isCopied, setIsCopied] = useState(false)
 
   const copy = async () => {
@@ -21,7 +21,7 @@ export const CopyButton = ({ text = '', ...rest }: CopyButtonProps) => {
   }
 
   return (
-    <Button {...rest} onClick={handleClick}>
+    <Button {...props} onClick={handleClick}>
       {isCopied ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"

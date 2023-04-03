@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react'
-import { Story, Meta } from '@storybook/react'
+import { StoryFn as Story, Meta } from '@storybook/react'
 
 import Rating, { RatingProps } from '.'
 
 export default {
-  title: `Data Input/Rating`,
+  title: 'Data Input/Rating',
   component: Rating,
 } as Meta
 

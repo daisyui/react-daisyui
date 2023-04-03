@@ -1,11 +1,11 @@
 import React from 'react'
-import { Story, Meta } from '@storybook/react'
+import { StoryFn as Story, Meta } from '@storybook/react'
 
 import PhoneMockup, { PhoneMockupProps } from '.'
 import { componentColors } from '../constants'
 
 const meta: Meta = {
-  title: `Mockup/PhoneMockup`,
+  title: 'Mockup/PhoneMockup',
   component: PhoneMockup,
   parameters: {
     controls: { expanded: true },

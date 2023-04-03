@@ -1,6 +1,6 @@
-import { create } from '@storybook/theming'
+import { create, ThemeVars } from '@storybook/theming'
 
-const baseTheme = {
+const baseTheme: ThemeVars = {
   base: 'dark',
   brandTitle: 'react-daisyUI',
   brandUrl: 'https://github.com/daisyui/react-daisyui',
@@ -22,11 +22,6 @@ const baseTheme = {
   barTextColor: '#A6ADBA',
   barSelectedColor: '#C3D0EA',
   barBg: '#191D24',
-}
-
-export const docsTheme = {
-  ...baseTheme,
-  maxWidth: '100%',
 }
 
 export default create(baseTheme)

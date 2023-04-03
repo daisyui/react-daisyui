@@ -12,7 +12,7 @@ export const toTitleCase = (str: string) => {
 }
 
 // Returns true if an element is a react fragment
-export const isReactFragment = (node: React.ReactNode) => {
+export const isReactFragment = (node: React.ReactNode | typeof React.Fragment) => {
   if (!node) return false
 
   if ((node as React.ReactElement)?.type) {
@@ -20,11 +20,6 @@ export const isReactFragment = (node: React.ReactNode) => {
   }
 
   return node === React.Fragment
-}
-
-// Return true if a react element is valid and not a fragment
-export const isValidAndNotFragment = (node: React.ReactNode) => {
-  return !isReactFragment(node) && React.isValidElement(node)
 }
 
 // If an invalid element or fragment is passed in as the node, wrap it with the wrapper and add props

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { ReactNode, useEffect, useMemo, useState } from 'react'
 import Highlight, { defaultProps } from "prism-react-renderer"
 import theme from "prism-react-renderer/themes/vsDark"
 
@@ -9,13 +9,36 @@ import Navbar from '../src/Navbar'
 import Tabs from '../src/Tabs'
 import Theme from '../src/Theme'
 
-const StoryLayout = ({ children, title, description, source }) => {
+type Props = {
+  children: ReactNode | ReactNode[]
+  title: string
+  description: string
+  source: string
+}
+
+const StoryLayout = ({ children, title, description, source }: Props) => {
   const [tab, setTab] = useState('preview')
   const globalTheme = useGlobalTheme()
 
   useEffect(() => {
     document.getElementsByTagName('html')[0].setAttribute('data-theme', globalTheme)
   }, [globalTheme])
+
+  const Code = () => useMemo(() => (
+    <Highlight {...defaultProps} theme={theme} code={source} language="jsx">
+      {({ tokens, getLineProps, getTokenProps }) => (
+        <pre slot="html">
+          {tokens.map((line, i) => (
+            <div {...getLineProps({ line, key: i })}>
+              {line.map((token, key) => (
+                <span {...getTokenProps({ token, key })} />
+              ))}
+            </div>
+          ))}
+        </pre>
+      )}
+    </Highlight>
+  ), [theme, source])
 
   return (
     <Theme dataTheme={globalTheme} className="w-full h-screen p-8 bg-base-100">
@@ -33,19 +56,7 @@ const StoryLayout = ({ children, title, description, source }) => {
           <div className='block sm:hidden'>
             {children}
             <CodeMockup className="w-full mb-8 mt-3">
-              <Highlight {...defaultProps} theme={theme} code={source} language="jsx">
-                {({ tokens, getLineProps, getTokenProps }) => (
-                  <pre slot="html">
-                    {tokens.map((line, i) => (
-                      <div {...getLineProps({ line, key: i })}>
-                        {line.map((token, key) => (
-                          <span {...getTokenProps({ token, key })} />
-                        ))}
-                      </div>
-                    ))}
-                  </pre>
-                )}
-              </Highlight>
+              <Code />
             </CodeMockup>
           </div>
 
@@ -77,19 +88,7 @@ const StoryLayout = ({ children, title, description, source }) => {
                 </div>
               ) : (
                 <CodeMockup className="w-full mb-8">
-                  <Highlight {...defaultProps} theme={theme} code={source} language="jsx">
-                    {({ tokens, getLineProps, getTokenProps }) => (
-                      <pre slot="html">
-                        {tokens.map((line, i) => (
-                          <div {...getLineProps({ line, key: i })}>
-                            {line.map((token, key) => (
-                              <span {...getTokenProps({ token, key })} />
-                            ))}
-                          </div>
-                        ))}
-                      </pre>
-                    )}
-                  </Highlight>
+                  <Code />
                 </CodeMockup>
               )}
             </div>

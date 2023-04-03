@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Story, Meta } from '@storybook/react'
+import { StoryFn as Story, Meta } from '@storybook/react'
 
 import Modal, { ModalProps } from '.'
 import Button from '../Button'
