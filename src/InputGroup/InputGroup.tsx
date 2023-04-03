@@ -19,7 +19,10 @@ const InputGroup = forwardRef<HTMLLabelElement, InputGroupProps>(
       'input-group',
       className,
       clsx({
-        [`input-group-${size}`]: size,
+        'input-group-lg': size === 'lg',
+        'input-group-md': size === 'md',
+        'input-group-sm': size === 'sm',
+        'input-group-xs': size === 'xs',
         'input-group-vertical': vertical,
       })
     )
