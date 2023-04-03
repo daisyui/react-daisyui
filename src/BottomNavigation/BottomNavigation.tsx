@@ -18,7 +18,10 @@ const BottomNavigation = forwardRef<HTMLDivElement, BottomNavigationProps>(
     const classes = twMerge(
       'btm-nav',
       clsx({
-        [`btm-nav-${size}`]: size,
+        'btm-nav-lg': size === 'lg',
+        'btm-nav-md': size === 'md',
+        'btm-nav-sm': size === 'sm',
+        'btm-nav-xs': size === 'xs',
       }),
       className
     )
