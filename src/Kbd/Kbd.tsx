@@ -15,7 +15,10 @@ const Kbd = forwardRef<HTMLElement, KbdProps>(
       'kbd',
       className,
       clsx({
-        [`kbd-${size}`]: size,
+        'bd-lg': size === 'lg',
+        'bd-md': size === 'md',
+        'bd-sm': size === 'sm',
+        'bd-xs': size === 'xs',
       })
     )
 
