@@ -56,7 +56,7 @@ export const Group: Story<AvatarProps & AvatarGroupProps> = (args) => {
 }
 Group.args = {
   src: 'http://daisyui.com/tailwind-css-component-profile-1@94w.png',
-  space: -6
+  space: -6,
 }
 
 export const Ring = Template.bind({})
@@ -150,4 +150,67 @@ export const MultipleChildren: Story<Omit<AvatarProps, 'children'>> = (
       {reactLogoSvg}
     </Avatar>
   )
+}
+
+export const Colors: Story<Omit<AvatarProps, 'color' | 'borderColor'>> = ({
+  src,
+  letters,
+  ...args
+}) => {
+  return (
+    <div>
+      <div className="flex gap-4 m-4">
+        <Avatar {...args} borderColor="primary" src={src} />
+        <Avatar {...args} borderColor="secondary" src={src} />
+        <Avatar {...args} borderColor="accent" src={src} />
+        <Avatar {...args} borderColor="ghost" src={src} />
+        <Avatar {...args} borderColor="info" src={src} />
+        <Avatar {...args} borderColor="success" src={src} />
+        <Avatar {...args} borderColor="warning" src={src} />
+        <Avatar {...args} borderColor="error" src={src} />
+      </div>
+      <div className="flex gap-4 m-4">
+        <Avatar
+          {...args}
+          borderColor="primary"
+          color="primary"
+          letters={letters}
+        />
+        <Avatar
+          {...args}
+          borderColor="secondary"
+          color="secondary"
+          letters={letters}
+        />
+        <Avatar
+          {...args}
+          borderColor="accent"
+          color="accent"
+          letters={letters}
+        />
+        <Avatar {...args} borderColor="ghost" color="ghost" letters={letters} />
+        <Avatar {...args} borderColor="info" color="info" letters={letters} />
+        <Avatar
+          {...args}
+          borderColor="success"
+          color="success"
+          letters={letters}
+        />
+        <Avatar
+          {...args}
+          borderColor="warning"
+          color="warning"
+          letters={letters}
+        />
+        <Avatar {...args} borderColor="error" color="error" letters={letters} />
+      </div>
+    </div>
+  )
+}
+Colors.args = {
+  src: 'http://daisyui.com/tailwind-css-component-profile-1@94w.png',
+  letters: 'Y',
+  border: true,
+  shape: 'circle',
+  size: 'sm',
 }
