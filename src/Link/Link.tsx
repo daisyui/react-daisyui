@@ -19,7 +19,14 @@ const Link = forwardRef<HTMLAnchorElement, LinkProps>(
       'link',
       className,
       clsx({
-        [`link-${color}`]: color,
+        'link-neutral': color === 'neutral',
+        'link-primary': color === 'primary',
+        'link-secondary': color === 'secondary',
+        'link-accent': color === 'accent',
+        'link-info': color === 'info',
+        'link-success': color === 'success',
+        'link-warning': color === 'warning',
+        'link-error': color === 'error',
         'link-hover': hover,
       })
     )
