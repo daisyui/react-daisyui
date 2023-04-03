@@ -21,8 +21,8 @@ const Steps = React.forwardRef<HTMLUListElement, StepsProps>(
       'steps',
       className,
       clsx({
-        ['steps-vertical']: vertical,
-        ['steps-horizontal']: horizontal,
+        'steps-vertical': vertical,
+        'steps-horizontal': horizontal,
       })
     )
 
