@@ -19,6 +19,7 @@ export type ButtonProps = Omit<
     size?: ComponentSize
     variant?: 'outline' | 'link'
     color?: ComponentColor
+    wide?: boolean
     fullWidth?: boolean
     responsive?: boolean
     animation?: boolean
@@ -39,6 +40,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       color,
       startIcon,
       endIcon,
+      wide,
       fullWidth,
       responsive,
       animation = true,
@@ -56,10 +58,23 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       'btn',
       className,
       clsx(((startIcon && !loading) || endIcon) && 'gap-2', {
-        [`btn-${size}`]: size,
-        [`btn-${shape}`]: shape,
-        [`btn-${variant}`]: variant,
-        [`btn-${color}`]: color,
+        'btn-lg': size === 'lg',
+        'btn-md': size === 'md',
+        'btn-sm': size === 'sm',
+        'btn-xs': size === 'xs',
+        'btn-circle': shape === 'circle',
+        'btn-square': shape === 'square',
+        'btn-outline': variant === 'outline',
+        'btn-link': variant === 'link',
+        'btn-primary': color === 'primary',
+        'btn-secondary': color === 'secondary',
+        'btn-accent': color === 'accent',
+        'btn-info': color === 'info',
+        'btn-success': color === 'success',
+        'btn-warning': color === 'warning',
+        'btn-error': color === 'error',
+        'btn-ghost': color === 'ghost',
+        'btn-wide': wide,
         'btn-block': fullWidth,
         'btn-xs md:btn-sm lg:btn-md xl:btn-lg': responsive,
         'no-animation': !animation,
