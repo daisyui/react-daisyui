@@ -12,7 +12,8 @@ export type TabProps<T> = Omit<
   activeValue?: T
   onClick?: (value: T) => void
   size?: ComponentSize
-  variant?: 'bordered' | 'lifted'
+  variant?: 'boxed' | 'bordered' | 'lifted'
+  disabled?: boolean
 }
 
 const TabInner = <T extends string | number | undefined>(
@@ -23,6 +24,7 @@ const TabInner = <T extends string | number | undefined>(
     onClick,
     size,
     variant,
+    disabled,
     className,
     style,
     ...props
@@ -34,8 +36,13 @@ const TabInner = <T extends string | number | undefined>(
     className,
     clsx({
       'tab-active': value != null && value === activeValue,
-      [`tab-${size}`]: size,
-      [`tab-${variant}`]: variant,
+      'tab-disabled': disabled,
+      'tab-lg': size === 'lg',
+      'tab-md': size === 'md',
+      'tab-sm': size === 'sm',
+      'tab-xs': size === 'xs',
+      'tab-bordered': variant === 'bordered',
+      'tab-lifted': variant === 'lifted',
     })
   )
 
