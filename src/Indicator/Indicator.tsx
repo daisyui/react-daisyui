@@ -30,8 +30,12 @@ const Indicator = React.forwardRef<HTMLDivElement, IndicatorProps>(
       'indicator-item',
       className,
       clsx({
-        [`indicator-${horizontal}`]: horizontal,
-        [`indicator-${vertical}`]: vertical,
+        'indicator-start': horizontal === 'start',
+        'indicator-center': horizontal === 'center',
+        'indicator-end': horizontal === 'end',
+        'indicator-top': vertical === 'top',
+        'indicator-middle': vertical === 'middle',
+        'indicator-bottom': vertical === 'bottom',
       })
     )
 
