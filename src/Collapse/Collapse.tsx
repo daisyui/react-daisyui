@@ -37,7 +37,8 @@ const Collapse = React.forwardRef<HTMLDivElement, CollapseProps>(
       'collapse',
       className,
       clsx({
-        [`collapse-${icon}`]: icon,
+        'collapse-arrow': icon === 'arrow',
+        'collapse-plus': icon === 'plus',
         'collapse-open': open === true,
         'collapse-close': open === false,
       })
