@@ -6,7 +6,7 @@ import { IComponentBaseProps } from '../types'
 
 export type StatItemProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {
-    variant: 'title' | 'value' | 'desc' | 'figure'
+    variant: 'title' | 'value' | 'desc' | 'figure' | 'actions'
   }
 
 const StatItem = React.forwardRef<HTMLDivElement, StatItemProps>(
@@ -14,7 +14,11 @@ const StatItem = React.forwardRef<HTMLDivElement, StatItemProps>(
     const classes = twMerge(
       className,
       clsx({
-        [`stat-${variant}`]: variant,
+        'stat-title': variant === 'title',
+        'stat-value': variant === 'value',
+        'stat-desc': variant === 'desc',
+        'stat-figure': variant === 'figure',
+        'stat-actions': variant === 'actions',
       })
     )
 
