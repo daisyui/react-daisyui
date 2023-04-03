@@ -20,7 +20,10 @@ const Alert = forwardRef<HTMLDivElement, AlertProps>(
       'alert',
       className,
       clsx({
-        [`alert-${status}`]: status,
+        'alert-info': status === 'info',
+        'alert-success': status === 'success',
+        'alert-warning': status === 'warning',
+        'alert-error': status === 'error',
       })
     )
 
