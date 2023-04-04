@@ -267,3 +267,23 @@ export { default as Theme } from './Theme'
 import { ThemeProps as TThemeProps } from './Theme'
 export type ThemeProps = TThemeProps
 export { useTheme } from './Theme/useTheme'
+
+const preset = {
+    content: [
+        "node_modules/daisyui/dist/**/*",
+        "node_modules/react-daisyui/dist/react-daisyui.cjs",
+    ],
+    daisyui: {
+      styled: true,
+      themes: true,
+      base: true,
+      utils: true,
+      logs: true,
+      rtl: false,
+      prefix: "",
+      darkTheme: "dark",
+    },
+    plugins: [require("daisyui")],
+}
+
+export default preset
