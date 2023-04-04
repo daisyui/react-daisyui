@@ -22,8 +22,18 @@ const FileInput = forwardRef<HTMLInputElement, FileInputProps>(
       'file-input',
       className,
       clsx({
-        [`file-input-${size}`]: size,
-        [`file-input-${color}`]: color,
+        'file-input-lg': size === 'lg',
+        'file-input-md': size === 'md',
+        'file-input-sm': size === 'sm',
+        'file-input-xs': size === 'xs',
+        'file-input-primary': color === 'primary',
+        'file-input-secondary': color === 'secondary',
+        'file-input-accent': color === 'accent',
+        'file-input-ghost': color === 'ghost',
+        'file-input-info': color === 'info',
+        'file-input-success': color === 'success',
+        'file-input-warning': color === 'warning',
+        'file-input-error': color === 'error',
         'file-input-bordered': bordered,
       })
     )

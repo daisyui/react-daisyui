@@ -24,10 +24,20 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
       'textarea',
       className,
       clsx({
-        [`textarea-${color}`]: color,
-        [`textarea-${size}`]: size,
-        [`focus:outline-offset-0`]: !borderOffset,
+        'textarea-lg': size === 'lg',
+        'textarea-md': size === 'md',
+        'textarea-sm': size === 'sm',
+        'textarea-xs': size === 'xs',
+        'textarea-primary': color === 'primary',
+        'textarea-secondary': color === 'secondary',
+        'textarea-accent': color === 'accent',
+        'textarea-ghost': color === 'ghost',
+        'textarea-info': color === 'info',
+        'textarea-success': color === 'success',
+        'textarea-warning': color === 'warning',
+        'textarea-error': color === 'error',
         'textarea-bordered': bordered,
+        'focus:outline-offset-0': !borderOffset,
       })
     )
 

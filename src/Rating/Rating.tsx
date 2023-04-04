@@ -27,7 +27,10 @@ const Rating = React.forwardRef<HTMLDivElement, RatingProps>(
       'rating',
       className,
       clsx({
-        [`rating-${size}`]: size,
+        'rating-lg': size === 'lg',
+        'rating-md': size === 'md',
+        'rating-sm': size === 'sm',
+        'rating-xs': size === 'xs',
         'rating-half': half,
         'rating-hidden': hidden || value === 0,
       })

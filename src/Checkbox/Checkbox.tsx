@@ -39,8 +39,17 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       'checkbox',
       className,
       clsx({
-        [`checkbox-${size}`]: size,
-        [`checkbox-${color}`]: color,
+        'checkbox-lg': size === 'lg',
+        'checkbox-md': size === 'md',
+        'checkbox-sm': size === 'sm',
+        'checkbox-xs': size === 'xs',
+        'checkbox-primary': color === 'primary',
+        'checkbox-secondary': color === 'secondary',
+        'checkbox-accent': color === 'accent',
+        'checkbox-info': color === 'info',
+        'checkbox-success': color === 'success',
+        'checkbox-warning': color === 'warning',
+        'checkbox-error': color === 'error',
       })
     )
 

@@ -37,10 +37,20 @@ const SelectInner = (
     'select',
     className,
     clsx({
-      [`select-${size}`]: size,
-      [`select-${color}`]: color,
-      [`focus:outline-offset-0`]: !borderOffset,
+      'select-lg': size === 'lg',
+      'select-md': size === 'md',
+      'select-sm': size === 'sm',
+      'select-xs': size === 'xs',
+      'select-primary': color === 'primary',
+      'select-secondary': color === 'secondary',
+      'select-accent': color === 'accent',
+      'select-ghost': color === 'ghost',
+      'select-info': color === 'info',
+      'select-success': color === 'success',
+      'select-warning': color === 'warning',
+      'select-error': color === 'error',
       'select-bordered': bordered,
+      'focus:outline-offset-0': !borderOffset,
     })
   )
 

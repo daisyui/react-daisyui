@@ -23,8 +23,17 @@ const Toggle = forwardRef<HTMLInputElement, ToggleProps>(
       'toggle',
       className,
       clsx({
-        [`toggle-${size}`]: size,
-        [`toggle-${color}`]: color,
+        'toggle-lg': size === 'lg',
+        'toggle-md': size === 'md',
+        'toggle-sm': size === 'sm',
+        'toggle-xs': size === 'xs',
+        'toggle-primary': color === 'primary',
+        'toggle-secondary': color === 'secondary',
+        'toggle-accent': color === 'accent',
+        'toggle-info': color === 'info',
+        'toggle-success': color === 'success',
+        'toggle-warning': color === 'warning',
+        'toggle-error': color === 'error',
       })
     )
 
