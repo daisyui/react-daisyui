@@ -22,7 +22,13 @@ const Step = React.forwardRef<HTMLLIElement, StepProps>(
       'step',
       className,
       clsx({
-        [`step-${color}`]: color,
+        'step-primary': color === 'primary',
+        'step-secondary': color === 'secondary',
+        'step-accent': color === 'accent',
+        'step-info': color === 'info',
+        'step-success': color === 'success',
+        'step-warning': color === 'warning',
+        'step-error': color === 'error',
       })
     )
 
