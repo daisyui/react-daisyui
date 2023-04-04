@@ -270,7 +270,7 @@ export { useTheme } from './Theme/useTheme'
 
 // ----------------------- < Tailwind Preset > ----------------------- //
 
-export default {
+export const preset = {
     content: [
         "node_modules/daisyui/dist/**/*",
         "node_modules/react-daisyui/dist/react-daisyui.cjs",
