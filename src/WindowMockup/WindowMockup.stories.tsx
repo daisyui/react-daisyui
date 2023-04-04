@@ -1,11 +1,11 @@
 import React from 'react'
-import { Story, Meta } from '@storybook/react'
+import { StoryFn as Story, Meta } from '@storybook/react'
 
 import WindowMockup, { WindowMockupProps } from '.'
 import { componentColors } from '../constants'
 
 const meta: Meta = {
-  title: `Mockup/WindowMockup`,
+  title: 'Mockup/WindowMockup',
   component: WindowMockup,
   parameters: {
     controls: { expanded: true },

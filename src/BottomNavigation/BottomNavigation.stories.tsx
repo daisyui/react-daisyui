@@ -1,18 +1,21 @@
 import React, { ReactNode } from 'react'
 import clsx from 'clsx'
-import { Story, Meta } from '@storybook/react'
+import { StoryFn as Story, Meta } from '@storybook/react'
 
 import BottomNavigation, { BottomNavigationProps } from '.'
 
 const { Label } = BottomNavigation
 
 const meta: Meta = {
-  title: `Navigation/BottomNavigation`,
+  title: 'Navigation/BottomNavigation',
   component: BottomNavigation,
   parameters: {
     controls: { expanded: true },
   },
 }
+
+export default meta
+
 const Home = ({
   className,
   children,
@@ -38,6 +41,7 @@ const Home = ({
     {children}
   </button>
 )
+
 const Warnings = ({
   className,
   children,
@@ -64,6 +68,7 @@ const Warnings = ({
     {children}
   </button>
 )
+
 const Statics = ({
   className,
   children,
@@ -89,8 +94,6 @@ const Statics = ({
     {children}
   </button>
 )
-
-export default meta
 
 const Template: Story = ({ children, ...rest }) => (
   <BottomNavigation {...rest}>{children}</BottomNavigation>
