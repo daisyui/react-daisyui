@@ -3,11 +3,6 @@ module.exports = {
     './src/**/*.{js,jsx,ts,tsx}',
     './.storybook/**/*.{js,jsx,ts,tsx,mdx}'
   ],
-  safelist: [
-    {
-      pattern: /./
-    },
-  ],
   daisyui: {
     styled: true,
     themes: true,
