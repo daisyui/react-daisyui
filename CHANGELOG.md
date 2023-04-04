@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.1](https://github.com/daisyui/react-daisyui/compare/v3.1.0...v3.1.1) (2023-04-04)
+
+
+### Bug Fixes
+
+* reverted minimum react version ([650aa4c](https://github.com/daisyui/react-daisyui/commit/650aa4c5643ab1ee16cede586030552bec0fe652))
+
 ## [3.1.0](https://github.com/daisyui/react-daisyui/compare/v3.0.3...v3.1.0) (2023-04-04)
 
 
