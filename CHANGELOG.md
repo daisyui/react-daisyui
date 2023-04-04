@@ -1,5 +1,52 @@
 # Changelog
 
+## [3.1.0](https://github.com/daisyui/react-daisyui/compare/v3.0.3...v3.1.0) (2023-04-04)
+
+
+### Features
+
+* removed safelist ([3315d22](https://github.com/daisyui/react-daisyui/commit/3315d22f5aa5f811773b968962afb3f3a743574c))
+
+
+### Bug Fixes
+
+* **Alert:** hardcoded statuses ([#311](https://github.com/daisyui/react-daisyui/issues/311)) ([f3bdaf8](https://github.com/daisyui/react-daisyui/commit/f3bdaf88e0a6afa9ee814b3abb9d4b4cdfdba6aa))
+* **Artboard:** hardcoded sizes ([#320](https://github.com/daisyui/react-daisyui/issues/320)) ([57b2b41](https://github.com/daisyui/react-daisyui/commit/57b2b413332ce5769240bd854e9fd7932c1f2db5))
+* **Avatar:** hardcoded colors ([9fbf01a](https://github.com/daisyui/react-daisyui/commit/9fbf01a5ea9f3dbd7c04d54a4a7e8262d25c577f))
+* **Badge:** hardcoded classes ([#312](https://github.com/daisyui/react-daisyui/issues/312)) ([5b83d73](https://github.com/daisyui/react-daisyui/commit/5b83d733c167a2ffa615f198abe4cb0d93d25e3e))
+* **BottomNavigation:** hardcoded sizes ([f1d8a2c](https://github.com/daisyui/react-daisyui/commit/f1d8a2c144acee67e5840f87b42f7d5b60fb8f71))
+* bump node version used in release action ([23c4911](https://github.com/daisyui/react-daisyui/commit/23c491118e126a29774726438aca03f340306efb))
+* **Button:** hardcoded classnames ([#309](https://github.com/daisyui/react-daisyui/issues/309)) ([c8d8aa1](https://github.com/daisyui/react-daisyui/commit/c8d8aa190c243516b61d082c4de651631ba4b23b))
+* **Carousel:** hardcoded snap classes ([#313](https://github.com/daisyui/react-daisyui/issues/313)) ([4c20ea6](https://github.com/daisyui/react-daisyui/commit/4c20ea68d82cd8a9c07b8789106aa7ae1239ac2c))
+* **ChatBubble:** hardcoded colors ([d0724ef](https://github.com/daisyui/react-daisyui/commit/d0724efb59dafdaa718b1aa150b2919a1440908b))
+* **Collapse:** hardcoded icon classes ([#314](https://github.com/daisyui/react-daisyui/issues/314)) ([2b3a2a7](https://github.com/daisyui/react-daisyui/commit/2b3a2a7e98e7b18f4fcdb1852526c1f2a6a82231))
+* **Dropdown:** hardcoded classes ([#310](https://github.com/daisyui/react-daisyui/issues/310)) ([ac9273e](https://github.com/daisyui/react-daisyui/commit/ac9273eb7167b5410f12abe891a3a8dfebe63826))
+* **Indicator:** hardcoded positions ([2c3e4f4](https://github.com/daisyui/react-daisyui/commit/2c3e4f493c3bf11d36d44157837302aeff2e1917))
+* **InputGroup:** hardcoded sizes ([eb614b2](https://github.com/daisyui/react-daisyui/commit/eb614b2be25ea1e9d6ef242eb4f20adffbb77ad9))
+* **Input:** hardcoded classes for all input components ([c91ab4c](https://github.com/daisyui/react-daisyui/commit/c91ab4c45745faf84ab60bf941cffb94c3fadfce))
+* **Kbd:** hardcoded sizes ([#315](https://github.com/daisyui/react-daisyui/issues/315)) ([f601e21](https://github.com/daisyui/react-daisyui/commit/f601e212391de42f5e263142fc742dd749ba2eba))
+* **Link:** hardcoded colors ([a564735](https://github.com/daisyui/react-daisyui/commit/a564735c6973f837467af70009ad04f5468a4d4b))
+* **Mask:** hardcoded variants ([bf4244d](https://github.com/daisyui/react-daisyui/commit/bf4244d4631658a34f09935b1a02a21f9c03bd07))
+* **Mockup:** hardcoded classes for mockup components ([3575ed4](https://github.com/daisyui/react-daisyui/commit/3575ed43cfdcf245cbd9870cc9e7f2ba61346047))
+* **Navbar:** hardcoded section classes ([bd72d25](https://github.com/daisyui/react-daisyui/commit/bd72d25904bd5b5f840b2c0350a1e32b59067244))
+* **Progress:** hardcoded colors ([93c4eec](https://github.com/daisyui/react-daisyui/commit/93c4eecce8577a27c99e0f431c8e44eaecf282f2))
+* **RadialProgress:** hardcoded colors ([#316](https://github.com/daisyui/react-daisyui/issues/316)) ([7028dee](https://github.com/daisyui/react-daisyui/commit/7028dee700405a97a9bae93ac41cf15f027d708f))
+* **States:** hardcoded item variants ([#319](https://github.com/daisyui/react-daisyui/issues/319)) ([27d6c44](https://github.com/daisyui/react-daisyui/commit/27d6c44fe86a813dbf3ecbb7bfbf129e5deeffc2))
+* **Step:** hardcoded colors ([74000f9](https://github.com/daisyui/react-daisyui/commit/74000f95ff28670f209d78a951c7a3221abec8a1))
+* **Tabs:** hardcoded variants and sizes ([8ee11b7](https://github.com/daisyui/react-daisyui/commit/8ee11b7876aacf87d29f2d73bd073bc60d52eccf))
+* **Tooltip:** hardcoded colors ([f2fa5ec](https://github.com/daisyui/react-daisyui/commit/f2fa5ec69a780d8f57be8dc75aba413afb4860fa))
+
+
+### Miscellaneous
+
+* **Avatar:** removed square brackets from classnames ([9a2f5cd](https://github.com/daisyui/react-daisyui/commit/9a2f5cdc988dd2e64f722b3d4fb37d6025fdd0e2))
+* **Divider:** added horizontal prop ([536c6b8](https://github.com/daisyui/react-daisyui/commit/536c6b831096d9e6de7024859052cfce832bcbd5))
+* **Progress:** removed square brackets from classnames ([4247e83](https://github.com/daisyui/react-daisyui/commit/4247e83d3f5ee9d62d475bbbd45880c92a0e87f1))
+* **Steps:** removed square brackets from classnames ([7bd23dd](https://github.com/daisyui/react-daisyui/commit/7bd23dde7b68e4f9c1b75741f878d270d20e03a0))
+* update daisyui version ([#318](https://github.com/daisyui/react-daisyui/issues/318)) ([a12f521](https://github.com/daisyui/react-daisyui/commit/a12f52173a6df8aeb5ab2bfa4ffae55e45a602d3))
+* updated github action workflows ([#317](https://github.com/daisyui/react-daisyui/issues/317)) ([844e42d](https://github.com/daisyui/react-daisyui/commit/844e42db8896bac4057042bcbb1c18c2161d010d))
+* upgrade dependencies ([#321](https://github.com/daisyui/react-daisyui/issues/321)) ([688c72e](https://github.com/daisyui/react-daisyui/commit/688c72e677103a0f7e4999e524ea8c735826977b))
+
 ## [3.0.3](https://github.com/daisyui/react-daisyui/compare/v3.0.2...v3.0.3) (2023-02-21)
 
 
