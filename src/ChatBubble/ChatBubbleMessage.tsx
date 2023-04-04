@@ -15,7 +15,13 @@ const ChatBubbleMessage = React.forwardRef<
   const classes = twMerge(
     'chat-bubble',
     clsx({
-      [`chat-bubble-${color}`]: color,
+      'chat-bubble-primary': color === 'primary',
+      'chat-bubble-secondary': color === 'secondary',
+      'chat-bubble-accent': color === 'accent',
+      'chat-bubble-info': color === 'info',
+      'chat-bubble-success': color === 'success',
+      'chat-bubble-warning': color === 'warning',
+      'chat-bubble-error': color === 'error',
     }),
     className
   )
