@@ -19,7 +19,12 @@ const PhoneMockup = forwardRef<HTMLDivElement, PhoneMockupProps>(
     const classes = twMerge(
       'mockup-phone',
       clsx({
-        [`border-${color}`]: color,
+        'border-primary': color === 'primary',
+        'border-secondary': color === 'secondary',
+        'border-info': color === 'info',
+        'border-success': color === 'success',
+        'border-warning': color === 'warning',
+        'border-error': color === 'error',
       }),
       className
     )

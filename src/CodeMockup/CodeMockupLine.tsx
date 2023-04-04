@@ -28,8 +28,14 @@ export const CodeMockupLine = forwardRef<HTMLPreElement, CodeMockupLineProps>(
   ): JSX.Element => {
     const classes = twMerge(
       clsx({
-        [`bg-${status}`]: status,
-        [`text-${status}-content`]: status,
+        'bg-info': status === 'info',
+        'bg-success': status === 'success',
+        'bg-warning': status === 'warning',
+        'bg-error': status === 'error',
+        'text-info-content': status === 'info',
+        'text-success-content': status === 'success',
+        'text-warning-content': status === 'warning',
+        'text-error-content': status === 'error',
       }),
       className
     )
