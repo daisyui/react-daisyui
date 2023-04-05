@@ -1,7 +1,7 @@
 import React from 'react'
 import { twMerge } from 'tailwind-merge'
-import { Avatar, AvatarProps } from '..'
 import { IComponentBaseProps } from '../types'
+import Avatar, { AvatarProps } from '../Avatar'
 
 export type ChatBubbleAvatarProps = AvatarProps & IComponentBaseProps
 
