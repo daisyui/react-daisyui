@@ -1,5 +1,15 @@
 # Changelog
 
+## [3.1.2](https://github.com/daisyui/react-daisyui/compare/v3.1.1...v3.1.2) (2023-04-06)
+
+
+### Bug Fixes
+
+* circular dependency in ChatBubbleAvatar ([#330](https://github.com/daisyui/react-daisyui/issues/330)) ([4cf1cd5](https://github.com/daisyui/react-daisyui/commit/4cf1cd54dac955cf09e8251908e74ad76a9c631d))
+* create .nojekyll file when generating docs ([8c4c180](https://github.com/daisyui/react-daisyui/commit/8c4c18078192e2a59684a0f1e9aa2c706f4f1da0))
+* **Kbd:** incorrect size class name ([#332](https://github.com/daisyui/react-daisyui/issues/332)) ([9473525](https://github.com/daisyui/react-daisyui/commit/9473525381226d6a9e15d060cd590be0a1c08c45))
+* **Navbar:** fixed examples Dropdown props ([#334](https://github.com/daisyui/react-daisyui/issues/334)) ([a773f88](https://github.com/daisyui/react-daisyui/commit/a773f8814ecaa71d608a263e5fcec3a10d97a68b))
+
 ## [3.1.1](https://github.com/daisyui/react-daisyui/compare/v3.1.0...v3.1.1) (2023-04-04)
 
 
