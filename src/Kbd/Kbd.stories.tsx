@@ -23,9 +23,7 @@ export const InText: Story<KbdProps> = (args) => {
     </div>
   )
 }
-InText.args = {
-  size: 'sm',
-}
+InText.args = {}
 
 export const KeyCombination: Story<KbdProps> = (args) => {
   return (
