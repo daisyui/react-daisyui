@@ -170,7 +170,7 @@ export const WithSearchInputAndDropdown: Story<NavbarProps> = (args) => {
           <Form>
             <Input bordered type="text" placeholder="Search" />
           </Form>
-          <Dropdown vertical="end">
+          <Dropdown end>
             <Button color="ghost" className="avatar" shape="circle">
               <div className="w-10 rounded-full">
                 <img src="https://api.lorem.space/image/face?hash=33791" />
@@ -203,7 +203,7 @@ export const WithIconIndicatorAndDropdown: Story<NavbarProps> = (args) => {
           </Button>
         </div>
         <div className="flex-none">
-          <Dropdown vertical="end">
+          <Dropdown end>
             <Button tabIndex={0} color="ghost" shape="circle">
               <Indicator item={<Badge size="sm">8</Badge>}>
                 <svg
@@ -237,7 +237,7 @@ export const WithIconIndicatorAndDropdown: Story<NavbarProps> = (args) => {
               </Card.Body>
             </Dropdown.Menu>
           </Dropdown>
-          <Dropdown vertical="end">
+          <Dropdown end>
             <Button color="ghost" className="avatar" shape="circle">
               <div className="w-10 rounded-full">
                 <img src="https://api.lorem.space/image/face?hash=33791" />
