@@ -61,15 +61,15 @@ const preview: Preview = {
         title={options.title}
         description={options.name}
         source={
-          options.parameters.docs.source.originalSource.
+          options.parameters.docs.source.originalSource
           /* TODO: clean up all this string formatting/regex */
           /* Removes the args arrow function */
-          replace(/^args\s*=>\s*\{\s*/, '    ').
-          replace(/\(.*args.*\)\s*=>\s*\{\s*\n/, '    ').
-          replace(/^(\s*)return\s+/, '$1').
-          replace(/_s\(\);/, '').
+          .replace(/^args\s*=>\s*\{\s*/, '    ')
+          .replace(/\(.*args.*\)\s*=>\s*\{\s*\n/, '    ')
+          .replace(/^(\s*)return\s+/, '$1')
+          .replace(/_s\(\);/, '')
           /* Removes the last occurence of a closing bracket (from the lambda) */
-          replace(/}([^}]*)$/, '$1')
+          .replace(/}([^}]*)$/, '$1')
           /* Removes the last occurence of a semicolon */
           .replace(/;(?=[^;]*$)/, '')
         }
