@@ -2,7 +2,7 @@ import { StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
   stories: ['./docs/pages/Welcome.mdx', "../src/**/*.stories.@(js|jsx|ts|tsx)"],
-  addons: ['@storybook/addon-actions', '@storybook/addon-storysource', {
+  addons: [{
     name: '@storybook/addon-styling',
     options: {
       implementation: require("postcss"),
