@@ -1,9 +1,4 @@
-import React, {
-  forwardRef,
-  useEffect,
-  useImperativeHandle,
-  useRef,
-} from 'react'
+import React, { forwardRef } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
@@ -53,25 +48,24 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       })
     )
 
-    const checkboxRef = useRef<HTMLInputElement>(null)
-    useImperativeHandle(ref, () => checkboxRef.current as HTMLInputElement)
-
-    useEffect(() => {
-      if (!checkboxRef.current) {
-        return
+    const setRef = (input: HTMLInputElement | null) => {
+      if (ref) {
+        if (typeof ref === 'function') {
+          ref(input)
+        } else {
+          ref.current = input
+        }
       }
 
-      if (indeterminate) {
-        checkboxRef.current.indeterminate = true
-      } else {
-        checkboxRef.current.indeterminate = false
+      if (input && indeterminate !== undefined) {
+        input.indeterminate = indeterminate
       }
-    }, [indeterminate])
+    }
 
     return (
       <input
         {...props}
-        ref={checkboxRef}
+        ref={setRef}
         type="checkbox"
         data-theme={dataTheme}
         className={classes}
