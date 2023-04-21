@@ -8,21 +8,20 @@ import Stat from './Stat'
 
 export type StatsProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {
-    horizontal?: boolean
-    vertical?: boolean
+    direction?: 'horizontal' | 'vertical'
   }
 
 const Stats = React.forwardRef<HTMLDivElement, StatsProps>(
   (
-    { horizontal, vertical, dataTheme, className, children, ...props },
+    { direction = 'horizontal', dataTheme, className, children, ...props },
     ref
   ): JSX.Element => {
     const classes = twMerge(
       'stats',
       className,
       clsx({
-        'stats-horizontal': horizontal,
-        'stats-vertical': vertical,
+        'stats-vertical': direction === 'vertical',
+        'stats-horizontal': direction === 'horizontal',
       })
     )
 
