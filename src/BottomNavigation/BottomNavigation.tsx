@@ -27,7 +27,13 @@ const BottomNavigation = forwardRef<HTMLDivElement, BottomNavigationProps>(
     )
 
     return (
-      <div {...props} data-theme={dataTheme} className={classes} ref={ref}>
+      <div
+        {...props}
+        role="navigation"
+        data-theme={dataTheme}
+        className={classes}
+        ref={ref}
+      >
         {children}
       </div>
     )
