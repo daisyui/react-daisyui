@@ -27,11 +27,12 @@ describe('Rating', () => {
   it('Should render', () => {
     render(<TestComponent value={0} />)
     expect(screen.getByLabelText('Rating')).toBeInTheDocument()
-    expect(screen.getAllByRole('checkbox')).toHaveLength(5)
+    expect(screen.getAllByRole('checkbox')).toHaveLength(6)
+    expect(screen.getAllByRole('checkbox')[0]).toHaveClass('hidden')
   })
 
   it.each([
-    [0, undefined],
+    [0, 0],
     [1, 0],
     [2, 1],
     [3, 2],
@@ -39,20 +40,25 @@ describe('Rating', () => {
     [5, 4],
   ])('Should change on value prop change', (value, checkboxIndex) => {
     render(<TestComponent value={value} />)
+    expect(screen.getAllByRole('checkbox')[checkboxIndex]).toBeChecked()
 
-    if (checkboxIndex != null) {
-      expect(screen.getAllByRole('checkbox')[checkboxIndex]).toBeChecked()
-    } else {
-      screen
-        .getAllByRole('checkbox')
-        .forEach((c) => expect(c).not.toBeChecked())
+    if (value === 0) {
+      expect(screen.getAllByRole('checkbox')[checkboxIndex]).toHaveClass(
+        'hidden'
+      )
     }
   })
 
-  it.each([0, 1, 2, 3, 4])('Should change on click', async (checkboxIndex) => {
+  it.each([
+    [1, 0],
+    [2, 1],
+    [3, 2],
+    [4, 3],
+    [5, 4],
+  ])('Should change on click', async (toBeClickedIndex, toBeCheckedIndex) => {
     render(<ControlledTestComponent />)
-    await userEvent.click(screen.getAllByRole('checkbox')[checkboxIndex])
-    expect(screen.getAllByRole('checkbox')[checkboxIndex]).toBeChecked()
+    await userEvent.click(screen.getAllByRole('checkbox')[toBeClickedIndex])
+    expect(screen.getAllByRole('checkbox')[toBeCheckedIndex]).toBeChecked()
   })
 
   it('Should not change on click if onChange prop is not provided', async () => {

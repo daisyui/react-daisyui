@@ -46,9 +46,7 @@ const Rating = React.forwardRef<HTMLDivElement, RatingProps>(
       >
         {value === 0 && (
           <RatingItem
-            className={classes}
-            // Currently only inline style works with unit tests
-            style={{ display: 'none' }}
+            className={clsx(classes, 'hidden')}
             checked
             readOnly
           />
