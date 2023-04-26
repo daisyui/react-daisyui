@@ -1,4 +1,4 @@
-import React, {ReactElement} from 'react'
+import React, { ReactElement } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
@@ -7,9 +7,9 @@ import { IComponentBaseProps, ComponentSize } from '../types'
 import RatingItem, { RatingItemProps } from './RatingItem'
 
 export type RatingProps = Omit<
-    React.HTMLAttributes<HTMLDivElement>,
-    'onChange'
-  > &
+  React.HTMLAttributes<HTMLDivElement>,
+  'onChange'
+> &
   IComponentBaseProps & {
     size?: ComponentSize
     half?: boolean
@@ -57,7 +57,9 @@ const Rating = React.forwardRef<HTMLDivElement, RatingProps>(
             key: index + value,
             checked: value === index + 1,
             readOnly: onChange == null,
-            onChange: () => { onChange?.(index + 1) },
+            onChange: () => {
+              onChange?.(index + 1)
+            },
           })
         })}
       </div>
