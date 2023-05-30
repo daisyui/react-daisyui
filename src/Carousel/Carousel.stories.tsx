@@ -13,32 +13,32 @@ export const Default: Story<CarouselProps> = (args) => {
   return (
     <Carousel {...args} className="rounded-box">
       <Carousel.Item
-        src="https://api.lorem.space/image/burger?w=400&h=300&hash=8B7BCDC2"
-        alt="Burger"
+        src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/burger?w=400&h=300&hash=500B67FB"
-        alt="Burger"
+        src="https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/burger?w=400&h=300&hash=A89D0DE6"
-        alt="Burger"
+        src="https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/burger?w=400&h=300&hash=225E6693"
-        alt="Burger"
+        src="https://daisyui.com/images/stock/photo-1494253109108-2e30c049369b.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/burger?w=400&h=300&hash=9D9539E7"
-        alt="Burger"
+        src="https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/burger?w=400&h=300&hash=BDC01094"
-        alt="Burger"
+        src="https://daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/burger?w=400&h=300&hash=7F5AE56A"
-        alt="Burger"
+        src="https://daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.jpg"
+        alt="Fruits"
       />
     </Carousel>
   )
@@ -49,32 +49,32 @@ export const Snap: Story<CarouselProps> = (args) => {
   return (
     <Carousel {...args} className="rounded-box">
       <Carousel.Item
-        src="https://api.lorem.space/image/drink?w=400&h=300&hash=8B7BCDC2"
-        alt="Drinks"
+        src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/drink?w=400&h=300&hash=500B67FB"
-        alt="Drinks"
+        src="https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/drink?w=400&h=300&hash=A89D0DE6"
-        alt="Drinks"
+        src="https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/drink?w=400&h=300&hash=225E6693"
-        alt="Drinks"
+        src="https://daisyui.com/images/stock/photo-1494253109108-2e30c049369b.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/drink?w=400&h=300&hash=9D9539E7"
-        alt="Drinks"
+        src="https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/drink?w=400&h=300&hash=BDC01094"
-        alt="Drinks"
+        src="https://daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/drink?w=400&h=300&hash=7F5AE56A"
-        alt="Drinks"
+        src="https://daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.jpg"
+        alt="Fruits"
       />
     </Carousel>
   )
@@ -87,32 +87,32 @@ export const FullWidth: Story<CarouselProps> = (args) => {
   return (
     <Carousel {...args} className="w-64 rounded-box">
       <Carousel.Item
-        src="https://api.lorem.space/image/game?w=256&h=400&hash=8B7BCDC2"
-        alt="Videogame Poster"
+        src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/game?w=256&h=400&hash=500B67FB"
-        alt="Videogame Poster"
+        src="https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/game?w=256&h=400&hash=A89D0DE6"
-        alt="Videogame Poster"
+        src="https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/game?w=256&h=400&hash=225E6693"
-        alt="Videogame Poster"
+        src="https://daisyui.com/images/stock/photo-1494253109108-2e30c049369b.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/game?w=256&h=400&hash=9D9539E7"
-        alt="Videogame Poster"
+        src="https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/game?w=256&h=400&hash=BDC01094"
-        alt="Videogame Poster"
+        src="https://daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/game?w=256&h=400&hash=7F5AE56A"
-        alt="Videogame Poster"
+        src="https://daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.jpg"
+        alt="Fruits"
       />
     </Carousel>
   )
@@ -125,32 +125,32 @@ export const HalfWidth: Story<CarouselProps> = (args) => {
   return (
     <Carousel {...args} className="w-64 rounded-box">
       <Carousel.Item
-        src="https://api.lorem.space/image/game?w=256&h=400&hash=8B7BCDC2"
-        alt="Videogame Poster"
+        src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/game?w=256&h=400&hash=500B67FB"
-        alt="Videogame Poster"
+        src="https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/game?w=256&h=400&hash=A89D0DE6"
-        alt="Videogame Poster"
+        src="https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/game?w=256&h=400&hash=225E6693"
-        alt="Videogame Poster"
+        src="https://daisyui.com/images/stock/photo-1494253109108-2e30c049369b.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/game?w=256&h=400&hash=9D9539E7"
-        alt="Videogame Poster"
+        src="https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/game?w=256&h=400&hash=BDC01094"
-        alt="Videogame Poster"
+        src="https://daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/game?w=256&h=400&hash=7F5AE56A"
-        alt="Videogame Poster"
+        src="https://daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.jpg"
+        alt="Fruits"
       />
     </Carousel>
   )
@@ -163,32 +163,32 @@ export const Vertical: Story<CarouselProps> = (args) => {
   return (
     <Carousel {...args} className="h-96 w-64 rounded-box">
       <Carousel.Item
-        src="https://api.lorem.space/image/game?w=256&h=400&hash=8B7BCDC2"
-        alt="Videogame Poster"
+        src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/game?w=256&h=400&hash=500B67FB"
-        alt="Videogame Poster"
+        src="https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/game?w=256&h=400&hash=A89D0DE6"
-        alt="Videogame Poster"
+        src="https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/game?w=256&h=400&hash=225E6693"
-        alt="Videogame Poster"
+        src="https://daisyui.com/images/stock/photo-1494253109108-2e30c049369b.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/game?w=256&h=400&hash=9D9539E7"
-        alt="Videogame Poster"
+        src="https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/game?w=256&h=400&hash=BDC01094"
-        alt="Videogame Poster"
+        src="https://daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg"
+        alt="Fruits"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/game?w=256&h=400&hash=7F5AE56A"
-        alt="Videogame Poster"
+        src="https://daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.jpg"
+        alt="Fruits"
       />
     </Carousel>
   )
@@ -202,20 +202,20 @@ export const Numbered: Story<CarouselProps> = (args) => {
   return (
     <Carousel {...args} className="rounded-box">
       <Carousel.Item
-        src="https://api.lorem.space/image/car?w=800&h=200&hash=8B7BCDC2"
-        alt="Car"
+        src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg"
+        alt="City"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/car?w=800&h=200&hash=500B67FB"
-        alt="Car"
+        src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg"
+        alt="City"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/car?w=800&h=200&hash=A89D0DE6"
-        alt="Car"
+        src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg"
+        alt="City"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/car?w=800&h=200&hash=225E6693"
-        alt="Car"
+        src="https://daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg"
+        alt="City"
       />
     </Carousel>
   )
@@ -228,20 +228,20 @@ export const Sequential: Story<CarouselProps> = (args) => {
   return (
     <Carousel {...args} className="rounded-box">
       <Carousel.Item
-        src="https://api.lorem.space/image/car?w=800&h=200&hash=8B7BCDC2"
-        alt="Car"
+        src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg"
+        alt="City"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/car?w=800&h=200&hash=500B67FB"
-        alt="Car"
+        src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg"
+        alt="City"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/car?w=800&h=200&hash=A89D0DE6"
-        alt="Car"
+        src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg"
+        alt="City"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/car?w=800&h=200&hash=225E6693"
-        alt="Car"
+        src="https://daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg"
+        alt="City"
       />
     </Carousel>
   )
@@ -260,20 +260,20 @@ export const CustomButton: Story<CarouselProps> = (args) => {
   return (
     <Carousel {...args} className="rounded-box">
       <Carousel.Item
-        src="https://api.lorem.space/image/car?w=800&h=200&hash=8B7BCDC2"
-        alt="Car"
+        src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg"
+        alt="City"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/car?w=800&h=200&hash=500B67FB"
-        alt="Car"
+        src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg"
+        alt="City"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/car?w=800&h=200&hash=A89D0DE6"
-        alt="Car"
+        src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg"
+        alt="City"
       />
       <Carousel.Item
-        src="https://api.lorem.space/image/car?w=800&h=200&hash=225E6693"
-        alt="Car"
+        src="https://daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg"
+        alt="City"
       />
     </Carousel>
   )
