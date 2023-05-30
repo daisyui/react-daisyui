@@ -173,7 +173,7 @@ export const WithSearchInputAndDropdown: Story<NavbarProps> = (args) => {
           <Dropdown end>
             <Button color="ghost" className="avatar" shape="circle">
               <div className="w-10 rounded-full">
-                <img src="https://api.lorem.space/image/face?hash=33791" />
+                <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
               </div>
             </Button>
             <Dropdown.Menu className="w-52 menu-compact">
@@ -240,7 +240,7 @@ export const WithIconIndicatorAndDropdown: Story<NavbarProps> = (args) => {
           <Dropdown end>
             <Button color="ghost" className="avatar" shape="circle">
               <div className="w-10 rounded-full">
-                <img src="https://api.lorem.space/image/face?hash=33791" />
+                <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
               </div>
             </Button>
             <Dropdown.Menu className="w-52 menu-compact">
