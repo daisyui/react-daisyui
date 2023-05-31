@@ -13,7 +13,7 @@ export const Default: Story<CardProps> = (args) => {
   return (
     <Card {...args}>
       <Card.Image
-        src="https://api.lorem.space/image/shoes?w=400&h=225"
+        src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
         alt="Shoes"
       />
       <Card.Body>
@@ -35,7 +35,7 @@ export const Responsive: Story<CardProps> = (args) => {
       </div>
       <Card {...args} side="lg">
         <Card.Image
-          src="https://api.lorem.space/image/shoes?w=400&h=225"
+          src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
           alt="Shoes"
         />
         <Card.Body>
@@ -54,7 +54,7 @@ export const Centered: Story<CardProps> = (args) => {
   return (
     <Card {...args}>
       <Card.Image
-        src="https://api.lorem.space/image/shoes?w=400&h=225"
+        src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
         alt="Shoes"
       />
       <Card.Body className="items-center text-center">
@@ -72,7 +72,7 @@ export const ImageOverlay: Story<CardProps> = (args) => {
   return (
     <Card {...args} imageFull>
       <Card.Image
-        src="https://api.lorem.space/image/shoes?w=400&h=225"
+        src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
         alt="Shoes"
       />
       <Card.Body>

@@ -92,7 +92,7 @@ export const IconsOrImage: Story<StatsProps> = (args) => {
           <Avatar
             size="sm"
             online={true}
-            src="https://api.lorem.space/image/face?w=128&h=128"
+            src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
             shape="circle"
           ></Avatar>
         </Stat.Item>
