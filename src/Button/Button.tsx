@@ -19,6 +19,7 @@ export type ButtonProps = Omit<
     size?: ComponentSize
     variant?: 'outline' | 'link'
     color?: ComponentColor
+    glass?: boolean
     wide?: boolean
     fullWidth?: boolean
     responsive?: boolean
@@ -38,6 +39,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       size,
       variant,
       color,
+      glass,
       startIcon,
       endIcon,
       wide,
@@ -66,6 +68,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         'btn-square': shape === 'square',
         'btn-outline': variant === 'outline',
         'btn-link': variant === 'link',
+        'btn-neutral': color === 'neutral',
         'btn-primary': color === 'primary',
         'btn-secondary': color === 'secondary',
         'btn-accent': color === 'accent',
@@ -74,6 +77,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         'btn-warning': color === 'warning',
         'btn-error': color === 'error',
         'btn-ghost': color === 'ghost',
+        glass: glass,
         'btn-wide': wide,
         'btn-block': fullWidth,
         'btn-xs md:btn-sm lg:btn-md xl:btn-lg': responsive,
