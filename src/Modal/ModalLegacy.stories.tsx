@@ -6,7 +6,7 @@ import Button from '../Button'
 
 export default {
   title: 'Actions/Modal/Legacy',
-  component: Modal,
+  component: Modal.Legacy,
 } as Meta
 
 export const Default: Story<ModalProps> = (args) => {
