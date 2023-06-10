@@ -2,7 +2,7 @@
 
 <img src="https://user-images.githubusercontent.com/64439681/181564610-a0fd8fef-b552-4cc5-b115-8652dc142065.svg">
 
-**daisyUI components built with React, Typescript and TailwindCSS**  
+**daisyUI components built with React, Typescript and TailwindCSS**
 
 [ [See all components](https://react.daisyui.com/) ]
 
@@ -36,10 +36,30 @@ To prevent TailwindCSS from purging your styles, add the following line to your 
 
 ```js
 module.exports = {
-  content: ['node_modules/daisyui/dist/**/*.js', 'node_modules/react-daisyui/dist/**/*.js'],
+  content: [
+    'node_modules/daisyui/dist/**/*.js',
+    'node_modules/react-daisyui/dist/**/*.js',
+  ],
   plugins: [require('daisyui')],
 }
 ```
+
+<details>
+<summary>For Next.js 13:</summary>
+
+Modify `transpilePackages` in your `next.config.js` file:
+
+```js
+const nextConfig = {
+  // ... your content here
+  transpilePackages: ['react-daisyui'],
+  reactStrictMode: true,
+}
+
+module.exports = nextConfig
+```
+
+</details>
 
 <details>
 <summary>For Next.js 12:</summary>
