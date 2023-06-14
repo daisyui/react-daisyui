@@ -1,8 +1,6 @@
 import React from 'react'
 
 import { classesFn, DropdownProps } from './Dropdown'
-import DropdownMenu from './DropdownMenu'
-import DropdownItem from './DropdownItem'
 import { Summary } from './DropdownToggle'
 
 export type DetailsProps = Omit<
