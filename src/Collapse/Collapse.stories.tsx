@@ -6,6 +6,9 @@ import Collapse, { CollapseProps } from '.'
 export default {
   title: 'Data Display/Collapse',
   component: Collapse,
+  args: {
+    className: 'bg-base-200',
+  },
 } as Meta
 
 const Template: Story<CollapseProps> = (args) => {
@@ -24,15 +27,13 @@ const Template: Story<CollapseProps> = (args) => {
 export const Default = Template.bind({})
 Default.args = {}
 
-export const Checkbox = (args) => {
+export const Checkbox: Story<CollapseProps> = (args) => {
   return (
     <Collapse {...args}>
       <Collapse.Title className="text-xl font-medium">
         Click me to show/hide content
       </Collapse.Title>
-      <Collapse.Content>
-        hello
-      </Collapse.Content>
+      <Collapse.Content>hello</Collapse.Content>
     </Collapse>
   )
 }
@@ -42,22 +43,22 @@ Checkbox.args = {
 
 export const WithBorderAndBackground = Template.bind({})
 WithBorderAndBackground.args = {
-  className: 'border border-base-300 bg-base-100 rounded-box',
+  className: 'border border-base-300 bg-base-200',
 }
 
 export const WithArrow = Template.bind({})
 WithArrow.args = {
-  className: 'border border-base-300 bg-base-100 rounded-box',
+  className: 'border border-base-300 bg-base-200',
   icon: 'arrow',
 }
 
 export const WithPlusMinus = Template.bind({})
 WithPlusMinus.args = {
-  className: 'border border-base-300 bg-base-100 rounded-box',
+  className: 'border border-base-300 bg-base-200',
   icon: 'plus',
 }
 
-export const ForceOpen = (args) => {
+export const ForceOpen: Story<CollapseProps> = (args) => {
   return (
     <Collapse {...args}>
       <Collapse.Title className="text-xl font-medium">
@@ -70,11 +71,11 @@ export const ForceOpen = (args) => {
   )
 }
 ForceOpen.args = {
-  className: 'border border-base-300 bg-base-100 rounded-box',
+  className: 'border border-base-300 bg-base-200',
   open: true,
 }
 
-export const ForceClose = (args) => {
+export const ForceClose: Story<CollapseProps> = (args) => {
   return (
     <Collapse {...args}>
       <Collapse.Title className="text-xl font-medium">
@@ -87,7 +88,7 @@ export const ForceClose = (args) => {
   )
 }
 ForceClose.args = {
-  className: 'border border-base-300 bg-base-100 rounded-box',
+  className: 'border border-base-300 bg-base-200',
   open: false,
 }
 
