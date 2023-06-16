@@ -10,74 +10,56 @@ export default {
 } as Meta
 
 export const Default: Story<BadgeProps> = (args) => {
-  return <Badge {...args}>Example</Badge>
+  return <Badge {...args}>Badge</Badge>
 }
 Default.args = {}
 
-export const Colors: Story<BadgeProps> = (args) => {
+export const BrandColors: Story<BadgeProps> = (args) => {
   return (
-    <div>
-      <div>
-        <Badge {...args}>neutral</Badge>
-        <Badge {...args} color="primary">
-          primary
-        </Badge>
-        <Badge {...args} color="secondary">
-          secondary
-        </Badge>
-        <Badge {...args} color="accent">
-          accent
-        </Badge>
-        <Badge {...args} color="ghost">
-          ghost
-        </Badge>
-      </div>
-      <div>
-        <Badge {...args} color="success">
-          success
-        </Badge>
-        <Badge {...args} color="info">
-          info
-        </Badge>
-        <Badge {...args} color="warning">
-          warning
-        </Badge>
-        <Badge {...args} color="error">
-          error
-        </Badge>
-      </div>
+    <div className="flex gap-2 items-center">
+      <Badge {...args}>default</Badge>
+      <Badge {...args} color="neutral">
+        neutral
+      </Badge>
+      <Badge {...args} color="primary">
+        primary
+      </Badge>
+      <Badge {...args} color="secondary">
+        secondary
+      </Badge>
+      <Badge {...args} color="accent">
+        accent
+      </Badge>
+      <Badge {...args} color="ghost">
+        ghost
+      </Badge>
     </div>
   )
-}
-Colors.args = {
-  className: 'm-1'
 }
 
 export const Outline: Story<BadgeProps> = (args) => {
   return (
-    <div>
-      <Badge {...args} variant="outline">
-        neutral
-      </Badge>
-      <Badge {...args} color="primary" variant="outline">
+    <div className="flex gap-2 items-center">
+      <Badge {...args}>default</Badge>
+      <Badge {...args} color="primary">
         primary
       </Badge>
-      <Badge {...args} color="secondary" variant="outline">
+      <Badge {...args} color="secondary">
         secondary
       </Badge>
-      <Badge {...args} color="accent" variant="outline">
+      <Badge {...args} color="accent">
         accent
       </Badge>
     </div>
   )
 }
 Outline.args = {
-  className: 'm-1'
+  variant: 'outline',
 }
 
 export const Sizes: Story<BadgeProps> = (args) => {
   return (
-    <div>
+    <div className="flex gap-2 items-center">
       <Badge {...args} size="lg">
         987,654
       </Badge>
@@ -93,9 +75,6 @@ export const Sizes: Story<BadgeProps> = (args) => {
     </div>
   )
 }
-Sizes.args = {
-  className: 'm-1'
-}
 
 export const Empty: Story<BadgeProps> = (args) => {
   return (
@@ -107,17 +86,112 @@ export const Empty: Story<BadgeProps> = (args) => {
     </div>
   )
 }
-Empty.args = {}
+Empty.args = {
+  color: 'primary',
+}
+
+export const StateColors: Story<BadgeProps> = (args) => {
+  return (
+    <div className="flex gap-2 items-center">
+      <Badge {...args} color="info">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          className="inline-block w-4 h-4 stroke-current"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+        info
+      </Badge>
+      <Badge {...args} color="success">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          className="inline-block w-4 h-4 stroke-current"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+        success
+      </Badge>
+      <Badge {...args} color="warning">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          className="inline-block w-4 h-4 stroke-current"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+        warning
+      </Badge>
+      <Badge {...args} color="error">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          className="inline-block w-4 h-4 stroke-current"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+        error
+      </Badge>
+    </div>
+  )
+}
+StateColors.args = {
+  className: 'gap-2',
+}
 
 export const BadgeInText: Story<BadgeProps> = (args) => {
   return (
-    <div className="flex gap-2 items-center">
-      <h2 className="text-xl gap-2">
-        Heading{' '}
+    <div className="flex flex-col gap-2 items-center">
+      <h2 className="text-xl">
+        Heading
         <Badge {...args} size="lg">
           NEW
         </Badge>
       </h2>
+      <h3 className="text-xl">
+        Heading
+        <Badge {...args} size="md">
+          NEW
+        </Badge>
+      </h3>
+      <h4 className="text-base">
+        Heading
+        <Badge {...args} size="sm">
+          NEW
+        </Badge>
+      </h4>
+
+      <h5 className="text-sm">
+        Heading
+        <Badge {...args} size="xs">
+          NEW
+        </Badge>
+      </h5>
     </div>
   )
 }
@@ -126,13 +200,13 @@ BadgeInText.args = {}
 export const BadgeInAButton: Story<BadgeProps> = (args) => {
   return (
     <div className="flex gap-2 items-center">
-      <Button className="gap-2">
+      <Button>
         Inbox
         <Badge {...args}>+99</Badge>
       </Button>
-      <Button className="gap-2">
+      <Button>
         Inbox
-        <Badge {...args} color="primary">
+        <Badge {...args} color="secondary">
           +99
         </Badge>
       </Button>
