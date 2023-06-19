@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useCallback } from 'react'
 import { StoryFn as Story, Meta } from '@storybook/react'
 
 import Modal, { ModalProps } from '.'
@@ -10,111 +10,84 @@ export default {
 } as Meta
 
 export const Default: Story<ModalProps> = (args) => {
-  const [visible, setVisible] = useState<boolean>(false)
-
-  const toggleVisible = () => {
-    setVisible(!visible)
-  }
-
+  const ref = useRef<HTMLDialogElement>(null)
+  const handleShow = useCallback(() => {
+    ref.current?.showModal()
+  }, [ref])
   return (
     <div className="font-sans">
-      <Button onClick={toggleVisible}>Open Modal</Button>
-      <Modal {...args} open={visible}>
-        <Modal.Header className="font-bold">
-          Congratulations random Interner user!
-        </Modal.Header>
-
+      <Button onClick={handleShow}>Open Modal</Button>
+      <Modal {...args} ref={ref}>
+        <Modal.Header className="font-bold">Hello!</Modal.Header>
         <Modal.Body>
-          You've been selected for a chance to get one year of subscription to
-          use Wikipedia for free!
+          Press ESC key or click the button below to close
         </Modal.Body>
-
         <Modal.Actions>
-          <Button onClick={toggleVisible}>Yay!</Button>
+          <Button>Close</Button>
         </Modal.Actions>
       </Modal>
     </div>
   )
 }
 
-export const CloseButton: Story<ModalProps> = (args) => {
-  const [visible, setVisible] = useState<boolean>(false)
-
-  const toggleVisible = () => {
-    setVisible(!visible)
-  }
-
+export const ClickedOutside: Story<ModalProps> = (args) => {
+  const ref = useRef<HTMLDialogElement>(null)
+  const handleShow = useCallback(() => {
+    ref.current?.showModal()
+  }, [ref])
   return (
     <div className="font-sans">
-      <Button onClick={toggleVisible}>Open Modal</Button>
-      <Modal {...args} open={visible}>
-        <Button
-          size="sm"
-          shape="circle"
-          className="absolute right-2 top-2"
-          onClick={toggleVisible}
-        >
-          ✕
-        </Button>
-        <Modal.Header className="font-bold">
-          Congratulations random Interner user!
-        </Modal.Header>
-
-        <Modal.Body>
-          You've been selected for a chance to get one year of subscription to
-          use Wikipedia for free!
-        </Modal.Body>
+      <Button onClick={handleShow}>Open Modal</Button>
+      <Modal {...args} ref={ref}>
+        <Modal.Header className="font-bold">Hello!</Modal.Header>
+        <Modal.Body>Press ESC key or click outside to close</Modal.Body>
       </Modal>
     </div>
   )
 }
+ClickedOutside.args = {
+  backdrop: true,
+}
 
-export const ClickedOutside: Story<ModalProps> = (args) => {
-  const [visible, setVisible] = useState<boolean>(false)
-
-  const toggleVisible = () => {
-    setVisible(!visible)
-  }
-
+export const CloseButton: Story<ModalProps> = (args) => {
+  const ref = useRef<HTMLDialogElement>(null)
+  const handleShow = useCallback(() => {
+    ref.current?.showModal()
+  }, [ref])
   return (
     <div className="font-sans">
-      <Button onClick={toggleVisible}>Open Modal</Button>
-      <Modal {...args} open={visible} onClickBackdrop={toggleVisible}>
-        <Modal.Header className="font-bold">
-          Congratulations random Interner user!
-        </Modal.Header>
-
-        <Modal.Body>
-          You've been selected for a chance to get one year of subscription to
-          use Wikipedia for free!
-        </Modal.Body>
+      <Button onClick={handleShow}>Open Modal</Button>
+      <Modal {...args} ref={ref}>
+        <Button
+          size="sm"
+          color="ghost"
+          shape="circle"
+          className="absolute right-2 top-2"
+        >
+          x
+        </Button>
+        <Modal.Header className="font-bold">Hello!</Modal.Header>
+        <Modal.Body>Press ESC key or click on X button to close</Modal.Body>
       </Modal>
     </div>
   )
 }
 
 export const CustomWidth: Story<ModalProps> = (args) => {
-  const [visible, setVisible] = useState<boolean>(false)
-
-  const toggleVisible = () => {
-    setVisible(!visible)
-  }
-
+  const ref = useRef<HTMLDialogElement>(null)
+  const handleShow = useCallback(() => {
+    ref.current?.showModal()
+  }, [ref])
   return (
     <div className="font-sans">
-      <Button onClick={toggleVisible}>Open Modal</Button>
-      <Modal {...args} open={visible}>
-        <Modal.Header className="font-bold">
-          Congratulations random Interner user!
-        </Modal.Header>
-
+      <Button onClick={handleShow}>Open Modal</Button>
+      <Modal {...args} ref={ref}>
+        <Modal.Header className="font-bold">Hello!</Modal.Header>
         <Modal.Body>
-          You've been selected for a chance to get one year of subscription to
-          use Wikipedia for free!
+          Press ESC key or click the button below to close
         </Modal.Body>
-
         <Modal.Actions>
-          <Button onClick={toggleVisible}>Yay!</Button>
+          <Button>Close</Button>
         </Modal.Actions>
       </Modal>
     </div>
@@ -123,4 +96,20 @@ export const CustomWidth: Story<ModalProps> = (args) => {
 
 CustomWidth.args = {
   className: 'w-11/12 max-w-5xl',
+}
+
+export const UseDialogHook: Story<ModalProps> = (args) => {
+  const { Dialog, handleShow } = Modal.useDialog()
+  return (
+    <div className="font-sans">
+      <Button onClick={handleShow}>Open Modal</Button>
+      <Dialog {...args}>
+        <Modal.Header className="font-bold">Hello!</Modal.Header>
+        <Modal.Body>This modal works with useDialog hook!</Modal.Body>
+        <Modal.Actions>
+          <Button>Close</Button>
+        </Modal.Actions>
+      </Dialog>
+    </div>
+  )
 }
