@@ -2,6 +2,7 @@ import React, { forwardRef, ReactNode } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
+import Loading from '../Loading';
 import {
   IComponentBaseProps,
   ComponentColor,
@@ -23,7 +24,7 @@ export type ButtonProps = Omit<
     fullWidth?: boolean
     responsive?: boolean
     animation?: boolean
-    loading?: boolean
+    loading?: boolean 
     active?: boolean
     startIcon?: ReactNode
     endIcon?: ReactNode
@@ -80,7 +81,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         'no-animation': !animation,
         'btn-active': active,
         'btn-disabled': disabled,
-        loading: loading,
       })
     )
 
@@ -102,6 +102,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           style={style}
           disabled={disabled}
         >
+          {!startIcon && loading && (<Loading size={size} />)}
           {startIcon && !loading && startIcon}
           {children}
           {endIcon && endIcon}
