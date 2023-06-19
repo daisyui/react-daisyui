@@ -29,6 +29,9 @@ export const Colors: Story<ButtonProps> = (args) => {
     <div>
       <div>
         <Button {...args}>Default</Button>
+        <Button {...args} color="neutral">
+          Neutral
+        </Button>
         <Button {...args} color="primary">
           Primary
         </Button>
@@ -60,7 +63,7 @@ export const Colors: Story<ButtonProps> = (args) => {
   )
 }
 Colors.args = {
-  className: "m-1"
+  className: 'm-1',
 }
 
 export const Variants: Story<ButtonProps> = (args) => {
@@ -119,4 +122,21 @@ export const AsHref: Story<ButtonProps> = (args) => {
       <Button href="https://google.com">I'm an {`<a>`}</Button>
     </div>
   )
+}
+
+export const Glass: Story<ButtonProps> = (args) => {
+  return (
+    <div
+      className="w-full flex justify-center py-8 rounded-md"
+      style={{
+        backgroundImage:
+          'url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)',
+      }}
+    >
+      <Button {...args}>Glass button</Button>
+    </div>
+  )
+}
+Glass.args = {
+  glass: true,
 }

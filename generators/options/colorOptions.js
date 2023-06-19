@@ -18,6 +18,7 @@ export const colorOptions = {
       'success',
       'warning',
       'error',
+      'neutral',
       'primary',
       'secondary',
       'accent',
