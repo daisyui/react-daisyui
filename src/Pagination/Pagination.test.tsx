@@ -4,6 +4,7 @@ import { render, screen } from '@testing-library/react'
 import Button from '../Button'
 import Pagination from './'
 
+const testid = 'pagination'
 const buttons = [
   <Button key="1">Button 1</Button>,
   <Button key="2">Button 2</Button>,
@@ -14,7 +15,6 @@ describe('Pagination', () => {
   it('Should render a group of buttons', () => {
     render(<Pagination>{buttons}</Pagination>)
 
-    expect(screen.getByLabelText('Group of 3 buttons')).toBeInTheDocument()
     expect(screen.getAllByRole('button')).toHaveLength(3)
     expect(screen.getByText('Button 1')).toBeInTheDocument()
     expect(screen.getByText('Button 2')).toBeInTheDocument()
@@ -22,23 +22,26 @@ describe('Pagination', () => {
   })
 
   it('Should apply additional class namess', () => {
-    render(<Pagination className="custom-class">{buttons}</Pagination>)
-    expect(screen.getByLabelText('Group of 3 buttons')).toHaveClass(
-      'btn-group',
-      'custom-class'
+    render(
+      <Pagination className="custom-class" data-testid={testid}>
+        {buttons}
+      </Pagination>
     )
+    expect(screen.getByTestId(testid)).toHaveClass('join', 'custom-class')
   })
 
   it('Should apply vertical style when vertical prop is true', () => {
-    render(<Pagination vertical>{buttons}</Pagination>)
-    expect(screen.getByLabelText('Group of 3 buttons')).toHaveClass(
-      'btn-group-vertical'
+    render(
+      <Pagination vertical data-testid={testid}>
+        {buttons}
+      </Pagination>
     )
+    expect(screen.getByTestId(testid)).toHaveClass('join-vertical')
   })
 
   it('Should allow passing extra props', () => {
-    render(<Pagination data-testid="button-group">{buttons}</Pagination>)
-    expect(screen.getByTestId('button-group')).toBeInTheDocument()
+    render(<Pagination data-testid={testid}>{buttons}</Pagination>)
+    expect(screen.getByTestId(testid)).toBeInTheDocument()
   })
 
   it('Should forward the ref to the root element', () => {

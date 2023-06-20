@@ -1,5 +1,5 @@
-import ButtonGroup, { ButtonGroupProps } from '../ButtonGroup'
+import Join, { JoinProps } from '../Join'
 
-export type PaginationProps = ButtonGroupProps
-const Pagination = ButtonGroup
+export type PaginationProps = JoinProps
+const Pagination = Join
 export default Pagination
