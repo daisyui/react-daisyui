@@ -1,8 +1,8 @@
-import React, { forwardRef, ReactNode } from 'react'
+import React, { forwardRef, ReactNode, ElementType } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-import Loading from '../Loading';
+import Loading from '../Loading'
 import {
   IComponentBaseProps,
   ComponentColor,
@@ -10,12 +10,10 @@ import {
   ComponentSize,
 } from '../types'
 
-export type ButtonProps = Omit<
-  React.ButtonHTMLAttributes<HTMLButtonElement>,
-  'color'
-> &
+export type ButtonProps<
+  T extends React.HTMLAttributes<HTMLElement> = React.ButtonHTMLAttributes<HTMLButtonElement>
+> = Omit<T, 'color' | 'size'> &
   IComponentBaseProps & {
-    href?: string
     shape?: ComponentShape
     size?: ComponentSize
     variant?: 'outline' | 'link'
@@ -25,17 +23,34 @@ export type ButtonProps = Omit<
     fullWidth?: boolean
     responsive?: boolean
     animation?: boolean
-    loading?: boolean 
+    loading?: boolean
     active?: boolean
     startIcon?: ReactNode
     endIcon?: ReactNode
+    tag?: ElementType
   }
-
+//  https://developer.mozilla.org/en-US/docs/Glossary/Void_element
+const VoidElementList: ElementType[] = [
+  'area',
+  'base',
+  'br',
+  'col',
+  'embed',
+  'hr',
+  'img',
+  'input',
+  'link',
+  'keygen',
+  'meta',
+  'param',
+  'source',
+  'track',
+  'wbr',
+]
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       children,
-      href,
       shape,
       size,
       variant,
@@ -53,10 +68,12 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       dataTheme,
       className,
       style,
+      tag = 'button',
       ...props
     },
     ref
   ): JSX.Element => {
+    const Tag = tag
     const classes = twMerge(
       'btn',
       className,
@@ -81,24 +98,26 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         glass: glass,
         'btn-wide': wide,
         'btn-block': fullWidth,
-        'btn-xs md:btn-sm lg:btn-md xl:btn-lg': responsive,
+        'btn-xs sm:btn-sm md:btn-md lg:btn-lg': responsive,
         'no-animation': !animation,
         'btn-active': active,
         'btn-disabled': disabled,
       })
     )
-
-    if (href) {
+    if (VoidElementList.includes(Tag)) {
       return (
-        <a className={classes} style={style} href={href}>
-          {startIcon && startIcon}
-          {children}
-          {endIcon && endIcon}
-        </a>
+        <Tag
+          {...props}
+          ref={ref}
+          data-theme={dataTheme}
+          className={classes}
+          style={style}
+          disabled={disabled}
+        />
       )
     } else {
       return (
-        <button
+        <Tag
           {...props}
           ref={ref}
           data-theme={dataTheme}
@@ -106,11 +125,11 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           style={style}
           disabled={disabled}
         >
-          {!startIcon && loading && (<Loading size={size} />)}
+          {!startIcon && loading && <Loading size={size} />}
           {startIcon && !loading && startIcon}
           {children}
           {endIcon && endIcon}
-        </button>
+        </Tag>
       )
     }
   }
@@ -118,4 +137,9 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
 Button.displayName = 'Button'
 
-export default Button
+export default Button as <
+  E extends HTMLElement = HTMLButtonElement,
+  A extends React.HTMLAttributes<HTMLElement> = React.ButtonHTMLAttributes<HTMLButtonElement>
+>(
+  props: ButtonProps<A> & { ref?: React.Ref<E> }
+) => JSX.Element

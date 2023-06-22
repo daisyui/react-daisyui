@@ -26,7 +26,14 @@ describe('Button', () => {
   })
 
   it('Renders an anchor tag when an href exists', () => {
-    render(<Button href="/home">Home</Button>)
+    render(
+      <Button<HTMLAnchorElement, React.AnchorHTMLAttributes<HTMLAnchorElement>>
+        tag="a"
+        href="/home"
+      >
+        Home
+      </Button>
+    )
 
     expect(screen.getByRole('link')).toBeTruthy()
     expect(screen.getByRole('link')).toHaveAttribute('href', '/home')
