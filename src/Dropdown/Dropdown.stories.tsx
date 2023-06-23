@@ -48,8 +48,11 @@ export const AsCard: Story<DropdownProps> = (args) => {
 
 export const InNavbar: Story<DropdownProps> = ({ dataTheme, ...args }) => {
   return (
-    <Navbar className="my-32 px-2 font-sans" color="dark" dataTheme={dataTheme}>
-      <Navbar.Start>
+    <Navbar
+      className="my-32 px-2 font-sans bg-base-300 rounded-box"
+      dataTheme={dataTheme}
+    >
+      <Navbar.Start className="px-2 lg:flex-none">
         <span className="text-lg font-bold">daisyUI</span>
       </Navbar.Start>
       <Navbar.End>
@@ -57,8 +60,10 @@ export const InNavbar: Story<DropdownProps> = ({ dataTheme, ...args }) => {
           Button
         </Button>
         <Dropdown {...args} dataTheme={dataTheme}>
-          <Dropdown.Toggle color="ghost">Dropdown</Dropdown.Toggle>
-          <Dropdown.Menu className="w-52">
+          <Dropdown.Toggle className="btn btn-ghost rounded-btn" button={false}>
+            Dropdown
+          </Dropdown.Toggle>
+          <Dropdown.Menu className="w-52 mt-4">
             <Dropdown.Item>Item 1</Dropdown.Item>
             <Dropdown.Item>Item 2</Dropdown.Item>
           </Dropdown.Menu>
@@ -67,13 +72,19 @@ export const InNavbar: Story<DropdownProps> = ({ dataTheme, ...args }) => {
     </Navbar>
   )
 }
+InNavbar.args = {
+  end: true,
+}
 
 export const Helper: Story<DropdownProps> = (args) => {
   return (
     <div className="my-32 font-sans">
       A normal text and a helper dropdown
       <Dropdown {...args}>
-        <Button shape="circle" className="text-info" color="ghost" size="xs">
+        <Dropdown.Toggle
+          button={false}
+          className="btn btn-circle btn-ghost btn-xs text-info"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -87,7 +98,7 @@ export const Helper: Story<DropdownProps> = (args) => {
               d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
             ></path>
           </svg>
-        </Button>
+        </Dropdown.Toggle>
         <Dropdown.Menu className="card compact w-64 !p-0 shadow bg-base-100 rounded-box">
           <Card.Body>
             <Card.Title tag={'h2'}>You needed more info?</Card.Title>
@@ -98,3 +109,4 @@ export const Helper: Story<DropdownProps> = (args) => {
     </div>
   )
 }
+Helper.args = { end: true }

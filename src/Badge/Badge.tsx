@@ -37,6 +37,7 @@ const Badge = forwardRef<HTMLDivElement, BadgeProps>(
         'badge-sm': size === 'sm',
         'badge-xs': size === 'xs',
         'badge-outline': variant === 'outline' || outline,
+        'badge-neutral': color === 'neutral',
         'badge-primary': color === 'primary',
         'badge-secondary': color === 'secondary',
         'badge-accent': color === 'accent',
