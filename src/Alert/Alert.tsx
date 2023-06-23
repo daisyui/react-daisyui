@@ -8,12 +8,11 @@ export type AlertProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {
     icon?: ReactNode
     status?: ComponentStatus
-    innerClassName?: string
   }
 
 const Alert = forwardRef<HTMLDivElement, AlertProps>(
   (
-    { children, icon, status, dataTheme, className, innerClassName, ...props },
+    { children, icon, status, dataTheme, className, ...props },
     ref
   ): JSX.Element => {
     const classes = twMerge(
@@ -35,10 +34,8 @@ const Alert = forwardRef<HTMLDivElement, AlertProps>(
         data-theme={dataTheme}
         className={classes}
       >
-        <div className={twMerge('flex-1', innerClassName)}>
-          {icon}
-          {children}
-        </div>
+        {icon}
+        {children}
       </div>
     )
   }

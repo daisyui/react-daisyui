@@ -18,13 +18,6 @@ describe('Alert', () => {
     expect(screen.getByRole('alert')).toHaveClass('alert-success')
   })
 
-  it('renders an innerClassName', () => {
-    render(<Alert innerClassName="font-bold">Test</Alert>)
-    expect(within(screen.getByRole('alert')).getByText(/test/i)).toHaveClass(
-      'font-bold'
-    )
-  })
-
   it('should be able to access the native div', () => {
     const alertRef = createRef<HTMLDivElement>()
     render(<Alert ref={alertRef} />)
