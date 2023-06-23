@@ -74,19 +74,19 @@ CustomBorderRadius.args = {}
 export const RadioInputsWithBtnStyle: Story<JoinProps> = (args) => {
   return (
     <Join {...args}>
-      <Input
+      <input
         className="join-item btn"
         type="radio"
         name="options"
         aria-label="Radio 1"
       />
-      <Input
+      <input
         className="join-item btn"
         type="radio"
         name="options"
         aria-label="Radio 2"
       />
-      <Input
+      <input
         className="join-item btn"
         type="radio"
         name="options"
