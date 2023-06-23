@@ -10,9 +10,45 @@ import {
   ComponentSize,
 } from '../types'
 
+type ITagProps = {
+  a: {
+    attr: React.AnchorHTMLAttributes<HTMLAnchorElement>
+    ele: HTMLAnchorElement
+  }
+  button: {
+    attr: React.ButtonHTMLAttributes<HTMLButtonElement>
+    ele: HTMLButtonElement
+  }
+  div: {
+    attr: React.HTMLAttributes<HTMLDivElement>
+    ele: HTMLDivElement
+  }
+  img: {
+    attr: React.ImgHTMLAttributes<HTMLImageElement>
+    ele: HTMLImageElement
+  }
+  input: {
+    attr: React.InputHTMLAttributes<HTMLInputElement>
+    ele: HTMLInputElement
+  }
+  label: {
+    attr: React.LabelHTMLAttributes<HTMLLabelElement>
+    ele: HTMLLabelElement
+  }
+  span: {
+    attr: React.HTMLAttributes<HTMLSpanElement>
+    ele: HTMLSpanElement
+  }
+}
+
+type GetTagProps<T extends ElementType> = T extends keyof ITagProps
+  ? ITagProps[T]
+  : ITagProps['button']
+
 export type ButtonProps<
-  T extends React.HTMLAttributes<HTMLElement> = React.ButtonHTMLAttributes<HTMLButtonElement>
-> = Omit<T, 'color' | 'size'> &
+  T extends ElementType = 'button',
+  A extends React.HTMLAttributes<HTMLElement> = GetTagProps<T>['attr']
+> = Omit<A, 'color' | 'size'> &
   IComponentBaseProps & {
     shape?: ComponentShape
     size?: ComponentSize
@@ -27,7 +63,8 @@ export type ButtonProps<
     active?: boolean
     startIcon?: ReactNode
     endIcon?: ReactNode
-    tag?: ElementType
+    disabled?: boolean
+    tag?: T
   }
 //  https://developer.mozilla.org/en-US/docs/Glossary/Void_element
 const VoidElementList: ElementType[] = [
@@ -138,8 +175,9 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = 'Button'
 
 export default Button as <
-  E extends HTMLElement = HTMLButtonElement,
-  A extends React.HTMLAttributes<HTMLElement> = React.ButtonHTMLAttributes<HTMLButtonElement>
+  T extends ElementType = 'button',
+  E extends HTMLElement = GetTagProps<T>['ele'],
+  A extends React.HTMLAttributes<HTMLElement> = GetTagProps<T>['attr']
 >(
-  props: ButtonProps<A> & { ref?: React.Ref<E> }
+  props: ButtonProps<T, A> & { ref?: React.Ref<E> }
 ) => JSX.Element

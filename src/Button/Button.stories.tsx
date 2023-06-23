@@ -182,50 +182,26 @@ Glass.args = {
 }
 
 export const DifferentHtmlTags: Story<
-  ButtonProps<React.HTMLAttributes<HTMLElement>>
+  ButtonProps<'main', React.HtmlHTMLAttributes<HTMLElement>>
 > = (args) => {
   return (
     <div className="flex gap-2 items-center justify-center">
-      <Button<HTMLAnchorElement, React.AnchorHTMLAttributes<HTMLAnchorElement>>
-        {...args}
-        tag="a"
-        role="button"
-      >
+      <Button<'a'> {...args} tag="a" role="button">
         Link
       </Button>
       <Button {...args} type="submit">
         Button
       </Button>
-      <Button<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>
-        {...args}
-        tag="input"
-        type="button"
-        value="Input"
-      />
-      <Button<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>
-        {...args}
-        tag="input"
-        type="submit"
-        value="Submit"
-      />
-      <Button<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>
-        {...args}
-        tag="input"
-        type="radio"
-        aria-label="Radio"
-      />
-      <Button<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>
+      <Button<'input'> {...args} tag="input" type="button" value="Input" />
+      <Button<'input'> {...args} tag="input" type="submit" value="Submit" />
+      <Button<'input'> {...args} tag="input" type="radio" aria-label="Radio" />
+      <Button<'input'>
         {...args}
         tag="input"
         type="checkbox"
         aria-label="Checkbox"
       />
-      <Button<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>
-        {...args}
-        tag="input"
-        type="reset"
-        value="Reset"
-      />
+      <Button<'input'> {...args} tag="input" type="reset" value="Reset" />
     </div>
   )
 }
@@ -413,4 +389,14 @@ export const WithoutClickAnimation: Story<ButtonProps> = (args) => {
 }
 WithoutClickAnimation.args = {
   animation: false,
+}
+
+export const LinkButton: Story<ButtonProps<'a'>> = (args) => {
+  return <Button {...args}> Link </Button>
+}
+LinkButton.args = {
+  tag: 'a',
+  target: '_blank',
+  rel: 'noopener',
+  href: 'https://daisyui.com/',
 }

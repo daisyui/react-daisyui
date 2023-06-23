@@ -27,10 +27,7 @@ describe('Button', () => {
 
   it('Renders an anchor tag when an href exists', () => {
     render(
-      <Button<HTMLAnchorElement, React.AnchorHTMLAttributes<HTMLAnchorElement>>
-        tag="a"
-        href="/home"
-      >
+      <Button<'a'> tag="a" href="/home">
         Home
       </Button>
     )
