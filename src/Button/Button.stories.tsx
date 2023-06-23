@@ -186,22 +186,17 @@ export const DifferentHtmlTags: Story<
 > = (args) => {
   return (
     <div className="flex gap-2 items-center justify-center">
-      <Button<'a'> {...args} tag="a" role="button">
+      <Button {...args} tag="a" role="button">
         Link
       </Button>
       <Button {...args} type="submit">
         Button
       </Button>
-      <Button<'input'> {...args} tag="input" type="button" value="Input" />
-      <Button<'input'> {...args} tag="input" type="submit" value="Submit" />
-      <Button<'input'> {...args} tag="input" type="radio" aria-label="Radio" />
-      <Button<'input'>
-        {...args}
-        tag="input"
-        type="checkbox"
-        aria-label="Checkbox"
-      />
-      <Button<'input'> {...args} tag="input" type="reset" value="Reset" />
+      <Button {...args} tag="input" type="button" value="Input" />
+      <Button {...args} tag="input" type="submit" value="Submit" />
+      <Button {...args} tag="input" type="radio" aria-label="Radio" />
+      <Button {...args} tag="input" type="checkbox" aria-label="Checkbox" />
+      <Button {...args} tag="input" type="reset" value="Reset" />
     </div>
   )
 }

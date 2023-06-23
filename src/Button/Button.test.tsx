@@ -27,7 +27,7 @@ describe('Button', () => {
 
   it('Renders an anchor tag when an href exists', () => {
     render(
-      <Button<'a'> tag="a" href="/home">
+      <Button tag="a" href="/home">
         Home
       </Button>
     )
