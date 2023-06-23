@@ -44,7 +44,7 @@ const DropdownToggle = ({
   )
 }
 
-export type SummaryProps = ButtonProps
+export type SummaryProps = Omit<ButtonProps, 'tag'>
 export const Summary = forwardRef<HTMLElement, SummaryProps>(
   (props, ref): JSX.Element => {
     return <Button {...props} ref={ref} tag="summary" />
