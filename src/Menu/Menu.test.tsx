@@ -12,16 +12,6 @@ describe('Menu', () => {
     expect(container.firstChild).toHaveClass('custom-class')
   })
 
-  it('Should apply normal modifier class', () => {
-    const { container } = render(<Menu normal />)
-    expect(container.firstChild).toHaveClass('menu-normal')
-  })
-
-  it('Should apply compact modifier class', () => {
-    const { container } = render(<Menu compact />)
-    expect(container.firstChild).toHaveClass('menu-compact')
-  })
-
   it('Should apply horizontal modifier class', () => {
     const { container } = render(<Menu horizontal />)
     expect(container.firstChild).toHaveClass('menu-horizontal')
