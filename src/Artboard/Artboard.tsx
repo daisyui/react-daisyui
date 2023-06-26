@@ -13,7 +13,7 @@ export type ArtboardProps = React.HTMLAttributes<HTMLDivElement> &
 
 const Artboard = forwardRef<HTMLDivElement, ArtboardProps>(
   (
-    { children, demo, size, horizontal, dataTheme, className, ...props },
+    { children, demo = true, size, horizontal, dataTheme, className, ...props },
     ref
   ): JSX.Element => {
     const classes = twMerge(
