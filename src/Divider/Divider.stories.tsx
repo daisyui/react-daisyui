@@ -2,40 +2,78 @@ import React from 'react'
 import { StoryFn as Story, Meta } from '@storybook/react'
 
 import Divider, { DividerProps } from '.'
+import Card from '../Card'
 
 export default {
   title: 'Layout/Divider',
   component: Divider,
+  args: {
+    children: 'OR',
+  },
 } as Meta
 
-export const Default: Story<DividerProps> = (args) => {
+export const Default: Story<DividerProps> = ({ children, ...args }) => {
   return (
-    <div className="flex flex-col w-full">
-      <div className="grid h-20 card bg-base-300 rounded-box place-items-center">
+    <div className="flex flex-col w-full border-opacity-50">
+      <Card className="grid h-20 bg-base-300 rounded-box place-items-center">
         content
-      </div>
-      <Divider {...args}>{args.children}</Divider>
-      <div className="grid h-20 card bg-base-300 rounded-box place-items-center">
+      </Card>
+      <Divider {...args}>{children}</Divider>
+      <Card className="grid h-20 bg-base-300 rounded-box place-items-center">
         content
-      </div>
+      </Card>
     </div>
   )
 }
 Default.args = {}
 
-export const Vertical: Story<DividerProps> = (args) => {
+export const Horizontal: Story<DividerProps> = ({ children, ...args }) => {
   return (
-    <div className="flex flex-row w-full">
-      <div className="grid flex-grow h-32 card bg-base-300 rounded-box place-items-center">
+    <div className="flex w-full ">
+      <Card className="grid h-20 flex-grow bg-base-300 rounded-box place-items-center">
         content
-      </div>
-      <Divider {...args}>{args.children}</Divider>
-      <div className="grid flex-grow h-32 card bg-base-300 rounded-box place-items-center">
+      </Card>
+      <Divider {...args}>{children}</Divider>
+      <Card className="grid h-20 flex-grow bg-base-300 rounded-box place-items-center">
         content
-      </div>
+      </Card>
     </div>
   )
 }
-Vertical.args = {
-  vertical: true,
+Horizontal.args = {
+  horizontal: true,
+}
+
+export const NoText: Story<DividerProps> = ({ children, ...args }) => {
+  return (
+    <div className="flex flex-col w-full">
+      <Card className="grid h-20 bg-base-300 rounded-box place-items-center">
+        content
+      </Card>
+      <Divider {...args}>{children}</Divider>
+      <Card className="grid h-20 bg-base-300 rounded-box place-items-center">
+        content
+      </Card>
+    </div>
+  )
+}
+NoText.args = {
+  children: '',
+}
+
+export const Responsive: Story<DividerProps> = ({ children, ...args }) => {
+  return (
+    <div className="flex flex-col w-full lg:flex-row">
+      <Card className="grid flex-grow h-32 bg-base-300 rounded-box place-items-center">
+        content
+      </Card>
+      <Divider {...args}>{children}</Divider>
+      <Card className="grid flex-grow h-32 bg-base-300 rounded-box place-items-center">
+        content
+      </Card>
+    </div>
+  )
+}
+Responsive.args = {
+  responsive: true,
 }
