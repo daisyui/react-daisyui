@@ -23,13 +23,29 @@ describe('Table', () => {
     expect(container.firstChild).toHaveAttribute('data-theme', 'dark')
   })
 
-  it('Should apply compact prop', () => {
-    const { container } = render(<Table compact />)
-    expect(container.firstChild).toHaveClass('table-compact')
+  it.each`
+    size    | expected
+    ${'xs'} | ${'table-xs'}
+    ${'sm'} | ${'table-sm'}
+    ${'md'} | ${'table-md'}
+    ${'lg'} | ${'table-lg'}
+  `('Should apply $size size prop', ({ size, expected }) => {
+    const { container } = render(<Table size={size} />)
+    expect(container.firstChild).toHaveClass(expected)
   })
 
   it('Should apply zebra prop', () => {
     const { container } = render(<Table zebra />)
     expect(container.firstChild).toHaveClass('table-zebra')
+  })
+
+  it('Should apply pinCols prop', () => {
+    const { container } = render(<Table pinCols />)
+    expect(container.firstChild).toHaveClass('table-pin-cols')
+  })
+
+  it('Should apply pinRows prop', () => {
+    const { container } = render(<Table pinRows />)
+    expect(container.firstChild).toHaveClass('table-pin-rows')
   })
 })
