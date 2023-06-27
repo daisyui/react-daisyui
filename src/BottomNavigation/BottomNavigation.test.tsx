@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import BottomNavigation from './'
+import ButtonGroup from '../ButtonGroup'
 
 describe('BottomNavigation', () => {
   it('Should render BottomNavigation', () => {
@@ -20,9 +21,9 @@ describe('BottomNavigation', () => {
   it('Should render children', () => {
     render(
       <BottomNavigation>
-        <button>Item 1</button>
-        <button>Item 2</button>
-        <button>Item 3</button>
+        <BottomNavigation.Item>Item 1</BottomNavigation.Item>
+        <BottomNavigation.Item>Item 2</BottomNavigation.Item>
+        <BottomNavigation.Item>Item 3</BottomNavigation.Item>
       </BottomNavigation>
     )
     expect(screen.getByText('Item 1')).toBeInTheDocument()
@@ -33,9 +34,9 @@ describe('BottomNavigation', () => {
   it('Should apply active styles to child element with active class', () => {
     render(
       <BottomNavigation>
-        <button className="active">Tab 1</button>
-        <button>Tab 2</button>
-        <button>Tab 3</button>
+        <BottomNavigation.Item active>Tab 1</BottomNavigation.Item>
+        <BottomNavigation.Item>Tab 2</BottomNavigation.Item>
+        <BottomNavigation.Item>Tab 3</BottomNavigation.Item>
       </BottomNavigation>
     )
     const tab1 = screen.getByText('Tab 1')
@@ -50,9 +51,9 @@ describe('BottomNavigation', () => {
   it('Should apply disabled styles to child element with disabled class', () => {
     render(
       <BottomNavigation>
-        <button className="disabled">Tab 1</button>
-        <button>Tab 2</button>
-        <button>Tab 3</button>
+        <BottomNavigation.Item disabled>Tab 1</BottomNavigation.Item>
+        <BottomNavigation.Item>Tab 2</BottomNavigation.Item>
+        <BottomNavigation.Item>Tab 3</BottomNavigation.Item>
       </BottomNavigation>
     )
     const tab1 = screen.getByText('Tab 1')
@@ -67,9 +68,11 @@ describe('BottomNavigation', () => {
   it('Should render Label with correct class name', () => {
     render(
       <BottomNavigation>
-        <BottomNavigation.Label className="my-class">
-          Tab 1
-        </BottomNavigation.Label>
+        <BottomNavigation.Item>
+          <BottomNavigation.Label className="my-class">
+            Tab 1
+          </BottomNavigation.Label>
+        </BottomNavigation.Item>
       </BottomNavigation>
     )
     expect(screen.getByText('Tab 1')).toHaveClass('btm-nav-label', 'my-class')
