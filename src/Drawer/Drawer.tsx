@@ -8,7 +8,6 @@ export type DrawerProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {
     side: ReactNode
     open?: boolean
-    mobile?: boolean
     end?: boolean
     toggleClassName?: string
     contentClassName?: string
@@ -21,7 +20,6 @@ const Drawer = ({
   children,
   side,
   open,
-  mobile,
   end,
   dataTheme,
   className,
@@ -36,7 +34,6 @@ const Drawer = ({
     'drawer',
     className,
     clsx({
-      'drawer-mobile': mobile,
       'drawer-end': end,
     })
   )
