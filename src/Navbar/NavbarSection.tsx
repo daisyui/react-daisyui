@@ -13,7 +13,6 @@ const NavbarSection = React.forwardRef<HTMLDivElement, NavbarSectionProps>(
     const classes = twMerge(
       className,
       clsx({
-        'flex-1': section !== 'center',
         'navbar-start': section === 'start',
         'navbar-center': section === 'center',
         'navbar-end': section === 'end',
