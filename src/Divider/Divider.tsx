@@ -8,12 +8,14 @@ export type DividerProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {
     vertical?: boolean
     horizontal?: boolean
+    responsive?: boolean
   }
 
 const Divider = ({
   children,
   vertical,
   horizontal,
+  responsive,
   dataTheme,
   className,
   ...props
@@ -24,6 +26,7 @@ const Divider = ({
     clsx({
       'divider-vertical': vertical,
       'divider-horizontal': horizontal,
+      'lg:divider-horizontal': responsive,
     })
   )
 
