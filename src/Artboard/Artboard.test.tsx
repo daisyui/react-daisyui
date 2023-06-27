@@ -18,6 +18,20 @@ describe('Artboard', () => {
     expect(screen.getByLabelText('Artboard')).toHaveClass('horizontal')
   })
 
+  it.each`
+    demo         | expected
+    ${undefined} | ${true}
+    ${true}      | ${true}
+    ${false}     | ${false}
+  `('renders a demo', ({ demo, expected }) => {
+    render(<Artboard demo={demo}>Test</Artboard>)
+    if (expected) {
+      expect(screen.getByLabelText('Artboard')).toHaveClass('artboard-demo')
+    } else {
+      expect(screen.getByLabelText('Artboard')).not.toHaveClass('artboard-demo')
+    }
+  })
+
   it('should be able to access the native div', () => {
     const artboardRef = createRef<HTMLDivElement>()
     render(<Artboard ref={artboardRef}>Test</Artboard>)
