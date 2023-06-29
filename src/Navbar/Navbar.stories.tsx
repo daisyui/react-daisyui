@@ -199,7 +199,10 @@ export const IconIndicatorAndDropdown: Story<NavbarProps> = (args) => {
       <div className="flex-none">
         <Dropdown end>
           <Button tag="label" tabIndex={0} color="ghost" shape="circle">
-            <Indicator item={<Badge size="sm">8</Badge>}>
+            <Indicator>
+              <Badge size="sm" className={Indicator.Item.className()}>
+                8
+              </Badge>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -310,7 +313,12 @@ export const DropdownCenterLogoAndIcon: Story<NavbarProps> = (args) => {
           </svg>
         </Button>
         <Button color="ghost" shape="circle">
-          <Indicator item={<Badge size="xs" color="primary" />}>
+          <Indicator>
+            <Badge
+              size="xs"
+              color="primary"
+              className={Indicator.Item.className()}
+            />
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"

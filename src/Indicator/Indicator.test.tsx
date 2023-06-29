@@ -4,12 +4,16 @@ import Indicator from './'
 
 describe('Indicator', () => {
   test('Should render Indicator', () => {
-    render(<Indicator />)
+    render(
+      <Indicator>
+        <Indicator.Item className="badge" />
+      </Indicator>
+    )
   })
 
   test('Should apply additional class names', () => {
-    render(<Indicator className="custom-class" />)
-    const indicatorElement = screen.getByLabelText('Indicator')
+    render(<Indicator data-testid="container" className="custom-class" />)
+    const indicatorElement = screen.getByTestId('container')
     expect(indicatorElement).toHaveClass('custom-class')
   })
 
@@ -20,15 +24,10 @@ describe('Indicator', () => {
   })
 
   test('Should apply the horizontal and vertical positioning classes', () => {
-    render(<Indicator horizontal="start" vertical="bottom" />)
+    render(<Indicator.Item horizontal="start" vertical="bottom" />)
     const indicatorElement = screen.getByLabelText('Indicator')
     expect(indicatorElement).toHaveClass('indicator-start')
     expect(indicatorElement).toHaveClass('indicator-bottom')
-  })
-
-  test('Should render the provided item', () => {
-    const { getByText } = render(<Indicator item="Item Content" />)
-    expect(getByText('Item Content')).toBeInTheDocument()
   })
 
   test('Should render children elements', () => {
