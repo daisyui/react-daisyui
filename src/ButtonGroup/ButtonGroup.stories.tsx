@@ -6,7 +6,7 @@ import Button from '../Button'
 import Radio from '../Radio'
 
 export default {
-  title: 'Layout/ButtonGroup',
+  title: 'Layout/ButtonGroup (Deprecated)',
   component: ButtonGroup,
 } as Meta
 
@@ -21,7 +21,7 @@ const Template: Story<ButtonGroupProps> = (args) => {
 }
 
 export const Default = Template.bind({})
-Default.args = { }
+Default.args = {}
 
 export const Vertical = Template.bind({})
 Vertical.args = { vertical: true }

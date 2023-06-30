@@ -8,7 +8,7 @@ import Select from '../Select'
 import Button from '../Button'
 
 export default {
-  title: 'Layout/InputGroup',
+  title: 'Layout/InputGroup (Deprecated)',
   component: InputGroup,
 } as Meta
 
