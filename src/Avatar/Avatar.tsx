@@ -12,17 +12,18 @@ import {
   ComponentSize,
 } from '../types'
 
-export type AvatarProps = React.HTMLAttributes<HTMLDivElement> &
+export type AvatarProps = Omit<React.HTMLAttributes<HTMLDivElement>, 'color'> &
   IComponentBaseProps & {
     src?: string
     letters?: string
     size?: ComponentSize | number
     shape?: ComponentShape
-    color?: ComponentColor
+    color?: Exclude<ComponentColor, 'ghost'>
     border?: boolean
-    borderColor?: ComponentColor
+    borderColor?: Exclude<ComponentColor, 'ghost'>
     online?: boolean
     offline?: boolean
+    innerClassName?: string
     children?: React.ReactNode
   }
 
@@ -40,6 +41,7 @@ const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
       offline,
       dataTheme,
       className,
+      innerClassName,
       children,
       ...props
     },
@@ -55,12 +57,12 @@ const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
       })
     )
 
-    const imgClasses = clsx({
+    const imgClasses = clsx(innerClassName, {
       'ring ring-offset-base-100 ring-offset-2': border,
       'ring-accent': borderColor === 'accent',
       'ring-error': borderColor === 'error',
-      'ring-ghost': borderColor === 'ghost',
       'ring-info': borderColor === 'info',
+      'ring-neutral': borderColor === 'neutral',
       'ring-primary': borderColor === 'primary',
       'ring-secondary': borderColor === 'secondary',
       'ring-success': borderColor === 'success',
@@ -73,20 +75,19 @@ const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
       'w-10 h-10': size === 'xs',
     })
 
-    const placeholderClasses = clsx({
+    const placeholderClasses = clsx(innerClassName, {
       'bg-neutral-focus': !color,
-      'text-neutral-content': !color,
+      'text-neutral-content': !color || color === 'neutral',
       'bg-accent': color === 'accent',
       'bg-error': color === 'error',
-      'bg-ghost': color === 'ghost',
       'bg-info': color === 'info',
+      'bg-neutral': color === 'neutral',
       'bg-primary': color === 'primary',
       'bg-secondary': color === 'secondary',
       'bg-success': color === 'success',
       'bg-warning': color === 'warning',
       'text-accent-content': color === 'accent',
       'text-error-content': color === 'error',
-      'text-ghost-content': color === 'ghost',
       'text-info-content': color === 'info',
       'text-primary-content': color === 'primary',
       'text-secondary-content': color === 'secondary',
@@ -95,8 +96,8 @@ const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
       'ring ring-offset-base-100 ring-offset-2': border,
       'ring-accent': borderColor === 'accent',
       'ring-error': borderColor === 'error',
-      'ring-ghost': borderColor === 'ghost',
       'ring-info': borderColor === 'info',
+      'ring-neutral': borderColor === 'neutral',
       'ring-primary': borderColor === 'primary',
       'ring-secondary': borderColor === 'secondary',
       'ring-success': borderColor === 'success',

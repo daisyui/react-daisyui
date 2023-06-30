@@ -2,7 +2,7 @@ import React from 'react'
 import { StoryFn as Story, Meta } from '@storybook/react'
 
 import Avatar, { AvatarProps } from '.'
-import { AvatarGroupProps } from './AvatarGroup'
+import Mask from '../Mask'
 
 export default {
   title: 'Data Display/Avatar',
@@ -14,40 +14,92 @@ export default {
       options: ['lg', 'md', 'sm', 'xs'],
     },
   },
+  args: {
+    innerClassName: 'rounded',
+    src: 'https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg',
+  },
 } as Meta
 
 const Template: Story<AvatarProps> = (args) => {
   return <Avatar {...args} />
 }
 
-export const Default = Template.bind({})
-Default.args = {
-  color: 'primary',
-  src: 'http://daisyui.com/tailwind-css-component-profile-1@94w.png',
-}
+export const Default: Story<AvatarProps> = Template.bind({})
 
-export const Rounded = Template.bind({})
-Rounded.args = {
-  src: 'http://daisyui.com/tailwind-css-component-profile-1@94w.png',
-  shape: 'circle',
-}
-
-export const CustomSize = Template.bind({})
+export const CustomSize: Story<AvatarProps> = Template.bind({})
 CustomSize.args = {
-  src: 'http://daisyui.com/tailwind-css-component-profile-1@94w.png',
   shape: 'circle',
   size: 30,
 }
-
 CustomSize.argTypes = {
   size: {
     control: { type: 'number', min: 1, step: 1 },
   },
 }
 
-export const Group: Story<AvatarProps & AvatarGroupProps> = (args) => {
+export const Sizes: Story<AvatarProps> = (args) => {
   return (
-    <Avatar.Group space={args.space}>
+    <div className="flex items-center gap-4">
+      <Avatar {...args} size="lg" />
+      <Avatar {...args} size="md" />
+      <Avatar {...args} size={4 * 20} />
+      <Avatar {...args} size={4 * 16} />
+      <Avatar {...args} size="sm" />
+      <Avatar {...args} size="xs" />
+    </div>
+  )
+}
+Sizes.argTypes = {
+  size: {
+    control: false,
+  },
+}
+
+export const Rounded: Story<AvatarProps> = (args) => {
+  return (
+    <div className="flex items-center gap-4">
+      <Avatar {...args} innerClassName="rounded-xl" />
+      <Avatar {...args} shape="circle" />
+    </div>
+  )
+}
+Rounded.argTypes = {
+  shape: {
+    control: false,
+  },
+  innerClassName: {
+    control: false,
+  },
+}
+
+export const WithMask: Story<AvatarProps> = (args) => {
+  return (
+    <div className="flex items-center gap-4">
+      <Avatar
+        {...args}
+        innerClassName={Mask.className({ variant: 'squircle' })}
+      />
+      <Avatar
+        {...args}
+        innerClassName={Mask.className({ variant: 'hexagon' })}
+      />
+      <Avatar
+        {...args}
+        innerClassName={Mask.className({ variant: 'triangle' })}
+      />
+    </div>
+  )
+}
+WithMask.argTypes = {
+  innerClassName: {
+    control: false,
+  },
+}
+
+export const Group: Story<AvatarProps> = (args) => {
+  return (
+    <Avatar.Group>
+      <Avatar {...args} />
       <Avatar {...args} />
       <Avatar {...args} />
       <Avatar {...args} />
@@ -55,22 +107,122 @@ export const Group: Story<AvatarProps & AvatarGroupProps> = (args) => {
   )
 }
 Group.args = {
-  src: 'http://daisyui.com/tailwind-css-component-profile-1@94w.png',
-  space: -6,
+  size: 'sm',
+  innerClassName: '',
+}
+Group.argTypes = {
+  shape: { control: false },
 }
 
-export const Ring = Template.bind({})
+export const GroupWithCounter: Story<AvatarProps> = ({
+  src,
+  letters,
+  ...args
+}) => {
+  return (
+    <Avatar.Group>
+      <Avatar {...args} src={src} />
+      <Avatar {...args} src={src} />
+      <Avatar {...args} src={src} />
+      <Avatar {...args} letters={letters} />
+    </Avatar.Group>
+  )
+}
+GroupWithCounter.args = {
+  size: 'sm',
+  letters: '+99',
+  innerClassName: '',
+}
+GroupWithCounter.argTypes = {
+  shape: { control: false },
+}
+
+export const GroupSpaceBetween: Story<AvatarProps> = ({
+  src,
+  letters,
+  ...args
+}) => {
+  return (
+    <div className="flex flex-col items-center gap-y-2">
+      <Avatar.Group className="space-x-4">
+        <Avatar {...args} src={src} />
+        <Avatar {...args} src={src} />
+        <Avatar {...args} src={src} />
+        <Avatar {...args} letters={letters} />
+      </Avatar.Group>
+      <Avatar.Group className="space-x-0">
+        <Avatar {...args} src={src} />
+        <Avatar {...args} src={src} />
+        <Avatar {...args} src={src} />
+        <Avatar {...args} letters={letters} />
+      </Avatar.Group>
+      <Avatar.Group className="-space-x-4">
+        <Avatar {...args} src={src} />
+        <Avatar {...args} src={src} />
+        <Avatar {...args} src={src} />
+        <Avatar {...args} letters={letters} />
+      </Avatar.Group>
+      <Avatar.Group className="-space-x-8">
+        <Avatar {...args} src={src} />
+        <Avatar {...args} src={src} />
+        <Avatar {...args} src={src} />
+        <Avatar {...args} letters={letters} />
+      </Avatar.Group>
+    </div>
+  )
+}
+GroupSpaceBetween.args = {
+  size: 'sm',
+  letters: '+99',
+  innerClassName: '',
+}
+GroupSpaceBetween.argTypes = {
+  shape: { control: false },
+}
+
+export const Ring: Story<AvatarProps> = Template.bind({})
 Ring.args = {
-  src: 'http://daisyui.com/tailwind-css-component-profile-1@94w.png',
   border: true,
   borderColor: 'primary',
   shape: 'circle',
 }
 
-export const Placeholder = Template.bind({})
+export const PresenceIndicator: Story<AvatarProps> = (args) => {
+  return (
+    <div className="flex items-center gap-4">
+      <Avatar {...args} online />
+      <Avatar {...args} offline />
+    </div>
+  )
+}
+PresenceIndicator.argTypes = {
+  online: { control: false },
+  offline: { control: false },
+}
+PresenceIndicator.args = {
+  innerClassName: '',
+  shape: 'circle',
+}
+
+export const Placeholder: Story<AvatarProps> = (args) => {
+  return (
+    <div className="flex items-center gap-4">
+      <Avatar {...args} letters="K" size="lg" />
+      <Avatar {...args} letters="JO" size="md" online={true} />
+      <Avatar {...args} letters="MX" size="sm" />
+      <Avatar {...args} letters="AA" size="xs" />
+    </div>
+  )
+}
+Placeholder.argTypes = {
+  size: { control: false },
+  online: { control: false },
+  letters: { control: false },
+  src: { control: false },
+}
 Placeholder.args = {
   shape: 'circle',
-  letters: 'Y',
+  src: '',
 }
 
 const reactLogoSvg = (
@@ -139,6 +291,8 @@ WithSvg.args = {
   shape: 'circle',
   children: reactLogoSvg,
   border: true,
+  innerClassName: '',
+  src: '',
 }
 
 export const MultipleChildren: Story<Omit<AvatarProps, 'children'>> = (
@@ -151,25 +305,31 @@ export const MultipleChildren: Story<Omit<AvatarProps, 'children'>> = (
     </Avatar>
   )
 }
+MultipleChildren.args = {
+  innerClassName: '',
+  src: '',
+}
 
-export const Colors: Story<Omit<AvatarProps, 'color' | 'borderColor'>> = ({
-  src,
-  letters,
-  ...args
-}) => {
+export const Colors: Story<AvatarProps> = ({ src, letters, ...args }) => {
   return (
     <div>
       <div className="flex gap-4 m-4">
+        <Avatar {...args} borderColor="neutral" src={src} />
         <Avatar {...args} borderColor="primary" src={src} />
         <Avatar {...args} borderColor="secondary" src={src} />
         <Avatar {...args} borderColor="accent" src={src} />
-        <Avatar {...args} borderColor="ghost" src={src} />
         <Avatar {...args} borderColor="info" src={src} />
         <Avatar {...args} borderColor="success" src={src} />
         <Avatar {...args} borderColor="warning" src={src} />
         <Avatar {...args} borderColor="error" src={src} />
       </div>
       <div className="flex gap-4 m-4">
+        <Avatar
+          {...args}
+          borderColor="neutral"
+          color="neutral"
+          letters={letters}
+        />
         <Avatar
           {...args}
           borderColor="primary"
@@ -188,7 +348,6 @@ export const Colors: Story<Omit<AvatarProps, 'color' | 'borderColor'>> = ({
           color="accent"
           letters={letters}
         />
-        <Avatar {...args} borderColor="ghost" color="ghost" letters={letters} />
         <Avatar {...args} borderColor="info" color="info" letters={letters} />
         <Avatar
           {...args}
@@ -207,8 +366,15 @@ export const Colors: Story<Omit<AvatarProps, 'color' | 'borderColor'>> = ({
     </div>
   )
 }
+Colors.argTypes = {
+  color: {
+    control: false,
+  },
+  borderColor: {
+    control: false,
+  },
+}
 Colors.args = {
-  src: 'http://daisyui.com/tailwind-css-component-profile-1@94w.png',
   letters: 'Y',
   border: true,
   shape: 'circle',
