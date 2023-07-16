@@ -1,5 +1,44 @@
 # Changelog
 
+## [4.0.0](https://github.com/daisyui/react-daisyui/compare/v3.1.2...v4.0.0) (2023-07-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Join:** replaces buttongroup and inputgroup
+
+### Features
+
+* **Accordion:** Add Accordion Component ([#364](https://github.com/daisyui/react-daisyui/issues/364)) ([8ed7768](https://github.com/daisyui/react-daisyui/commit/8ed7768bffa032042bc11207eab87864a496c991))
+* **Alert:** Support V3 ([#370](https://github.com/daisyui/react-daisyui/issues/370)) ([20b6939](https://github.com/daisyui/react-daisyui/commit/20b69398d0e541d9d2f7635cfa6b57e0be69c509))
+* **Badge:** Add badge of neutral color ([#367](https://github.com/daisyui/react-daisyui/issues/367)) ([b102f07](https://github.com/daisyui/react-daisyui/commit/b102f07f8ac4e41ad73b94115665766558aadab8))
+* **Button:** Glass button & Neutral color button ([#362](https://github.com/daisyui/react-daisyui/issues/362)) ([2e7e0c4](https://github.com/daisyui/react-daisyui/commit/2e7e0c4eb01ad2c289c8189b8cf58c933b9fd22e))
+* **Divider:** responsive prop ([#375](https://github.com/daisyui/react-daisyui/issues/375)) ([fd2f903](https://github.com/daisyui/react-daisyui/commit/fd2f90322c2ca97adb7092bacbe77dda0a885220))
+* **Drawer:** support daisyUI 3. ([#371](https://github.com/daisyui/react-daisyui/issues/371)) ([0c2a73d](https://github.com/daisyui/react-daisyui/commit/0c2a73d6c21c3c03952f75ee3aa1b1f39502b39f))
+* **Join:** Add Join Component ([#363](https://github.com/daisyui/react-daisyui/issues/363)) ([3cf91f9](https://github.com/daisyui/react-daisyui/commit/3cf91f9d70b6c5978cb69f6d559f50ab98afdd91))
+* **Loading:** Add a new component Loading and fix an issue with loading on component Button after upgrade to daisyui version 3 ([#358](https://github.com/daisyui/react-daisyui/issues/358)) ([65550d9](https://github.com/daisyui/react-daisyui/commit/65550d9030640e0370483e720b5fbe590014b532))
+* **Menu:** support daisyUI 3. ([#372](https://github.com/daisyui/react-daisyui/issues/372)) ([60549d3](https://github.com/daisyui/react-daisyui/commit/60549d30a3b20766a35591f58471af4a70886c47))
+* **Modal:** using dialog element ([#359](https://github.com/daisyui/react-daisyui/issues/359)) ([e5161fd](https://github.com/daisyui/react-daisyui/commit/e5161fde9b35726510603ef3b4057982dd67ff5f))
+* **Navbar:** support daisyUI 3. ([#374](https://github.com/daisyui/react-daisyui/issues/374)) ([bd346a2](https://github.com/daisyui/react-daisyui/commit/bd346a2d99651a6b41c85ee311ac15712a726234))
+* **Pagination:** Switch to Join Component ([#368](https://github.com/daisyui/react-daisyui/issues/368)) ([28737c3](https://github.com/daisyui/react-daisyui/commit/28737c35e31cf059f2a5b4de514d7359912f6515))
+* **Table:** support daisyUI 3. ([#373](https://github.com/daisyui/react-daisyui/issues/373)) ([2ed2b02](https://github.com/daisyui/react-daisyui/commit/2ed2b021d03d858f724d0ea6ba4aea5afdb05948))
+
+
+### Bug Fixes
+
+* **Artboard:** changed default value of demo prop ([#376](https://github.com/daisyui/react-daisyui/issues/376)) ([93ba905](https://github.com/daisyui/react-daisyui/commit/93ba905a0f2329f0a9f1c5876d2dd8c8d6238349))
+* image source for various components in Storybook ([#355](https://github.com/daisyui/react-daisyui/issues/355)) ([b149d80](https://github.com/daisyui/react-daisyui/commit/b149d801ab547c574dd3bf770f152b265b239b37))
+
+
+### Miscellaneous
+
+* added .nojekyll file to public folder ([440e79d](https://github.com/daisyui/react-daisyui/commit/440e79d747174bb539ad6ea9d9a07e1747ed6852))
+* **BottomNavigation:** add Item component ([#377](https://github.com/daisyui/react-daisyui/issues/377)) ([359c8ed](https://github.com/daisyui/react-daisyui/commit/359c8ed81e4ab54cddcba15db2ec4b2afbb9156f))
+* **main:** release 4.0.0 ([#336](https://github.com/daisyui/react-daisyui/issues/336)) ([7922a9f](https://github.com/daisyui/react-daisyui/commit/7922a9f7b04a490c666a792a304d18f80feddaa4))
+* removed unused storybook dependencies ([ec25ef2](https://github.com/daisyui/react-daisyui/commit/ec25ef2a4cf9e10dbc09434d865c4ce7d2636b6d))
+* updated vite config ([45f835e](https://github.com/daisyui/react-daisyui/commit/45f835e5c25a2d02808279913b9acc11709aa1c5))
+* upgraded storybook to 7.0.4 ([88eb6ea](https://github.com/daisyui/react-daisyui/commit/88eb6ea3e12c050dbaf6cee9255e83f86651f413))
+
 ## [4.0.0](https://github.com/daisyui/react-daisyui/compare/v3.1.2...v4.0.0) (2023-06-27)
 
 
