@@ -138,14 +138,17 @@ Use tools like the official <a href="https://daisyui.com/theme-generator/">daisy
 <details>
 <summary>Data Display:</summary>
   
+- [x] <a href="https://react.daisyui.com/?path=/story/data-display-accordion">Accordion</a>
 - [x] <a href="https://react.daisyui.com/?path=/story/data-display-alert">Alert</a>
 - [X] <a href="https://react.daisyui.com/?path=/story/data-display-avatar">Avatar</a>
 - [X] <a href="https://react.daisyui.com/?path=/story/data-display-badge">Badge</a>
 - [X] <a href="https://react.daisyui.com/?path=/story/data-display-card">Card</a>
 - [X] <a href="https://react.daisyui.com/?path=/story/data-display-carousel">Carousel</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-chart-bubble">Chart Bubble</a>
 - [X] <a href="https://react.daisyui.com/?path=/story/data-display-collapse">Collapse</a>
 - [X] <a href="https://react.daisyui.com/?path=/story/data-display-countdown">Countdown</a>
 - [X] <a href="https://react.daisyui.com/?path=/story/data-display-kbd">Kbd</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-loading">Loading</a>
 - [X] <a href="https://react.daisyui.com/?path=/story/data-display-progress">Progress</a>
 - [X] <a href="https://react.daisyui.com/?path=/story/data-display-radial-progress">Radial Progress</a>
 - [X] <a href="https://react.daisyui.com/?path=/story/data-display-stats">Stats</a>
@@ -157,6 +160,7 @@ Use tools like the official <a href="https://daisyui.com/theme-generator/">daisy
 <summary>Data Input:</summary>
 
 - [x] <a href="https://react.daisyui.com/?path=/story/data-input-checkbox">Checkbox</a>
+- [x] <a href="https://react.daisyui.com/?path=/story/data-input-fileinput">FileInput</a>
 - [x] <a href="https://react.daisyui.com/?path=/story/data-input-input">Input</a>
 - [x] <a href="https://react.daisyui.com/?path=/story/data-input-radio">Radio</a>
 - [x] <a href="https://react.daisyui.com/?path=/story/data-input-range">Range</a>
@@ -170,13 +174,14 @@ Use tools like the official <a href="https://daisyui.com/theme-generator/">daisy
 <summary>Layout:</summary>
 
 - [x] <a href="https://react.daisyui.com/?path=/story/layout-artboard">Artboard</a>
-- [x] <a href="https://react.daisyui.com/?path=/story/layout-buttongroup">Button-Group</a>
+- [x] <a href="https://react.daisyui.com/?path=/story/layout-buttongroup">Button Group (Deprecated)</a>
 - [x] <a href="https://react.daisyui.com/?path=/story/layout-divider">Divider</a>
 - [x] <a href="https://react.daisyui.com/?path=/story/layout-drawer">Drawer</a>
 - [x] <a href="https://react.daisyui.com/?path=/story/layout-footer">Footer</a>
 - [x] <a href="https://react.daisyui.com/?path=/story/layout-hero">Hero</a>
 - [x] <a href="https://react.daisyui.com/?path=/story/layout-indicator">Indicator</a>
-- [x] <a href="https://react.daisyui.com/?path=/story/layout-inputgroup">Input Group</a>
+- [x] <a href="https://react.daisyui.com/?path=/story/layout-inputgroup">Input Group (Deprecated)</a>
+- [x] <a href="https://react.daisyui.com/?path=/story/layout-join">Join (group items)</a>
 - [x] <a href="https://react.daisyui.com/?path=/story/layout-mask">Mask</a>
 - [x] <a href="https://react.daisyui.com/?path=/story/layout-stack">Stack</a>
 - [x] <a href="https://react.daisyui.com/?path=/story/layout-toast">Toast</a>
@@ -185,6 +190,7 @@ Use tools like the official <a href="https://daisyui.com/theme-generator/">daisy
 <details>
 <summary>Navigation:</summary>
 
+- [x] <a href="https://react.daisyui.com/?path=/story/navigation-bottomnavigation">Bottom Navigation</a>
 - [x] <a href="https://react.daisyui.com/?path=/story/navigation-breadcrumbs">Breadcrumbs</a>
 - [x] <a href="https://react.daisyui.com/?path=/story/navigation-link">Link</a>
 - [x] <a href="https://react.daisyui.com/?path=/story/navigation-menu">Menu</a>
