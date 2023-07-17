@@ -1,4 +1,0 @@
-import{a as o}from"./tw-merge-e8a1af18.js";import{I as s}from"./index-3c55ac6b.js";import{A as n}from"./index-2beddb95.js";import{B as c}from"./index-524ee75a.js";import"./index-f1f749bf.js";import"./_commonjsHelpers-042e6b4d.js";import"./clsx.m-1229b3e0.js";import"./utils-134b33db.js";const h={title:"Layout/Indicator",component:s,argTypes:{innerRef:{control:!1},children:{control:!1},item:{control:!1}}},r=i=>o(s,{...i});r.args={children:o(n,{src:"http://daisyui.com/tailwind-css-component-profile-1@94w.png"}),item:o(c,{color:"error"})};var t,a,e;r.parameters={...r.parameters,docs:{...(t=r.parameters)==null?void 0:t.docs,source:{originalSource:`args => {
-  return <Indicator {...args} />;
-}`,...(e=(a=r.parameters)==null?void 0:a.docs)==null?void 0:e.source}}};const x=["Default"];export{r as Default,x as __namedExportsOrder,h as default};
-//# sourceMappingURL=Indicator.stories-3cca029d.js.map
