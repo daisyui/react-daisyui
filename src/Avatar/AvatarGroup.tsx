@@ -1,17 +1,15 @@
 import React, { ReactElement } from 'react'
-import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { AvatarProps } from '../Avatar'
 
 export type AvatarGroupProps = React.HTMLAttributes<HTMLDivElement> & {
   children: ReactElement<AvatarProps>[]
-  space?: number
 }
 
 const AvatarGroup = React.forwardRef<HTMLDivElement, AvatarGroupProps>(
-  ({ children, space = -6, className, ...props }, ref): JSX.Element => {
-    const spacingClassName = `${space < 0 ? '-':''}space-x-${Math.abs(space)}`
-    const classes = clsx('avatar-group', spacingClassName, className)
+  ({ children, className, ...props }, ref): JSX.Element => {
+    const classes = twMerge('avatar-group -space-x-6', className)
 
     return (
       <div
