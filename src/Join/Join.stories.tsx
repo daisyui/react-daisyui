@@ -53,7 +53,10 @@ export const ExtraElementsInTheGroup: Story<JoinProps> = (args) => {
         <Select.Option>Drama</Select.Option>
         <Select.Option>Action</Select.Option>
       </Select>
-      <Indicator item={<Badge color="secondary">new</Badge>}>
+      <Indicator>
+        <Badge color="secondary" className={Indicator.Item.className()}>
+          new
+        </Badge>
         <Button className="join-item">Search</Button>
       </Indicator>
     </Join>
