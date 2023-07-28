@@ -1,5 +1,23 @@
 # Changelog
 
+## [4.0.1](https://github.com/daisyui/react-daisyui/compare/v4.0.0...v4.0.1) (2023-07-28)
+
+
+### Bug Fixes
+
+* **Button:** starticon prevented loading animation from rendering ([ecb4add](https://github.com/daisyui/react-daisyui/commit/ecb4add5b85d4af50e76eda48c7f48b4572d8124))
+* **Stats:** removed incorrect import on examples ([#339](https://github.com/daisyui/react-daisyui/issues/339)) ([c0cc690](https://github.com/daisyui/react-daisyui/commit/c0cc6903a98e2d017898d9792a8b98a338a8711a))
+
+
+### Miscellaneous
+
+* **Avatar:** Add innerClassName prop. ([#380](https://github.com/daisyui/react-daisyui/issues/380)) ([5de58d3](https://github.com/daisyui/react-daisyui/commit/5de58d3a237ff3089074fe76e68b72ce93f837df))
+* **DropdownItem:** make wrapping of children with anchor tag optional ([#386](https://github.com/daisyui/react-daisyui/issues/386)) ([1c4aa85](https://github.com/daisyui/react-daisyui/commit/1c4aa851e4f0150fdcb6343ed4bd83750c3d91de))
+* **Indicator:** Add item component. ([#379](https://github.com/daisyui/react-daisyui/issues/379)) ([7442f11](https://github.com/daisyui/react-daisyui/commit/7442f11861a904414eccbe60cdf84fa526528317))
+* manually updated version number ([fba1e1b](https://github.com/daisyui/react-daisyui/commit/fba1e1b68874b5c80c52c611a3a8bdc2ab6e5464))
+* upgraded release workflow deps ([805db03](https://github.com/daisyui/react-daisyui/commit/805db03da4fb38ceff80b9bc31054e2cd86c2a55))
+* upgraded storybook to 7.1.1 ([f4aaf49](https://github.com/daisyui/react-daisyui/commit/f4aaf4996a3faf923eb0e4b631a1be52f7969396))
+
 ## [4.0.0](https://github.com/daisyui/react-daisyui/compare/v3.1.2...v4.0.0) (2023-06-27)
 
 
