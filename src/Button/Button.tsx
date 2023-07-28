@@ -162,7 +162,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           style={style}
           disabled={disabled}
         >
-          {!startIcon && loading && <Loading size={size} />}
+          {loading && <Loading size={size} />}
           {startIcon && !loading && startIcon}
           {children}
           {endIcon && endIcon}
