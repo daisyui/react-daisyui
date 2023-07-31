@@ -201,6 +201,11 @@ export { default as Toast } from './Toast'
 import { ToastProps as TToastProps } from './Toast'
 export type ToastProps = TToastProps
 
+// Layout > Join
+export { default as Join } from './Join'
+import { JoinProps as TJoinProps } from './Join'
+export type JoinProps = TJoinProps
+
 // ----------------------- < Navigation > ----------------------- //
 
 // Navigation > Breadcrumbs
