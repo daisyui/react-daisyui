@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.2](https://github.com/daisyui/react-daisyui/compare/v4.0.1...v4.0.2) (2023-07-31)
+
+
+### Bug Fixes
+
+* **Join:** exported join component ([095425b](https://github.com/daisyui/react-daisyui/commit/095425b4111b73999c2812ba86fbe52a42e68110))
+
 ## [4.0.1](https://github.com/daisyui/react-daisyui/compare/v4.0.0...v4.0.1) (2023-07-28)
 
 
