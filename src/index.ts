@@ -97,6 +97,11 @@ export { default as Loading } from './Loading'
 import { LoadingProps as TLoadingProps } from './Loading'
 export type LoadingProps = TLoadingProps
 
+// Data Display > Accordion
+export { default as Accordion } from './Accordion'
+import { AccordionProps as TAccordionProps } from './Accordion'
+export type AccordionProps = TAccordionProps
+
 // ----------------------- < Data Input > ----------------------- //
 
 // Data Input > Form
