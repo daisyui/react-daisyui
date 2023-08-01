@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.0.3](https://github.com/daisyui/react-daisyui/compare/v4.0.2...v4.0.3) (2023-08-01)
+
+
+### Bug Fixes
+
+* **Accordion:** export component ([8fc05e7](https://github.com/daisyui/react-daisyui/commit/8fc05e7c7020e662e7d2bfe6d264194eae3657f9))
+* **Loading:** export component ([bb65352](https://github.com/daisyui/react-daisyui/commit/bb65352bd8c4064fcde6b2617209e068c03707c1))
+
 ## [4.0.2](https://github.com/daisyui/react-daisyui/compare/v4.0.1...v4.0.2) (2023-07-31)
 
 
