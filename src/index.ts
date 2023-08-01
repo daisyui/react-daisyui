@@ -92,6 +92,11 @@ export { default as Tooltip } from './Tooltip'
 import { TooltipProps as TTooltipProps } from './Tooltip'
 export type TooltipProps = TTooltipProps
 
+// Data Display > Loading
+export { default as Loading } from './Loading'
+import { LoadingProps as TLoadingProps } from './Loading'
+export type LoadingProps = TLoadingProps
+
 // ----------------------- < Data Input > ----------------------- //
 
 // Data Input > Form
