@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.4](https://github.com/daisyui/react-daisyui/compare/v4.0.3...v4.0.4) (2023-08-04)
+
+
+### Miscellaneous
+
+* **types:** add default export for ModalLegacyProps ([#405](https://github.com/daisyui/react-daisyui/issues/405)) ([0206ad9](https://github.com/daisyui/react-daisyui/commit/0206ad996e7c4dbb38ab32ef3558bd901225e144))
+
 ## [4.0.3](https://github.com/daisyui/react-daisyui/compare/v4.0.2...v4.0.3) (2023-08-01)
 
 
