@@ -18,7 +18,8 @@ export type ModalProps = TModalProps
 // Actions > ModalLegacy
 import { ModalLegacyProps } from './Modal'
 export type ModalLegacyProps
-
+import { ModalLegacyProps as TModalLegacyProps } from './Modal'
+export type ModalLegacyProps = TModalLegacyProps
 // Actions > Swap
 export { default as Swap } from './Swap'
 import { SwapProps as TSwapProps } from './Swap'
