@@ -203,6 +203,7 @@ Use tools like the official <a href="https://daisyui.com/theme-generator/">daisy
 <details>
 <summary>Mockup:</summary>
 
+- [x] <a href="https://react.daisyui.com/?path=/story/mockup-browser">Browser</a>
 - [x] <a href="https://react.daisyui.com/?path=/story/mockup-code">Code</a>
 - [x] <a href="https://react.daisyui.com/?path=/story/mockup-phone">Phone</a>
 - [x] <a href="https://react.daisyui.com/?path=/story/mockup-window">Window</a>
