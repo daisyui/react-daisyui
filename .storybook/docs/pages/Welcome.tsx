@@ -104,6 +104,7 @@ export const HomePage = () => {
             </div>
             <div className="pt-4 flex flex-row gap-2">
               <Button
+                tag="a"
                 active
                 startIcon={githubMark}
                 size="lg"
@@ -114,6 +115,7 @@ export const HomePage = () => {
                 GitHub
               </Button>
               <Button
+                tag="a"
                 size="lg"
                 href="https://www.npmjs.com/package/react-daisyui"
                 target="_blank"
