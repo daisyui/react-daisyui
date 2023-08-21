@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.1.0](https://github.com/daisyui/react-daisyui/compare/v4.0.4...v4.1.0) (2023-08-21)
+
+
+### Features
+
+* **BrowserMockup:** Add Browser mockup ([#409](https://github.com/daisyui/react-daisyui/issues/409)) ([cb77fe7](https://github.com/daisyui/react-daisyui/commit/cb77fe7a6da6bd42d8f76da12e235a8d67177551))
+
+
+### Bug Fixes
+
+* **welcome:** fix link tag ([#408](https://github.com/daisyui/react-daisyui/issues/408)) ([a093ead](https://github.com/daisyui/react-daisyui/commit/a093eadb4891aa1b724796003f9e28c623a2c6e7))
+
 ## [4.0.4](https://github.com/daisyui/react-daisyui/compare/v4.0.3...v4.0.4) (2023-08-04)
 
 
