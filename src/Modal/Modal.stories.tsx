@@ -91,7 +91,9 @@ export const CustomWidth: Story<ModalProps> = (args) => {
           Press ESC key or click the button below to close
         </Modal.Body>
         <Modal.Actions>
-          <Button>Close</Button>
+          <form method="dialog">
+            <Button>Close</Button>
+          </form>
         </Modal.Actions>
       </Modal>
     </div>
@@ -111,7 +113,9 @@ export const UseDialogHook: Story<ModalProps> = (args) => {
         <Modal.Header className="font-bold">Hello!</Modal.Header>
         <Modal.Body>This modal works with useDialog hook!</Modal.Body>
         <Modal.Actions>
-          <Button>Close</Button>
+          <form method="dialog">
+            <Button>Close</Button>
+          </form>
         </Modal.Actions>
       </Dialog>
     </div>
