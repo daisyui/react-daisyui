@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.1.1](https://github.com/daisyui/react-daisyui/compare/v4.1.0...v4.1.1) (2023-09-15)
+
+
+### Bug Fixes
+
+* **Modal:** modal form change  proposal ([#416](https://github.com/daisyui/react-daisyui/issues/416)) ([e0bf9c2](https://github.com/daisyui/react-daisyui/commit/e0bf9c2736b11e4a707500a953f62d4274475189))
+* **Select:** [#413](https://github.com/daisyui/react-daisyui/issues/413) ([#414](https://github.com/daisyui/react-daisyui/issues/414)) ([4f4dd09](https://github.com/daisyui/react-daisyui/commit/4f4dd094cadfdf208258d05d235d4019553c1a65))
+
 ## [4.1.0](https://github.com/daisyui/react-daisyui/compare/v4.0.4...v4.1.0) (2023-08-21)
 
 
