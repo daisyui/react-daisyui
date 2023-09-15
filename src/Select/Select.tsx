@@ -2,7 +2,12 @@ import React, { ReactElement } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-import { IComponentBaseProps, ComponentColor, ComponentSize } from '../types'
+import {
+  IComponentBaseProps,
+  ComponentColor,
+  ComponentSize,
+  ListOrItem,
+} from '../types'
 
 import SelectOption, { SelectOptionProps } from './SelectOption'
 
@@ -11,7 +16,7 @@ export type SelectProps = Omit<
   'size' | 'color'
 > &
   IComponentBaseProps & {
-    children: ReactElement<SelectOptionProps>[]
+    children: ListOrItem<ReactElement<SelectOptionProps>>
     size?: ComponentSize
     color?: ComponentColor
     bordered?: boolean

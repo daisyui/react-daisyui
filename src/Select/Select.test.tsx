@@ -6,8 +6,8 @@ import { render, screen } from '@testing-library/react'
 import Select from './index'
 import userEvent from '@testing-library/user-event'
 import { SelectProps } from './Select'
-import { ComponentColor, ComponentSize } from '../types';
-import Checkbox from '../Checkbox';
+import { ComponentColor, ComponentSize } from '../types'
+import Checkbox from '../Checkbox'
 
 const TestComponent = (props?: Omit<SelectProps, 'children'>) => {
   return (
@@ -169,5 +169,45 @@ describe('Select', () => {
     const testClass = '123asd123asd'
     render(<TestComponent className={testClass} />)
     expect(screen.getByRole('combobox')).toHaveClass(testClass)
+  })
+  it('Should render single item', () => {
+    render(
+      <Select>
+        <Select.Option value="" disabled>
+          Single Item
+        </Select.Option>
+      </Select>
+    )
+  })
+  it('#413', () => {
+    const options = [
+      {
+        label: 'a',
+        value: 'a',
+        disabled: false,
+      },
+      {
+        label: 'b',
+        value: 'b',
+        disabled: false,
+      },
+      {
+        label: 'c',
+        value: 'c',
+        disabled: false,
+      },
+    ]
+    render(
+      <Select>
+        <Select.Option value="" disabled>
+          Select Item
+        </Select.Option>
+        {options.map((o) => (
+          <Select.Option key={o.label} value={o.value} disabled={o.disabled}>
+            {o.label}
+          </Select.Option>
+        ))}
+      </Select>
+    )
   })
 })
