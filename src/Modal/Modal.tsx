@@ -42,9 +42,9 @@ const Modal = forwardRef<HTMLDialogElement, ModalProps>(
         className={containerClasses}
         ref={ref}
       >
-        <form method="dialog" data-theme={dataTheme} className={bodyClasses}>
+        <div data-theme={dataTheme} className={bodyClasses}>
           {children}
-        </form>
+        </div>
         {backdrop && (
           <form method="dialog" className="modal-backdrop">
             <button>close</button>

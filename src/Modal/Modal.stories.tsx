@@ -23,7 +23,9 @@ export const Default: Story<ModalProps> = (args) => {
           Press ESC key or click the button below to close
         </Modal.Body>
         <Modal.Actions>
-          <Button>Close</Button>
+          <form method="dialog">
+            <Button>Close</Button>
+          </form>
         </Modal.Actions>
       </Modal>
     </div>
@@ -58,14 +60,16 @@ export const CloseButton: Story<ModalProps> = (args) => {
     <div className="font-sans">
       <Button onClick={handleShow}>Open Modal</Button>
       <Modal {...args} ref={ref}>
-        <Button
-          size="sm"
-          color="ghost"
-          shape="circle"
-          className="absolute right-2 top-2"
-        >
-          x
-        </Button>
+        <form method="dialog">
+          <Button
+            size="sm"
+            color="ghost"
+            shape="circle"
+            className="absolute right-2 top-2"
+          >
+            x
+          </Button>
+        </form>
         <Modal.Header className="font-bold">Hello!</Modal.Header>
         <Modal.Body>Press ESC key or click on X button to close</Modal.Body>
       </Modal>
@@ -87,7 +91,9 @@ export const CustomWidth: Story<ModalProps> = (args) => {
           Press ESC key or click the button below to close
         </Modal.Body>
         <Modal.Actions>
-          <Button>Close</Button>
+          <form method="dialog">
+            <Button>Close</Button>
+          </form>
         </Modal.Actions>
       </Modal>
     </div>
@@ -107,7 +113,9 @@ export const UseDialogHook: Story<ModalProps> = (args) => {
         <Modal.Header className="font-bold">Hello!</Modal.Header>
         <Modal.Body>This modal works with useDialog hook!</Modal.Body>
         <Modal.Actions>
-          <Button>Close</Button>
+          <form method="dialog">
+            <Button>Close</Button>
+          </form>
         </Modal.Actions>
       </Dialog>
     </div>
