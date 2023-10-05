@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.2](https://github.com/daisyui/react-daisyui/compare/v4.1.1...v4.1.2) (2023-10-05)
+
+
+### Bug Fixes
+
+* **Swap:** prevent onclick from firing twice by moving from label to inner input ([6478b1b](https://github.com/daisyui/react-daisyui/commit/6478b1bd690719deaa89cf5ccc7a8ead43996b4b))
+
 ## [4.1.1](https://github.com/daisyui/react-daisyui/compare/v4.1.0...v4.1.1) (2023-09-15)
 
 
