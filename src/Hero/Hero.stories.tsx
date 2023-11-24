@@ -12,14 +12,13 @@ export default {
   title: 'Layout/Hero',
   component: Hero,
   args: {
-    className: 'bg-base-200 ',
+    className: 'bg-base-200 min-h-[30rem]',
   },
 } as Meta
 
 export const Default: Story<HeroProps> = (args) => {
   return (
     <Hero {...args}>
-      <Hero.Overlay className="bg-opacity-60" />
       <Hero.Content className="text-center">
         <div className="max-w-md">
           <h1 className="text-5xl font-bold">Hello there</h1>

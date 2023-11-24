@@ -12,13 +12,13 @@
 /* FIXME: this class should add the polka-dotted background to story previews. 
  * however we cannot add transparency to the base-content color variable.
  */
-.preview,
-.component-preview {
+
+.preview {
   background-image: repeating-linear-gradient(
     45deg,
-    hsl(var(--b1)),
-    hsl(var(--b1)) 13px,
-    hsl(var(--b2)) 13px,
-    hsl(var(--b2)) 14px
+    var(--fallback-b1, oklch(var(--b1))),
+    var(--fallback-b1, oklch(var(--b1))) 13px,
+    var(--fallback-b2, oklch(var(--b2))) 13px,
+    var(--fallback-b2, oklch(var(--b2))) 14px
   );
 }

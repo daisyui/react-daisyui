@@ -4,7 +4,7 @@ import { StoryFn as Story, Meta } from '@storybook/react'
 import Progress, { ProgressProps } from '.'
 
 export default {
-  title: 'Data Display/Progress',
+  title: 'Feedback/Progress',
   component: Progress,
 } as Meta
 

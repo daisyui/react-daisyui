@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react'
 import BottomNavigation from './'
-import ButtonGroup from '../ButtonGroup'
 
 describe('BottomNavigation', () => {
   it('Should render BottomNavigation', () => {

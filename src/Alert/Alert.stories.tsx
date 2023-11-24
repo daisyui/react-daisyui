@@ -5,7 +5,7 @@ import Alert, { AlertProps } from '.'
 import Button from '../Button'
 
 export default {
-  title: 'Data Display/Alert',
+  title: 'Feedback/Alert',
   component: Alert,
   argTypes: {
     icon: {

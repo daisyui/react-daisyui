@@ -1,5 +1,5 @@
 import React from 'react'
-import type { Preview } from "@storybook/react";
+import type { Preview } from '@storybook/react'
 
 import StoryLayout from './StoryLayout'
 
@@ -26,9 +26,10 @@ const preview: Preview = {
           'Utils',
           'Actions',
           'Data Display',
+          'Navigation',
+          'Feedback',
           'Data Input',
           'Layout',
-          'Navigation',
           'Mockup',
         ],
       },
@@ -60,8 +61,7 @@ const preview: Preview = {
       <StoryLayout
         title={options.title}
         description={options.name}
-        source={
-          options.parameters.docs.source.originalSource
+        source={options.parameters.docs.source.originalSource
           /* TODO: clean up all this string formatting/regex */
           /* Removes the args arrow function */
           .replace(/^args\s*=>\s*\{\s*/, '    ')
@@ -71,13 +71,12 @@ const preview: Preview = {
           /* Removes the last occurence of a closing bracket (from the lambda) */
           .replace(/}([^}]*)$/, '$1')
           /* Removes the last occurence of a semicolon */
-          .replace(/;(?=[^;]*$)/, '')
-        }
+          .replace(/;(?=[^;]*$)/, '')}
       >
         <Story />
       </StoryLayout>
     ),
-  ]
+  ],
 }
 
 export default preview

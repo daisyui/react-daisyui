@@ -27,5 +27,8 @@ export const DEFAULT_THEMES = [
   'lemonade',
   'night',
   'coffee',
-  'winter'
+  'winter',
+  'dim',
+  'nord',
+  'sunset',
 ] as const
