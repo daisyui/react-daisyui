@@ -170,13 +170,13 @@ Use tools like the official <a href="https://daisyui.com/theme-generator/">daisy
 <details>
 <summary>Feedback:</summary>
   
-- [x] <a href="https://react.daisyui.com/?path=/story/data-display-alert">Alert</a>
-- [X] <a href="https://react.daisyui.com/?path=/story/data-display-loading">Loading</a>
-- [X] <a href="https://react.daisyui.com/?path=/story/data-display-progress">Progress</a>
-- [X] <a href="https://react.daisyui.com/?path=/story/data-display-radial-progress">Radial Progress</a>
+- [x] <a href="https://react.daisyui.com/?path=/story/feedback-alert">Alert</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/feedback-loading">Loading</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/feedback-progress">Progress</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/feedback-radial-progress">Radial Progress</a>
 - [ ] Skeleton
-- [x] <a href="https://react.daisyui.com/?path=/story/layout-toast">Toast</a>
-- [X] <a href="https://react.daisyui.com/?path=/story/data-display-tooltip">Tooltip</a>
+- [x] <a href="https://react.daisyui.com/?path=/story/feedback-toast">Toast</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/feedback-tooltip">Tooltip</a>
 </details>
 
 <details>
