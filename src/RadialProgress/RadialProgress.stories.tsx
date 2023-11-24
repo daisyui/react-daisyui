@@ -4,7 +4,7 @@ import { StoryFn as Story, Meta } from '@storybook/react'
 import RadialProgress, { RadialProgressProps } from '.'
 
 export default {
-  title: 'Data Display/Radial Progress',
+  title: 'Feedback/Radial Progress',
   component: RadialProgress,
 } as Meta
 

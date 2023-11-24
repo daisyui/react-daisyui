@@ -45,7 +45,7 @@ module.exports = {
 ```
 
 <details>
-<summary>For Next.js 13:</summary>
+<summary>For Next.js 13 - 14:</summary>
 
 Modify `transpilePackages` in your `next.config.js` file:
 
@@ -133,13 +133,13 @@ Use tools like the official <a href="https://daisyui.com/theme-generator/">daisy
 - [X] <a href="https://react.daisyui.com/?path=/story/actions-dropdown">Dropdown</a>
 - [X] <a href="https://react.daisyui.com/?path=/story/actions-modal">Modal</a>
 - [X] <a href="https://react.daisyui.com/?path=/story/actions-swap">Swap</a>
+- [ ] Theme Controller
 </details>
 
 <details>
 <summary>Data Display:</summary>
   
 - [x] <a href="https://react.daisyui.com/?path=/story/data-display-accordion">Accordion</a>
-- [x] <a href="https://react.daisyui.com/?path=/story/data-display-alert">Alert</a>
 - [X] <a href="https://react.daisyui.com/?path=/story/data-display-avatar">Avatar</a>
 - [X] <a href="https://react.daisyui.com/?path=/story/data-display-badge">Badge</a>
 - [X] <a href="https://react.daisyui.com/?path=/story/data-display-card">Card</a>
@@ -147,12 +147,35 @@ Use tools like the official <a href="https://daisyui.com/theme-generator/">daisy
 - [X] <a href="https://react.daisyui.com/?path=/story/data-display-chart-bubble">Chart Bubble</a>
 - [X] <a href="https://react.daisyui.com/?path=/story/data-display-collapse">Collapse</a>
 - [X] <a href="https://react.daisyui.com/?path=/story/data-display-countdown">Countdown</a>
+- [ ] Diff
 - [X] <a href="https://react.daisyui.com/?path=/story/data-display-kbd">Kbd</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-stats">Stats</a>
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-table">Table</a>
+- [ ] Timeline
+</details>
+
+<details>
+<summary>Navigation:</summary>
+
+- [x] <a href="https://react.daisyui.com/?path=/story/navigation-bottomnavigation">Bottom Navigation</a>
+- [x] <a href="https://react.daisyui.com/?path=/story/navigation-breadcrumbs">Breadcrumbs</a>
+- [x] <a href="https://react.daisyui.com/?path=/story/navigation-link">Link</a>
+- [x] <a href="https://react.daisyui.com/?path=/story/navigation-menu">Menu</a>
+- [x] <a href="https://react.daisyui.com/?path=/story/navigation-navbar">Navbar</a>
+- [x] <a href="https://react.daisyui.com/?path=/story/navigation-pagination">Pagination</a>
+- [x] <a href="https://react.daisyui.com/?path=/story/navigation-steps">Steps</a>
+- [x] <a href="https://react.daisyui.com/?path=/story/navigation-tabs">Tabs</a>
+</details>
+
+<details>
+<summary>Feedback:</summary>
+  
+- [x] <a href="https://react.daisyui.com/?path=/story/data-display-alert">Alert</a>
 - [X] <a href="https://react.daisyui.com/?path=/story/data-display-loading">Loading</a>
 - [X] <a href="https://react.daisyui.com/?path=/story/data-display-progress">Progress</a>
 - [X] <a href="https://react.daisyui.com/?path=/story/data-display-radial-progress">Radial Progress</a>
-- [X] <a href="https://react.daisyui.com/?path=/story/data-display-stats">Stats</a>
-- [X] <a href="https://react.daisyui.com/?path=/story/data-display-table">Table</a>
+- [ ] Skeleton
+- [x] <a href="https://react.daisyui.com/?path=/story/layout-toast">Toast</a>
 - [X] <a href="https://react.daisyui.com/?path=/story/data-display-tooltip">Tooltip</a>
 </details>
 
@@ -184,20 +207,6 @@ Use tools like the official <a href="https://daisyui.com/theme-generator/">daisy
 - [x] <a href="https://react.daisyui.com/?path=/story/layout-join">Join (group items)</a>
 - [x] <a href="https://react.daisyui.com/?path=/story/layout-mask">Mask</a>
 - [x] <a href="https://react.daisyui.com/?path=/story/layout-stack">Stack</a>
-- [x] <a href="https://react.daisyui.com/?path=/story/layout-toast">Toast</a>
-</details>
-
-<details>
-<summary>Navigation:</summary>
-
-- [x] <a href="https://react.daisyui.com/?path=/story/navigation-bottomnavigation">Bottom Navigation</a>
-- [x] <a href="https://react.daisyui.com/?path=/story/navigation-breadcrumbs">Breadcrumbs</a>
-- [x] <a href="https://react.daisyui.com/?path=/story/navigation-link">Link</a>
-- [x] <a href="https://react.daisyui.com/?path=/story/navigation-menu">Menu</a>
-- [x] <a href="https://react.daisyui.com/?path=/story/navigation-navbar">Navbar</a>
-- [x] <a href="https://react.daisyui.com/?path=/story/navigation-pagination">Pagination</a>
-- [x] <a href="https://react.daisyui.com/?path=/story/navigation-steps">Steps</a>
-- [x] <a href="https://react.daisyui.com/?path=/story/navigation-tabs">Tabs</a>
 </details>
 
 <details>

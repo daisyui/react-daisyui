@@ -4,12 +4,12 @@ import { StoryFn as Story, Meta } from '@storybook/react'
 import Loading, { LoadingProps } from '.'
 
 const meta: Meta = {
-  title: 'Data Display/Loading',
+  title: 'Feedback/Loading',
   component: Loading,
   parameters: {
     controls: { expanded: true },
   },
-};
+}
 
 export default meta
 
@@ -39,7 +39,7 @@ export const Colors: Story<LoadingProps> = (args) => {
   )
 }
 Colors.args = {
-  className: "m-1"
+  className: 'm-1',
 }
 
 export const Variants: Story<LoadingProps> = (args) => {

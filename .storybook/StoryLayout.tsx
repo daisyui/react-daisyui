@@ -79,7 +79,7 @@ const StoryLayout = ({ children, title, description, source }: Props) => {
             <div className='rounded-b-box rounded-tr-box relative overflow-x-auto'>
               {tab === 'preview' ? (
                 <div
-                  className="preview border-base-300 bg-base-200 rounded-b-box rounded-tr-box
+                  className="preview border-base-300 bg-base-100 rounded-se-box rounded-b-box
                             flex min-h-[6rem] min-w-[18rem] flex-wrap items-center justify-center gap-2
                             overflow-x-hidden overflow-y-hidden border bg-cover bg-top p-4"
                 >
