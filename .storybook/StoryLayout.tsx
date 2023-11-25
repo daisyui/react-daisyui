@@ -72,11 +72,8 @@ const StoryLayout = ({ children, title, description, source }: Props) => {
                 name="content"
                 label="Preview"
                 defaultChecked={true}
-                // className="[--tab-bg:hsl(var(--b2))]"
-                // className="checked:[--tab-bg:var(--fallback-b1,oklch(var(--b1)))] [--tab-border-color:transparent]"
                 className="checked:[--tab-bg:var(--fallback-b1,oklch(var(--b1)))] checked:!border-base-300  
                           [--tab-border-color:transparent]"
-                // className="checked:!bg-base-200"
                 contentClassName="overflow-x-auto"
               >
                 <div
