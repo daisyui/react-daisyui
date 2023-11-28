@@ -147,11 +147,11 @@ Use tools like the official <a href="https://daisyui.com/theme-generator/">daisy
 - [X] <a href="https://react.daisyui.com/?path=/story/data-display-chart-bubble">Chart Bubble</a>
 - [X] <a href="https://react.daisyui.com/?path=/story/data-display-collapse">Collapse</a>
 - [X] <a href="https://react.daisyui.com/?path=/story/data-display-countdown">Countdown</a>
-- [ ] Diff
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-diff">Diff<a>
 - [X] <a href="https://react.daisyui.com/?path=/story/data-display-kbd">Kbd</a>
 - [X] <a href="https://react.daisyui.com/?path=/story/data-display-stats">Stats</a>
 - [X] <a href="https://react.daisyui.com/?path=/story/data-display-table">Table</a>
-- [ ] Timeline
+- [X] <a href="https://react.daisyui.com/?path=/story/data-display-timeline">Timeline</a>
 </details>
 
 <details>
