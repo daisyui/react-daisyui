@@ -1,67 +1,28 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-import { ComponentSize } from '../types'
-
-export type TabProps<T> = Omit<
-  React.AnchorHTMLAttributes<HTMLAnchorElement>,
-  'onClick'
-> & {
-  value: T
-  activeValue?: T
-  onClick?: (value: T) => void
-  size?: ComponentSize
-  variant?: 'boxed' | 'bordered' | 'lifted'
+export type TabProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  active?: boolean
   disabled?: boolean
 }
 
-const TabInner = <T extends string | number | undefined>(
-  {
-    children,
-    value,
-    activeValue,
-    onClick,
-    size,
-    variant,
-    disabled,
-    className,
-    style,
-    ...props
-  }: TabProps<T>,
-  ref?: React.ForwardedRef<T>
-): JSX.Element => {
-  const classes = twMerge(
-    'tab',
-    className,
-    clsx({
-      'tab-active': value != null && value === activeValue,
-      'tab-disabled': disabled,
-      'tab-lg': size === 'lg',
-      'tab-md': size === 'md',
-      'tab-sm': size === 'sm',
-      'tab-xs': size === 'xs',
-      'tab-bordered': variant === 'bordered',
-      'tab-lifted': variant === 'lifted',
-    })
-  )
-
-  return (
-    <a
-      role="tab"
-      {...props}
-      className={classes}
-      style={style}
-      onClick={() => onClick && onClick(value)}
-    >
-      {children}
-    </a>
-  )
-}
-
-// Make forwardRef work with generic component
-const Tab = React.forwardRef(TabInner) as <T>(
-  props: TabProps<T> & { ref?: React.ForwardedRef<HTMLAnchorElement> }
-) => ReturnType<typeof TabInner>
+const Tab = forwardRef<HTMLAnchorElement, TabProps>(
+  ({ children, className, active, disabled, ...props }, ref): JSX.Element => {
+    const classes = twMerge(
+      'tab',
+      className,
+      clsx({
+        'tab-active': active,
+        'tab-disabled': disabled,
+      })
+    )
+    return (
+      <a role="tab" {...props} ref={ref} className={classes}>
+        {children}
+      </a>
+    )
+  }
+)
 
 export default Tab
