@@ -1,5 +1,31 @@
 # Changelog
 
+## [5.0.0](https://github.com/daisyui/react-daisyui/compare/v4.1.2...v5.0.0) (2023-11-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* removes InputGroup and ButtonGroup components and changes tabs API
+
+### Features
+
+* **Diff:** Add Diff Component ([#430](https://github.com/daisyui/react-daisyui/issues/430)) ([858cd96](https://github.com/daisyui/react-daisyui/commit/858cd96514b9dcb0888c8a9f340db547a1e8b7d2))
+* exported new components ([28f2fc4](https://github.com/daisyui/react-daisyui/commit/28f2fc48e4c8cac7041ea8f24bcd4bb59a0df5cb))
+* **Skeleton:** Add skeleton component ([#429](https://github.com/daisyui/react-daisyui/issues/429)) ([d7af59e](https://github.com/daisyui/react-daisyui/commit/d7af59ee6a83afa7994f4507e5bd76f92fce25ec))
+* support daisyUI V4 ([#428](https://github.com/daisyui/react-daisyui/issues/428)) ([a835ccf](https://github.com/daisyui/react-daisyui/commit/a835ccfbd2aada01e362798a4490de35dffedb01))
+* **Timeline:** add timeline component ([#431](https://github.com/daisyui/react-daisyui/issues/431)) ([0a7d560](https://github.com/daisyui/react-daisyui/commit/0a7d56021950499ad523d53b429b47a15fccc6c3))
+
+
+### Bug Fixes
+
+* **Divider:** support v4 ([#434](https://github.com/daisyui/react-daisyui/issues/434)) ([f8dd4fd](https://github.com/daisyui/react-daisyui/commit/f8dd4fdd91aa9dcc028276955429c0a51764de3c))
+* **Tabs:** support v4 ([#433](https://github.com/daisyui/react-daisyui/issues/433)) ([2dfbf6f](https://github.com/daisyui/react-daisyui/commit/2dfbf6fe0b5e8b3750c5fdf4e3584bdea000fa18))
+
+
+### Miscellaneous
+
+* removed unused dependency ([63a042d](https://github.com/daisyui/react-daisyui/commit/63a042dd120dcd2e87670986fdc18e60354a775d))
+
 ## [4.1.2](https://github.com/daisyui/react-daisyui/compare/v4.1.1...v4.1.2) (2023-10-05)
 
 
