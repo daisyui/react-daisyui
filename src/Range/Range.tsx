@@ -42,13 +42,10 @@ const Range = forwardRef<HTMLInputElement, RangeProps>(
     const calculatedDisplayTicks = displayTicks ?? (step !== undefined);
     const calculatedStep = step !== undefined ? Number(step) : 1; // default value per HTML standard
     const calculatedTicksStep = ticksStep ?? calculatedStep;
-
-    const isNumeric = (n: any): n is number =>
-      !isNaN(parseFloat(n)) && isFinite(n)
+    const min = props.min !== undefined ? Number(props.min) : 0; // default value per HTML standard
+    const max = props.max !== undefined ? Number(props.max) : 100; // default value per HTML standard
 
     const numTicks = useMemo(() => {
-      const min = props.min !== undefined ? Number(props.min) : 0; // default value per HTML standard
-      const max = props.max !== undefined ? Number(props.max) : 100; // default value per HTML standard
       return Math.ceil((max - min) / calculatedTicksStep) + 1;
     }, [props.min, props.max, ticksStep])
 
@@ -62,7 +59,7 @@ const Range = forwardRef<HTMLInputElement, RangeProps>(
           data-theme={dataTheme}
           className={classes}
         />
-        {isNumeric(step) && (
+        {calculatedDisplayTicks && (
           <div className="w-full flex justify-between text-xs px-2">
             {[...Array(numTicks)].map((_, i) => {
               return <span key={i}>|</span>
