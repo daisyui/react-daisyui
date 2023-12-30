@@ -45,10 +45,8 @@ const Range = forwardRef<HTMLInputElement, RangeProps>(
     const min = props.min !== undefined ? Number(props.min) : 0; // default value per HTML standard
     const max = props.max !== undefined ? Number(props.max) : 100; // default value per HTML standard
 
-    const numTicks = useMemo(() => {
-      // use Math.max to solve multiple issues with negative numbers throwing errors
-      return Math.max(Math.ceil((max - min) / calculatedTicksStep), 1) + 1;
-    }, [props.min, props.max, ticksStep])
+    // use Math.max to solve multiple issues with negative numbers throwing errors
+    const numTicks = Math.max(Math.ceil((max - min) / calculatedTicksStep), 1) + 1;
 
     return (
       <>
