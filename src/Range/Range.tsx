@@ -39,16 +39,18 @@ const Range = forwardRef<HTMLInputElement, RangeProps>(
       })
     )
 
-    displayTicks = displayTicks ?? (step !== undefined);
-    ticksStep = ticksStep ?? Number(step);
+    const calculatedDisplayTicks = displayTicks ?? (step !== undefined);
+    const calculatedStep = step !== undefined ? Number(step) : 1; // default value per HTML standard
+    const calculatedTicksStep = ticksStep ?? calculatedStep;
 
     const isNumeric = (n: any): n is number =>
       !isNaN(parseFloat(n)) && isFinite(n)
 
-    const numSteps = useMemo(() => {
-      const safeStep = Math.max(1, Number(step))
-      return Math.ceil(100 / safeStep) ?? 1
-    }, [props.max, step])
+    const numTicks = useMemo(() => {
+      const min = props.min !== undefined ? Number(props.min) : 0; // default value per HTML standard
+      const max = props.max !== undefined ? Number(props.max) : 100; // default value per HTML standard
+      return Math.ceil((max - min) / calculatedTicksStep) + 1;
+    }, [props.min, props.max, ticksStep])
 
     return (
       <>
@@ -62,7 +64,7 @@ const Range = forwardRef<HTMLInputElement, RangeProps>(
         />
         {isNumeric(step) && (
           <div className="w-full flex justify-between text-xs px-2">
-            {[...Array(numSteps + 1)].map((_, i) => {
+            {[...Array(numTicks)].map((_, i) => {
               return <span key={i}>|</span>
             })}
           </div>
