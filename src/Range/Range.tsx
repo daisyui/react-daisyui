@@ -39,6 +39,9 @@ const Range = forwardRef<HTMLInputElement, RangeProps>(
       })
     )
 
+    displayTicks = displayTicks ?? (step !== undefined);
+    ticksStep = ticksStep ?? Number(step);
+
     const isNumeric = (n: any): n is number =>
       !isNaN(parseFloat(n)) && isFinite(n)
 
