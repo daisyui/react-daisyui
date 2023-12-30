@@ -15,10 +15,12 @@ export type RangeProps = Omit<
   IComponentBaseProps & {
     color?: ComponentColor
     size?: ComponentSize
+    displayTicks?: boolean
+    ticksStep: number
   }
 
 const Range = forwardRef<HTMLInputElement, RangeProps>(
-  ({ color, size, step, dataTheme, className, ...props }, ref): JSX.Element => {
+  ({ color, size, step, displayTicks, ticksStep, dataTheme, className, ...props }, ref): JSX.Element => {
     const classes = twMerge(
       'range',
       className,
