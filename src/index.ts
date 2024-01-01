@@ -15,17 +15,16 @@ export { default as Modal } from './Modal'
 import { ModalProps as TModalProps } from './Modal'
 export type ModalProps = TModalProps
 
+// Actions > ModalLegacy
+import { ModalLegacyProps as TModalLegacyProps } from './Modal'
+export type ModalLegacyProps = TModalLegacyProps
+
 // Actions > Swap
 export { default as Swap } from './Swap'
 import { SwapProps as TSwapProps } from './Swap'
 export type SwapProps = TSwapProps
 
 // ----------------------- < Data Display > ----------------------- //
-
-// Data Display > Alert
-export { default as Alert } from './Alert'
-import { AlertProps as TAlertProps } from './Alert'
-export type AlertProps = TAlertProps
 
 // Data Display > Avatar
 export { default as Avatar } from './Avatar'
@@ -67,16 +66,6 @@ export { default as Kbd } from './Kbd'
 import { KbdProps as TKbdProps } from './Kbd'
 export type KbdProps = TKbdProps
 
-// Data Display > Progress
-export { default as Progress } from './Progress'
-import { ProgressProps as TProgressProps } from './Progress'
-export type ProgressProps = TProgressProps
-
-// Data Display > RadialProgress
-export { default as RadialProgress } from './RadialProgress'
-import { RadialProgressProps as TRadialProgressProps } from './RadialProgress'
-export type RadialProgressProps = TRadialProgressProps
-
 // Data Display > Stats
 export { default as Stats } from './Stats'
 import { StatsProps as TStatsProps } from './Stats'
@@ -87,7 +76,96 @@ export { default as Table } from './Table'
 import { TableProps as TTableProps } from './Table'
 export type TableProps = TTableProps
 
-// Data Display > Tooltip
+// Data Display > Accordion
+export { default as Accordion } from './Accordion'
+import { AccordionProps as TAccordionProps } from './Accordion'
+export type AccordionProps = TAccordionProps
+
+// Data Display > Diff
+export { default as Diff } from './Diff'
+import { DiffProps as TDiffProps } from './Diff'
+export type DiffProps = TDiffProps
+
+// Data Display > Timeline
+export { default as Timeline } from './Timeline'
+import { TimelineProps as TTimelineProps } from './Timeline'
+export type TimelineProps = TTimelineProps
+
+// ----------------------- < Navigation > ----------------------- //
+
+// Navigation > Breadcrumbs
+export { default as Breadcrumbs } from './Breadcrumbs'
+import { BreadcrumbsProps as TBreadcrumbsProps } from './Breadcrumbs'
+export type BreadcrumbsProps = TBreadcrumbsProps
+
+// Navigation > BottomNavigation
+export { default as BottomNavigation } from './BottomNavigation'
+import { BottomNavigationProps as TBottomNavigationProps } from './BottomNavigation'
+export type BottomNavigationProps = TBottomNavigationProps
+
+// Navigation > Link
+export { default as Link } from './Link'
+import { LinkProps as TLinkProps } from './Link'
+export type LinkProps = TLinkProps
+
+// Navigation > Menu
+export { default as Menu } from './Menu'
+import { MenuProps as TMenuProps } from './Menu'
+export type MenuProps = TMenuProps
+
+// Navigation > Navbar
+export { default as Navbar } from './Navbar'
+import { NavbarProps as TNavbarProps } from './Navbar'
+export type NavbarProps = TNavbarProps
+
+// Navigation > Pagination
+export { default as Pagination } from './Pagination'
+import { PaginationProps as TPaginationProps } from './Pagination'
+export type PaginationProps = TPaginationProps
+
+// Navigation > Steps
+export { default as Steps } from './Steps'
+import { StepsProps as TStepsProps } from './Steps'
+export type StepsProps = TStepsProps
+
+// Navigation > Tabs
+export { default as Tabs } from './Tabs'
+import { TabsProps as TTabsProps } from './Tabs'
+export type TabsProps = TTabsProps
+
+// ----------------------- < Feedback > ------------------------- //
+
+// Feedback > Alert
+export { default as Alert } from './Alert'
+import { AlertProps as TAlertProps } from './Alert'
+export type AlertProps = TAlertProps
+
+// Feedback > Loading
+export { default as Loading } from './Loading'
+import { LoadingProps as TLoadingProps } from './Loading'
+export type LoadingProps = TLoadingProps
+
+// Feedback > Progress
+export { default as Progress } from './Progress'
+import { ProgressProps as TProgressProps } from './Progress'
+export type ProgressProps = TProgressProps
+
+// Feedback > RadialProgress
+export { default as RadialProgress } from './RadialProgress'
+import { RadialProgressProps as TRadialProgressProps } from './RadialProgress'
+export type RadialProgressProps = TRadialProgressProps
+
+// Feedback > Skeleton
+export { default as Skeleton } from './Skeleton'
+import { SkeletonProps as TSkeletonProps } from './Skeleton'
+export type SkeletonProps = TSkeletonProps
+
+// Feedback > Toast
+export { default as Toast } from './Toast'
+import { ToastProps as TToastProps } from './Toast'
+export type ToastProps = TToastProps
+
+// Feedback > Tooltip
 export { default as Tooltip } from './Tooltip'
 import { TooltipProps as TTooltipProps } from './Tooltip'
 export type TooltipProps = TTooltipProps
@@ -151,11 +229,6 @@ export { default as Artboard } from './Artboard'
 import { ArtboardProps as TArtboardProps } from './Artboard'
 export type ArtboardProps = TArtboardProps
 
-// Layout > ButtonGroup
-export { default as ButtonGroup } from './ButtonGroup'
-import { ButtonGroupProps as TButtonGroupProps } from './ButtonGroup'
-export type ButtonGroupProps = TButtonGroupProps
-
 // Layout > Divider
 export { default as Divider } from './Divider'
 import { DividerProps as TDividerProps } from './Divider'
@@ -181,11 +254,6 @@ export { default as Indicator } from './Indicator'
 import { IndicatorProps as TIndicatorProps } from './Indicator'
 export type IndicatorProps = TIndicatorProps
 
-// Layout > InputGroup
-export { default as InputGroup } from './InputGroup'
-import { InputGroupProps as TInputGroupProps } from './InputGroup'
-export type InputGroupProps = TInputGroupProps
-
 // Layout > Mask
 export { default as Mask } from './Mask'
 import { MaskProps as TMaskProps } from './Mask'
@@ -196,52 +264,10 @@ export { default as Stack } from './Stack'
 import { StackProps as TStackProps } from './Stack'
 export type StackProps = TStackProps
 
-// Layout > Stack
-export { default as Toast } from './Toast'
-import { ToastProps as TToastProps } from './Toast'
-export type ToastProps = TToastProps
-
-// ----------------------- < Navigation > ----------------------- //
-
-// Navigation > Breadcrumbs
-export { default as Breadcrumbs } from './Breadcrumbs'
-import { BreadcrumbsProps as TBreadcrumbsProps } from './Breadcrumbs'
-export type BreadcrumbsProps = TBreadcrumbsProps
-
-// Navigation > BottomNavigation
-export { default as BottomNavigation } from './BottomNavigation'
-import { BottomNavigationProps as TBottomNavigationProps } from './BottomNavigation'
-export type BottomNavigationProps = TBottomNavigationProps
-
-// Navigation > Link
-export { default as Link } from './Link'
-import { LinkProps as TLinkProps } from './Link'
-export type LinkProps = TLinkProps
-
-// Navigation > Menu
-export { default as Menu } from './Menu'
-import { MenuProps as TMenuProps } from './Menu'
-export type MenuProps = TMenuProps
-
-// Navigation > Navbar
-export { default as Navbar } from './Navbar'
-import { NavbarProps as TNavbarProps } from './Navbar'
-export type NavbarProps = TNavbarProps
-
-// Navigation > Pagination
-export { default as Pagination } from './Pagination'
-import { PaginationProps as TPaginationProps } from './Pagination'
-export type PaginationProps = TPaginationProps
-
-// Navigation > Steps
-export { default as Steps } from './Steps'
-import { StepsProps as TStepsProps } from './Steps'
-export type StepsProps = TStepsProps
-
-// Navigation > Tabs
-export { default as Tabs } from './Tabs'
-import { TabsProps as TTabsProps } from './Tabs'
-export type TabsProps<T> = TTabsProps<T>
+// Layout > Join
+export { default as Join } from './Join'
+import { JoinProps as TJoinProps } from './Join'
+export type JoinProps = TJoinProps
 
 // ----------------------- < Mockup > ----------------------- //
 

@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 
 import { ComponentColor, ComponentSize, IComponentBaseProps } from '../types'
 
-import Button from '../Button'
+import Button, { ButtonProps } from '../Button'
 
 export type DropdownToggleProps = Omit<
   React.LabelHTMLAttributes<HTMLLabelElement>,
@@ -29,7 +29,7 @@ const DropdownToggle = ({
     <label tabIndex={0} className={className} {...props}>
       {button ? (
         <Button
-          type='button'
+          type="button"
           dataTheme={dataTheme}
           color={color}
           size={size}
@@ -43,5 +43,12 @@ const DropdownToggle = ({
     </label>
   )
 }
+
+export type SummaryProps = Omit<ButtonProps, 'tag'>
+export const Summary = forwardRef<HTMLElement, SummaryProps>(
+  (props, ref): JSX.Element => {
+    return <Button {...props} ref={ref} tag="summary" />
+  }
+)
 
 export default DropdownToggle

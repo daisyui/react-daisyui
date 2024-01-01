@@ -1,5 +1,136 @@
 # Changelog
 
+## [5.0.0](https://github.com/daisyui/react-daisyui/compare/v4.1.2...v5.0.0) (2023-11-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* removes InputGroup and ButtonGroup components and changes tabs API
+
+### Features
+
+* **Diff:** Add Diff Component ([#430](https://github.com/daisyui/react-daisyui/issues/430)) ([858cd96](https://github.com/daisyui/react-daisyui/commit/858cd96514b9dcb0888c8a9f340db547a1e8b7d2))
+* exported new components ([28f2fc4](https://github.com/daisyui/react-daisyui/commit/28f2fc48e4c8cac7041ea8f24bcd4bb59a0df5cb))
+* **Skeleton:** Add skeleton component ([#429](https://github.com/daisyui/react-daisyui/issues/429)) ([d7af59e](https://github.com/daisyui/react-daisyui/commit/d7af59ee6a83afa7994f4507e5bd76f92fce25ec))
+* support daisyUI V4 ([#428](https://github.com/daisyui/react-daisyui/issues/428)) ([a835ccf](https://github.com/daisyui/react-daisyui/commit/a835ccfbd2aada01e362798a4490de35dffedb01))
+* **Timeline:** add timeline component ([#431](https://github.com/daisyui/react-daisyui/issues/431)) ([0a7d560](https://github.com/daisyui/react-daisyui/commit/0a7d56021950499ad523d53b429b47a15fccc6c3))
+
+
+### Bug Fixes
+
+* **Divider:** support v4 ([#434](https://github.com/daisyui/react-daisyui/issues/434)) ([f8dd4fd](https://github.com/daisyui/react-daisyui/commit/f8dd4fdd91aa9dcc028276955429c0a51764de3c))
+* **Tabs:** support v4 ([#433](https://github.com/daisyui/react-daisyui/issues/433)) ([2dfbf6f](https://github.com/daisyui/react-daisyui/commit/2dfbf6fe0b5e8b3750c5fdf4e3584bdea000fa18))
+
+
+### Miscellaneous
+
+* removed unused dependency ([63a042d](https://github.com/daisyui/react-daisyui/commit/63a042dd120dcd2e87670986fdc18e60354a775d))
+
+## [4.1.2](https://github.com/daisyui/react-daisyui/compare/v4.1.1...v4.1.2) (2023-10-05)
+
+
+### Bug Fixes
+
+* **Swap:** prevent onclick from firing twice by moving from label to inner input ([6478b1b](https://github.com/daisyui/react-daisyui/commit/6478b1bd690719deaa89cf5ccc7a8ead43996b4b))
+
+## [4.1.1](https://github.com/daisyui/react-daisyui/compare/v4.1.0...v4.1.1) (2023-09-15)
+
+
+### Bug Fixes
+
+* **Modal:** modal form change  proposal ([#416](https://github.com/daisyui/react-daisyui/issues/416)) ([e0bf9c2](https://github.com/daisyui/react-daisyui/commit/e0bf9c2736b11e4a707500a953f62d4274475189))
+* **Select:** [#413](https://github.com/daisyui/react-daisyui/issues/413) ([#414](https://github.com/daisyui/react-daisyui/issues/414)) ([4f4dd09](https://github.com/daisyui/react-daisyui/commit/4f4dd094cadfdf208258d05d235d4019553c1a65))
+
+## [4.1.0](https://github.com/daisyui/react-daisyui/compare/v4.0.4...v4.1.0) (2023-08-21)
+
+
+### Features
+
+* **BrowserMockup:** Add Browser mockup ([#409](https://github.com/daisyui/react-daisyui/issues/409)) ([cb77fe7](https://github.com/daisyui/react-daisyui/commit/cb77fe7a6da6bd42d8f76da12e235a8d67177551))
+
+
+### Bug Fixes
+
+* **welcome:** fix link tag ([#408](https://github.com/daisyui/react-daisyui/issues/408)) ([a093ead](https://github.com/daisyui/react-daisyui/commit/a093eadb4891aa1b724796003f9e28c623a2c6e7))
+
+## [4.0.4](https://github.com/daisyui/react-daisyui/compare/v4.0.3...v4.0.4) (2023-08-04)
+
+
+### Miscellaneous
+
+* **types:** add default export for ModalLegacyProps ([#405](https://github.com/daisyui/react-daisyui/issues/405)) ([0206ad9](https://github.com/daisyui/react-daisyui/commit/0206ad996e7c4dbb38ab32ef3558bd901225e144))
+
+## [4.0.3](https://github.com/daisyui/react-daisyui/compare/v4.0.2...v4.0.3) (2023-08-01)
+
+
+### Bug Fixes
+
+* **Accordion:** export component ([8fc05e7](https://github.com/daisyui/react-daisyui/commit/8fc05e7c7020e662e7d2bfe6d264194eae3657f9))
+* **Loading:** export component ([bb65352](https://github.com/daisyui/react-daisyui/commit/bb65352bd8c4064fcde6b2617209e068c03707c1))
+
+## [4.0.2](https://github.com/daisyui/react-daisyui/compare/v4.0.1...v4.0.2) (2023-07-31)
+
+
+### Bug Fixes
+
+* **Join:** exported join component ([095425b](https://github.com/daisyui/react-daisyui/commit/095425b4111b73999c2812ba86fbe52a42e68110))
+
+## [4.0.1](https://github.com/daisyui/react-daisyui/compare/v4.0.0...v4.0.1) (2023-07-28)
+
+
+### Bug Fixes
+
+* **Button:** starticon prevented loading animation from rendering ([ecb4add](https://github.com/daisyui/react-daisyui/commit/ecb4add5b85d4af50e76eda48c7f48b4572d8124))
+* **Stats:** removed incorrect import on examples ([#339](https://github.com/daisyui/react-daisyui/issues/339)) ([c0cc690](https://github.com/daisyui/react-daisyui/commit/c0cc6903a98e2d017898d9792a8b98a338a8711a))
+
+
+### Miscellaneous
+
+* **Avatar:** Add innerClassName prop. ([#380](https://github.com/daisyui/react-daisyui/issues/380)) ([5de58d3](https://github.com/daisyui/react-daisyui/commit/5de58d3a237ff3089074fe76e68b72ce93f837df))
+* **DropdownItem:** make wrapping of children with anchor tag optional ([#386](https://github.com/daisyui/react-daisyui/issues/386)) ([1c4aa85](https://github.com/daisyui/react-daisyui/commit/1c4aa851e4f0150fdcb6343ed4bd83750c3d91de))
+* **Indicator:** Add item component. ([#379](https://github.com/daisyui/react-daisyui/issues/379)) ([7442f11](https://github.com/daisyui/react-daisyui/commit/7442f11861a904414eccbe60cdf84fa526528317))
+* manually updated version number ([fba1e1b](https://github.com/daisyui/react-daisyui/commit/fba1e1b68874b5c80c52c611a3a8bdc2ab6e5464))
+* upgraded release workflow deps ([805db03](https://github.com/daisyui/react-daisyui/commit/805db03da4fb38ceff80b9bc31054e2cd86c2a55))
+* upgraded storybook to 7.1.1 ([f4aaf49](https://github.com/daisyui/react-daisyui/commit/f4aaf4996a3faf923eb0e4b631a1be52f7969396))
+
+## [4.0.0](https://github.com/daisyui/react-daisyui/compare/v3.1.2...v4.0.0) (2023-06-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Join:** replaces buttongroup and inputgroup
+
+### Features
+
+* **Accordion:** Add Accordion Component ([#364](https://github.com/daisyui/react-daisyui/issues/364)) ([8ed7768](https://github.com/daisyui/react-daisyui/commit/8ed7768bffa032042bc11207eab87864a496c991))
+* **Alert:** Support V3 ([#370](https://github.com/daisyui/react-daisyui/issues/370)) ([20b6939](https://github.com/daisyui/react-daisyui/commit/20b69398d0e541d9d2f7635cfa6b57e0be69c509))
+* **Badge:** Add badge of neutral color ([#367](https://github.com/daisyui/react-daisyui/issues/367)) ([b102f07](https://github.com/daisyui/react-daisyui/commit/b102f07f8ac4e41ad73b94115665766558aadab8))
+* **Button:** Glass button & Neutral color button ([#362](https://github.com/daisyui/react-daisyui/issues/362)) ([2e7e0c4](https://github.com/daisyui/react-daisyui/commit/2e7e0c4eb01ad2c289c8189b8cf58c933b9fd22e))
+* **Divider:** responsive prop ([#375](https://github.com/daisyui/react-daisyui/issues/375)) ([fd2f903](https://github.com/daisyui/react-daisyui/commit/fd2f90322c2ca97adb7092bacbe77dda0a885220))
+* **Drawer:** support daisyUI 3. ([#371](https://github.com/daisyui/react-daisyui/issues/371)) ([0c2a73d](https://github.com/daisyui/react-daisyui/commit/0c2a73d6c21c3c03952f75ee3aa1b1f39502b39f))
+* **Join:** Add Join Component ([#363](https://github.com/daisyui/react-daisyui/issues/363)) ([3cf91f9](https://github.com/daisyui/react-daisyui/commit/3cf91f9d70b6c5978cb69f6d559f50ab98afdd91))
+* **Loading:** Add a new component Loading and fix an issue with loading on component Button after upgrade to daisyui version 3 ([#358](https://github.com/daisyui/react-daisyui/issues/358)) ([65550d9](https://github.com/daisyui/react-daisyui/commit/65550d9030640e0370483e720b5fbe590014b532))
+* **Menu:** support daisyUI 3. ([#372](https://github.com/daisyui/react-daisyui/issues/372)) ([60549d3](https://github.com/daisyui/react-daisyui/commit/60549d30a3b20766a35591f58471af4a70886c47))
+* **Modal:** using dialog element ([#359](https://github.com/daisyui/react-daisyui/issues/359)) ([e5161fd](https://github.com/daisyui/react-daisyui/commit/e5161fde9b35726510603ef3b4057982dd67ff5f))
+* **Navbar:** support daisyUI 3. ([#374](https://github.com/daisyui/react-daisyui/issues/374)) ([bd346a2](https://github.com/daisyui/react-daisyui/commit/bd346a2d99651a6b41c85ee311ac15712a726234))
+* **Pagination:** Switch to Join Component ([#368](https://github.com/daisyui/react-daisyui/issues/368)) ([28737c3](https://github.com/daisyui/react-daisyui/commit/28737c35e31cf059f2a5b4de514d7359912f6515))
+* **Table:** support daisyUI 3. ([#373](https://github.com/daisyui/react-daisyui/issues/373)) ([2ed2b02](https://github.com/daisyui/react-daisyui/commit/2ed2b021d03d858f724d0ea6ba4aea5afdb05948))
+
+
+### Bug Fixes
+
+* **Artboard:** changed default value of demo prop ([#376](https://github.com/daisyui/react-daisyui/issues/376)) ([93ba905](https://github.com/daisyui/react-daisyui/commit/93ba905a0f2329f0a9f1c5876d2dd8c8d6238349))
+* image source for various components in Storybook ([#355](https://github.com/daisyui/react-daisyui/issues/355)) ([b149d80](https://github.com/daisyui/react-daisyui/commit/b149d801ab547c574dd3bf770f152b265b239b37))
+
+
+### Miscellaneous
+
+* added .nojekyll file to public folder ([440e79d](https://github.com/daisyui/react-daisyui/commit/440e79d747174bb539ad6ea9d9a07e1747ed6852))
+* **BottomNavigation:** add Item component ([#377](https://github.com/daisyui/react-daisyui/issues/377)) ([359c8ed](https://github.com/daisyui/react-daisyui/commit/359c8ed81e4ab54cddcba15db2ec4b2afbb9156f))
+* removed unused storybook dependencies ([ec25ef2](https://github.com/daisyui/react-daisyui/commit/ec25ef2a4cf9e10dbc09434d865c4ce7d2636b6d))
+* updated vite config ([45f835e](https://github.com/daisyui/react-daisyui/commit/45f835e5c25a2d02808279913b9acc11709aa1c5))
+* upgraded storybook to 7.0.4 ([88eb6ea](https://github.com/daisyui/react-daisyui/commit/88eb6ea3e12c050dbaf6cee9255e83f86651f413))
+
 ## [3.1.2](https://github.com/daisyui/react-daisyui/compare/v3.1.1...v3.1.2) (2023-04-06)
 
 

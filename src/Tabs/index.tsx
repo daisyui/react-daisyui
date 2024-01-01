@@ -1,3 +1,3 @@
 import Tabs, { TabsProps as TTabsProps } from './Tabs'
-export type TabsProps<T> = TTabsProps<T>
+export type TabsProps = TTabsProps
 export default Tabs

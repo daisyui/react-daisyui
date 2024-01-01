@@ -12,14 +12,13 @@ export default {
   title: 'Layout/Hero',
   component: Hero,
   args: {
-    className: 'bg-base-200 ',
+    className: 'bg-base-200 min-h-[30rem]',
   },
 } as Meta
 
 export const Default: Story<HeroProps> = (args) => {
   return (
     <Hero {...args}>
-      <Hero.Overlay className="bg-opacity-60" />
       <Hero.Content className="text-center">
         <div className="max-w-md">
           <h1 className="text-5xl font-bold">Hello there</h1>
@@ -41,7 +40,7 @@ export const HeroWithFigure: Story<HeroProps> = (args) => {
     <Hero {...args}>
       <Hero.Content>
         <img
-          src="https://api.lorem.space/image/movie?w=260&h=400"
+          src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
           className="max-w-sm rounded-lg shadow-2xl"
         />
         <div>
@@ -108,7 +107,7 @@ export const HeroWithOverlayImage: Story<HeroProps> = (args) => {
     <Hero
       style={{
         backgroundImage:
-          'url(https://api.lorem.space/image/fashion?w=1000&h=800)',
+          'url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)',
       }}
     >
       <Hero.Overlay {...args} />

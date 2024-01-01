@@ -15,10 +15,12 @@ export type RangeProps = Omit<
   IComponentBaseProps & {
     color?: ComponentColor
     size?: ComponentSize
+    displayTicks?: boolean
+    ticksStep: number
   }
 
 const Range = forwardRef<HTMLInputElement, RangeProps>(
-  ({ color, size, step, dataTheme, className, ...props }, ref): JSX.Element => {
+  ({ color, size, step, displayTicks, ticksStep, dataTheme, className, ...props }, ref): JSX.Element => {
     const classes = twMerge(
       'range',
       className,
@@ -37,13 +39,14 @@ const Range = forwardRef<HTMLInputElement, RangeProps>(
       })
     )
 
-    const isNumeric = (n: any): n is number =>
-      !isNaN(parseFloat(n)) && isFinite(n)
+    const calculatedDisplayTicks = displayTicks ?? (step !== undefined);
+    const calculatedStep = step !== undefined ? Number(step) : 1; // default value per HTML standard
+    const calculatedTicksStep = ticksStep ?? calculatedStep;
+    const min = props.min !== undefined ? Number(props.min) : 0; // default value per HTML standard
+    const max = props.max !== undefined ? Number(props.max) : 100; // default value per HTML standard
 
-    const numSteps = useMemo(() => {
-      const safeStep = Math.max(1, Number(step))
-      return Math.ceil(100 / safeStep) ?? 1
-    }, [props.max, step])
+    // use Math.max to solve multiple issues with negative numbers throwing errors
+    const numTicks = Math.max(Math.ceil((max - min) / calculatedTicksStep), 1) + 1;
 
     return (
       <>
@@ -55,9 +58,9 @@ const Range = forwardRef<HTMLInputElement, RangeProps>(
           data-theme={dataTheme}
           className={classes}
         />
-        {isNumeric(step) && (
+        {calculatedDisplayTicks && (
           <div className="w-full flex justify-between text-xs px-2">
-            {[...Array(numSteps + 1)].map((_, i) => {
+            {[...Array(numTicks)].map((_, i) => {
               return <span key={i}>|</span>
             })}
           </div>

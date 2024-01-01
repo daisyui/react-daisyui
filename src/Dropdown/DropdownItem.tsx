@@ -1,12 +1,18 @@
 import React from 'react'
 
-export type DropdownItemProps = React.AnchorHTMLAttributes<HTMLAnchorElement>
+type Anchor = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  anchor?: true
+}
+
+type NoAnchor = Pick<Anchor, 'children'> & { anchor?: false }
+
+export type DropdownItemProps = Anchor | NoAnchor
 
 const DropdownItem = React.forwardRef<HTMLAnchorElement, DropdownItemProps>(
-  ({ className, ...props }, ref) => {
+  ({ anchor = true, ...props }, ref) => {
     return (
-      <li className={className}>
-        <a ref={ref} {...props}></a>
+      <li role="menuitem">
+        {anchor ? <a ref={ref} {...props}></a> : props.children}
       </li>
     )
   }

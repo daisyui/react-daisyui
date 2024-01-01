@@ -4,9 +4,15 @@ import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps, ComponentSize } from '../types'
 
+import BottomNavigationItem, {
+  BottomNavigationItemProps as ItemProps,
+} from './BottomNavigationItem'
 import BottomNavigationLabel, {
-  BottomNavigationLabelProps,
+  BottomNavigationLabelProps as LabelProps,
 } from './BottomNavigationLabel'
+
+export type BottomNavigationItemProps = ItemProps
+export type BottomNavigationLabelProps = LabelProps
 
 export type BottomNavigationProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {
@@ -27,7 +33,13 @@ const BottomNavigation = forwardRef<HTMLDivElement, BottomNavigationProps>(
     )
 
     return (
-      <div {...props} data-theme={dataTheme} className={classes} ref={ref}>
+      <div
+        {...props}
+        role="navigation"
+        data-theme={dataTheme}
+        className={classes}
+        ref={ref}
+      >
         {children}
       </div>
     )
@@ -36,4 +48,7 @@ const BottomNavigation = forwardRef<HTMLDivElement, BottomNavigationProps>(
 
 BottomNavigation.displayName = 'BottomNavigation'
 
-export default Object.assign(BottomNavigation, { Label: BottomNavigationLabel })
+export default Object.assign(BottomNavigation, {
+  Item: BottomNavigationItem,
+  Label: BottomNavigationLabel,
+})

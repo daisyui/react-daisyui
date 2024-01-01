@@ -18,7 +18,7 @@ export type CheckboxProps = Omit<
   'size'
 > &
   IComponentBaseProps & {
-    color?: ComponentColor
+    color?: Exclude<ComponentColor, 'ghost'>
     size?: ComponentSize
     indeterminate?: boolean
   }

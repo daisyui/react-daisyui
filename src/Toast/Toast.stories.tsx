@@ -6,7 +6,7 @@ import Alert from '../Alert'
 import Button from '../Button'
 
 export default {
-  title: 'Layout/Toast',
+  title: 'Feedback/Toast',
   component: Toast,
 } as Meta
 
@@ -82,7 +82,7 @@ const dynamicToastChildStatuses = [
 
 type DynamicToastChild = {
   text: string
-  status: typeof dynamicToastChildStatuses[number]
+  status: (typeof dynamicToastChildStatuses)[number]
 }
 
 export const DynamicAlerts: Story<ToastProps> = (args) => {

@@ -5,13 +5,15 @@ import { twMerge } from 'tailwind-merge'
 import { IComponentBaseProps } from '../types'
 import { wrapWithElementIfInvalid } from '../utils'
 
-export type SwapProps = React.LabelHTMLAttributes<HTMLLabelElement> &
+export type SwapProps = Omit<React.LabelHTMLAttributes<HTMLLabelElement>, 'onClick' | 'onChange'> &
   IComponentBaseProps & {
     onElement: ReactNode | ReactNode[]
     offElement: ReactNode | ReactNode[]
     active?: boolean
     rotate?: boolean
     flip?: boolean
+    onClick?: React.MouseEventHandler<HTMLInputElement>
+    onChange?: React.FormEventHandler<HTMLInputElement>
   }
 
 const Swap = React.forwardRef<HTMLLabelElement, SwapProps>(
@@ -24,6 +26,8 @@ const Swap = React.forwardRef<HTMLLabelElement, SwapProps>(
       flip,
       dataTheme,
       className,
+      onClick,
+      onChange,
       ...props
     },
     ref
@@ -53,7 +57,7 @@ const Swap = React.forwardRef<HTMLLabelElement, SwapProps>(
 
     return (
       <label {...props} data-theme={dataTheme} className={classes} ref={ref}>
-        <input type="checkbox" />
+        <input type="checkbox" onClick={onClick} onChange={onChange} />
         {onEl}
         {offEl}
       </label>

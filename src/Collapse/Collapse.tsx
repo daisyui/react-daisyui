@@ -4,18 +4,36 @@ import { twMerge } from 'tailwind-merge'
 
 import { IComponentBaseProps } from '../types'
 
+import CollapseDetails from './CollapseDetails'
 import CollapseTitle from './CollapseTitle'
 import CollapseContent from './CollapseContent'
 
-export type CollapseProps = React.HTMLAttributes<HTMLDivElement> &
-  IComponentBaseProps & {
-    checkbox?: boolean
-    icon?: 'arrow' | 'plus'
-    open?: boolean
-    onOpen?: () => void
-    onClose?: () => void
-    onToggle?: () => void
-  }
+export type CollapseProps<T extends HTMLElement = HTMLDivElement> =
+  React.HTMLAttributes<T> &
+    IComponentBaseProps & {
+      checkbox?: boolean
+      icon?: 'arrow' | 'plus'
+      open?: boolean
+      onOpen?: () => void
+      onClose?: () => void
+      onToggle?: () => void
+    }
+
+export const classesFn = ({
+  className,
+  icon,
+  open,
+}: Pick<CollapseProps, 'className' | 'icon' | 'open'>) =>
+  twMerge(
+    'collapse',
+    className,
+    clsx({
+      'collapse-arrow': icon === 'arrow',
+      'collapse-plus': icon === 'plus',
+      'collapse-open': open === true,
+      'collapse-close': open === false,
+    })
+  )
 
 const Collapse = React.forwardRef<HTMLDivElement, CollapseProps>(
   (
@@ -33,17 +51,6 @@ const Collapse = React.forwardRef<HTMLDivElement, CollapseProps>(
     },
     ref
   ): JSX.Element => {
-    const classes = twMerge(
-      'collapse',
-      className,
-      clsx({
-        'collapse-arrow': icon === 'arrow',
-        'collapse-plus': icon === 'plus',
-        'collapse-open': open === true,
-        'collapse-close': open === false,
-      })
-    )
-
     const [isChecked, setIsChecked] = useState(open)
     const checkboxRef = useRef<HTMLInputElement>(null)
 
@@ -57,7 +64,7 @@ const Collapse = React.forwardRef<HTMLDivElement, CollapseProps>(
       } else if (onClose && !checkboxRef.current?.checked) {
         onClose()
       }
-      
+
       setIsChecked(checkboxRef.current?.checked)
     }
 
@@ -82,7 +89,7 @@ const Collapse = React.forwardRef<HTMLDivElement, CollapseProps>(
         ref={ref}
         tabIndex={isChecked === true ? undefined : 0}
         data-theme={dataTheme}
-        className={classes}
+        className={classesFn({ className, icon, open })}
         onBlur={handleBlur}
         onFocus={handleFocus}
       >
@@ -102,6 +109,7 @@ const Collapse = React.forwardRef<HTMLDivElement, CollapseProps>(
 )
 
 export default Object.assign(Collapse, {
+  Details: CollapseDetails,
   Title: CollapseTitle,
   Content: CollapseContent,
 })

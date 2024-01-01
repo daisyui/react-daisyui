@@ -11,10 +11,10 @@ export default {
 
 const Template: Story<RadioProps> = (args) => {
   return (
-    <Form>
-      <Radio {...args} name="radio1" />
+    <>
       <Radio {...args} name="radio1" defaultChecked />
-    </Form>
+      <Radio {...args} name="radio1" />
+    </>
   )
 }
 

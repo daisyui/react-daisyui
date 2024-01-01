@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useCallback } from 'react'
 import { StoryFn as Story, Meta } from '@storybook/react'
 
 import Drawer, { DrawerProps } from '.'
@@ -6,62 +6,81 @@ import Button from '../Button'
 import Navbar from '../Navbar'
 import Menu from '../Menu'
 
-const side = (
-  <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
-    <li>
-      <a>Sidebar Item 1</a>
-    </li>
-    <li>
-      <a>Sidebar Item 2</a>
-    </li>
-  </ul>
-)
-
 export default {
   title: 'Layout/Drawer',
   component: Drawer,
-  args: {
-    side,
+  argTypes: {
+    side: {
+      control: false,
+    },
   },
 } as Meta
 
 export const Default: Story<DrawerProps> = (args) => {
   const [visible, setVisible] = useState(false)
 
-  const toggleVisible = () => {
-    setVisible(!visible)
-  }
+  const toggleVisible = useCallback(() => {
+    setVisible((visible) => !visible)
+  }, [])
   return (
-    <Drawer {...args} open={visible} onClickOverlay={toggleVisible}>
-      <div className="flex h-56 items-center justify-center">
-        <Button color="primary" onClick={toggleVisible}>
-          Open drawer
-        </Button>
-      </div>
+    <Drawer
+      {...args}
+      open={visible}
+      onClickOverlay={toggleVisible}
+      side={
+        <Menu className="p-4 w-80 h-full bg-base-200 text-base-content">
+          <Menu.Item>
+            <a>Sidebar Item 1</a>
+          </Menu.Item>
+          <Menu.Item>
+            <a>Sidebar Item 2</a>
+          </Menu.Item>
+        </Menu>
+      }
+    >
+      <Button color="primary" onClick={toggleVisible}>
+        Open drawer
+      </Button>
     </Drawer>
   )
 }
+Default.args = {
+  sideClassName: 'h-full absolute',
+  contentClassName: 'flex h-56 items-center justify-center',
+}
 
-export const ForMobileFixedSidebarForDesktop: Story<DrawerProps> = (args) => {
+export const Responsive: Story<DrawerProps> = (args) => {
   const [visible, setVisible] = useState(false)
 
-  const toggleVisible = () => {
-    setVisible(!visible)
-  }
-
+  const toggleVisible = useCallback(() => {
+    setVisible((visible) => !visible)
+  }, [])
   return (
-    <Drawer {...args} open={visible} onClickOverlay={toggleVisible}>
-      <div className="flex h-56 items-center justify-center">
-        <Button color="primary" className="lg:hidden" onClick={toggleVisible}>
-          Open drawer
-        </Button>
-      </div>
+    <Drawer
+      {...args}
+      open={visible}
+      onClickOverlay={toggleVisible}
+      side={
+        <Menu className="p-4 w-80 h-full bg-base-200 text-base-content">
+          <Menu.Item>
+            <a>Sidebar Item 1</a>
+          </Menu.Item>
+          <Menu.Item>
+            <a>Sidebar Item 2</a>
+          </Menu.Item>
+        </Menu>
+      }
+    >
+      <Button color="primary" onClick={toggleVisible} className="lg:hidden">
+        Open drawer
+      </Button>
     </Drawer>
   )
 }
-
-ForMobileFixedSidebarForDesktop.args = {
-  mobile: true,
+Responsive.args = {
+  className: 'lg:drawer-open',
+  sideClassName: 'h-full absolute',
+  contentClassName: 'flex h-56 items-center justify-center',
 }
 
 export const NavbarMenuForDesktopSidebarDrawerForMobile: Story<DrawerProps> = (
@@ -69,18 +88,27 @@ export const NavbarMenuForDesktopSidebarDrawerForMobile: Story<DrawerProps> = (
 ) => {
   const [visible, setVisible] = useState(false)
 
-  const toggleVisible = () => {
-    setVisible(!visible)
-  }
+  const toggleVisible = useCallback(() => {
+    setVisible((visible) => !visible)
+  }, [])
 
   return (
     <Drawer
       {...args}
       open={visible}
       onClickOverlay={toggleVisible}
-      className="font-sans"
+      side={
+        <Menu className="p-4 w-60 md:w-80 h-full bg-base-200">
+          <Menu.Item>
+            <a>Sidebar Item 1</a>
+          </Menu.Item>
+          <Menu.Item>
+            <a>Sidebar Item 2</a>
+          </Menu.Item>
+        </Menu>
+      }
     >
-      <Navbar>
+      <Navbar className="w-full bg-base-300">
         <div className="flex-none lg:hidden">
           <Button shape="square" color="ghost" onClick={toggleVisible}>
             <svg
@@ -92,9 +120,9 @@ export const NavbarMenuForDesktopSidebarDrawerForMobile: Story<DrawerProps> = (
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth={2}
+                strokeWidth="2"
                 d="M4 6h16M4 12h16M4 18h16"
-              />
+              ></path>
             </svg>
           </Button>
         </div>
@@ -110,7 +138,45 @@ export const NavbarMenuForDesktopSidebarDrawerForMobile: Story<DrawerProps> = (
           </Menu>
         </div>
       </Navbar>
-      <div className="flex h-36 items-center justify-center">Content</div>
+      <div className="flex flex-grow items-center justify-center">Content</div>
     </Drawer>
   )
+}
+NavbarMenuForDesktopSidebarDrawerForMobile.args = {
+  className: 'h-56 rounded overflow-hidden',
+  contentClassName: 'flex flex-col',
+}
+
+export const RightSideOfPage: Story<DrawerProps> = (args) => {
+  const [visible, setVisible] = useState(false)
+
+  const toggleVisible = useCallback(() => {
+    setVisible((visible) => !visible)
+  }, [])
+  return (
+    <Drawer
+      {...args}
+      open={visible}
+      onClickOverlay={toggleVisible}
+      side={
+        <Menu className="p-4 w-80 h-full bg-base-200 text-base-content">
+          <Menu.Item>
+            <a>Sidebar Item 1</a>
+          </Menu.Item>
+          <Menu.Item>
+            <a>Sidebar Item 2</a>
+          </Menu.Item>
+        </Menu>
+      }
+    >
+      <Button color="primary" onClick={toggleVisible}>
+        Open drawer
+      </Button>
+    </Drawer>
+  )
+}
+RightSideOfPage.args = {
+  sideClassName: 'h-full absolute',
+  contentClassName: 'flex h-56 items-center justify-center',
+  end: true,
 }

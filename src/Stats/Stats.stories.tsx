@@ -83,11 +83,11 @@ export const IconsOrImage: Story<StatsProps> = (args) => {
             ></path>
           </svg>
         </Stats.Stat.Figure>
-        <Stats.Stat.Figure className=" text-secondary">
+        <Stats.Stat.Figure className="text-secondary">
           <Avatar
             size="sm"
             online={true}
-            src="https://api.lorem.space/image/face?w=128&h=128"
+            src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
             shape="circle"
           ></Avatar>
         </Stats.Stat.Figure>

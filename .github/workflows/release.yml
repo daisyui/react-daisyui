@@ -6,6 +6,8 @@ name: release-please-pr
 jobs:
   release-pr:
     runs-on: ubuntu-latest
+    env:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - uses: google-github-actions/release-please-action@v3
         id: release-please
@@ -14,7 +16,7 @@ jobs:
           package-name: "react-daisyui"
           changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false},{"type":"refactor","section":"Miscellaneous","hidden":false},{"type":"docs","section":"Storybook","hidden":true}]'
           command: release-pr
-      - uses: actions/github-script@v5
+      - uses: actions/github-script@v6
         if: ${{ steps.release-please.outputs.pr }}
         id: extract-branch
         env:
@@ -37,6 +39,8 @@ jobs:
 
   release:
     runs-on: ubuntu-latest
+    env:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - uses: google-github-actions/release-please-action@v3
         id: release
