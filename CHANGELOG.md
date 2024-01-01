@@ -1,5 +1,17 @@
 # Changelog
 
+## [5.0.1](https://github.com/daisyui/react-daisyui/compare/v5.0.0...v5.0.1) (2024-01-01)
+
+
+### Bug Fixes
+
+* **Range:** ticks fix ([#438](https://github.com/daisyui/react-daisyui/issues/438)) ([e6f46a3](https://github.com/daisyui/react-daisyui/commit/e6f46a3ce523962d272d8693aa5b97d33a586357))
+
+
+### Miscellaneous
+
+* **Stats:** changed Stat structure ([#341](https://github.com/daisyui/react-daisyui/issues/341)) ([dea06ba](https://github.com/daisyui/react-daisyui/commit/dea06bab3a868c295fcede7fa806bc028f499861))
+
 ## [5.0.0](https://github.com/daisyui/react-daisyui/compare/v4.1.2...v5.0.0) (2023-11-28)
 
 
