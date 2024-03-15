@@ -15,9 +15,9 @@ export default meta
 const Template: Story<TabsProps> = (args) => {
   return (
     <Tabs {...args}>
-      <Tab>Tab 1</Tab>
-      <Tab active={true}>Tab 2</Tab>
-      <Tab>Tab 3</Tab>
+      <Tabs.Tab>Tab 1</Tabs.Tab>
+      <Tabs.Tab active={true}>Tab 2</Tabs.Tab>
+      <Tabs.Tab>Tab 3</Tabs.Tab>
     </Tabs>
   )
 }
@@ -42,27 +42,27 @@ export const Sizes: Story<TabsProps> = ({ size, ...args }) => {
     <div className="flex flex-col items-center gap-6">
       {/*xs*/}
       <Tabs {...args} size="xs">
-        <Tab>Tiny</Tab>
-        <Tab active={true}>Tiny</Tab>
-        <Tab>Tiny</Tab>
+        <Tabs.Tab>Tiny</Tabs.Tab>
+        <Tabs.Tab active={true}>Tiny</Tabs.Tab>
+        <Tabs.Tab>Tiny</Tabs.Tab>
       </Tabs>
       {/*sm*/}
       <Tabs {...args} size="sm">
-        <Tab>Small</Tab>
-        <Tab active={true}>Small</Tab>
-        <Tab>Small</Tab>
+        <Tabs.Tab>Small</Tabs.Tab>
+        <Tabs.Tab active={true}>Small</Tabs.Tab>
+        <Tabs.Tab>Small</Tabs.Tab>
       </Tabs>
       {/*md*/}
       <Tabs {...args} size="md">
-        <Tab>Normal</Tab>
-        <Tab active={true}>Normal</Tab>
-        <Tab>Normal</Tab>
+        <Tabs.Tab>Normal</Tabs.Tab>
+        <Tabs.Tab active={true}>Normal</Tabs.Tab>
+        <Tabs.Tab>Normal</Tabs.Tab>
       </Tabs>
       {/*lg*/}
       <Tabs {...args} size="lg">
-        <Tab>Large</Tab>
-        <Tab active={true}>Large</Tab>
-        <Tab>Large</Tab>
+        <Tabs.Tab>Large</Tabs.Tab>
+        <Tabs.Tab active={true}>Large</Tabs.Tab>
+        <Tabs.Tab>Large</Tabs.Tab>
       </Tabs>
     </div>
   )
@@ -79,20 +79,20 @@ Sizes.args = {
 export const RadioTabBordered: Story<TabsProps> = (args) => {
   return (
     <Tabs {...args}>
-      <RadioTab name="my_tabs_1" label="Tab 1" contentClassName="p-10">
+      <Tabs.RadioTab name="my_tabs_1" label="Tab 1" contentClassName="p-10">
         Tab content 1
-      </RadioTab>
-      <RadioTab
+      </Tabs.RadioTab>
+      <Tabs.RadioTab
         name="my_tabs_1"
         label="Tab 2"
         contentClassName="p-10"
         defaultChecked={true}
       >
         Tab content 2
-      </RadioTab>
-      <RadioTab name="my_tabs_1" label="Tab 3" contentClassName="p-10">
+      </Tabs.RadioTab>
+      <Tabs.RadioTab name="my_tabs_1" label="Tab 3" contentClassName="p-10">
         Tab content 3
-      </RadioTab>
+      </Tabs.RadioTab>
     </Tabs>
   )
 }
@@ -103,28 +103,28 @@ RadioTabBordered.args = {
 export const RadioTabLifted: Story<TabsProps> = (args) => {
   return (
     <Tabs {...args}>
-      <RadioTab
+      <Tabs.RadioTab
         name="my_tabs_2"
         label="Tab 1"
         contentClassName="bg-base-100 border-base-300 rounded-box p-6"
       >
         Tab content 1
-      </RadioTab>
-      <RadioTab
+      </Tabs.RadioTab>
+      <Tabs.RadioTab
         name="my_tabs_2"
         label="Tab 2"
         contentClassName="bg-base-100 border-base-300 rounded-box p-6"
         defaultChecked={true}
       >
         Tab content 2
-      </RadioTab>
-      <RadioTab
+      </Tabs.RadioTab>
+      <Tabs.RadioTab
         name="my_tabs_2"
         label="Tab 3"
         contentClassName="bg-base-100 border-base-300 rounded-box p-6"
       >
         Tab content 3
-      </RadioTab>
+      </Tabs.RadioTab>
     </Tabs>
   )
 }
