@@ -16,7 +16,7 @@ export type RangeProps = Omit<
     color?: ComponentColor
     size?: ComponentSize
     displayTicks?: boolean
-    ticksStep: number
+    ticksStep?: number
   }
 
 const Range = forwardRef<HTMLInputElement, RangeProps>(
