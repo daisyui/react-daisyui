@@ -36,12 +36,12 @@ describe('Stats', () => {
   })
 
   it('Should apply horizontal modifier class', () => {
-    const { container } = render(<Stats horizontal />)
+    const { container } = render(<Stats direction="horizontal" />)
     expect(container.firstChild).toHaveClass('stats-horizontal')
   })
 
   it('Should apply vertical modifier class', () => {
-    const { container } = render(<Stats vertical />)
+    const { container } = render(<Stats direction="vertical" />)
     expect(container.firstChild).toHaveClass('stats-vertical')
   })
 })
