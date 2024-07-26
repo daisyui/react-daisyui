@@ -176,7 +176,7 @@ export const RightSideOfPage: Story<DrawerProps> = (args) => {
   )
 }
 RightSideOfPage.args = {
-  sideClassName: 'h-full absolute',
+  sideClassName: 'h-full absolute ms-[-100vw] w-[stretch]',
   contentClassName: 'flex h-56 items-center justify-center',
   end: true,
 }
