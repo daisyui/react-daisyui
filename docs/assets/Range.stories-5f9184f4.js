@@ -1,0 +1,22 @@
+import{t as W,a as i,F as A,j as a}from"./tw-merge-0a3648bd.js";import{r as O}from"./index-1b03fe98.js";import{c as $}from"./clsx.m-1229b3e0.js";const d=O.forwardRef(({color:e,size:u,step:c,displayTicks:w,ticksStep:T,dataTheme:k,className:z,...s},b)=>{const q=W("range",z,$({"range-lg":u==="lg","range-md":u==="md","range-sm":u==="sm","range-xs":u==="xs","range-primary":e==="primary","range-secondary":e==="secondary","range-accent":e==="accent","range-info":e==="info","range-success":e==="success","range-warning":e==="warning","range-error":e==="error"})),j=w??c!==void 0,D=c!==void 0?Number(c):1,I=T??D,M=s.min!==void 0?Number(s.min):0,C=s.max!==void 0?Number(s.max):100,E=Math.max(Math.ceil((C-M)/I),1)+1;return i(A,{children:[a("input",{...s,ref:b,type:"range",step:c,"data-theme":k,className:q}),j&&a("div",{className:"w-full flex justify-between text-xs px-2",children:[...Array(E)].map((B,F)=>a("span",{children:"|"},F))})]})});d.displayName="Range";const r=d;try{d.displayName="Range",d.__docgenInfo={description:"",displayName:"Range",props:{dataTheme:{defaultValue:null,description:"",name:"dataTheme",required:!1,type:{name:"string"}},size:{defaultValue:null,description:"",name:"size",required:!1,type:{name:"enum",value:[{value:'"lg"'},{value:'"md"'},{value:'"sm"'},{value:'"xs"'}]}},displayTicks:{defaultValue:null,description:"",name:"displayTicks",required:!1,type:{name:"boolean"}},ticksStep:{defaultValue:null,description:"",name:"ticksStep",required:!1,type:{name:"number"}}}}}catch{}try{r.displayName="Range",r.__docgenInfo={description:"",displayName:"Range",props:{dataTheme:{defaultValue:null,description:"",name:"dataTheme",required:!1,type:{name:"string"}},size:{defaultValue:null,description:"",name:"size",required:!1,type:{name:"enum",value:[{value:'"lg"'},{value:'"md"'},{value:'"sm"'},{value:'"xs"'}]}},displayTicks:{defaultValue:null,description:"",name:"displayTicks",required:!1,type:{name:"boolean"}},ticksStep:{defaultValue:null,description:"",name:"ticksStep",required:!1,type:{name:"number"}}}}}catch{}const K={title:"Data Input/Range",component:r},S=e=>a(r,{...e}),l=S.bind({});l.args={};const n=S.bind({});n.args={step:25};const t=e=>i("div",{className:"w-full flex flex-col gap-2",children:[a(r,{...e,defaultValue:"20",color:"primary"}),a(r,{...e,defaultValue:"30",color:"secondary"}),a(r,{...e,defaultValue:"40",color:"accent"}),a(r,{...e,defaultValue:"50",color:"success"}),a(r,{...e,defaultValue:"60",color:"warning"}),a(r,{...e,defaultValue:"70",color:"info"}),a(r,{...e,defaultValue:"80",color:"error"})]});t.args={};const o=e=>i("div",{className:"w-full flex flex-col gap-2",children:[a(r,{...e,defaultValue:"40",size:"xs"}),a(r,{...e,defaultValue:"50",size:"sm"}),a(r,{...e,defaultValue:"60",size:"md"}),a(r,{...e,defaultValue:"70",size:"lg"})]});var m,g,p;l.parameters={...l.parameters,docs:{...(m=l.parameters)==null?void 0:m.docs,source:{originalSource:`args => {
+  return <Range {...args} />;
+}`,...(p=(g=l.parameters)==null?void 0:g.docs)==null?void 0:p.source}}};var f,y,V;n.parameters={...n.parameters,docs:{...(f=n.parameters)==null?void 0:f.docs,source:{originalSource:`args => {
+  return <Range {...args} />;
+}`,...(V=(y=n.parameters)==null?void 0:y.docs)==null?void 0:V.source}}};var x,R,v;t.parameters={...t.parameters,docs:{...(x=t.parameters)==null?void 0:x.docs,source:{originalSource:`args => {
+  return <div className="w-full flex flex-col gap-2">
+      <Range {...args} defaultValue="20" color="primary" />
+      <Range {...args} defaultValue="30" color="secondary" />
+      <Range {...args} defaultValue="40" color="accent" />
+      <Range {...args} defaultValue="50" color="success" />
+      <Range {...args} defaultValue="60" color="warning" />
+      <Range {...args} defaultValue="70" color="info" />
+      <Range {...args} defaultValue="80" color="error" />
+    </div>;
+}`,...(v=(R=t.parameters)==null?void 0:R.docs)==null?void 0:v.source}}};var _,h,N;o.parameters={...o.parameters,docs:{...(_=o.parameters)==null?void 0:_.docs,source:{originalSource:`args => {
+  return <div className="w-full flex flex-col gap-2">
+      <Range {...args} defaultValue="40" size="xs" />
+      <Range {...args} defaultValue="50" size="sm" />
+      <Range {...args} defaultValue="60" size="md" />
+      <Range {...args} defaultValue="70" size="lg" />
+    </div>;
+}`,...(N=(h=o.parameters)==null?void 0:h.docs)==null?void 0:N.source}}};const L=["Default","WithSteps","Colors","Sizes"];export{t as Colors,l as Default,o as Sizes,n as WithSteps,L as __namedExportsOrder,K as default};
