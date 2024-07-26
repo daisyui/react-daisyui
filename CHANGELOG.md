@@ -1,5 +1,14 @@
 # Changelog
 
+## [5.0.3](https://github.com/daisyui/react-daisyui/compare/v5.0.2...v5.0.3) (2024-07-26)
+
+
+### Miscellaneous
+
+* **Carousel:** added snap start utility ([50a5add](https://github.com/daisyui/react-daisyui/commit/50a5add71d22dff4b865135961d6e8124ea6e61b))
+* **Tab:** added bg and border colors (full support WIP) ([1cd081e](https://github.com/daisyui/react-daisyui/commit/1cd081e6a9a713c61ecdae73d0e9429bf82c16db))
+* upgraded daisyui version to 4.12.10 ([602bf54](https://github.com/daisyui/react-daisyui/commit/602bf54d8c3a3b7005faa083fe9890e24ef57e4a))
+
 ## [5.0.2](https://github.com/daisyui/react-daisyui/compare/v5.0.1...v5.0.2) (2024-07-26)
 
 
