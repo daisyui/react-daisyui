@@ -40,7 +40,7 @@ export const Default: Story<DefaultControls> = ({
         </ChatBubble.Header>
       )}
       {avatar && (
-        <ChatBubble.Avatar src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+        <ChatBubble.Avatar src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
       )}
       <ChatBubble.Message>You were my brother, Anakin.</ChatBubble.Message>
       {footer && <ChatBubble.Footer>Seen</ChatBubble.Footer>}
@@ -79,21 +79,21 @@ export const Side: Story<ChatBubbleProps> = (args) => (
 export const WithImage: Story<ChatBubbleProps> = (args) => (
   <>
     <ChatBubble>
-      <ChatBubble.Avatar src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+      <ChatBubble.Avatar src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
       <ChatBubble.Message>
         It was said that you would, destroy the Sith, not join them.
       </ChatBubble.Message>
     </ChatBubble>
 
     <ChatBubble>
-      <ChatBubble.Avatar src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+      <ChatBubble.Avatar src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
       <ChatBubble.Message>
         It was you who would bring balance to the Force
       </ChatBubble.Message>
     </ChatBubble>
 
     <ChatBubble>
-      <ChatBubble.Avatar src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+      <ChatBubble.Avatar src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
       <ChatBubble.Message>Not leave it in Darkness</ChatBubble.Message>
     </ChatBubble>
   </>
@@ -105,7 +105,7 @@ export const WithHeader: Story<ChatBubbleProps> = (args) => (
       <ChatBubble.Header>
         Obi-Wan Kenobi <ChatBubble.Time>12:45</ChatBubble.Time>
       </ChatBubble.Header>
-      <ChatBubble.Avatar src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+      <ChatBubble.Avatar src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
       <ChatBubble.Message>You were the Chosen One!</ChatBubble.Message>
     </ChatBubble>
 
@@ -113,7 +113,7 @@ export const WithHeader: Story<ChatBubbleProps> = (args) => (
       <ChatBubble.Header>
         Anakin <ChatBubble.Time>12:46</ChatBubble.Time>
       </ChatBubble.Header>
-      <ChatBubble.Avatar src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+      <ChatBubble.Avatar src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
       <ChatBubble.Message>I hate you!</ChatBubble.Message>
     </ChatBubble>
   </>
@@ -122,13 +122,13 @@ export const WithHeader: Story<ChatBubbleProps> = (args) => (
 export const WithFooter: Story<ChatBubbleProps> = (args) => (
   <>
     <ChatBubble>
-      <ChatBubble.Avatar src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+      <ChatBubble.Avatar src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
       <ChatBubble.Message>You were the Chosen One!</ChatBubble.Message>
       <ChatBubble.Footer>Delivered</ChatBubble.Footer>
     </ChatBubble>
 
     <ChatBubble end>
-      <ChatBubble.Avatar src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+      <ChatBubble.Avatar src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
       <ChatBubble.Message>I hate you!</ChatBubble.Message>
       <ChatBubble.Footer>Seen at 12:46</ChatBubble.Footer>
     </ChatBubble>

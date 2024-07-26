@@ -29,17 +29,17 @@ export const StackedImages: Story<StackProps> = (args) => {
   return (
     <Stack {...args}>
       <img
-        src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp"
         alt="Image 1"
         className="rounded"
       />
       <img
-        src="https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp"
         alt="Image 2"
         className="rounded"
       />
       <img
-        src="https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp"
         alt="Image 3"
         className="rounded"
       />
