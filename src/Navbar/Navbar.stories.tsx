@@ -166,7 +166,7 @@ export const SearchInputAndDropdown: Story<NavbarProps> = (args) => {
             shape="circle"
           >
             <div className="w-10 rounded-full">
-              <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+              <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
             </div>
           </Button>
           <Dropdown.Menu className="w-52 menu-sm mt-3 z-[1] p-2">
@@ -240,7 +240,7 @@ export const IconIndicatorAndDropdown: Story<NavbarProps> = (args) => {
             shape="circle"
           >
             <div className="w-10 rounded-full">
-              <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+              <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
             </div>
           </Button>
           <Dropdown.Menu className="mt-3 z-[1] w-52 menu-sm">

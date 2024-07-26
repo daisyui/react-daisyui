@@ -19,13 +19,13 @@ export const Default: Story<DiffProps> = ({ secondItem, ...args }) => (
     secondItem={
       <img
         alt="daisy"
-        src="https://daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a-blur.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a-blur.webp"
       />
     }
   >
     <img
       alt="daisy"
-      src=" https://daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a.jpg"
+      src=" https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a.webp"
     />
   </Diff>
 )

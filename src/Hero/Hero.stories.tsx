@@ -40,7 +40,7 @@ export const HeroWithFigure: Story<HeroProps> = (args) => {
     <Hero {...args}>
       <Hero.Content>
         <img
-          src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
+          src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
           className="max-w-sm rounded-lg shadow-2xl"
         />
         <div>
@@ -107,7 +107,7 @@ export const HeroWithOverlayImage: Story<HeroProps> = (args) => {
     <Hero
       style={{
         backgroundImage:
-          'url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)',
+          'url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp)',
       }}
     >
       <Hero.Overlay {...args} />

@@ -51,7 +51,7 @@ describe('ChatBubble', () => {
   test('Should render ChatBubbleAvatar subcomponent', () => {
     const { getByAltText } = render(
       <ChatBubble.Avatar>
-        <img src="avatar.jpg" alt="Avatar" />
+        <img src="avatar.webp" alt="Avatar" />
       </ChatBubble.Avatar>
     )
     expect(getByAltText('Avatar')).toBeInTheDocument()

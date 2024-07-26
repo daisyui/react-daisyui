@@ -170,7 +170,7 @@ export const Glass: Story<ButtonProps> = (args) => {
       className="w-full flex justify-center py-8 rounded-md"
       style={{
         backgroundImage:
-          'url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)',
+          'url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp)',
       }}
     >
       <Button {...args}>Glass button</Button>

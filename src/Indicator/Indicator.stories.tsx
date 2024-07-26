@@ -76,7 +76,7 @@ export const ForAvatar: Story<IndicatorItemProps> = (args) => {
       </Badge>
       <Avatar
         shape="square"
-        src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
       />
     </Indicator>
   )
@@ -119,7 +119,7 @@ export const InCenterOfImage: Story<IndicatorItemProps> = (args) => {
       <Badge color="secondary" className={Indicator.Item.className(args)}>
         Uploading Image...
       </Badge>
-      <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" />
+      <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" />
     </Indicator>
   )
 }

@@ -13,31 +13,31 @@ export const Default: Story<CarouselProps> = (args) => {
   return (
     <Carousel {...args} className="rounded-box">
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1494253109108-2e30c049369b.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp"
         alt="Fruits"
       />
     </Carousel>
@@ -49,31 +49,31 @@ export const Snap: Story<CarouselProps> = (args) => {
   return (
     <Carousel {...args} className="rounded-box">
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1494253109108-2e30c049369b.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp"
         alt="Fruits"
       />
     </Carousel>
@@ -87,31 +87,31 @@ export const FullWidth: Story<CarouselProps> = (args) => {
   return (
     <Carousel {...args} className="w-64 rounded-box">
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1494253109108-2e30c049369b.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp"
         alt="Fruits"
       />
     </Carousel>
@@ -125,31 +125,31 @@ export const HalfWidth: Story<CarouselProps> = (args) => {
   return (
     <Carousel {...args} className="w-64 rounded-box">
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1494253109108-2e30c049369b.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp"
         alt="Fruits"
       />
     </Carousel>
@@ -163,31 +163,31 @@ export const Vertical: Story<CarouselProps> = (args) => {
   return (
     <Carousel {...args} className="h-96 w-64 rounded-box">
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1494253109108-2e30c049369b.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp"
         alt="Fruits"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp"
         alt="Fruits"
       />
     </Carousel>
@@ -202,19 +202,19 @@ export const Numbered: Story<CarouselProps> = (args) => {
   return (
     <Carousel {...args} className="rounded-box">
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
         alt="City"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
         alt="City"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
         alt="City"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
         alt="City"
       />
     </Carousel>
@@ -228,19 +228,19 @@ export const Sequential: Story<CarouselProps> = (args) => {
   return (
     <Carousel {...args} className="rounded-box">
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
         alt="City"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
         alt="City"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
         alt="City"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
         alt="City"
       />
     </Carousel>
@@ -260,19 +260,19 @@ export const CustomButton: Story<CarouselProps> = (args) => {
   return (
     <Carousel {...args} className="rounded-box">
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
         alt="City"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
         alt="City"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
         alt="City"
       />
       <Carousel.Item
-        src="https://daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg"
+        src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
         alt="City"
       />
     </Carousel>

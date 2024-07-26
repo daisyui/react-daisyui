@@ -5,19 +5,19 @@ const children = [
   <Carousel.Item
     key="1"
     id="slide1"
-    src="http://xyz/images/pic-1.jpg"
+    src="http://xyz/images/pic-1.webp"
     alt="Pic-1"
   />,
   <Carousel.Item
     key="2"
     id="slide2"
-    src="http://xyz/images/pic-2.jpg"
+    src="http://xyz/images/pic-2.webp"
     alt="Pic-2"
   />,
   <Carousel.Item
     key="3"
     id="slide3"
-    src="http://xyz/images/pic-3.jpg"
+    src="http://xyz/images/pic-3.webp"
     alt="Pic-3"
   />,
 ]
