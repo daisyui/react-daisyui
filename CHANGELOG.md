@@ -1,5 +1,13 @@
 # Changelog
 
+## [5.0.2](https://github.com/daisyui/react-daisyui/compare/v5.0.1...v5.0.2) (2024-07-26)
+
+
+### Bug Fixes
+
+* **Range:** made ticksStep optional ([d054b29](https://github.com/daisyui/react-daisyui/commit/d054b29cb9bc56643e3b1db940f371d06b76b79c))
+* **Stats:** fixed stats tests ([a010e43](https://github.com/daisyui/react-daisyui/commit/a010e43cc73a5dec8d36a77654da20dbf7aff7d8))
+
 ## [5.0.1](https://github.com/daisyui/react-daisyui/compare/v5.0.0...v5.0.1) (2024-01-01)
 
 
