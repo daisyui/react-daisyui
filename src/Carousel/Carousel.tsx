@@ -47,6 +47,7 @@ const Carousel = forwardRef<HTMLDivElement, CarouselProps>(
       'carousel',
       className,
       clsx({
+        'carousel-start': snap === 'start',
         'carousel-center': snap === 'center',
         'carousel-end': snap === 'end',
         'carousel-vertical': vertical,
