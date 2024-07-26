@@ -2,10 +2,15 @@ import React, { forwardRef, ReactNode } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
+import { ComponentColor } from '../types'
+
 export type RadioTabProps = Omit<
   React.InputHTMLAttributes<HTMLInputElement>,
-  'type'
+  'type' | 'color'
 > & {
+  color?: ComponentColor
+  bgColor?: string
+  borderColor?: string
   active?: boolean
   disabled?: boolean
   label: string
@@ -18,6 +23,9 @@ const RadioTab = forwardRef<HTMLInputElement, RadioTabProps>(
     {
       children,
       className,
+      color,
+      bgColor,
+      borderColor,
       active,
       label,
       disabled,
@@ -31,6 +39,16 @@ const RadioTab = forwardRef<HTMLInputElement, RadioTabProps>(
       'tab',
       className,
       clsx({
+        [`[--tab-bg:${bgColor}]`]: bgColor,
+        [`[--tab-border-color:${borderColor}]`]: borderColor,
+        'text-neutral': color === 'neutral',
+        'text-primary': color === 'primary',
+        'text-secondary': color === 'secondary',
+        'text-accent': color === 'accent',
+        'text-info': color === 'info',
+        'text-success': color === 'success',
+        'text-warning': color === 'warning',
+        'text-error': color === 'error',
         'tab-active': active,
         'tab-disabled': disabled,
       })

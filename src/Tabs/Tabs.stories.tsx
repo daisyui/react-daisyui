@@ -132,3 +132,18 @@ RadioTabLifted.args = {
   className: 'w-full my-10 lg:mx-10',
   variant: 'lifted',
 }
+
+export const TabsWithCustomColor: Story<TabsProps> = (args) => {
+  return (
+    <Tabs {...args}>
+      <Tabs.Tab>Tab 1</Tabs.Tab>
+      <Tabs.Tab color="primary" bgColor="yellow" borderColor="orange" active={true}>Tab 2</Tabs.Tab>
+      <Tabs.Tab>Tab 3</Tabs.Tab>
+    </Tabs>
+  )
+}
+TabsWithCustomColor.args = {
+  className: 'w-full my-10 lg:mx-10',
+  variant: 'lifted',
+}
+
