@@ -14,11 +14,21 @@ export type ModalProps = React.HTMLAttributes<HTMLDialogElement> &
     open?: boolean
     responsive?: boolean
     backdrop?: boolean
+    ariaHidden?: boolean
   }
 
 const Modal = forwardRef<HTMLDialogElement, ModalProps>(
   (
-    { children, open, responsive, backdrop, dataTheme, className, ...props },
+    {
+      children,
+      open,
+      responsive,
+      backdrop,
+      ariaHidden,
+      dataTheme,
+      className,
+      ...props
+    },
     ref
   ): JSX.Element => {
     const containerClasses = twMerge(
@@ -29,13 +39,14 @@ const Modal = forwardRef<HTMLDialogElement, ModalProps>(
       })
     )
 
+    ariaHidden = ariaHidden ?? !open
     const bodyClasses = twMerge('modal-box', className)
 
     return (
       <dialog
         {...props}
         aria-label="Modal"
-        aria-hidden={!open}
+        aria-hidden={ariaHidden}
         open={open}
         aria-modal={open}
         data-theme={dataTheme}
