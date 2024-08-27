@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.1.0](https://github.com/daisyui/react-daisyui/compare/v5.0.3...v5.1.0) (2024-08-27)
+
+
+### Features
+
+* **Modal:** added ariaHidden to Modal component Props. ([#456](https://github.com/daisyui/react-daisyui/issues/456)) ([45fa820](https://github.com/daisyui/react-daisyui/commit/45fa8204e5aef13e99b9057adf9293669e499aac))
+
 ## [5.0.3](https://github.com/daisyui/react-daisyui/compare/v5.0.2...v5.0.3) (2024-07-26)
 
 
