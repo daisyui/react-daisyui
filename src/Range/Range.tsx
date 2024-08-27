@@ -41,7 +41,7 @@ const Range = forwardRef<HTMLInputElement, RangeProps>(
 
     const calculatedDisplayTicks = displayTicks ?? (step !== undefined);
     const calculatedStep = step !== undefined ? Number(step) : 1; // default value per HTML standard
-    const calculatedTicksStep = ticksStep ?? calculatedStep;
+    const calculatedTicksStep = !!ticksStep ? ticksStep : calculatedStep;
     const min = props.min !== undefined ? Number(props.min) : 0; // default value per HTML standard
     const max = props.max !== undefined ? Number(props.max) : 100; // default value per HTML standard
 
