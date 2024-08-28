@@ -1,5 +1,13 @@
 # Changelog
 
+## [5.0.4](https://github.com/daisyui/react-daisyui/compare/v5.0.3...v5.0.4) (2024-08-28)
+
+
+### Miscellaneous
+
+* **Modal:** added ariaHidden to Modal component Props. ([#456](https://github.com/daisyui/react-daisyui/issues/456)) ([9e5064d](https://github.com/daisyui/react-daisyui/commit/9e5064ddf991cc3366c0c3fd05a6fda121ed04cf))
+* **Modal:** fixed Props type to use DialogHTMLAttributes ([#459](https://github.com/daisyui/react-daisyui/issues/459)) ([275e2e9](https://github.com/daisyui/react-daisyui/commit/275e2e90d5d146c8a96f38590fe856d80383c732))
+
 ## [5.0.3](https://github.com/daisyui/react-daisyui/compare/v5.0.2...v5.0.3) (2024-07-26)
 
 
