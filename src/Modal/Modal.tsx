@@ -7,7 +7,7 @@ import { IComponentBaseProps } from '../types'
 import ModalActions from './ModalActions'
 import ModalBody from './ModalBody'
 import ModalHeader from './ModalHeader'
-import ModalLegacy, { ModalProps as ModalLegacyProps } from './ModalLegacy'
+import ModalLegacy from './ModalLegacy'
 
 export type ModalProps = React.DialogHTMLAttributes<HTMLDialogElement> &
   IComponentBaseProps & {
