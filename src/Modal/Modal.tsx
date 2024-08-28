@@ -9,7 +9,7 @@ import ModalBody from './ModalBody'
 import ModalHeader from './ModalHeader'
 import ModalLegacy, { ModalProps as ModalLegacyProps } from './ModalLegacy'
 
-export type ModalProps = React.HTMLAttributes<HTMLDialogElement> &
+export type ModalProps = React.DialogHTMLAttributes<HTMLDialogElement> &
   IComponentBaseProps & {
     open?: boolean
     responsive?: boolean
