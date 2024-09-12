@@ -1,5 +1,5 @@
-import React from 'react'
 import { render } from '@testing-library/react'
+import React from 'react'
 import Table from './'
 
 describe('Table', () => {
@@ -47,5 +47,36 @@ describe('Table', () => {
   it('Should apply pinRows prop', () => {
     const { container } = render(<Table pinRows />)
     expect(container.firstChild).toHaveClass('table-pin-rows')
+  })
+
+  const tableComponents: [string, React.ElementType][] = [
+    ['Table.Head', Table.Head],
+    ['Table.Row', Table.Row],
+    ['Table.Footer', Table.Footer],
+  ]
+  describe.each(tableComponents)('asd', (componentName, TableComponent) => {
+    it(`${componentName}: Should render th for the first child and td tags for subsequent children when noCell is false`, () => {
+      const { container } = render(
+        <TableComponent>
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+        </TableComponent>
+      )
+      expect(container.querySelectorAll('th').length).toEqual(1)
+      expect(container.querySelectorAll('td').length).toEqual(2)
+    })
+
+    it(`${componentName}: Should render th for the first child and td tags for subsequent children when noCell is false`, () => {
+      const { container } = render(
+        <TableComponent>
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+        </TableComponent>
+      )
+      expect(container.querySelectorAll('th').length).toEqual(1)
+      expect(container.querySelectorAll('td').length).toEqual(2)
+    })
   })
 })
