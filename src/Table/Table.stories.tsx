@@ -493,43 +493,12 @@ Xs.args = {
   size: 'xs',
 }
 
+// set of 50 columns with data to help demo scrolling and pinned headers
+const colCount = 50
 const tableData: { headers: string[]; row: string[]; footers: string[] } = {
-  headers: [
-    'header1',
-    'header2',
-    'header3',
-    'header4',
-    'header5',
-    'header6',
-    'header7',
-    'header8',
-    'header9',
-    'header10',
-  ],
-  row: [
-    'data1',
-    'data2',
-    'data3',
-    'data4',
-    'data5',
-    'data6',
-    'data7',
-    'data8',
-    'data9',
-    'data10',
-  ],
-  footers: [
-    'footer1',
-    'footer2',
-    'footer3',
-    'footer4',
-    'footer5',
-    'footer6',
-    'footer7',
-    'footer8',
-    'footer9',
-    'footer10',
-  ],
+  headers: new Array(colCount).fill('header').map((value, i) => value + i),
+  row: new Array(colCount).fill('data').map((value, i) => value + i),
+  footers: new Array(colCount).fill('footer').map((value, i) => value + i),
 }
 
 const renderTableItem = (v, i, renderCell = true) => {
@@ -537,7 +506,8 @@ const renderTableItem = (v, i, renderCell = true) => {
     return <div>{v}</div>
   }
 
-  return <td>{v}</td>
+  // render every 5th cell as a th, which get pinned as users scroll
+  return i % 5 === 0 ? <th>{v}</th> : <td>{v}</td>
 }
 
 const renderHeaders = (noCell) =>
@@ -573,4 +543,5 @@ PinnedRowsOrColsNoCell.args = {
   noCell: true,
   pinRows: true,
   pinCols: true,
+  zebra: true,
 }
