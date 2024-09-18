@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.0.5](https://github.com/daisyui/react-daisyui/compare/v5.0.4...v5.0.5) (2024-09-18)
+
+
+### Miscellaneous
+
+* **Table:** more flexible Table.Head/Footer with [noCell] prop for better pinCols support ([#463](https://github.com/daisyui/react-daisyui/issues/463)) ([0317ed3](https://github.com/daisyui/react-daisyui/commit/0317ed36ab92c717cecf738f18e71154a49dd2b7))
+
 ## [5.0.4](https://github.com/daisyui/react-daisyui/compare/v5.0.3...v5.0.4) (2024-08-28)
 
 
