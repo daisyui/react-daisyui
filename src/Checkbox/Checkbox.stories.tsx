@@ -35,10 +35,11 @@ FormControl.args = {}
 
 export const Colors: Story<CheckboxProps> = (args) => {
   return (
-    <div className="flex flex-col items-center float-left gap-2">
+    <div className="flex flex-row items-center float-left gap-2">
       <Checkbox {...args} defaultChecked color="primary" />
       <Checkbox {...args} defaultChecked color="secondary" />
       <Checkbox {...args} defaultChecked color="accent" />
+      <Checkbox {...args} defaultChecked color="neutral" />
       <Checkbox {...args} defaultChecked color="success" />
       <Checkbox {...args} defaultChecked color="warning" />
       <Checkbox {...args} defaultChecked color="info" />
@@ -50,11 +51,12 @@ Colors.args = {}
 
 export const Sizes: Story<CheckboxProps> = (args) => {
   return (
-    <div className="flex flex-col items-center float-left gap-2">
+    <div className="flex flex-row items-center float-left gap-2">
       <Checkbox {...args} defaultChecked size="xs" />
       <Checkbox {...args} defaultChecked size="sm" />
       <Checkbox {...args} defaultChecked size="md" />
       <Checkbox {...args} defaultChecked size="lg" />
+      <Checkbox {...args} defaultChecked size="xl" />
     </div>
   )
 }
