@@ -11,19 +11,18 @@ export type TextareaProps = Omit<
   IComponentBaseProps & {
     color?: ComponentColor
     size?: ComponentSize
-    bordered?: boolean
-    borderOffset?: boolean
   }
 
 const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
   (
-    { bordered = true, borderOffset, color, size, dataTheme, className, ...props },
+    { color, size, dataTheme, className, ...props },
     ref
   ): JSX.Element => {
     const classes = twMerge(
       'textarea',
       className,
       clsx({
+        'textarea-xl': size === 'xl',
         'textarea-lg': size === 'lg',
         'textarea-md': size === 'md',
         'textarea-sm': size === 'sm',
@@ -36,8 +35,6 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
         'textarea-success': color === 'success',
         'textarea-warning': color === 'warning',
         'textarea-error': color === 'error',
-        'textarea-bordered': bordered,
-        'focus:outline-offset-0': !borderOffset,
       })
     )
 
