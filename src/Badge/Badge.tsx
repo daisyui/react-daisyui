@@ -2,14 +2,18 @@ import React, { forwardRef, ReactNode } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-import { IComponentBaseProps, ComponentColor, ComponentSize } from '../types'
+import {
+  IComponentBaseProps,
+  ComponentColor,
+  ComponentSize,
+  ComponentVariant,
+} from '../types'
 
 export type BadgeProps = Omit<React.HTMLAttributes<HTMLDivElement>, 'color'> &
   IComponentBaseProps & {
-    variant?: 'outline'
-    outline?: boolean
     size?: ComponentSize
     color?: ComponentColor
+    variant?: ComponentVariant
     responsive?: boolean
   }
 
@@ -17,10 +21,9 @@ const Badge = forwardRef<HTMLDivElement, BadgeProps>(
   (
     {
       children,
-      variant,
-      outline,
       size,
       color,
+      variant,
       responsive,
       dataTheme,
       className,
@@ -32,11 +35,14 @@ const Badge = forwardRef<HTMLDivElement, BadgeProps>(
       'badge',
       className,
       clsx({
+        'badge-xl': size === 'xl',
         'badge-lg': size === 'lg',
         'badge-md': size === 'md',
         'badge-sm': size === 'sm',
         'badge-xs': size === 'xs',
-        'badge-outline': variant === 'outline' || outline,
+        'badge-soft': variant === 'soft',
+        'badge-dash': variant === 'dash',
+        'badge-outline': variant === 'outline',
         'badge-neutral': color === 'neutral',
         'badge-primary': color === 'primary',
         'badge-secondary': color === 'secondary',

@@ -37,7 +37,7 @@ export const BrandColors: Story<BadgeProps> = (args) => {
   )
 }
 
-export const Outline: Story<BadgeProps> = (args) => {
+export const SoftStyle: Story<BadgeProps> = (args) => {
   return (
     <div className="flex gap-2 items-center">
       <Badge {...args}>default</Badge>
@@ -53,8 +53,48 @@ export const Outline: Story<BadgeProps> = (args) => {
     </div>
   )
 }
-Outline.args = {
+SoftStyle.args = {
+  variant: 'soft',
+}
+
+export const OutlineStyle: Story<BadgeProps> = (args) => {
+  return (
+    <div className="flex gap-2 items-center">
+      <Badge {...args}>default</Badge>
+      <Badge {...args} color="primary">
+        primary
+      </Badge>
+      <Badge {...args} color="secondary">
+        secondary
+      </Badge>
+      <Badge {...args} color="accent">
+        accent
+      </Badge>
+    </div>
+  )
+}
+OutlineStyle.args = {
   variant: 'outline',
+}
+
+export const DashStyle: Story<BadgeProps> = (args) => {
+  return (
+    <div className="flex gap-2 items-center">
+      <Badge {...args}>default</Badge>
+      <Badge {...args} color="primary">
+        primary
+      </Badge>
+      <Badge {...args} color="secondary">
+        secondary
+      </Badge>
+      <Badge {...args} color="accent">
+        accent
+      </Badge>
+    </div>
+  )
+}
+DashStyle.args = {
+  variant: 'dash',
 }
 
 export const Sizes: Story<BadgeProps> = (args) => {
