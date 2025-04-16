@@ -23,6 +23,7 @@ const Radio = forwardRef<HTMLInputElement, RadioProps>(
       'radio',
       className,
       clsx({
+        'radio-xl': size === 'xl',
         'radio-lg': size === 'lg',
         'radio-md': size === 'md',
         'radio-sm': size === 'sm',
