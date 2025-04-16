@@ -23,10 +23,12 @@ const Toggle = forwardRef<HTMLInputElement, ToggleProps>(
       'toggle',
       className,
       clsx({
+        'toggle-xl': size === 'xl',
         'toggle-lg': size === 'lg',
         'toggle-md': size === 'md',
         'toggle-sm': size === 'sm',
         'toggle-xs': size === 'xs',
+        'toggle-neutral': color === 'neutral',
         'toggle-primary': color === 'primary',
         'toggle-secondary': color === 'secondary',
         'toggle-accent': color === 'accent',
