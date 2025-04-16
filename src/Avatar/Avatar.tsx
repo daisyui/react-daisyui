@@ -51,9 +51,9 @@ const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
       'avatar',
       className,
       clsx({
-        online: online,
-        offline: offline,
-        placeholder: !src,
+        'avatar-online': online,
+        'avatar-offline': offline,
+        'avatar-placeholder': !src,
       })
     )
 
