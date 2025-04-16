@@ -8,17 +8,13 @@ import {
   ComponentStatus,
 } from '../types'
 
-export type BottomNavigationItemProps =
-  React.ButtonHTMLAttributes<HTMLButtonElement> &
-    IComponentBaseProps & {
-      color?: ComponentBrandColors | ComponentStatus
-      active?: boolean
-    }
+export type DockItemProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
+  IComponentBaseProps & {
+    color?: ComponentBrandColors | ComponentStatus
+    active?: boolean
+  }
 
-const BottomNavigationItem = forwardRef<
-  HTMLButtonElement,
-  BottomNavigationItemProps
->(
+const DockItem = forwardRef<HTMLButtonElement, DockItemProps>(
   (
     { children, className, color, dataTheme, active, disabled, ...props },
     ref
@@ -46,4 +42,4 @@ const BottomNavigationItem = forwardRef<
   }
 )
 
-export default BottomNavigationItem
+export default DockItem

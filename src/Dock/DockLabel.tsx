@@ -1,13 +1,13 @@
 import React, { forwardRef } from 'react'
 import { twMerge } from 'tailwind-merge'
 
-export type BottomNavigationLabelProps = React.HTMLAttributes<HTMLSpanElement>
+export type DockLabelProps = React.HTMLAttributes<HTMLSpanElement>
 
-const BottomNavigationLabel = forwardRef<
+const DockLabel = forwardRef<
   HTMLSpanElement,
-  BottomNavigationLabelProps
+  DockLabelProps
 >(({ children, className, ...props }, ref): JSX.Element => {
-  const classes = twMerge('btm-nav-label', className)
+  const classes = twMerge('dock-label', className)
   return (
     <span {...props} className={classes} ref={ref}>
       {children}
@@ -15,4 +15,4 @@ const BottomNavigationLabel = forwardRef<
   )
 })
 
-export default BottomNavigationLabel
+export default DockLabel
