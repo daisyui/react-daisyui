@@ -2,22 +2,25 @@ import React from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-import { IComponentBaseProps } from '../types'
+import { IComponentBaseProps, ComponentLayout } from '../types'
 
 import FooterTitle from './FooterTitle'
 
 export type FooterProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {
     center?: boolean
+    layout?: ComponentLayout
   }
 
 const Footer = React.forwardRef<HTMLDivElement, FooterProps>(
-  ({ center, dataTheme, className, ...props }, ref) => {
+  ({ center, layout = 'vertical', dataTheme, className, ...props }, ref) => {
     const classes = twMerge(
       'footer',
       className,
       clsx({
         'footer-center': center,
+        'footer-vertical': layout === 'vertical',
+        'footer-horizontal': layout === 'horizontal',
       })
     )
 
