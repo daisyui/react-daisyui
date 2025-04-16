@@ -9,8 +9,6 @@ export type InputProps = Omit<
   'size' | 'color'
 > &
   IComponentBaseProps & {
-    bordered?: boolean
-    borderOffset?: boolean
     size?: ComponentSize
     color?: ComponentColor
   }
@@ -20,8 +18,6 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
     {
       value,
       placeholder,
-      bordered = true,
-      borderOffset,
       size,
       color,
       dataTheme,
@@ -35,6 +31,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       'input',
       className,
       clsx({
+        'input-xl': size === 'xl',
         'input-lg': size === 'lg',
         'input-md': size === 'md',
         'input-sm': size === 'sm',
@@ -47,8 +44,6 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         'input-success': color === 'success',
         'input-warning': color === 'warning',
         'input-error': color === 'error',
-        'input-bordered': bordered,
-        'focus:outline-offset-0': !borderOffset,
       })
     )
 
