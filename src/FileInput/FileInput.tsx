@@ -22,6 +22,7 @@ const FileInput = forwardRef<HTMLInputElement, FileInputProps>(
       'file-input',
       className,
       clsx({
+        'file-input-xl': size === 'xl',
         'file-input-lg': size === 'lg',
         'file-input-md': size === 'md',
         'file-input-sm': size === 'sm',
