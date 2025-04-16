@@ -12,7 +12,7 @@ import ModalLegacy from './ModalLegacy'
 export type ModalProps = React.DialogHTMLAttributes<HTMLDialogElement> &
   IComponentBaseProps & {
     open?: boolean
-    position?: Exclude<ComponentPosition, 'left' | 'right'> | 'start' | 'end'
+    position?: Exclude<ComponentPosition, 'left' | 'right'>
     responsive?: boolean
     backdrop?: boolean
     ariaHidden?: boolean

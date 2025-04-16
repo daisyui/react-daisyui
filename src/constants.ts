@@ -1,5 +1,5 @@
 export const componentLayouts = ['vertical', 'horizontal'] as const
-export const componentPositions = ['top', 'bottom', 'left', 'right'] as const
+export const componentPositions = ['top', 'bottom', 'left', 'right', 'start', 'end'] as const
 export const componentShapes = ['circle', 'square'] as const
 export const componentSizes = ['xl', 'lg', 'md', 'sm', 'xs'] as const
 export const componentStatuses = [
