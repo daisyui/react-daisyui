@@ -37,8 +37,8 @@ const PhoneMockup = forwardRef<HTMLDivElement, PhoneMockupProps>(
         className={classes}
         ref={ref}
       >
-        <div className="camera" />
-        <div className="display">
+        <div className="mockup-phone-camera" />
+        <div className="mockup-phone-display">
           <div
             {...innerProps}
             className={twMerge(
