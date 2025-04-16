@@ -78,34 +78,6 @@ Circle.args = {
   src: 'https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp',
   variant: 'circle',
 }
-export const Parallelogram: Story<MaskProps> = (args) => {
-  return <Mask {...args} />
-}
-Parallelogram.args = {
-  src: 'https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp',
-  variant: 'parallelogram',
-}
-export const ParallelogramTwo: Story<MaskProps> = (args) => {
-  return <Mask {...args} />
-}
-ParallelogramTwo.args = {
-  src: 'https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp',
-  variant: 'parallelogram-2',
-}
-export const ParallelogramThree: Story<MaskProps> = (args) => {
-  return <Mask {...args} />
-}
-ParallelogramThree.args = {
-  src: 'https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp',
-  variant: 'parallelogram-3',
-}
-export const ParallelogramFour: Story<MaskProps> = (args) => {
-  return <Mask {...args} />
-}
-ParallelogramFour.args = {
-  src: 'https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp',
-  variant: 'parallelogram-4',
-}
 export const Star: Story<MaskProps> = (args) => {
   return <Mask {...args} />
 }
