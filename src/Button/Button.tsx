@@ -7,6 +7,7 @@ import {
   IComponentBaseProps,
   ComponentColor,
   ComponentShape,
+  ComponentVariant,
   ComponentSize,
 } from '../types'
 
@@ -52,8 +53,8 @@ export type ButtonProps<
   IComponentBaseProps & {
     shape?: ComponentShape
     size?: ComponentSize
-    variant?: 'outline' | 'link'
     color?: ComponentColor
+    variant?: ComponentVariant | 'link'
     glass?: boolean
     wide?: boolean
     fullWidth?: boolean
@@ -115,12 +116,15 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       'btn',
       className,
       clsx(((startIcon && !loading) || endIcon) && 'gap-2', {
+        'btn-xl': size === 'xl',
         'btn-lg': size === 'lg',
         'btn-md': size === 'md',
         'btn-sm': size === 'sm',
         'btn-xs': size === 'xs',
         'btn-circle': shape === 'circle',
         'btn-square': shape === 'square',
+        'btn-soft': variant === 'soft',
+        'btn-dash': variant === 'dash',
         'btn-outline': variant === 'outline',
         'btn-link': variant === 'link',
         'btn-neutral': color === 'neutral',

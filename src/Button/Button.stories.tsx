@@ -47,6 +47,102 @@ export const BrandColors: Story<ButtonProps> = (args) => {
 }
 BrandColors.args = {}
 
+export const SoftStyle: Story<ButtonProps> = (args) => {
+  return (
+    <div className="flex items-center gap-2">
+      <Button {...args}>Default</Button>
+      <Button {...args} color="primary">
+        Primary
+      </Button>
+      <Button {...args} color="secondary">
+        Secondary
+      </Button>
+      <Button {...args} color="accent">
+        Accent
+      </Button>
+      <Button {...args} color="info">
+        Info
+      </Button>
+      <Button {...args} color="success">
+        Success
+      </Button>
+      <Button {...args} color="warning">
+        Warning
+      </Button>
+      <Button {...args} color="error">
+        Error
+      </Button>
+    </div>
+  )
+}
+SoftStyle.args = {
+  variant: 'soft',
+}
+
+export const OutlineStyle: Story<ButtonProps> = (args) => {
+  return (
+    <div className="flex items-center gap-2">
+      <Button {...args}>Default</Button>
+      <Button {...args} color="primary">
+        Primary
+      </Button>
+      <Button {...args} color="secondary">
+        Secondary
+      </Button>
+      <Button {...args} color="accent">
+        Accent
+      </Button>
+      <Button {...args} color="info">
+        Info
+      </Button>
+      <Button {...args} color="success">
+        Success
+      </Button>
+      <Button {...args} color="warning">
+        Warning
+      </Button>
+      <Button {...args} color="error">
+        Error
+      </Button>
+    </div>
+  )
+}
+OutlineStyle.args = {
+  variant: 'outline',
+}
+
+export const DashStyle: Story<ButtonProps> = (args) => {
+  return (
+    <div className="flex items-center gap-2">
+      <Button {...args}>Default</Button>
+      <Button {...args} color="primary">
+        Primary
+      </Button>
+      <Button {...args} color="secondary">
+        Secondary
+      </Button>
+      <Button {...args} color="accent">
+        Accent
+      </Button>
+      <Button {...args} color="info">
+        Info
+      </Button>
+      <Button {...args} color="success">
+        Success
+      </Button>
+      <Button {...args} color="warning">
+        Warning
+      </Button>
+      <Button {...args} color="error">
+        Error
+      </Button>
+    </div>
+  )
+}
+DashStyle.args = {
+  variant: 'dash',
+}
+
 export const ActiveButtons: Story<ButtonProps> = (args) => {
   return (
     <div className="flex items-center gap-2">
