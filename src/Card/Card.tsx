@@ -18,7 +18,7 @@ export type CardProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {
     size?: ComponentSize
     border?: boolean
-    variant?: Omit<ComponentVariant, 'soft'> | 'border'
+    variant?: Exclude<ComponentVariant, 'soft'> | 'border'
     imageFull?: boolean
 
     side?: ComponentSize | boolean

@@ -6,7 +6,7 @@ import { IComponentBaseProps, ComponentColor } from '../types'
 
 export type PhoneMockupProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {
-    color?: Omit<ComponentColor, 'ghost'>
+    color?: Exclude<ComponentColor, 'ghost'>
     innerProps?: React.HTMLAttributes<HTMLDivElement>
     innerRef?: React.Ref<HTMLDivElement>
   }
