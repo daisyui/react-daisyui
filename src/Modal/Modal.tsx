@@ -2,7 +2,7 @@ import React, { forwardRef, useCallback, useRef } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-import { IComponentBaseProps } from '../types'
+import { IComponentBaseProps, ComponentPosition } from '../types'
 
 import ModalActions from './ModalActions'
 import ModalBody from './ModalBody'
@@ -12,6 +12,7 @@ import ModalLegacy from './ModalLegacy'
 export type ModalProps = React.DialogHTMLAttributes<HTMLDialogElement> &
   IComponentBaseProps & {
     open?: boolean
+    position?: Exclude<ComponentPosition, 'left' | 'right'> | 'start' | 'end'
     responsive?: boolean
     backdrop?: boolean
     ariaHidden?: boolean
@@ -22,6 +23,7 @@ const Modal = forwardRef<HTMLDialogElement, ModalProps>(
     {
       children,
       open,
+      position,
       responsive,
       backdrop,
       ariaHidden,
@@ -35,6 +37,11 @@ const Modal = forwardRef<HTMLDialogElement, ModalProps>(
       'modal',
       clsx({
         'modal-open': open,
+        'modal-end': position === 'end',
+        'modal-start': position === 'start',
+        'modal-top': position === 'top',
+        'modal-middle': position === 'middle',
+        'modal-bottom': position === 'bottom',
         'modal-bottom sm:modal-middle': responsive,
       })
     )
