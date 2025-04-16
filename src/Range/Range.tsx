@@ -25,6 +25,7 @@ const Range = forwardRef<HTMLInputElement, RangeProps>(
       'range',
       className,
       clsx({
+        'range-xl': size === 'xl',
         'range-lg': size === 'lg',
         'range-md': size === 'md',
         'range-sm': size === 'sm',
