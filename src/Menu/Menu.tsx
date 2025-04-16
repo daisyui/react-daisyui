@@ -34,6 +34,7 @@ const Menu = React.forwardRef<HTMLUListElement, MenuProps>(
       className,
       clsx({
         'menu-vertical lg:menu-horizontal': responsive,
+        'menu-xl': size === 'xl',
         'menu-lg': size === 'lg',
         'menu-md': size === 'md',
         'menu-sm': size === 'sm',
