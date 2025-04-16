@@ -152,6 +152,75 @@ ErrorColor.args = {
   status: 'error',
 }
 
+export const SoftStyle: Story<AlertProps> = (args) => {
+  return (
+    <div className="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
+      <Alert {...args} status="info">
+        12 unread messages. Tap to see.
+      </Alert>
+      <Alert {...args} status="success">
+        Your purchase has been confirmed!
+      </Alert>
+      <Alert {...args} status="warning">
+        Warning: Invalid email address!
+      </Alert>
+      <Alert {...args} status="error">
+        Error! Task failed successfully.
+      </Alert>
+    </div>
+  )
+}
+SoftStyle.args = {
+  variant: 'soft',
+  className: 'w-full',
+}
+
+export const OutlineStyle: Story<AlertProps> = (args) => {
+  return (
+    <div className="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
+      <Alert {...args} status="info">
+        12 unread messages. Tap to see.
+      </Alert>
+      <Alert {...args} status="success">
+        Your purchase has been confirmed!
+      </Alert>
+      <Alert {...args} status="warning">
+        Warning: Invalid email address!
+      </Alert>
+      <Alert {...args} status="error">
+        Error! Task failed successfully.
+      </Alert>
+    </div>
+  )
+}
+OutlineStyle.args = {
+  variant: 'outline',
+  className: 'w-full',
+}
+
+export const DashStyle: Story<AlertProps> = (args) => {
+  return (
+    <div className="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10">
+      <Alert {...args} status="info">
+        12 unread messages. Tap to see.
+      </Alert>
+      <Alert {...args} status="success">
+        Your purchase has been confirmed!
+      </Alert>
+      <Alert {...args} status="warning">
+        Warning: Invalid email address!
+      </Alert>
+      <Alert {...args} status="error">
+        Error! Task failed successfully.
+      </Alert>
+    </div>
+  )
+}
+DashStyle.args = {
+  variant: 'dash',
+  className: 'w-full',
+}
+
 export const WithButtons: Story<AlertProps> = (args) => {
   return (
     <Alert
