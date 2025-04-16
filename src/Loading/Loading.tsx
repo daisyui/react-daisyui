@@ -34,6 +34,7 @@ const Loading = forwardRef<HTMLSpanElement, LoadingProps>(
       'loading',
       className,
       clsx({
+        'loading-xl': size === 'xl',
         'loading-lg': size === 'lg',
         'loading-md': size === 'md',
         'loading-sm': size === 'sm',
