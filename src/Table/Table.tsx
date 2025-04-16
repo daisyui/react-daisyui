@@ -27,6 +27,7 @@ const Table = React.forwardRef<HTMLTableElement, TableProps>(
       className,
       clsx({
         'table-zebra': zebra,
+        'table-xl': size === 'xl',
         'table-lg': size === 'lg',
         'table-md': size === 'md',
         'table-sm': size === 'sm',

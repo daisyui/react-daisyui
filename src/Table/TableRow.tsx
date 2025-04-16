@@ -8,20 +8,18 @@ export type TableRowProps = React.TableHTMLAttributes<HTMLTableRowElement> &
   IComponentBaseProps & {
     children?: ReactElement[]
     active?: boolean
-    hover?: boolean
     noCell?: boolean // don't wrap children in th/td, should pass children as th/tds manually
   }
 
 const TableRow = React.forwardRef<HTMLTableRowElement, TableRowProps>(
   (
-    { children, active, hover, noCell = false, className, ...props },
+    { children, active, noCell = false, className, ...props },
     ref
   ): JSX.Element => {
     const classes = twMerge(
       className,
       clsx({
         active: active,
-        hover: hover,
       })
     )
 
