@@ -19,8 +19,6 @@ export type SelectProps = Omit<
     children: ListOrItem<ReactElement<SelectOptionProps>>
     size?: ComponentSize
     color?: ComponentColor
-    bordered?: boolean
-    borderOffset?: boolean
   }
 
 const SelectInner = (
@@ -31,8 +29,6 @@ const SelectInner = (
     children,
     size,
     color,
-    bordered = true,
-    borderOffset,
     dataTheme,
     className,
     ...rest
@@ -42,6 +38,7 @@ const SelectInner = (
     'select',
     className,
     clsx({
+      'select-xl': size === 'xl',
       'select-lg': size === 'lg',
       'select-md': size === 'md',
       'select-sm': size === 'sm',
@@ -54,8 +51,6 @@ const SelectInner = (
       'select-success': color === 'success',
       'select-warning': color === 'warning',
       'select-error': color === 'error',
-      'select-bordered': bordered,
-      'focus:outline-offset-0': !borderOffset,
     })
   )
 
