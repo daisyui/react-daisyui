@@ -2,7 +2,7 @@ import React from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
-import { IComponentBaseProps, ComponentSize } from '../types'
+import { IComponentBaseProps, ComponentSize, ComponentVariant } from '../types'
 
 import CardActions, { CardActionsProps as ActionProps } from './CardActions'
 import CardBody, { CardBodyProps as BodyProps } from './CardBody'
@@ -16,13 +16,12 @@ export type CardImageProps = ImageProps
 
 export type CardProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {
-    bordered?: boolean
+    size?: ComponentSize
+    border?: boolean
+    variant?: Omit<ComponentVariant, 'soft'> | 'border'
     imageFull?: boolean
 
-    // responsive props
-    normal?: ComponentSize | boolean // Applies default paddings
-    compact?: ComponentSize | boolean // Applies smaller padding
-    side?: ComponentSize | boolean // The image in <figure> will be on to the side
+    side?: ComponentSize | boolean
   }
 
 interface ModifierMap {
@@ -32,20 +31,6 @@ interface ModifierMap {
 }
 
 const DYNAMIC_MODIFIERS: ModifierMap = {
-  compact: {
-    true: 'card-compact',
-    xs: 'xs:card-compact',
-    sm: 'sm:card-compact',
-    md: 'md:card-compact',
-    lg: 'lg:card-compact',
-  },
-  normal: {
-    true: 'card-normal',
-    xs: 'xs:card-normal',
-    sm: 'sm:card-normal',
-    md: 'md:card-normal',
-    lg: 'lg:card-normal',
-  },
   side: {
     true: 'card-side',
     xs: 'xs:card-side',
@@ -57,18 +42,21 @@ const DYNAMIC_MODIFIERS: ModifierMap = {
 
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
   (
-    { bordered = true, imageFull, normal, compact, side, className, ...props },
+    { size, border = true, variant, imageFull, side, className, ...props },
     ref
   ): JSX.Element => {
     const classes = twMerge(
       'card',
       className,
       clsx({
-        'card-bordered': bordered,
+        'card-xl': size === 'xl',
+        'card-lg': size === 'lg',
+        'card-md': size === 'md',
+        'card-sm': size === 'sm',
+        'card-xs': size === 'xs',
+        'card-dash': variant === 'dash',
+        'card-border': border || variant === 'outline' || variant == 'border',
         'image-full': imageFull,
-        [(compact && DYNAMIC_MODIFIERS.compact[compact.toString()]) || '']:
-          compact,
-        [(normal && DYNAMIC_MODIFIERS.normal[normal.toString()]) || '']: normal,
         [(side && DYNAMIC_MODIFIERS.side[side.toString()]) || '']: side,
       })
     )
