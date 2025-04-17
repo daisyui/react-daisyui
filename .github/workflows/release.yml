@@ -16,7 +16,7 @@ jobs:
           package-name: "react-daisyui"
           changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false},{"type":"refactor","section":"Miscellaneous","hidden":false},{"type":"docs","section":"Storybook","hidden":true}]'
           command: release-pr
-      - uses: actions/github-script@v6
+      - uses: actions/github-script@v7
         if: ${{ steps.release-please.outputs.pr }}
         id: extract-branch
         env:
@@ -24,7 +24,7 @@ jobs:
         with:
           result-encoding: string
           script: return JSON.parse(process.env.PR).headBranchName
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         if: ${{ steps.release-please.outputs.pr }}
         with:
           ref: ${{ steps.extract-branch.outputs.result }}
@@ -42,15 +42,15 @@ jobs:
     env:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
-      - uses: google-github-actions/release-please-action@v3
+      - uses: googleapis/release-please-action@v4
         id: release
         with:
           release-type: node
           package-name: "react-daisyui"
           command: github-release
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         if: ${{ steps.release.outputs.release_created }}
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: '17.x'
         if: ${{ steps.release.outputs.release_created }}
