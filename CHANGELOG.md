@@ -1,5 +1,21 @@
 # Changelog
 
+## [6.0.0](https://github.com/daisyui/react-daisyui/compare/v5.0.5...v6.0.0) (2025-04-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* new peer dependency version with breaking changes
+
+### Features
+
+* **Dock:** added Dock component to replace BottomNavigation ([f00654c](https://github.com/daisyui/react-daisyui/commit/f00654c9af4554b9acf0cbb97d25f946112e7111))
+
+
+### Miscellaneous Chores
+
+* upgrade to daisyui 5.0.0 ([eb32cb1](https://github.com/daisyui/react-daisyui/commit/eb32cb14a255fc0364b8ed8512beb6bd3b94ab4a))
+
 ## [5.0.5](https://github.com/daisyui/react-daisyui/compare/v5.0.4...v5.0.5) (2024-09-18)
 
 
