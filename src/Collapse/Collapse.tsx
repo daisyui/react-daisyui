@@ -14,6 +14,9 @@ export type CollapseProps<T extends HTMLElement = HTMLDivElement> =
       checkbox?: boolean
       icon?: 'arrow' | 'plus'
       open?: boolean
+
+      // The default open state ( From the issue suggestion )
+      defaultOpen?: boolean
       onOpen?: () => void
       onClose?: () => void
       onToggle?: () => void
@@ -42,6 +45,7 @@ const Collapse = React.forwardRef<HTMLDivElement, CollapseProps>(
       checkbox,
       icon,
       open,
+      defaultOpen = false,
       dataTheme,
       className,
       onOpen,
@@ -51,7 +55,7 @@ const Collapse = React.forwardRef<HTMLDivElement, CollapseProps>(
     },
     ref
   ): JSX.Element => {
-    const [isChecked, setIsChecked] = useState(open)
+    const [isChecked, setIsChecked] = useState(open ?? defaultOpen)
     const checkboxRef = useRef<HTMLInputElement>(null)
 
     // Handle events for checkbox changes
@@ -65,7 +69,7 @@ const Collapse = React.forwardRef<HTMLDivElement, CollapseProps>(
         onClose()
       }
 
-      setIsChecked(checkboxRef.current?.checked)
+      setIsChecked(checkboxRef.current?.checked ?? false)
     }
 
     // Handle blur events, specifically handling open/close for non checkbox types
@@ -100,6 +104,7 @@ const Collapse = React.forwardRef<HTMLDivElement, CollapseProps>(
             className="peer"
             ref={checkboxRef}
             onChange={handleCheckboxChange}
+            defaultChecked={defaultOpen}
           />
         )}
         {children}

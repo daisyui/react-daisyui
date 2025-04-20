@@ -189,3 +189,20 @@ export const CheckboxEvents: Story<CollapseProps> = (args) => {
     </div>
   )
 }
+
+export const DefaultOpen: Story<CollapseProps> = (args) => {
+  return (
+    <Collapse {...args}>
+      <Collapse.Title className="text-xl font-medium">
+        Hi, 👋🏾 I am open by default
+      </Collapse.Title>
+      <Collapse.Content>
+        This content is visible by default because defaultOpen is set to true
+      </Collapse.Content>
+    </Collapse>
+  )
+}
+DefaultOpen.args = {
+  className: 'border border-base-300 bg-base-200',
+  defaultOpen: true
+}
