@@ -63,4 +63,22 @@ describe('Collapse', () => {
     const contentElement = screen.getByText('Test Content')
     expect(contentElement).toBeInTheDocument()
   })
+
+  test('Should be closed by default without defaultOpen prop', () => {
+    render(<Collapse checkbox data-testid="collapse" />)
+    const checkboxInput = screen.getByRole('checkbox')
+    expect(checkboxInput).not.toBeChecked()
+  })
+
+  test('Should be open by default with defaultOpen prop', () => {
+    render(<Collapse checkbox defaultOpen data-testid="collapse" />)
+    const checkboxInput = screen.getByRole('checkbox')
+    expect(checkboxInput).toBeChecked()
+  })
+
+  test('Should respect open prop over defaultOpen', () => {
+    render(<Collapse checkbox defaultOpen open={false} data-testid="collapse" />)
+    const checkboxInput = screen.getByRole('checkbox')
+    expect(checkboxInput).not.toBeChecked()
+  })
 })
