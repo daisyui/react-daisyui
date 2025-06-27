@@ -1,0 +1,19 @@
+import{j as a}from"./jsx-runtime-BjG_zV1W.js";import{e as g}from"./iframe-DDnXVYpC.js";import{c as b}from"./clsx-B-dksMZM.js";import{t as y}from"./bundle-mjs-yGZq-iow.js";const l=g.forwardRef(({color:e,size:r,dataTheme:d,className:p,...x},f)=>{const v=y("textarea",p,b({"textarea-xl":r==="xl","textarea-lg":r==="lg","textarea-md":r==="md","textarea-sm":r==="sm","textarea-xs":r==="xs","textarea-primary":e==="primary","textarea-secondary":e==="secondary","textarea-accent":e==="accent","textarea-ghost":e==="ghost","textarea-info":e==="info","textarea-success":e==="success","textarea-warning":e==="warning","textarea-error":e==="error"}));return a.jsx("textarea",{...x,"data-theme":d,className:v,ref:f})});try{l.displayName="Textarea",l.__docgenInfo={description:"",displayName:"Textarea",props:{dataTheme:{defaultValue:null,description:"",name:"dataTheme",required:!1,type:{name:"string"}},color:{defaultValue:null,description:"",name:"color",required:!1,type:{name:"enum",value:[{value:'"neutral"'},{value:'"primary"'},{value:'"secondary"'},{value:'"accent"'},{value:'"ghost"'},{value:'"info"'},{value:'"success"'},{value:'"warning"'},{value:'"error"'}]}},size:{defaultValue:null,description:"",name:"size",required:!1,type:{name:"enum",value:[{value:'"xl"'},{value:'"lg"'},{value:'"md"'},{value:'"sm"'},{value:'"xs"'}]}}}}}catch{}try{l.displayName="Textarea",l.__docgenInfo={description:"",displayName:"Textarea",props:{dataTheme:{defaultValue:null,description:"",name:"dataTheme",required:!1,type:{name:"string"}},color:{defaultValue:null,description:"",name:"color",required:!1,type:{name:"enum",value:[{value:'"neutral"'},{value:'"primary"'},{value:'"secondary"'},{value:'"accent"'},{value:'"ghost"'},{value:'"info"'},{value:'"success"'},{value:'"warning"'},{value:'"error"'}]}},size:{defaultValue:null,description:"",name:"size",required:!1,type:{name:"enum",value:[{value:'"xl"'},{value:'"lg"'},{value:'"md"'},{value:'"sm"'},{value:'"xs"'}]}}}}}catch{}const w={title:"Data Input/Textarea",component:l,args:{placeholder:"Bio",disabled:!1}},s=e=>a.jsx("div",{className:"flex w-full component-preview p-4 items-center justify-center gap-2 font-sans",children:a.jsx(l,{...e})}),t=e=>a.jsx("div",{className:"flex w-full component-preview p-4 items-center justify-center gap-2 font-sans",children:a.jsxs("div",{className:"form-control",children:[a.jsxs("label",{className:"label",children:[a.jsx("span",{className:"label-text",children:"Your bio"}),a.jsx("span",{className:"label-text-alt",children:"Alt label"})]}),a.jsx(l,{...e}),a.jsxs("label",{className:"label",children:[a.jsx("span",{className:"label-text-alt",children:"Your bio"}),a.jsx("span",{className:"label-text-alt",children:"Alt label"})]})]})});var n,c,o;s.parameters={...s.parameters,docs:{...(n=s.parameters)==null?void 0:n.docs,source:{originalSource:`args => {
+  return <div className="flex w-full component-preview p-4 items-center justify-center gap-2 font-sans">
+      <Textarea {...args} />
+    </div>;
+}`,...(o=(c=s.parameters)==null?void 0:c.docs)==null?void 0:o.source}}};var u,i,m;t.parameters={...t.parameters,docs:{...(u=t.parameters)==null?void 0:u.docs,source:{originalSource:`args => {
+  return <div className="flex w-full component-preview p-4 items-center justify-center gap-2 font-sans">
+      <div className="form-control">
+        <label className="label">
+          <span className="label-text">Your bio</span>
+          <span className="label-text-alt">Alt label</span>
+        </label>
+        <Textarea {...args} />
+        <label className="label">
+          <span className="label-text-alt">Your bio</span>
+          <span className="label-text-alt">Alt label</span>
+        </label>
+      </div>
+    </div>;
+}`,...(m=(i=t.parameters)==null?void 0:i.docs)==null?void 0:m.source}}};const T=["Default","FormControlAndLabels"];export{s as Default,t as FormControlAndLabels,T as __namedExportsOrder,w as default};
