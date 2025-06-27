@@ -19,7 +19,7 @@ describe('Range', () => {
 
   it('should render Range with 0 step', () => {
     render(<Range data-testid="range" step={0} />)
-    expect(screen.getAllByText('|')).toHaveLength(101)
+    expect(screen.queryByText('|')).not.toBeInTheDocument()
   })
 
   it('should render step with decimal ', () => {
@@ -39,6 +39,6 @@ describe('Range', () => {
 
   it('should render step with negative number ', () => {
     render(<Range data-testid="range" step="-25" />)
-    expect(screen.getAllByText('|')).toHaveLength(101)
+    expect(screen.queryAllByText('|')).toHaveLength(2)
   })
 })

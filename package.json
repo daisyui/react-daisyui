@@ -64,6 +64,7 @@
     "daisyui": "^5.0.43",
     "eslint-plugin-mdx": "^3.5.0",
     "jest": "^30.0.3",
+    "jest-environment-jsdom": "^30.0.2",
     "microbundle": "^0.15.1",
     "plop": "^4.0.1",
     "prettier": "^3.6.2",

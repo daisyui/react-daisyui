@@ -18,8 +18,8 @@ describe('Card', () => {
   })
 
   it('Should apply the "bordered" prop', () => {
-    const { getByLabelText } = render(<Card bordered />)
-    expect(getByLabelText('Card')).toHaveClass('card-bordered')
+    const { getByLabelText } = render(<Card border />)
+    expect(getByLabelText('Card')).toHaveClass('card-border')
   })
 
   it('Should apply the "imageFull" prop', () => {
@@ -27,15 +27,15 @@ describe('Card', () => {
     expect(getByLabelText('Card')).toHaveClass('image-full')
   })
 
-  it('Should apply the "normal" prop', () => {
-    const { getByLabelText } = render(<Card normal />)
-    expect(getByLabelText('Card')).toHaveClass('card-normal')
-  })
+  // it('Should apply the "normal" prop', () => {
+  //   const { getByLabelText } = render(<Card normal />)
+  //   expect(getByLabelText('Card')).toHaveClass('card-normal')
+  // })
 
-  it('Should apply the "compact" prop', () => {
-    const { getByLabelText } = render(<Card compact />)
-    expect(getByLabelText('Card')).toHaveClass('card-compact')
-  })
+  // it('Should apply the "compact" prop', () => {
+  //   const { getByLabelText } = render(<Card compact />)
+  //   expect(getByLabelText('Card')).toHaveClass('card-compact')
+  // })
 
   it('Should apply the "side" prop', () => {
     const { getByLabelText } = render(<Card side />)

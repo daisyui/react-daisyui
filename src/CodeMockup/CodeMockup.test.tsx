@@ -1,14 +1,13 @@
 import '@testing-library/jest-dom'
-import '@testing-library/jest-dom/extend-expect'
 
 import * as React from 'react'
 import { render, fireEvent, screen } from '@testing-library/react'
 
-import {CodeMockup} from './CodeMockup'
+import { CodeMockup } from './CodeMockup'
 
-describe('codeMockup', ()=> {
+describe('codeMockup', () => {
     it('should render', () => {
-        render(<CodeMockup data-testid="code-mockup"/>)
+        render(<CodeMockup data-testid="code-mockup" />)
         expect(screen.getByTestId('code-mockup')).toBeInTheDocument();
     })
 
@@ -26,7 +25,7 @@ describe('codeMockup', ()=> {
         render(<CodeMockup>
             <CodeMockup.Line dataPrefix={false} data-testid="code-line"></CodeMockup.Line>
         </CodeMockup>)
-        
+
         expect(getComputedStyle(screen.getByTestId('code-line'), ':before').getPropertyValue("content")).toEqual("")
-    })  
+    })
 })

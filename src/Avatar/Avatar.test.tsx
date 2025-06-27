@@ -44,12 +44,12 @@ describe('Artboard', () => {
 
   it('renders an online', () => {
     render(<Avatar online />)
-    expect(screen.getByLabelText('Avatar photo')).toHaveClass('online')
+    expect(screen.getByLabelText('Avatar photo')).toHaveClass('avatar-online')
   })
 
   it('renders an offline', () => {
     render(<Avatar offline />)
-    expect(screen.getByLabelText('Avatar photo')).toHaveClass('offline')
+    expect(screen.getByLabelText('Avatar photo')).toHaveClass('avatar-offline')
   })
 
   it('should be able to access the native div', () => {
