@@ -1,5 +1,4 @@
 import '@testing-library/jest-dom'
-import '@testing-library/jest-dom/extend-expect'
 import * as React from 'react'
 import { useState } from 'react'
 import { render, screen } from '@testing-library/react'
@@ -56,54 +55,54 @@ describe('Select', () => {
   it('Should change selected on option click', async () => {
     render(<TestComponent />)
     await userEvent.selectOptions(screen.getByRole('combobox'), ['Maggie'])
-    ;(screen.getAllByRole('option') as HTMLOptionElement[]).forEach((o) => {
-      expect(o).toBeInstanceOf(HTMLOptionElement)
-      if (o.label === 'Maggie') {
-        expect(o.selected).toBeTruthy()
-      } else {
-        expect(o.selected).toBeFalsy()
-      }
-    })
+      ; (screen.getAllByRole('option') as HTMLOptionElement[]).forEach((o) => {
+        expect(o).toBeInstanceOf(HTMLOptionElement)
+        if (o.label === 'Maggie') {
+          expect(o.selected).toBeTruthy()
+        } else {
+          expect(o.selected).toBeFalsy()
+        }
+      })
   })
 
   it('(disabled) Should not change selected on click', async () => {
     render(<TestComponent disabled />)
     await userEvent.selectOptions(screen.getByRole('combobox'), ['Maggie'])
-    ;(screen.getAllByRole('option') as HTMLOptionElement[]).forEach((o) => {
-      expect(o).toBeInstanceOf(HTMLOptionElement)
-      if (o.label === 'Homer') {
-        expect(o.selected).toBeTruthy()
-      } else {
-        expect(o.selected).toBeFalsy()
-      }
-    })
+      ; (screen.getAllByRole('option') as HTMLOptionElement[]).forEach((o) => {
+        expect(o).toBeInstanceOf(HTMLOptionElement)
+        if (o.label === 'Homer') {
+          expect(o.selected).toBeTruthy()
+        } else {
+          expect(o.selected).toBeFalsy()
+        }
+      })
   })
 
   it('(controlled) Should change selected on option click', async () => {
     render(<ControlledTestComponent />)
     await userEvent.selectOptions(screen.getByRole('combobox'), ['Maggie'])
-    ;(screen.getAllByRole('option') as HTMLOptionElement[]).forEach((o) => {
-      expect(o).toBeInstanceOf(HTMLOptionElement)
+      ; (screen.getAllByRole('option') as HTMLOptionElement[]).forEach((o) => {
+        expect(o).toBeInstanceOf(HTMLOptionElement)
 
-      if (o.label === 'Maggie') {
-        expect(o.selected).toBeTruthy()
-      } else {
-        expect(o.selected).toBeFalsy()
-      }
-    })
+        if (o.label === 'Maggie') {
+          expect(o.selected).toBeTruthy()
+        } else {
+          expect(o.selected).toBeFalsy()
+        }
+      })
   })
 
   it('(controlled + disabled) Should not change selected on click', async () => {
     render(<ControlledTestComponent value="Bart" disabled />)
     await userEvent.selectOptions(screen.getByRole('combobox'), ['Maggie'])
-    ;(screen.getAllByRole('option') as HTMLOptionElement[]).forEach((o) => {
-      expect(o).toBeInstanceOf(HTMLOptionElement)
-      if (o.label === 'Bart') {
-        expect(o.selected).toBeTruthy()
-      } else {
-        expect(o.selected).toBeFalsy()
-      }
-    })
+      ; (screen.getAllByRole('option') as HTMLOptionElement[]).forEach((o) => {
+        expect(o).toBeInstanceOf(HTMLOptionElement)
+        if (o.label === 'Bart') {
+          expect(o.selected).toBeTruthy()
+        } else {
+          expect(o.selected).toBeFalsy()
+        }
+      })
   })
 
   it('Should change selected by keyboard', async () => {
@@ -112,27 +111,27 @@ describe('Select', () => {
     await userEvent.keyboard('[Space]')
     await userEvent.keyboard('[ArrowDown]')
     await userEvent.keyboard('[Enter]')
-    ;(screen.getAllByRole('option') as HTMLOptionElement[]).forEach((o) => {
-      expect(o).toBeInstanceOf(HTMLOptionElement)
-      if (o.label === 'Homer') {
-        expect(o.selected).toBeTruthy()
-      } else {
-        expect(o.selected).toBeFalsy()
-      }
-    })
+      ; (screen.getAllByRole('option') as HTMLOptionElement[]).forEach((o) => {
+        expect(o).toBeInstanceOf(HTMLOptionElement)
+        if (o.label === 'Homer') {
+          expect(o.selected).toBeTruthy()
+        } else {
+          expect(o.selected).toBeFalsy()
+        }
+      })
   })
 
   it('Should change selected based on value prop', () => {
     render(<ControlledTestComponent value="Bart" />)
-    ;(screen.getAllByRole('option') as HTMLOptionElement[]).forEach((o) => {
-      expect(o).toBeInstanceOf(HTMLOptionElement)
+      ; (screen.getAllByRole('option') as HTMLOptionElement[]).forEach((o) => {
+        expect(o).toBeInstanceOf(HTMLOptionElement)
 
-      if (o.label === 'Bart') {
-        expect(o.selected).toBeTruthy()
-      } else {
-        expect(o.selected).toBeFalsy()
-      }
-    })
+        if (o.label === 'Bart') {
+          expect(o.selected).toBeTruthy()
+        } else {
+          expect(o.selected).toBeFalsy()
+        }
+      })
   })
 
   it.each(['xs', 'sm', 'md', 'lg'] satisfies ComponentSize[])(

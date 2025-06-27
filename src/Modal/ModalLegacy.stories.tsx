@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import { StoryFn as Story, Meta } from '@storybook/react-vite'
 
 import Modal, { ModalLegacyProps as ModalProps } from '.'
 import Button from '../Button'

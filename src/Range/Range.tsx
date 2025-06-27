@@ -1,4 +1,6 @@
-import React, { forwardRef, useMemo } from 'react'
+import * as React from 'react'
+import { forwardRef, useMemo } from 'react'
+import type { JSX } from 'react'
 import clsx from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
@@ -49,6 +51,9 @@ const Range = forwardRef<HTMLInputElement, RangeProps>(
     // use Math.max to solve multiple issues with negative numbers throwing errors
     const numTicks = Math.max(Math.ceil((max - min) / calculatedTicksStep), 1) + 1;
 
+    // Only render ticks if numTicks is a safe, positive integer
+    const shouldRenderTicks = Number.isSafeInteger(numTicks) && numTicks > 0 && numTicks < 1000;
+
     return (
       <>
         <input
@@ -59,7 +64,7 @@ const Range = forwardRef<HTMLInputElement, RangeProps>(
           data-theme={dataTheme}
           className={classes}
         />
-        {calculatedDisplayTicks && (
+        {calculatedDisplayTicks && shouldRenderTicks && (
           <div className="w-full flex justify-between text-xs px-2">
             {[...Array(numTicks)].map((_, i) => {
               return <span key={i}>|</span>

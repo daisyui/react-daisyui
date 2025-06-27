@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 import clsx from 'clsx'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import { StoryFn as Story, Meta } from '@storybook/react-vite'
 
 import Dock, { DockProps } from '.'
 

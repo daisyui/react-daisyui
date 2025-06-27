@@ -1,5 +1,5 @@
 import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import { StoryFn as Story, Meta } from '@storybook/react-vite'
 
 import Carousel, { CarouselProps } from '.'
 import Button from '../Button'

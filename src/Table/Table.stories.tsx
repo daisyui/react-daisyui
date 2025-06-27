@@ -1,4 +1,4 @@
-import { Meta, StoryFn as Story } from '@storybook/react'
+import { Meta, StoryFn as Story } from '@storybook/react-vite'
 import React from 'react'
 
 import Table, { TableProps } from '.'

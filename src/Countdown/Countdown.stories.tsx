@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import { StoryFn as Story, Meta } from '@storybook/react-vite'
 
 import Countdown, { CountdownProps } from '.'
 

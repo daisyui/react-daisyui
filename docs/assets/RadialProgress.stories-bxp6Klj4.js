@@ -1,0 +1,16 @@
+import{j as o}from"./jsx-runtime-BjG_zV1W.js";import{r as T}from"./iframe-DDnXVYpC.js";import{c as V}from"./clsx-B-dksMZM.js";import{t as q}from"./bundle-mjs-yGZq-iow.js";const r=T.forwardRef(({value:a,size:k="4rem",thickness:_="4px",color:e,dataTheme:b,className:z,children:C,...j},N)=>{const S=q("radial-progress",z,V({"text-primary":e==="primary","text-secondary":e==="secondary","text-accent":e==="accent","text-info":e==="info","text-success":e==="success","text-warning":e==="warning","text-error":e==="error"})),c=Math.min(100,Math.max(0,a)),w={"--value":c,"--size":k,"--thickness":_};return o.jsx("div",{role:"progressbar","aria-valuenow":c,"aria-valuemin":0,"aria-valuemax":100,...j,ref:N,"data-theme":b,className:S,style:w,children:C})});r.displayName="RadialProgress";try{r.displayName="RadialProgress",r.__docgenInfo={description:"",displayName:"RadialProgress",props:{dataTheme:{defaultValue:null,description:"",name:"dataTheme",required:!1,type:{name:"string"}},value:{defaultValue:null,description:"",name:"value",required:!0,type:{name:"number"}},size:{defaultValue:{value:"4rem"},description:"",name:"size",required:!1,type:{name:"string"}},thickness:{defaultValue:{value:"4px"},description:"",name:"thickness",required:!1,type:{name:"string"}}}}}catch{}const D={title:"Feedback/Radial Progress",component:r},l=a=>o.jsxs(r,{...a,children:[a.value,"%"]}),s=l.bind({});s.args={value:75};const t=l.bind({});t.args={value:75,color:"primary"};const i=l.bind({});i.args={value:75,className:"bg-primary text-primary-content border-4 border-primary"};const n=a=>o.jsxs("div",{className:"flex items-center gap-4",children:[o.jsx(r,{value:70,size:"12rem",thickness:"2px",children:"70%"}),o.jsx(r,{value:80,size:"12rem",thickness:"2rem",children:"80%"})]});n.args={};var d,m,u;s.parameters={...s.parameters,docs:{...(d=s.parameters)==null?void 0:d.docs,source:{originalSource:`args => {
+  return <RadialProgress {...args}>{args.value}%</RadialProgress>;
+}`,...(u=(m=s.parameters)==null?void 0:m.docs)==null?void 0:u.source}}};var p,g,x;t.parameters={...t.parameters,docs:{...(p=t.parameters)==null?void 0:p.docs,source:{originalSource:`args => {
+  return <RadialProgress {...args}>{args.value}%</RadialProgress>;
+}`,...(x=(g=t.parameters)==null?void 0:g.docs)==null?void 0:x.source}}};var v,f,y;i.parameters={...i.parameters,docs:{...(v=i.parameters)==null?void 0:v.docs,source:{originalSource:`args => {
+  return <RadialProgress {...args}>{args.value}%</RadialProgress>;
+}`,...(y=(f=i.parameters)==null?void 0:f.docs)==null?void 0:y.source}}};var h,R,P;n.parameters={...n.parameters,docs:{...(h=n.parameters)==null?void 0:h.docs,source:{originalSource:`args => {
+  return <div className="flex items-center gap-4">
+      <RadialProgress value={70} size="12rem" thickness="2px">
+        70%
+      </RadialProgress>
+      <RadialProgress value={80} size="12rem" thickness="2rem">
+        80%
+      </RadialProgress>
+    </div>;
+}`,...(P=(R=n.parameters)==null?void 0:R.docs)==null?void 0:P.source}}};const F=["Default","CustomColor","BackgroundColor","CustomSizeAndThickness"];export{i as BackgroundColor,t as CustomColor,n as CustomSizeAndThickness,s as Default,F as __namedExportsOrder,D as default};
