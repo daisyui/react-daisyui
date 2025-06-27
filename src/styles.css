@@ -1,24 +1,2 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --base-content: theme('colors.base-content');
-  --base-100: theme('colors.base-100');
-  --base-200: theme('colors.base-200');
-  --alpha: 0.2;
-}
-
-/* FIXME: this class should add the polka-dotted background to story previews. 
- * however we cannot add transparency to the base-content color variable.
- */
-
-.preview {
-  background-image: repeating-linear-gradient(
-    45deg,
-    var(--fallback-b1, oklch(var(--b1))),
-    var(--fallback-b1, oklch(var(--b1))) 13px,
-    var(--fallback-b2, oklch(var(--b2))) 13px,
-    var(--fallback-b2, oklch(var(--b2))) 14px
-  );
-}
+@import "tailwindcss";
+@plugin "daisyui";

@@ -23,6 +23,7 @@
   ],
   "scripts": {
     "start": "storybook dev -p 6006",
+    "dev": "vite",
     "dist": "microbundle --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react --globals react/jsx-runtime=jsx --format modern,cjs,esm --css inline --compress false",
     "docs": "storybook build -o ./docs -s ./public",
     "test": "jest",
@@ -38,7 +39,7 @@
     "daisyui": "^5.0.43",
     "react": ">=16",
     "react-dom": ">=16",
-    "tailwindcss": ">=3.2.7"
+    "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
     "@babel/core": "^7.24.7",
@@ -47,6 +48,7 @@
     "@babel/preset-typescript": "^7.24.7",
     "@storybook/addon-docs": "^9.0.13",
     "@storybook/addon-onboarding": "^9.0.13",
+    "@storybook/builder-vite": "^9.0.13",
     "@storybook/react-vite": "^9.0.13",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
@@ -55,15 +57,15 @@
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^4.6.0",
-    "autoprefixer": "^10.4.19",
+    "autoprefixer": "^10.4.21",
     "babel-jest": "^30.0.2",
     "babel-loader": "^10.0.0",
     "clsx": "^2.1.1",
+    "daisyui": "^5.0.43",
     "eslint-plugin-mdx": "^3.5.0",
     "jest": "^30.0.3",
     "microbundle": "^0.15.1",
     "plop": "^4.0.1",
-    "postcss": "^8.4.38",
     "prettier": "^3.6.2",
     "prism-react-renderer": "^2.4.1",
     "react": "^19.1.0",
@@ -71,8 +73,12 @@
     "storybook": "^9.0.13",
     "styled-jsx": "^5.1.2",
     "tailwind-merge": "^3.3.1",
+    "tailwindcss": "^4.1.11",
     "ts-jest": "^29.1.1",
     "typescript": "^5.8.3",
     "vite": "^5.4.19"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.11"
   }
 }

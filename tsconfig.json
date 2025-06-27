@@ -2,7 +2,11 @@
   "compilerOptions": {
     "target": "es2020",
     "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
     "allowJs": false,
     "skipLibCheck": false,
     "esModuleInterop": true,
@@ -18,6 +22,10 @@
     "jsxFactory": "",
     "jsxFragmentFactory": ""
   },
-  "include": ["./src"],
-  "exclude": ["./src/**/*.stories.tsx"]
+  "include": [
+    "./src"
+  ],
+  "exclude": [
+    "./src/**/*.stories.tsx"
+  ]
 }
