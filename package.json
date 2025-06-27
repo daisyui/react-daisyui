@@ -12,7 +12,6 @@
   "exports": {
     "import": "./dist/react-daisyui.modern.js",
     "require": "./dist/react-daisyui.cjs",
-    "default": "./dist/react-daisyui.modern.js",
     "types": "./dist/index.d.ts"
   },
   "main": "./dist/react-daisyui.cjs",
@@ -38,7 +37,7 @@
     "daisyui": "^5.0.43",
     "react": ">=16",
     "react-dom": ">=16",
-    "tailwindcss": "^4.1.11"
+    "tailwindcss": ">=3.2.7"
   },
   "devDependencies": {
     "@babel/core": "^7.24.7",
