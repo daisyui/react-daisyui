@@ -10,9 +10,9 @@
   },
   "type": "module",
   "exports": {
+    "types": "./dist/index.d.ts",
     "import": "./dist/react-daisyui.modern.js",
-    "require": "./dist/react-daisyui.cjs",
-    "types": "./dist/index.d.ts"
+    "require": "./dist/react-daisyui.cjs"
   },
   "main": "./dist/react-daisyui.cjs",
   "module": "./dist/react-daisyui.esm.js",
@@ -21,7 +21,6 @@
   "files": [
     "dist"
   ],
-  "types": "./dist/index.d.ts",
   "scripts": {
     "start": "storybook dev -p 6006",
     "dist": "microbundle --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react --globals react/jsx-runtime=jsx --format modern,cjs,esm --css inline --compress false",
