@@ -1,14 +1,14 @@
 export default {
   stories: ['./docs/pages/Welcome.mdx', "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
-    {
-      name: '@storybook/addon-essentials',
-      options: {
-        backgrounds: false
-      }
-    }
+    '@storybook/addon-essentials',
+    '@storybook/addon-links',
+    '@storybook/addon-docs'
   ],
-  framework: '@storybook/react-vite',
+  framework: {
+    name: '@storybook/react-vite',
+    options: {}
+  },
   docs: {
     autodocs: false
   }

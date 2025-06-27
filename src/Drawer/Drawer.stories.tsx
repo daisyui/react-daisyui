@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import { StoryFn as Story, Meta } from '@storybook/react-vite'
 
 import Drawer, { DrawerProps } from '.'
 import Button from '../Button'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import { StoryFn as Story, Meta } from '@storybook/react-vite'
 
 import WindowMockup, { WindowMockupProps } from '.'
 import { componentColors } from '../constants'
