@@ -12,7 +12,10 @@ export type LabelDropdownToggleProps = Omit<LabelProps, 'color'> & {
   unstyled?: false
 }
 
-export type UnstyledDropdownToggleProps = HTMLAttributes<HTMLElement> & {
+export type UnstyledDropdownToggleProps = Omit<
+  HTMLAttributes<HTMLElement>,
+  'color'
+> & {
   button?: false
   unstyled: true
 }

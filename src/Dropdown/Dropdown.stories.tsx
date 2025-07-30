@@ -1,11 +1,10 @@
+import { Meta, StoryFn as Story } from '@storybook/react'
 import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
-
 import Dropdown, { DropdownProps } from '.'
+import Badge from '../Badge'
+import Button from '../Button'
 import Card from '../Card/'
 import Navbar from '../Navbar'
-import Button from '../Button'
-import Badge from '../Badge'
 
 export default {
   title: 'Actions/Dropdown',
@@ -81,7 +80,7 @@ export const ButtonToggle: Story<DropdownProps> = (args) => {
   return (
     <div className="my-32">
       <Dropdown {...args}>
-        <Dropdown.Toggle size="sm" variant="outline" color="secondary">
+        <Dropdown.Toggle size="xl" color="success" variant="dash">
           Click
         </Dropdown.Toggle>
         <Dropdown.Menu className="w-52">
