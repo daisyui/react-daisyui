@@ -1,48 +1,40 @@
-import React, { forwardRef } from 'react'
-
-import { ComponentColor, ComponentSize, IComponentBaseProps } from '../types'
-
+import React, { forwardRef, LabelHTMLAttributes } from 'react'
 import Button, { ButtonProps } from '../Button'
+import Label, { LabelProps } from '../Form/Label'
 
-export type DropdownToggleProps = Omit<
-  React.LabelHTMLAttributes<HTMLLabelElement>,
-  'color'
-> &
-  IComponentBaseProps & {
-    color?: ComponentColor
-    size?: ComponentSize
-    button?: boolean
-    disabled?: boolean
-  }
+export type ButtonDropdownToggleProps = ButtonProps & {
+  button?: true
+}
 
-const DropdownToggle = ({
-  children,
-  color,
-  size,
-  button = true,
-  dataTheme,
-  className,
-  disabled,
-  ...props
-}: DropdownToggleProps) => {
-  return (
-    <label tabIndex={0} className={className} {...props}>
-      {button ? (
-        <Button
-          type="button"
-          dataTheme={dataTheme}
-          color={color}
-          size={size}
-          disabled={disabled}
-        >
+export type LabelDropdownToggleProps = LabelProps & {
+  button?: false
+}
+
+export type DropdownToggleProps = React.HTMLAttributes<HTMLElement> &
+  (ButtonDropdownToggleProps | LabelDropdownToggleProps)
+
+const DropdownToggle = forwardRef<HTMLElement, DropdownToggleProps>(
+  (props, ref) => {
+    const { button = true, children, ...rest } = props
+
+    if (button) {
+      return (
+        <Button ref={ref} type="button" {...(rest as ButtonProps)}>
           {children}
         </Button>
-      ) : (
-        children
-      )}
-    </label>
-  )
-}
+      )
+    } else {
+      return (
+        <Label
+          ref={ref as React.Ref<HTMLLabelElement>}
+          {...(rest as LabelProps)}
+        >
+          {children}
+        </Label>
+      )
+    }
+  }
+)
 
 export type SummaryProps = Omit<ButtonProps, 'tag'>
 export const Summary = forwardRef<HTMLElement, SummaryProps>(
