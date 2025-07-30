@@ -16,6 +16,9 @@ export const useAriaHidden = (
       ref.current.addEventListener('close', () => {
         setIAriaHidden(true)
       })
+      ref.current.addEventListener('cancel', () => {
+        setIAriaHidden(true)
+      })
     }
   }, [ref.current])
 
