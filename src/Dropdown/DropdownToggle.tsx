@@ -1,21 +1,34 @@
-import React, { forwardRef, LabelHTMLAttributes } from 'react'
+import React, { forwardRef, HTMLAttributes } from 'react'
 import Button, { ButtonProps } from '../Button'
 import Label, { LabelProps } from '../Form/Label'
 
 export type ButtonDropdownToggleProps = ButtonProps & {
   button?: true
+  unstyled?: false
 }
 
 export type LabelDropdownToggleProps = LabelProps & {
   button?: false
+  unstyled?: false
 }
 
-export type DropdownToggleProps = React.HTMLAttributes<HTMLElement> &
+export type DropdownToggleProps = HTMLAttributes<HTMLElement> &
   (ButtonDropdownToggleProps | LabelDropdownToggleProps)
 
 const DropdownToggle = forwardRef<HTMLElement, DropdownToggleProps>(
   (props, ref) => {
-    const { button = true, children, ...rest } = props
+    const { button = true, unstyled = false, children, ...rest } = props
+
+    if (unstyled) {
+      return (
+        <div
+          ref={ref as React.Ref<HTMLDivElement>}
+          {...(rest as React.HTMLAttributes<HTMLElement>)}
+        >
+          {children}
+        </div>
+      )
+    }
 
     if (button) {
       return (
