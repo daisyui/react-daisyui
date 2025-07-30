@@ -1,13 +1,13 @@
-import React, { forwardRef, useCallback, useRef } from 'react'
 import clsx from 'clsx'
+import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { twMerge } from 'tailwind-merge'
-
-import { IComponentBaseProps, ComponentPosition } from '../types'
+import { ComponentPosition, IComponentBaseProps } from '../types'
 
 import ModalActions from './ModalActions'
 import ModalBody from './ModalBody'
 import ModalHeader from './ModalHeader'
 import ModalLegacy from './ModalLegacy'
+import { useAriaHidden } from './useAriaHidden'
 
 export type ModalProps = React.DialogHTMLAttributes<HTMLDialogElement> &
   IComponentBaseProps & {
@@ -33,6 +33,10 @@ const Modal = forwardRef<HTMLDialogElement, ModalProps>(
     },
     ref
   ): JSX.Element => {
+    const internalRef = useRef<HTMLDialogElement>(null)
+    useImperativeHandle(ref, () => internalRef.current as HTMLDialogElement)
+    const isAriaHidden = useAriaHidden(internalRef, open, ariaHidden)
+
     const containerClasses = twMerge(
       'modal',
       clsx({
@@ -40,25 +44,24 @@ const Modal = forwardRef<HTMLDialogElement, ModalProps>(
         'modal-end': position === 'end',
         'modal-start': position === 'start',
         'modal-top': position === 'top',
-        'modal-middle': position === 'middle',
         'modal-bottom': position === 'bottom',
+        'modal-middle': position === undefined,
         'modal-bottom sm:modal-middle': responsive,
       })
     )
 
-    ariaHidden = ariaHidden ?? !open
     const bodyClasses = twMerge('modal-box', className)
 
     return (
       <dialog
         {...props}
         aria-label="Modal"
-        aria-hidden={ariaHidden}
+        aria-hidden={isAriaHidden}
         open={open}
         aria-modal={open}
         data-theme={dataTheme}
         className={containerClasses}
-        ref={ref}
+        ref={internalRef}
       >
         <div data-theme={dataTheme} className={bodyClasses}>
           {children}
@@ -79,13 +82,13 @@ export type DialogProps = Omit<ModalProps, 'ref'>
 const useDialog = () => {
   const dialogRef = useRef<HTMLDialogElement>(null)
 
-  const handleShow = useCallback(() => {
+  const handleShow = () => {
     dialogRef.current?.showModal()
-  }, [dialogRef])
+  }
 
-  const handleHide = useCallback(() => {
+  const handleHide = () => {
     dialogRef.current?.close()
-  }, [dialogRef])
+  }
 
   const Dialog = ({ children, ...props }: DialogProps) => {
     return (
