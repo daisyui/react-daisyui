@@ -1,10 +1,10 @@
+import { Meta, StoryFn as Story } from '@storybook/react'
 import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
-
 import Dropdown, { DropdownProps } from '.'
+import Badge from '../Badge'
+import Button from '../Button'
 import Card from '../Card/'
 import Navbar from '../Navbar'
-import Button from '../Button'
 
 export default {
   title: 'Actions/Dropdown',
@@ -74,6 +74,54 @@ export const InNavbar: Story<DropdownProps> = ({ dataTheme, ...args }) => {
 }
 InNavbar.args = {
   end: true,
+}
+
+export const ButtonToggle: Story<DropdownProps> = (args) => {
+  return (
+    <div className="my-32">
+      <Dropdown {...args}>
+        <Dropdown.Toggle size="xl" color="success" variant="dash">
+          Click
+        </Dropdown.Toggle>
+        <Dropdown.Menu className="w-52">
+          <Dropdown.Item>Item 1</Dropdown.Item>
+          <Dropdown.Item>Item 2</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+    </div>
+  )
+}
+
+export const LabelToggle: Story<DropdownProps> = (args) => {
+  return (
+    <div className="my-32">
+      <Dropdown {...args}>
+        <Dropdown.Toggle button={false}>Click</Dropdown.Toggle>
+        <Dropdown.Menu className="w-52">
+          <Dropdown.Item>Item 1</Dropdown.Item>
+          <Dropdown.Item>Item 2</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+    </div>
+  )
+}
+
+export const UnstyledCustomToggle: Story<DropdownProps> = (args) => {
+  return (
+    <div className="my-32">
+      <Dropdown {...args}>
+        <Dropdown.Toggle unstyled>
+          <Badge color="primary" variant="outline" className="cursor-pointer">
+            Any component can be a toggle, even a {`<Badge>`}!
+          </Badge>
+        </Dropdown.Toggle>
+        <Dropdown.Menu className="w-52">
+          <Dropdown.Item>Item 1</Dropdown.Item>
+          <Dropdown.Item>Item 2</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+    </div>
+  )
 }
 
 export const Helper: Story<DropdownProps> = (args) => {
