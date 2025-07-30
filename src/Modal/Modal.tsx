@@ -1,8 +1,7 @@
-import React, { forwardRef, useCallback, useRef } from 'react'
 import clsx from 'clsx'
+import React, { forwardRef, useCallback, useRef, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
-
-import { IComponentBaseProps, ComponentPosition } from '../types'
+import { ComponentPosition, IComponentBaseProps } from '../types'
 
 import ModalActions from './ModalActions'
 import ModalBody from './ModalBody'
@@ -40,8 +39,8 @@ const Modal = forwardRef<HTMLDialogElement, ModalProps>(
         'modal-end': position === 'end',
         'modal-start': position === 'start',
         'modal-top': position === 'top',
-        'modal-middle': position === 'middle',
         'modal-bottom': position === 'bottom',
+        'modal-middle': position === undefined,
         'modal-bottom sm:modal-middle': responsive,
       })
     )
@@ -78,18 +77,21 @@ Modal.displayName = 'Modal'
 export type DialogProps = Omit<ModalProps, 'ref'>
 const useDialog = () => {
   const dialogRef = useRef<HTMLDialogElement>(null)
+  const [ariaHidden, setAriaHidden] = useState(true)
 
   const handleShow = useCallback(() => {
     dialogRef.current?.showModal()
+    setAriaHidden(false)
   }, [dialogRef])
 
   const handleHide = useCallback(() => {
     dialogRef.current?.close()
+    setAriaHidden(true)
   }, [dialogRef])
 
   const Dialog = ({ children, ...props }: DialogProps) => {
     return (
-      <Modal {...props} ref={dialogRef}>
+      <Modal {...props} ref={dialogRef} ariaHidden={ariaHidden}>
         {children}
       </Modal>
     )
