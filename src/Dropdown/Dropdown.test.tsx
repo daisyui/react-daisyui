@@ -34,7 +34,7 @@ describe('Dropdown', () => {
     )
 
     expect(screen.getByRole('listbox')).toHaveClass('custom-dropdown')
-    expect(screen.getByText('Toggle').parentElement).toHaveClass(
+    expect(screen.getByText('Toggle').closest('button')).toHaveClass(
       'custom-toggle'
     )
     expect(screen.getByRole('menu')).toHaveClass('custom-menu')
@@ -74,5 +74,59 @@ describe('Dropdown', () => {
     expect(screen.getByRole('listbox')).toHaveClass('dropdown-end')
     expect(screen.getByRole('listbox')).toHaveClass('dropdown-hover')
     expect(screen.getByRole('listbox')).toHaveClass('dropdown-open')
+  })
+
+  test('Should render a Button when button=true (default)', () => {
+    render(
+      <Dropdown>
+        <Dropdown.Toggle>Toggle</Dropdown.Toggle>
+        <Dropdown.Menu>{DropdownItems}</Dropdown.Menu>
+      </Dropdown>
+    )
+
+    const toggle = screen.getByRole('button', { name: 'Toggle' })
+    expect(toggle).toBeInTheDocument()
+    expect(toggle.tagName).toBe('BUTTON')
+  })
+
+  test('Should render a Button when button=true (explicit)', () => {
+    render(
+      <Dropdown>
+        <Dropdown.Toggle button={true}>Toggle</Dropdown.Toggle>
+        <Dropdown.Menu>{DropdownItems}</Dropdown.Menu>
+      </Dropdown>
+    )
+
+    const toggle = screen.getByRole('button', { name: 'Toggle' })
+    expect(toggle).toBeInTheDocument()
+    expect(toggle.tagName).toBe('BUTTON')
+  })
+
+  test('Should render a Label when button=false', () => {
+    render(
+      <Dropdown>
+        <Dropdown.Toggle button={false}>Toggle</Dropdown.Toggle>
+        <Dropdown.Menu>{DropdownItems}</Dropdown.Menu>
+      </Dropdown>
+    )
+
+    const toggle = screen.getByRole('button', { name: 'Toggle' })
+    expect(toggle).toBeInTheDocument()
+    expect(toggle.tagName).toBe('LABEL')
+  })
+
+  test('Should render a div when unstyled=true', () => {
+    render(
+      <Dropdown>
+        <Dropdown.Toggle unstyled aria-label="Dropdown toggle">
+          Toggle
+        </Dropdown.Toggle>
+        <Dropdown.Menu>{DropdownItems}</Dropdown.Menu>
+      </Dropdown>
+    )
+
+    const toggle = screen.getByRole('button', { name: 'Dropdown toggle' })
+    expect(toggle).toBeInTheDocument()
+    expect(toggle.tagName).toBe('DIV')
   })
 })

@@ -7,43 +7,44 @@ export type ButtonDropdownToggleProps = ButtonProps & {
   unstyled?: false
 }
 
-export type LabelDropdownToggleProps = LabelProps & {
-  button?: false
+export type LabelDropdownToggleProps = Omit<LabelProps, 'color'> & {
+  button: false
   unstyled?: false
 }
 
-export type DropdownToggleProps = HTMLAttributes<HTMLElement> &
-  (ButtonDropdownToggleProps | LabelDropdownToggleProps)
+export type UnstyledDropdownToggleProps = HTMLAttributes<HTMLElement> & {
+  button?: false
+  unstyled: true
+}
+
+export type DropdownToggleProps =
+  | ButtonDropdownToggleProps
+  | LabelDropdownToggleProps
+  | UnstyledDropdownToggleProps
 
 const DropdownToggle = forwardRef<HTMLElement, DropdownToggleProps>(
   (props, ref) => {
-    const { button = true, unstyled = false, children, ...rest } = props
+    const { button = true, unstyled = false, ...rest } = props
 
     if (unstyled) {
       return (
         <div
           ref={ref as React.Ref<HTMLDivElement>}
+          role="button"
+          tabIndex={0}
           {...(rest as React.HTMLAttributes<HTMLElement>)}
-        >
-          {children}
-        </div>
+        />
       )
-    }
-
-    if (button) {
-      return (
-        <Button ref={ref} type="button" {...(rest as ButtonProps)}>
-          {children}
-        </Button>
-      )
+    } else if (button) {
+      return <Button ref={ref} {...(rest as ButtonDropdownToggleProps)} />
     } else {
       return (
         <Label
           ref={ref as React.Ref<HTMLLabelElement>}
-          {...(rest as LabelProps)}
-        >
-          {children}
-        </Label>
+          role="button"
+          tabIndex={0}
+          {...(rest as LabelDropdownToggleProps)}
+        />
       )
     }
   }
