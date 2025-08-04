@@ -11,164 +11,54 @@ export default {
 
 export const Default: Story<PaginationProps> = (args) => {
   return (
-    <Pagination {...args}>
-      <Button className="join-item">1</Button>
-      <Button className="join-item" active>
-        2
-      </Button>
-      <Button className="join-item">3</Button>
-      <Button className="join-item">4</Button>
-    </Pagination>
+    <Pagination {...args} onPageChange={(currentPage: number) => console.log(currentPage)} />
   )
 }
 
-Default.args = {}
+Default.args = { totalCount: 101 }
 
 export const Sizes: Story<PaginationProps> = (args) => {
   return (
-    <div className="flex flex-col gap-2 items-center">
-      <Pagination {...args}>
-        <Button size="xs" className="join-item">
-          1
-        </Button>
-        <Button size="xs" className="join-item" active>
-          2
-        </Button>
-        <Button size="xs" className="join-item">
-          3
-        </Button>
-        <Button size="xs" className="join-item">
-          4
-        </Button>
-      </Pagination>
-
-      <Pagination {...args}>
-        <Button size="sm" className="join-item">
-          1
-        </Button>
-        <Button size="sm" className="join-item" active>
-          2
-        </Button>
-        <Button size="sm" className="join-item">
-          3
-        </Button>
-        <Button size="sm" className="join-item">
-          4
-        </Button>
-      </Pagination>
-
-      <Pagination {...args}>
-        <Button size="md" className="join-item">
-          1
-        </Button>
-        <Button size="md" className="join-item" active>
-          2
-        </Button>
-        <Button size="md" className="join-item">
-          3
-        </Button>
-        <Button size="md" className="join-item">
-          4
-        </Button>
-      </Pagination>
-
-      <Pagination {...args}>
-        <Button size="lg" className="join-item">
-          1
-        </Button>
-        <Button size="lg" className="join-item" active>
-          2
-        </Button>
-        <Button size="lg" className="join-item">
-          3
-        </Button>
-        <Button size="lg" className="join-item">
-          4
-        </Button>
-      </Pagination>
+    <div className='flex flex-col gap-4'>
+      <Pagination {...args} size='xs' />
+      <Pagination {...args} size='sm' />
+      <Pagination {...args} size='md' />
+      <Pagination {...args} size='lg' />
     </div>
   )
 }
 
-Sizes.args = {}
+Sizes.args = { totalCount: 101 }
 
-export const DisabledButton: Story<PaginationProps> = (args) => {
+export const ShowTotal: Story<PaginationProps> = (args) => {
   return (
-    <Pagination {...args}>
-      <Button className="join-item">1</Button>
-      <Button className="join-item">2</Button>
-      <Button className="join-item" disabled>
-        ...
-      </Button>
-      <Button className="join-item">99</Button>
-      <Button className="join-item">100</Button>
-    </Pagination>
+    <div className='flex flex-col gap-4'>
+      <Pagination {...args} showTotal={(total: number) => `Total ${total} items`} />
+      <Pagination {...args} showTotal={(total: number, range: number[]) => `${range[0]}-${range[1]} of ${total} items`} />
+    </div>
   )
 }
 
-DisabledButton.args = {}
+ShowTotal.args = { totalCount: 101 }
+
 
 export const ExtraSmallButtons: Story<PaginationProps> = (args) => {
   return (
-    <Pagination {...args}>
-      <Button className="join-item">«</Button>
-      <Button className="join-item">Page 22</Button>
-      <Button className="join-item">»</Button>
-    </Pagination>
+    <div className='flex flex-col gap-4'>
+      <Pagination {...args} simple />
+      <Pagination {...args} simple={(currentPage: number) => `page ${currentPage}`} />
+    </div>
   )
 }
 
-ExtraSmallButtons.args = {}
+ExtraSmallButtons.args = { totalCount: 101, previousLabel: "«", nextLabel: "»" }
 
 export const NextPrevOutlineButtonsWithEqualWidth: Story<PaginationProps> = (
   args
 ) => {
   return (
-    <Pagination {...args}>
-      <Button variant="outline" className="join-item">
-        Previous page
-      </Button>
-      <Button variant="outline" className="join-item">
-        Next
-      </Button>
-    </Pagination>
+    <Pagination {...args} />
   )
 }
 
-NextPrevOutlineButtonsWithEqualWidth.args = {
-  className: 'grid grid-cols-2',
-}
-
-export const UsingRadioInputs: Story<PaginationProps> = (args) => {
-  return (
-    <Pagination {...args}>
-      <input
-        className="join-item btn btn-square"
-        type="radio"
-        name="options"
-        aria-label="1"
-        defaultChecked={true}
-      />
-      <input
-        className="join-item btn btn-square"
-        type="radio"
-        name="options"
-        aria-label="2"
-      />
-      <input
-        className="join-item btn btn-square"
-        type="radio"
-        name="options"
-        aria-label="3"
-      />
-      <input
-        className="join-item btn btn-square"
-        type="radio"
-        name="options"
-        aria-label="4"
-      />
-    </Pagination>
-  )
-}
-
-UsingRadioInputs.args = {}
+NextPrevOutlineButtonsWithEqualWidth.args = { totalCount: 101, previousLabel: "previous", nextLabel: "next", simple: true, variant: 'outline', className: 'grid grid-cols-2' }
