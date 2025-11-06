@@ -87,13 +87,13 @@ const useDialog = () => {
     dialogRef.current?.close()
   }, [dialogRef])
 
-  const Dialog = ({ children, ...props }: DialogProps) => {
+  const Dialog = useCallback<React.FunctionComponent>(({ children, ...props }: DialogProps) => {
     return (
       <Modal {...props} ref={dialogRef}>
         {children}
       </Modal>
     )
-  }
+  }, [dialogRef])
   Dialog.displayName = 'Dialog'
   return { dialogRef, Dialog, handleShow, handleHide }
 }
