@@ -160,9 +160,9 @@ describe('Select', () => {
     }
   )
 
-  it('Should not render border class if bordered prop value is false', () => {
-    render(<TestComponent bordered={false} />)
-    expect(screen.getByRole('combobox')).not.toHaveClass('select-bordered')
+  it('Should apply the base select class', () => {
+    render(<TestComponent />)
+    expect(screen.getByRole('combobox')).toHaveClass('select')
   })
 
   it('Should render class based on className prop', () => {

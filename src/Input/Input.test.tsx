@@ -30,14 +30,9 @@ describe('Input', () => {
     expect(mockType).toHaveBeenCalledTimes(0)
   })
 
-  it('Should forward the bordered prop to Input', () => {
-    render(<Input bordered={false} />)
-    expect(screen.getByRole('textbox')).not.toHaveClass('input-bordered')
-  })
-
-  it('Should forward the borderOffset prop to Input', () => {
-    render(<Input borderOffset={false} />)
-    expect(screen.getByRole('textbox')).toHaveClass('focus:outline-offset-0')
+  it('Should apply the base input class', () => {
+    render(<Input />)
+    expect(screen.getByRole('textbox')).toHaveClass('input')
   })
 
   it('Should forward the size prop to Input', () => {

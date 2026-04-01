@@ -40,7 +40,6 @@ const Modal = forwardRef<HTMLDialogElement, ModalProps>(
         'modal-end': position === 'end',
         'modal-start': position === 'start',
         'modal-top': position === 'top',
-        'modal-middle': position === 'middle',
         'modal-bottom': position === 'bottom',
         'modal-bottom sm:modal-middle': responsive,
       })
